@@ -102,10 +102,11 @@ function StellarMissions:loop()
     WKSHud:wait_until_ready()
 
     Ferret:wait(self.wait_timers.pre_open_mission_list)
-    WKSMission:open_basic_missions()
+    WKSMission:open()
     Ferret:wait(self.wait_timers.post_open_mission_list)
 
     local available_missions = WKSMission:get_available_missions()
+	local mission_list = self.mission_list:get_overlap(available_missions):filter_by_job(self.job)
     local mission_list = self.mission_list:get_overlap(available_missions)
 
     if self:get_table_length(mission_list.missions) <= 0 then
