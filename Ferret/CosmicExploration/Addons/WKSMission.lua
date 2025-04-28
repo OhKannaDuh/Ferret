@@ -54,22 +54,25 @@ function WKSMission:get_available_missions()
     Logger:debug('Getting missions from mission list:')
 
     local missions = MissionList()
-    local index = 2 -- Start at 2 because that's the first mission node
 
-    repeat
-        local mission = self:get_mission_name_by_index(index):gsub(' ', '')
-        if mission ~= '' then
-            local found_mission = MasterMissionList:filter_by_job(Ferret.job):find_by_name(mission)
-            if found_mission ~= nil then
-                -- Logger:debug(mission .. ": " .. found_mission:to_string())
-                -- missions.missions[found_mission.id] = found_mission
-                table.insert(missions.missions, found_mission)
-            else
-                Logger:error(mission .. ': Not found')
+    for _, tab in ipairs({0, 1}) do
+        yield(string.format('/callback WKSMission true 15 %d', tab))
+        Ferret:wait(0.5)
+
+        local index = 2
+        repeat
+            local mission = self:get_mission_name_by_index(index):gsub(' ', '')
+            if mission ~= '' then
+                local found_mission = Ferret.cosmic_exploration.mission_list:find_by_name(mission)
+                if found_mission ~= nil then
+                    table.insert(missions.missions, found_mission)
+                else
+                    Logger:error(mission .. ': Not found')
+                end
+                index = index + 1
             end
-            index = index + 1
-        end
-    until (mission == '') or index >= 24
+        until (mission == '') or index >= 24
+    end
 
     return missions
 end
