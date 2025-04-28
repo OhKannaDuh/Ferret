@@ -53,6 +53,12 @@ end
     return filtered
 end 
 
+function MissionList:filter_by_ids(ids)
+    return self:filter(function(mission)
+        return Ferret:table_contains(ids, mission.id)
+    end)
+end
+
 function MissionList:find_by_name(name)
     name = string.upper(name)
     for _, mission in pairs(self.missions) do
