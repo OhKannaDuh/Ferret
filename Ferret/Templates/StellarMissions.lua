@@ -14,7 +14,7 @@ MissionOrder = {
 StellarMissions = Ferret:extend()
 function StellarMissions:new()
     StellarMissions.super.new(self, i18n('templates.stellar_missions.name'))
-    self.template_version = Version(2, 8, 0)
+    self.template_version = Version(2, 8, 1)
 
     self.mission_list = MissionList()
     self.mission_order = MissionOrder.TopPriority
@@ -172,7 +172,13 @@ function StellarMissions:loop()
                 Logger:info('Quiting Ferret ' .. self.version:to_string())
                 self:stop()
             end
-            return
+
+            if result.tier == MissionResult.Fail then
+                Addons.WKSHud:open_mission_menu()
+                Addons.WKSMissionInfomation:wait_until_ready()
+                mission:abandon()
+                return
+            end
         end
 
         Addons.WKSHud:open_mission_menu()
