@@ -25,12 +25,21 @@ function ToDoList:get_stellar_mission_scores()
         :with_fr('Évaluation : ([%d%s]+) / Rang or : ([%d%s]+)')
         :with_jp('現在の評価値: ([%d,]+) / ゴールドグレード条件: ([%d,]+)')
 
+    local has_bronze = self:has_stellar_mission_bronze()
+    if not has_bronze then
+        return MissionScore(MissionResult.Fail, '0', '0')
+    end
+
     for side = 1, 2 do
         for i = 1, self:get_count() do
             local node_text = self:get_node_text(i, side)
             local current, silver = string.match(node_text, silver_patern:get())
             if current and silver then
-                return MissionScore(MissionResult.Fail, current, silver)
+                if has_bronze then
+                    return MissionScore(MissionResult.Bronze, current, silver)
+                else
+                    return MissionScore(MissionResult.Fail, current, silver)
+                end
             end
 
             local current, gold = string.match(node_text, gold_pattern:get())
@@ -45,6 +54,42 @@ function ToDoList:get_stellar_mission_scores()
     end
 
     return MissionScore(MissionResult.Fail, '0', '0')
+end
+
+function ToDoList:has_stellar_mission_bronze()
+    local completions = self:get_stellar_mission_craft_completions()
+    local has_bronze = true
+    for _, completion in ipairs(completions) do
+        if completion.crafted < completion.required then
+            has_bronze = false
+            break
+        end
+    end
+
+    return has_bronze
+end
+
+function ToDoList:get_stellar_mission_craft_completions()
+    local matches = {}
+    local pattern = Translatable('.-crafted: (%d+)/(%d+)')
+        :with_de('.-hergestellt: (%d+)/(%d+)')
+        :with_fr('.-fabriqué : (%d+)/(%d+)')
+        :with_jp('.-作成済み: (%d+)/(%d+)')
+
+    -- for side = 1, 2 do
+    for i = 1, self:get_count() do
+        local node_text = self:get_node_text(i, 3)
+        local crafted, required = string.match(node_text, pattern:get())
+        if crafted and required then
+            table.insert(matches, {
+                crafted = String:parse_number(crafted),
+                required = String:parse_number(required),
+            })
+        end
+    end
+    -- end
+
+    return matches
 end
 
 function ToDoList:get_time_remaining()

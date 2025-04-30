@@ -20,7 +20,7 @@ function Ferret:new(name)
     self.plugins = {}
     self.hook_subscriptions = {}
     self.timer = Timer()
-    self.version = Version(0, 10, 0)
+    self.version = Version(0, 11, 0)
 end
 
 ---@param plugin Plugin

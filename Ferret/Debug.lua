@@ -17,4 +17,14 @@ function Debug:log_previous_call()
     })
 end
 
+function Debug:log_current_line()
+    local info = debug.getinfo(2, 'Sln')
+
+    Logger:debug_t('debug.current_line', {
+        filename = info.short_src:match('[^/\\]+$'),
+        line = info.linedefined,
+        method = info.name,
+    })
+end
+
 return Debug()

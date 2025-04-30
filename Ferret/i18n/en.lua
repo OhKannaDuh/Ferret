@@ -6,6 +6,7 @@ return {
         },
         debug = {
             previous_call = 'Called from %{filename} (Line: %{line}) (Method: %{method})',
+            current_line = 'Current line %{filename} (Line: %{line}) (Method: %{method})',
         },
         actions = {
             messages = {
@@ -101,6 +102,8 @@ return {
                     finished_craft = 'Finished Craft',
                     finished = 'Finished, crafted: %{crafted}',
                     no_more_to_craft = 'No more to craft, crafted: %{crafted}',
+                    reached_goal = 'Reached goal, crafted: %{crafted}',
+                    reason = 'Reason: %{reason}',
                 },
             },
         },

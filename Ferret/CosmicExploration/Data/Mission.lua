@@ -26,7 +26,7 @@ Mission.wait_timers = {
     post_synthesize = 0,
 }
 
-Mission.last_crafting_action_threshold = 15
+Mission.last_crafting_action_threshold = 5
 
 ---@param id integer
 ---@param name Translatable
@@ -146,10 +146,10 @@ function Mission:start()
     Addons.WKSMission:start_mission(self.id)
 end
 
+---@param goal MissionResult
 ---@return boolean
-function Mission:is_complete()
-    return Addons.ToDoList:get_stellar_mission_scores().tier == MissionResult.Gold
-        or not self:has_base_crafting_material()
+function Mission:is_complete(goal)
+    return Addons.ToDoList:get_stellar_mission_scores().tier >= goal or not self:has_base_crafting_material()
 end
 
 ---@return MissionScore
@@ -157,10 +157,11 @@ function Mission:get_mission_score()
     return Addons.ToDoList:get_stellar_mission_scores()
 end
 
-function Mission:wait_for_crafting_ui_or_mission_complete()
+---@param goal MissionResult
+function Mission:wait_for_crafting_ui_or_mission_complete(goal)
     self:log_debug('waiting_for_crafting_ui_or_mission_complete')
     Ferret:wait_until(function()
-        return Addons.WKSRecipeNotebook:is_ready() or self:is_complete()
+        return Addons.WKSRecipeNotebook:is_ready() or self:is_complete(goal)
     end)
     Ferret:wait(1)
     self:log_debug('crafting_ui_or_mission_complete')
@@ -185,7 +186,9 @@ function Mission:craft_current()
     end
 
     Ferret:wait(Mission.wait_timers.pre_synthesize)
+
     Addons.WKSRecipeNotebook:synthesize()
+
     Addons.Synthesis:wait_until_ready()
 
     timer:flip()
@@ -204,8 +207,9 @@ function Mission:craft_current()
     return true, self:translate('finished_craft')
 end
 
+---@param goal MissionResult
 ---@return MissionScore, string
-function Mission:single_recipe()
+function Mission:single_recipe(goal)
     self:log_debug('recipe_count', { count = 1 })
     local crafted = 0
     repeat
@@ -214,19 +218,29 @@ function Mission:single_recipe()
         end
 
         Addons.WKSRecipeNotebook:wait_until_ready()
+
         local should_continue, reason = self:craft_current()
+
+        self:log_debug('reason', { reason = reason })
         if not should_continue then
             return self:get_mission_score(), reason
         end
 
         crafted = crafted + 1
-    until self:is_complete()
+
+        local score = self:get_mission_score()
+        if score.tier >= goal then
+            return score, self:translate('reached_goal', { crafted = crafted })
+        end
+
+    until self:is_complete(goal)
 
     return self:get_mission_score(), self:translate('finished', { crafted = crafted })
 end
 
+---@param goal MissionResult
 ---@return MissionScore, string
-function Mission:multi_recipe()
+function Mission:multi_recipe(goal)
     self:log_debug('recipe_count', { count = Table:count(self.multi_craft_config) })
     local crafted = 0
 
@@ -241,24 +255,31 @@ function Mission:multi_recipe()
             Addons.WKSRecipeNotebook:set_hq()
             for i = 1, count do
                 Addons.WKSRecipeNotebook:wait_until_ready()
-                self:craft_current()
+                local should_continue, reason = self:craft_current()
+                self:log_debug('reason', { reason = reason })
 
                 crafted = crafted + 1
+
+                local score = self:get_mission_score()
+                if score.tier >= goal then
+                    return score, self:translate('reached_goal', { crafted = crafted })
+                end
             end
         end
-    until self:is_complete()
+    until self:is_complete(goal)
 
     return self:get_mission_score(), self:translate('finished', { crafted = crafted })
 end
 
+---@param goal MissionResult
 ---@return MissionScore, string
-function Mission:handle()
+function Mission:handle(goal)
     self:log_debug('starting_mission', { mission = self.name:get() })
 
     if not self.has_multiple_recipes then
-        return self:single_recipe()
+        return self:single_recipe(goal)
     else
-        return self:multi_recipe()
+        return self:multi_recipe(goal)
     end
 end
 

@@ -9,7 +9,7 @@ require('Ferret/CosmicExploration/CosmicExploration')
 StellarCraftingRelic = Ferret:extend()
 function StellarCraftingRelic:new()
     StellarCraftingRelic.super.new(self, i18n('templates.stellar_crafting_relic.name'))
-    self.template_version = Version(0, 9, 0)
+    self.template_version = Version(0, 10, 0)
 
     self.job_order = {
         Jobs.Carpenter,
@@ -48,6 +48,9 @@ function StellarCraftingRelic:new()
     self.minimum_acceptable_result = MissionResult.Gold
     self.per_mission_acceptable_result = {}
 
+    self.minimum_target_result = MissionResult.Gold
+    self.per_mission_target_result = {}
+
     self.researchingway = Targetable(i18n('npcs.researchingway'))
 end
 
@@ -65,11 +68,27 @@ function StellarCraftingRelic:slow_mode()
 end
 
 function StellarCraftingRelic:get_acceptable_result(mission)
+    if self.per_mission_target_result[mission.id] then
+        return self.per_mission_target_result[mission.id]
+    end
+
     if self.per_mission_acceptable_result[mission.id] then
         return self.per_mission_acceptable_result[mission.id]
     end
 
+    if self.minimum_target_result < self.minimum_acceptable_result then
+        return self.minimum_target_result
+    end
+
     return self.minimum_acceptable_result
+end
+
+function StellarCraftingRelic:get_target_result(mission)
+    if self.per_mission_target_result[mission.id] then
+        return self.per_mission_target_result[mission.id]
+    end
+
+    return self.minimum_target_result
 end
 
 function StellarCraftingRelic:setup()
@@ -177,7 +196,13 @@ function StellarCraftingRelic:loop()
 
     Addons.WKSHud:open_mission_menu()
 
-    local result, reason = mission:handle()
+    local goal = self:get_target_result(mission)
+    Logger:info('Mission target: ' .. MissionResult.to_string(goal))
+
+    local result, reason = mission:handle(goal)
+    Logger:debug('Result: ' .. MissionResult.to_string(result.tier))
+    Logger:debug('Acceptable: ' .. MissionResult.to_string(self:get_acceptable_result(mission)))
+
     if result.tier < self:get_acceptable_result(mission) then
         Logger:warn_t('templates.stellar_crafting_relic.mission_failed', { mission = mission:to_string() })
         Logger:warn('Reason: ' .. reason)

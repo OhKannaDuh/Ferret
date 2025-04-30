@@ -36,6 +36,7 @@ end
 
 ---@param class string
 function MissionList:filter_by_class(class)
+    Logger:debug('Filtering missions by class: ' .. class)
     return self:filter(function(mission)
         return mission.class == class
     end)
@@ -43,6 +44,7 @@ end
 
 ---@param names string[]
 function MissionList:filter_by_names(names)
+    Logger:debug('Filtering missions by names: ' .. table.concat(names, ', '))
     local filtered = MissionList()
 
     for _, wanted_name in ipairs(names) do
@@ -61,11 +63,13 @@ end
 
 ---@param ids integer[]
 function MissionList:filter_by_ids(ids)
+    Logger:debug('Filtering missions by ids: ' .. table.concat(ids, ', '))
     local filtered = MissionList()
 
     for _, id in ipairs(ids) do
         local mission = self:find_by_id(id)
         if mission then
+            Logger:info('Adding')
             filtered:add(mission)
         end
     end
@@ -75,6 +79,7 @@ end
 
 ---@param name string
 function MissionList:find_by_name(name)
+    Logger:debug('Finding mission by name: ' .. name)
     name = string.upper(name)
     for _, mission in pairs(self.missions) do
         local start_index = string.find(string.upper(mission.name:get()), name, 0, true)
@@ -90,6 +95,7 @@ end
 ---@param id integer
 ---@return Mission|nil
 function MissionList:find_by_id(id)
+    Logger:debug('Finding mission by id: ' .. id)
     for _, mission in pairs(self.missions) do
         if mission.id == id then
             return mission
@@ -176,6 +182,16 @@ function MissionList:to_string()
     local missions = {}
     for _, mission in ipairs(self.missions) do
         table.insert(missions, mission.name:get())
+    end
+
+    return 'Mission List: ' .. table.concat(missions, ', ')
+end
+
+---@return string
+function MissionList:to_id_string()
+    local missions = {}
+    for _, mission in ipairs(self.missions) do
+        table.insert(missions, mission.id)
     end
 
     return 'Mission List: ' .. table.concat(missions, ', ')

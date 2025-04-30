@@ -14,13 +14,16 @@ MissionOrder = {
 StellarMissions = Ferret:extend()
 function StellarMissions:new()
     StellarMissions.super.new(self, i18n('templates.stellar_missions.name'))
-    self.template_version = Version(2, 6, 0)
+    self.template_version = Version(2, 8, 0)
 
     self.mission_list = MissionList()
     self.mission_order = MissionOrder.TopPriority
 
     self.minimum_acceptable_result = MissionResult.Gold
     self.per_mission_acceptable_result = {}
+
+    self.minimum_target_result = MissionResult.Gold
+    self.per_mission_target_result = {}
 
     self.stop_on_failure = false
 
@@ -60,15 +63,36 @@ function StellarMissions:create_job_list_by_ids(ids)
 end
 
 function StellarMissions:get_acceptable_result(mission)
+    if self.per_mission_target_result[mission.id] then
+        return self.per_mission_target_result[mission.id]
+    end
+
     if self.per_mission_acceptable_result[mission.id] then
         return self.per_mission_acceptable_result[mission.id]
+    end
+
+    if self.minimum_target_result < self.minimum_acceptable_result then
+        return self.minimum_target_result
     end
 
     return self.minimum_acceptable_result
 end
 
+function StellarMissions:get_target_result(mission)
+    if self.per_mission_target_result[mission.id] then
+        return self.per_mission_target_result[mission.id]
+    end
+
+    return self.minimum_target_result
+end
+
 function StellarMissions:setup()
     Logger:info(self.name .. ': ' .. self.template_version:to_string())
+
+    if self.mission_list:is_empty() then
+        Logger:warn('No missions taken from configured mission list')
+        return false
+    end
 
     PauseYesAlready()
 
@@ -133,7 +157,13 @@ function StellarMissions:loop()
 
         Addons.WKSHud:open_mission_menu()
 
-        local result, reason = mission:handle()
+        local goal = self:get_target_result(mission)
+        Logger:info('Mission target: ' .. MissionResult.to_string(goal))
+
+        local result, reason = mission:handle(goal)
+        Logger:debug('Result: ' .. MissionResult.to_string(result.tier))
+        Logger:debug('Acceptable: ' .. MissionResult.to_string(self:get_acceptable_result(mission)))
+
         if result.tier < self:get_acceptable_result(mission) then
             Logger:warn('Mission failed: ' .. mission:to_string())
             Logger:warn('Reason: ' .. reason)
@@ -146,7 +176,6 @@ function StellarMissions:loop()
         end
 
         Addons.WKSHud:open_mission_menu()
-        Character:wait_until_done_crafting()
         Addons.WKSMissionInfomation:wait_until_ready()
         self:repeat_until(function()
             mission:report()
