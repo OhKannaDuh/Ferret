@@ -69,7 +69,6 @@ function MissionList:filter_by_ids(ids)
     for _, id in ipairs(ids) do
         local mission = self:find_by_id(id)
         if mission then
-            Logger:info('Adding')
             filtered:add(mission)
         end
     end

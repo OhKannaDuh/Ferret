@@ -49,6 +49,14 @@ function Mission:new(id, name, job, class)
     self.has_multiple_recipes = false
     self.multi_craft_config = {}
 
+    self.is_time_restricted = false
+    self.time_restriction = {
+        start = 0,
+        finish = 0,
+    }
+
+    self.weather_restriction = nil
+
     self.translation_path = 'modules.cosmic_exploration.mission'
 end
 
@@ -139,6 +147,37 @@ end
 function Mission:with_multi_craft_config(config)
     self.multi_craft_config = config
     return self
+end
+
+---@param start integer
+---@param finish integer
+---@return Mission
+function Mission:with_time_restriction(start, finish)
+    self.is_time_restricted = true
+    self.time_restriction.start = start
+    self.time_restriction.finish = finish
+    return self
+end
+
+---@param weather Weather
+---@return Mission
+function Mission:with_weather_restriction(weather)
+    self.weather_restriction = weather
+    return self
+end
+
+---@return boolean
+function Mission:is_available()
+    return true
+    -- if self.is_time_restricted then
+    --     return World:is_hour_between(self.time_restriction.start, self.time_restriction.finish)
+    -- end
+
+    -- if self.weather_restriction then
+    --     return World:is_weather(self.weather_restriction)
+    -- end
+
+    -- return true
 end
 
 function Mission:start()

@@ -25,6 +25,7 @@ require('Ferret/Data/Jobs')
 require('Ferret/Data/Name')
 require('Ferret/Data/Objects')
 require('Ferret/Data/Status')
+require('Ferret/Data/Weather')
 require('Ferret/Data/Version')
 require('Ferret/Data/Node')
 

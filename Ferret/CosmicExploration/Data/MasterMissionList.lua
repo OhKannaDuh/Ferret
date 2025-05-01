@@ -332,7 +332,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(1, 3, 16))
         :with_exp_reward(MissionReward(1, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [31] = Mission(31, Name('A-3: High-quality Crafting Tools'), Jobs.Carpenter, 'A') -- A3
         :with_de_name('A-3: Hochwertige Ersatz-Werkzeuge')
         :with_fr_name('A-3 : Approvisionnement en outils d\'artisanat')
@@ -347,7 +348,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(1, 3, 15))
         :with_exp_reward(MissionReward(1, 2, 15))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [32] = Mission(32, Name('A-3: Elevating Platforms'), Jobs.Carpenter, 'A') -- A3
         :with_de_name('A-3: Höhenverstellbare Podeste')
         :with_fr_name('A-3 : Structures de travail en hauteur')
@@ -362,7 +364,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(1, 2, 16))
         :with_exp_reward(MissionReward(1, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [33] = Mission(33, Name('A-1: Power Transmission Shafts I'), Jobs.Carpenter, 'A')
         :with_de_name('A-1: Kraftübertragungs-Pfosten I')
         :with_fr_name('A-1 : Préparation de cardan de transmission')
@@ -455,7 +458,8 @@ MasterMissionList.missions = {
         :with_cosmocredit(17)
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(1, 4, 17))
-        :with_exp_reward(MissionReward(1, 3, 12)),
+        :with_exp_reward(MissionReward(1, 3, 12))
+        :with_time_restriction(0, 2),
     [41] = Mission(41, Name('A-2: Packing Materials II'), Jobs.Carpenter, 'A') -- A2
         :with_de_name('A-2: Verpackungsmaterialien II')
         :with_fr_name('A-2 : Amélioration de matériaux pour conteneurs')
@@ -494,7 +498,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(1, 3, 17))
         :with_exp_reward(MissionReward(1, 1, 17))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_time_restriction(12, 14),
     [44] = Mission(44, Name('A-3: Biofuel II'), Jobs.Carpenter, 'A') -- A3
         :with_de_name('A-3: Biotreibstoff II')
         :with_fr_name('A-3 : Amélioration de combustible biologique')
@@ -844,7 +849,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(2, 3, 16))
         :with_exp_reward(MissionReward(2, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [76] = Mission(76, Name('A-3: High-durability Material Processing'), Jobs.Blacksmith, 'A') -- A3
         :with_de_name('A-3: Erhöhung der Materialbelastung')
         :with_fr_name('A-3 : Traitement d\'amélioration de la durabilité')
@@ -859,7 +865,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(2, 3, 15))
         :with_exp_reward(MissionReward(2, 2, 15))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [77] = Mission(77, Name('A-3: Impact-resistant Material Processing'), Jobs.Blacksmith, 'A') -- A3
         :with_de_name('A-3: Erhöhung der Material-Schockresistenz')
         :with_fr_name('A-3 : Traitement anti-chocs')
@@ -874,7 +881,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(2, 2, 16))
         :with_exp_reward(MissionReward(2, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [78] = Mission(78, Name('A-1: Hub Furnishings and Fixtures I'), Jobs.Blacksmith, 'A')
         :with_de_name('A-1: Station-Möbelstücke I')
         :with_fr_name('A-1 : Préparation de mobilier pour infrastructure')
@@ -967,7 +975,8 @@ MasterMissionList.missions = {
         :with_cosmocredit(17)
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(2, 4, 17))
-        :with_exp_reward(MissionReward(2, 3, 12)),
+        :with_exp_reward(MissionReward(2, 3, 12))
+        :with_time_restriction(4, 6),
     [86] = Mission(86, Name('A-2: High-performance Drone Materials II'), Jobs.Blacksmith, 'A') -- A2
         :with_de_name('A-2: Hochfunktionsdrohnen-Materialien II')
         :with_fr_name('A-2 : Amélioration de matériaux pour drones ultraperformants')
@@ -1006,7 +1015,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(2, 3, 17))
         :with_exp_reward(MissionReward(2, 1, 17))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_time_restriction(16, 18),
     [89] = Mission(89, Name('A-3: Cosmotized Equipment Materials II'), Jobs.Blacksmith, 'A') -- A3
         :with_de_name('A-3: Spezialausrüstungs-Materialien II')
         :with_fr_name('A-3 : Amélioration de matériaux pour machine d\'un nouveau genre')
@@ -1356,7 +1366,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(3, 3, 16))
         :with_exp_reward(MissionReward(3, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [121] = Mission(121, Name('A-3: High-durability Material Processing'), Jobs.Armorer, 'A') -- A3
         :with_de_name('A-3: Erhöhung der Materialbelastung')
         :with_fr_name('A-3 : Traitement d\'amélioration de la durabilité')
@@ -1371,7 +1382,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(3, 3, 15))
         :with_exp_reward(MissionReward(3, 2, 15))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [122] = Mission(122, Name('A-3: Impact-resistant Material Processing'), Jobs.Armorer, 'A') -- A3
         :with_de_name('A-3: Erhöhung der Material-Schockresistenz')
         :with_fr_name('A-3 : Traitement anti-chocs')
@@ -1386,7 +1398,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(3, 2, 16))
         :with_exp_reward(MissionReward(3, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [123] = Mission(123, Name('A-1: Hub Furnishings and Fixtures I'), Jobs.Armorer, 'A')
         :with_de_name('A-1: Station-Möbelstücke I')
         :with_fr_name('A-1 : Préparation de mobilier pour infrastructure')
@@ -1479,7 +1492,8 @@ MasterMissionList.missions = {
         :with_cosmocredit(17)
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(3, 4, 17))
-        :with_exp_reward(MissionReward(3, 3, 12)),
+        :with_exp_reward(MissionReward(3, 3, 12))
+        :with_time_restriction(8, 10),
     [131] = Mission(131, Name('A-2: High-performance Drone Materials II'), Jobs.Armorer, 'A') -- A2
         :with_de_name('A-2: Hochfunktionsdrohnen-Materialien II')
         :with_fr_name('A-2 : Amélioration de matériaux pour drones ultraperformants')
@@ -1518,7 +1532,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(3, 3, 17))
         :with_exp_reward(MissionReward(3, 1, 17))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_time_restriction(20, 22),
     [134] = Mission(134, Name('A-3: Cosmotized Equipment Materials II'), Jobs.Armorer, 'A') -- A3
         :with_de_name('A-3: Spezialausrüstungs-Materialien II')
         :with_fr_name('A-3 : Amélioration de matériaux pour machine d\'un nouveau genre')
@@ -1868,7 +1883,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(4, 3, 16))
         :with_exp_reward(MissionReward(4, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [166] = Mission(166, Name('A-3: High-durability Material Processing'), Jobs.Goldsmith, 'A') -- A3
         :with_de_name('A-3: Erhöhung der Materialbelastung')
         :with_fr_name('A-3 : Traitement d\'amélioration de la durabilité')
@@ -1883,7 +1899,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(4, 3, 15))
         :with_exp_reward(MissionReward(4, 2, 15))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [167] = Mission(167, Name('A-3: Impact-resistant Material Processing'), Jobs.Goldsmith, 'A') -- A3
         :with_de_name('A-3: Erhöhung der Material-Schockresistenz')
         :with_fr_name('A-3 : Traitement anti-chocs')
@@ -1898,7 +1915,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(4, 2, 16))
         :with_exp_reward(MissionReward(4, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [168] = Mission(168, Name('A-1: Hub Furnishings and Fixtures I'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Station-Möbelstücke I')
         :with_fr_name('A-1 : Préparation de mobilier pour infrastructure')
@@ -1991,7 +2009,8 @@ MasterMissionList.missions = {
         :with_cosmocredit(17)
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(4, 4, 17))
-        :with_exp_reward(MissionReward(4, 3, 12)),
+        :with_exp_reward(MissionReward(4, 3, 12))
+        :with_time_restriction(12, 14),
     [176] = Mission(176, Name('A-2: High-performance Drone Materials II'), Jobs.Goldsmith, 'A') -- A2
         :with_de_name('A-2: Hochfunktionsdrohnen-Materialien II')
         :with_fr_name('A-2 : Amélioration de matériaux pour drones ultraperformants')
@@ -2030,7 +2049,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(4, 3, 17))
         :with_exp_reward(MissionReward(4, 1, 17))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_time_restriction(0, 2),
     [179] = Mission(179, Name('A-3: Cosmotized Equipment Materials II'), Jobs.Goldsmith, 'A') -- A3
         :with_de_name('A-3: Spezialausrüstungs-Materialien II')
         :with_fr_name('A-3 : Amélioration de matériaux pour machine d\'un nouveau genre')
@@ -2380,7 +2400,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(5, 3, 16))
         :with_exp_reward(MissionReward(5, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [211] = Mission(211, Name('A-3: Safety Shoes'), Jobs.Leatherworker, 'A') -- A3
         :with_de_name('A-3: Arbeiter-Sicherheitsschuhe')
         :with_fr_name('A-3 : Chaussures de sécurité')
@@ -2395,7 +2416,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(5, 3, 15))
         :with_exp_reward(MissionReward(5, 2, 15))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [212] = Mission(212, Name('A-3: Gatherer\'s Overalls'), Jobs.Leatherworker, 'A') -- A3
         :with_de_name('A-3: Sammler-Arbeitskleidung')
         :with_fr_name('A-3 : Habits de récolte')
@@ -2410,7 +2432,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(5, 2, 16))
         :with_exp_reward(MissionReward(5, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [213] = Mission(213, Name('A-1: Base Supplies I'), Jobs.Leatherworker, 'A')
         :with_de_name('A-1: Basis-Ausstattung I')
         :with_fr_name('A-1 : Préparation de matériel pour poste avancé')
@@ -2503,7 +2526,8 @@ MasterMissionList.missions = {
         :with_cosmocredit(17)
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(5, 4, 17))
-        :with_exp_reward(MissionReward(5, 3, 12)),
+        :with_exp_reward(MissionReward(5, 3, 12))
+        :with_time_restriction(16, 18),
     [221] = Mission(221, Name('A-2: Packing Materials II'), Jobs.Leatherworker, 'A') -- A2
         :with_de_name('A-2: Verpackungsmaterialien II')
         :with_fr_name('A-2 : Amélioration de matériaux pour conteneurs')
@@ -2542,7 +2566,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(5, 3, 17))
         :with_exp_reward(MissionReward(5, 1, 17))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_time_restriction(4, 6),
     [224] = Mission(224, Name('A-3: Cosmic Suits II'), Jobs.Leatherworker, 'A') -- A3
         :with_de_name('A-3: Raumanzug II')
         :with_fr_name('A-3 : Amélioration de combinaisons cosmiques')
@@ -2892,7 +2917,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(6, 3, 16))
         :with_exp_reward(MissionReward(6, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [256] = Mission(256, Name('A-3: Cold-weather Work Hats'), Jobs.Weaver, 'A') -- A3
         :with_de_name('A-3: Arbeiter-Wintermützen')
         :with_fr_name('A-3 : Chapeaux thermiques')
@@ -2907,7 +2933,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(6, 3, 15))
         :with_exp_reward(MissionReward(6, 2, 15))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [257] = Mission(257, Name('A-3: Crafter\'s Overalls'), Jobs.Weaver, 'A') -- A3
         :with_de_name('A-3: Handwerker-Arbeitskleidung')
         :with_fr_name('A-3 : Habits d\'artisanat')
@@ -2922,7 +2949,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(6, 2, 16))
         :with_exp_reward(MissionReward(6, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [258] = Mission(258, Name('A-1: Cosmoliner Materials I'), Jobs.Weaver, 'A')
         :with_de_name('A-1: Kosmozapper-Materialien I')
         :with_fr_name('A-1 : Préparation de matériaux pour cosmo-navette')
@@ -3015,7 +3043,8 @@ MasterMissionList.missions = {
         :with_cosmocredit(17)
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(6, 4, 17))
-        :with_exp_reward(MissionReward(6, 3, 12)),
+        :with_exp_reward(MissionReward(6, 3, 12))
+        :with_time_restriction(20, 22),
     [266] = Mission(266, Name('A-2: Packing Materials II'), Jobs.Weaver, 'A') -- A2
         :with_de_name('A-2: Verpackungsmaterialien II')
         :with_fr_name('A-2 : Amélioration de matériaux pour conteneurs')
@@ -3054,7 +3083,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(6, 3, 17))
         :with_exp_reward(MissionReward(6, 1, 17))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_time_restriction(8, 10),
     [269] = Mission(269, Name('A-3: Crew Suits II'), Jobs.Weaver, 'A') -- A3
         :with_de_name('A-3: Besatzungsuniformen II')
         :with_fr_name('A-3 : Amélioration d\'uniformes cosmiques')
@@ -3404,7 +3434,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(7, 3, 16))
         :with_exp_reward(MissionReward(7, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [301] = Mission(301, Name('A-3: Rust Repellent'), Jobs.Alchemist, 'A') -- A3
         :with_de_name('A-3: Rostschutzmittel')
         :with_fr_name('A-3 : Produits antirouille')
@@ -3419,7 +3450,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(7, 3, 15))
         :with_exp_reward(MissionReward(7, 2, 15))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [302] = Mission(302, Name('A-3: Stable Medicine'), Jobs.Alchemist, 'A') -- A3
         :with_de_name('A-3: Lang haltbare Medikamente')
         :with_fr_name('A-3 : Conservateurs alimentaires')
@@ -3434,7 +3466,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(7, 2, 16))
         :with_exp_reward(MissionReward(7, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [303] = Mission(303, Name('A-1: Natural Remedy Inspection I'), Jobs.Alchemist, 'A')
         :with_de_name('A-1: Naturheilmittel-Inspektion I')
         :with_fr_name('A-1 : Préparation de remèdes expérimentaux')
@@ -3527,7 +3560,8 @@ MasterMissionList.missions = {
         :with_cosmocredit(17)
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(7, 4, 17))
-        :with_exp_reward(MissionReward(7, 3, 12)),
+        :with_exp_reward(MissionReward(7, 3, 12))
+        :with_time_restriction(0, 2),
     [311] = Mission(311, Name('A-2: Nutrient Jelly Materials II'), Jobs.Alchemist, 'A') -- A2
         :with_de_name('A-2: Nährreiche Geleegetränk-Zutaten II')
         :with_fr_name('A-2 : Amélioration de boissons gélatineuses de haute qualité nutritive')
@@ -3566,7 +3600,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(7, 3, 17))
         :with_exp_reward(MissionReward(7, 1, 17))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_time_restriction(12, 14),
     [314] = Mission(314, Name('A-3: Dichromatic Compound II'), Jobs.Alchemist, 'A') -- A3
         :with_de_name('A-3: Pleochrome Tinktur II')
         :with_fr_name('A-3 : Amélioration de potions alchimiques multicolores')
@@ -3916,7 +3951,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(8, 3, 16))
         :with_exp_reward(MissionReward(8, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [346] = Mission(346, Name('A-3: Cured Seafood'), Jobs.Culinarian, 'A') -- A3
         :with_de_name('A-3: Wasserprodukt-Räucherung')
         :with_fr_name('A-3 : Traitement de produits de la mer fumés')
@@ -3931,7 +3967,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(8, 3, 15))
         :with_exp_reward(MissionReward(8, 2, 15))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.UmbralWind),
     [347] = Mission(347, Name('A-3: Cured Meat'), Jobs.Culinarian, 'A') -- A3
         :with_de_name('A-3: Tierfleisch-Räucherung')
         :with_fr_name('A-3 : Traitement de viande animale fumée')
@@ -3946,7 +3983,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(8, 2, 16))
         :with_exp_reward(MissionReward(8, 1, 16))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_weather_restriction(Weather.MoonDust),
     [348] = Mission(348, Name('A-1: Worker\'s Banquet Preparation I'), Jobs.Culinarian, 'A')
         :with_de_name('A-1: Arbeiter-Mahlzeitausgabe I')
         :with_fr_name('A-1 : Préparation d\'en-cas pour ouvriers')
@@ -4039,7 +4077,8 @@ MasterMissionList.missions = {
         :with_cosmocredit(17)
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(8, 4, 17))
-        :with_exp_reward(MissionReward(8, 3, 12)),
+        :with_exp_reward(MissionReward(8, 3, 12))
+        :with_time_restriction(4, 6),
     [356] = Mission(356, Name('A-2: Nutrient-rich Foodstuffs II'), Jobs.Culinarian, 'A') -- A2
         :with_de_name('A-2: Nährreiche Lebensmittel II')
         :with_fr_name('A-2 : Amélioration d\'aliments de haute qualité nutritive')
@@ -4078,7 +4117,8 @@ MasterMissionList.missions = {
         :with_exp_reward(MissionReward(8, 3, 17))
         :with_exp_reward(MissionReward(8, 1, 17))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_time_restriction(16, 18),
     [359] = Mission(359, Name('A-3: Whole Meals II'), Jobs.Culinarian, 'A') -- A3
         :with_de_name('A-3: Vollwertnahrung II')
         :with_fr_name('A-3 : Amélioration de repas complets')

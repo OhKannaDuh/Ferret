@@ -74,12 +74,12 @@ function WKSMission:get_available_missions()
                 break
             end
 
-            self:log_debug('.mission_found', { mission = mission_name })
+            self:log_debug('mission_found', { mission = mission_name })
             table.insert(names, mission_name)
 
             ---@diagnostic disable-next-line: undefined-field
             local mission = Ferret.cosmic_exploration.mission_list:find_by_name(mission_name)
-            if mission ~= nil then
+            if mission ~= nil and mission:is_available() then
                 missions:add(mission)
             end
         end

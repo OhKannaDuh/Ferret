@@ -49,4 +49,10 @@ function World:get_special_node()
     return Node(marker[0], y, marker[1])
 end
 
+---@param weather  Weather
+---@return boolean
+function World:is_weather(weather)
+    return GetActiveWeatherID() == weather
+end
+
 return World()
