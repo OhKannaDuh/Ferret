@@ -20,7 +20,7 @@ function Ferret:new(name)
     self.plugins = {}
     self.hook_subscriptions = {}
     self.timer = Timer()
-    self.version = Version(0, 11, 1)
+    self.version = Version(0, 11, 2)
 end
 
 ---@param plugin Plugin
@@ -129,7 +129,7 @@ function Ferret:emit(event, context)
     end
 
     for _, callback in pairs(self.hook_subscriptions[event]) do
-        callback(self, context)
+        callback(context)
     end
 end
 
