@@ -67,3 +67,11 @@ end
 function Node:to_string()
     return string.format('%f, %f, %f', self.x, self.y, self.z)
 end
+
+function Node:to_formatted_string()
+    return string.format('%.2f, %.2f, %.2f', self.x, self.y, self.z)
+end
+
+function Node:__tostring()
+    return self:to_string()
+end

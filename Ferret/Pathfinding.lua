@@ -132,7 +132,7 @@ function Pathfinding:wait_until_at_node(node)
 
     Ferret:wait_until(function()
         return Character:get_position():is_nearby(node, 1)
-    end)
+    end, 0.0167)
 end
 
 function Pathfinding:wait_until_close_to_target(distance)

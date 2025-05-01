@@ -12,6 +12,7 @@ Conditions = {
     Crafting40 = 40,
     PreparingToCraft = 41,
     Gathering42 = 42,
+    WatchingCustscene = 58,
     Mounting = 64,
     Flying = 77,
 }
