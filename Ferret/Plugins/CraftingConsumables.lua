@@ -19,11 +19,11 @@ function CraftingConsumables:new()
 
     self.wait_time = 5
 
-    self.should_eat = function(context)
+    self.should_eat = function(plugin, context)
         return true
     end
 
-    self.should_drink = function(context)
+    self.should_drink = function(plugin, context)
         return true
     end
 end
@@ -49,7 +49,8 @@ function CraftingConsumables:init()
             end
         end
 
-        if self:should_drink() and (self.medicine ~= nil and self.medicine ~= '') then
+        -- Medicine
+        if self:should_drink(context) and (self.medicine ~= nil and self.medicine ~= '') then
             local remaining = self:get_remaining_medicine_time()
             if remaining <= self.medicine_threshold then
                 Logger:debug_t('plugins.crafting_consumables.drinking_medicine', { medicine = self.medicine })
