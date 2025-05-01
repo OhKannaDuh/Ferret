@@ -14,7 +14,7 @@ MissionOrder = {
 StellarMissions = Ferret:extend()
 function StellarMissions:new()
     StellarMissions.super.new(self, i18n('templates.stellar_missions.name'))
-    self.template_version = Version(2, 8, 1)
+    self.template_version = Version(2, 8, 2)
 
     self.mission_list = MissionList()
     self.mission_order = MissionOrder.TopPriority
@@ -153,7 +153,9 @@ function StellarMissions:loop()
         mission:start()
         Ferret:wait(self.wait_timers.post_mission_start)
         Addons.WKSRecipeNotebook:wait_until_ready()
-        self:emit(Hooks.PRE_CRAFT)
+        self:emit(Hooks.PRE_CRAFT, {
+            mission = mission
+        })
 
         Addons.WKSHud:open_mission_menu()
 
