@@ -168,16 +168,15 @@ end
 
 ---@return boolean
 function Mission:is_available()
+    if self.is_time_restricted then
+        return World:is_hour_between(self.time_restriction.start, self.time_restriction.finish)
+    end
+
+    if self.weather_restriction then
+        return World:is_weather(self.weather_restriction)
+    end
+
     return true
-    -- if self.is_time_restricted then
-    --     return World:is_hour_between(self.time_restriction.start, self.time_restriction.finish)
-    -- end
-
-    -- if self.weather_restriction then
-    --     return World:is_weather(self.weather_restriction)
-    -- end
-
-    -- return true
 end
 
 function Mission:start()
