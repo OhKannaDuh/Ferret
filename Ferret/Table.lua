@@ -22,7 +22,7 @@ end
 ---@param search any
 ---@return boolean
 function Table:contains(subject, search)
-    for _, v in pairs(table) do
+    for _, v in pairs(subject) do
         if v == search then
             return true
         end

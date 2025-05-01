@@ -30,8 +30,6 @@ end
 
 function CraftingConsumables:init()
     Ferret:subscribe(Hooks.PRE_CRAFT, function(context)
-        Logger:info('context: ' .. Table:keys(context))
-        Logger:info('type: ' .. type(context.mission.id))
         Logger:debug_t('plugins.crafting_consumables.pre_craft_start')
         -- Food
         if self:should_eat(context) and (self.food ~= nil and self.food ~= '') then
@@ -51,6 +49,7 @@ function CraftingConsumables:init()
             end
         end
 
+        -- Medicine
         if self:should_drink(context) and (self.medicine ~= nil and self.medicine ~= '') then
             local remaining = self:get_remaining_medicine_time()
             if remaining <= self.medicine_threshold then
