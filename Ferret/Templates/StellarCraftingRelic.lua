@@ -9,7 +9,7 @@ require('Ferret/CosmicExploration/CosmicExploration')
 StellarCraftingRelic = Ferret:extend()
 function StellarCraftingRelic:new()
     StellarCraftingRelic.super.new(self, i18n('templates.stellar_crafting_relic.name'))
-    self.template_version = Version(0, 10, 2)
+    self.template_version = Version(0, 10, 3)
 
     self.job_order = {
         Jobs.Carpenter,
@@ -94,7 +94,7 @@ end
 
 function StellarCraftingRelic:setup_blacklist()
     self.actual_blacklist = MissionList()
-    for _, mission in ipairs(self.blacklist:get_all()) do
+    for _, mission in ipairs(self.blacklist.missions) do
         self.actual_blacklist:add(mission)
     end
 end
