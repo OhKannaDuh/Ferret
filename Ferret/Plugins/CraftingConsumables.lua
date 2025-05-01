@@ -19,17 +19,19 @@ function CraftingConsumables:new()
 
     self.wait_time = 5
 
-    self.should_eat = function(context)
+    self.should_eat = function(plugin, context)
         return true
     end
 
-    self.should_drink = function(context)
+    self.should_drink = function(plugin, context)
         return true
     end
 end
 
 function CraftingConsumables:init()
     Ferret:subscribe(Hooks.PRE_CRAFT, function(context)
+        Logger:info('context: ' .. Table:keys(context))
+        Logger:info('type: ' .. type(context.mission.id))
         Logger:debug_t('plugins.crafting_consumables.pre_craft_start')
         -- Food
         if self:should_eat(context) and (self.food ~= nil and self.food ~= '') then
