@@ -9,7 +9,7 @@ require('Ferret/CosmicExploration/CosmicExploration')
 StellarCraftingRelic = Ferret:extend()
 function StellarCraftingRelic:new()
     StellarCraftingRelic.super.new(self, i18n('templates.stellar_crafting_relic.name'))
-    self.template_version = Version(0, 10, 0)
+    self.template_version = Version(0, 10, 1)
 
     self.job_order = {
         Jobs.Carpenter,
@@ -43,6 +43,7 @@ function StellarCraftingRelic:new()
     }
 
     self.blacklist = MissionList()
+    self.actual_blacklist = MissionList()
     self.auto_blacklist = true
 
     self.minimum_acceptable_result = MissionResult.Gold
@@ -91,8 +92,16 @@ function StellarCraftingRelic:get_target_result(mission)
     return self.minimum_target_result
 end
 
+function StellarCraftingRelic:setup_blacklist()
+    for _, mission in ipairs(self.blacklist:get_all()) do
+        self.actual_blacklist:add(mission)
+    end
+end
+
 function StellarCraftingRelic:setup()
     Logger:info(self.name .. ': ' .. self.template_version:to_string())
+
+    self:setup_blacklist()
 
     PauseYesAlready()
 
@@ -116,7 +125,7 @@ function StellarCraftingRelic:loop()
             if job ~= GetClassJobId() then
                 yield('/gearset change ' .. Jobs.get_name(job))
                 self.cosmic_exploration:set_job(job)
-                self.blacklist = MissionList()
+                self:setup_blacklist()
                 Ferret:wait(1)
             end
 
@@ -176,7 +185,7 @@ function StellarCraftingRelic:loop()
         return
     end
 
-    local mission = Addons.WKSMission:get_best_available_mission(self.blacklist)
+    local mission = Addons.WKSMission:get_best_available_mission(self.actual_blacklist)
     if mission == nil then
         Logger:warn_t('templates.stellar_crafting_relic.failed_to_get_mission')
         Logger:info('Quiting Ferret ' .. self.verion:to_string())
@@ -209,7 +218,7 @@ function StellarCraftingRelic:loop()
 
         if self.auto_blacklist then
             Logger:warn_t('templates.stellar_crafting_relic.mission_blacklisting', { mission = mission.name:get() })
-            self.blacklist:add(mission)
+            self.actual_blacklist:add(mission)
         end
 
         if Addons.Synthesis:is_visible() then

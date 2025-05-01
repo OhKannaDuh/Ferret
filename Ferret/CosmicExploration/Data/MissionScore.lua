@@ -9,12 +9,12 @@
 ---@field next integer
 MissionScore = Object:extend()
 ---@param tier MissionResult
----@param current string
----@param next string
+---@param current integer
+---@param next integer
 function MissionScore:new(tier, current, next)
     self.tier = tier
-    self.current = String:parse_number(current)
-    self.next = String:parse_number(next)
+    self.current = current
+    self.next = next
 end
 
 function MissionScore:to_string()
