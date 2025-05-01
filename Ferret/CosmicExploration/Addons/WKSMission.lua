@@ -62,7 +62,6 @@ function WKSMission:get_available_missions()
     self:log_debug('getting_missions')
 
     local missions = MissionList()
-    local names = {}
 
     for tab = 0, 2 do
         self:callback(true, 15, tab)
@@ -70,12 +69,11 @@ function WKSMission:get_available_missions()
 
         for index = 2, 24 do
             local mission_name = self:get_mission_name_by_index(index):gsub(' ', '')
-            if mission_name == '' or Table:contains(names, mission_name) then
+            if mission_name == '' then
                 break
             end
 
             self:log_debug('mission_found', { mission = mission_name })
-            table.insert(names, mission_name)
 
             ---@diagnostic disable-next-line: undefined-field
             local mission = Ferret.cosmic_exploration.mission_list:find_by_name(mission_name)
