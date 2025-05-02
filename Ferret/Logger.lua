@@ -11,7 +11,7 @@ local Logger = Object:extend()
 function Logger:new()
     self.log_file_directory = nil
     self.file_only = false
-    self.show_debug = false
+    self.show_debug = _debug or false
 end
 
 ---Sets log_file_directory, copies the current log to [name].prev.log and prepares [name].log
@@ -44,7 +44,7 @@ function Logger:log(message)
         IO:open(path, 'a'):write(message .. '\n'):close()
     end
 
-    if not self.file_only then
+    if not self.file_only and Ferret.run then
         yield('/e ' .. message)
     end
 end

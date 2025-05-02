@@ -5,19 +5,33 @@
 
 require('Ferret/Addons/Addon')
 
+local function require_addon_mixin(name)
+    return require('Ferret/Addons/Mixins/' .. name)
+end
+
+local function require_addon(name)
+    return require('Ferret/Addons/' .. name)
+end
+
+AddonMixins = {
+    GracefulClose = require_addon_mixin('GracefulClose'),
+    GracefulOpen = require_addon_mixin('GracefulOpen'),
+}
+
 Addons = {
-    Gathering = require('Ferret/Addons/GatheringAddon'),
-    GatheringMasterpiece = require('Ferret/Addons/GatheringMasterpiece'),
-    Materialize = require('Ferret/Addons/Materialize'),
-    MaterializeDialog = require('Ferret/Addons/MaterializeDialog'),
-    PurifyAutoDialog = require('Ferret/Addons/PurifyAutoDialog'),
-    PurifyItemSelector = require('Ferret/Addons/PurifyItemSelector'),
-    PurifyResult = require('Ferret/Addons/PurifyResult'),
-    SelectIconString = require('Ferret/Addons/SelectIconString'),
-    SelectString = require('Ferret/Addons/SelectString'),
-    SelectYesno = require('Ferret/Addons/SelectYesno'),
-    SpearFishing = require('Ferret/Addons/SpearFishing'),
-    Synthesis = require('Ferret/Addons/Synthesis'),
-    Talk = require('Ferret/Addons/Talk'),
-    ToDoList = require('Ferret/Addons/ToDoList'),
+    Gathering = require_addon('GatheringAddon'),
+    GatheringMasterpiece = require_addon('GatheringMasterpiece'),
+    Materialize = require_addon('Materialize'),
+    MaterializeDialog = require_addon('MaterializeDialog'),
+    PurifyAutoDialog = require_addon('PurifyAutoDialog'),
+    PurifyItemSelector = require_addon('PurifyItemSelector'),
+    PurifyResult = require_addon('PurifyResult'),
+    RecipeNote = require_addon('RecipeNote'),
+    SelectIconString = require_addon('SelectIconString'),
+    SelectString = require_addon('SelectString'),
+    SelectYesno = require_addon('SelectYesno'),
+    SpearFishing = require_addon('SpearFishing'),
+    Synthesis = require_addon('Synthesis'),
+    Talk = require_addon('Talk'),
+    ToDoList = require_addon('ToDoList'),
 }

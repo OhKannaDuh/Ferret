@@ -11,13 +11,13 @@ Addon = Object:extend()
 function Addon:new(key)
     self.key = key
 
-    self.ready_delay = nil
+    self.ready_delay = 1 / 60
     self.ready_max = nil
-    self.not_ready_delay = nil
+    self.not_ready_delay = 1 / 60
     self.not_ready_max = nil
-    self.visible_delay = nil
+    self.visible_delay = 1 / 60
     self.visible_max = nil
-    self.not_visible_delay = nil
+    self.not_visible_delay = 1 / 60
     self.not_visible_max = nil
 end
 

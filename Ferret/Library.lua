@@ -17,10 +17,13 @@ i18n.load(require('Ferret/i18n/jp'))
 -- Mixins
 require('Ferret/Mixins/Translation')
 
+Wait = require('Ferret/Wait')
+
 -- Data enums and objects
 require('Ferret/Data/Translatable')
 require('Ferret/Data/Conditions')
 require('Ferret/Data/Hooks')
+require('Ferret/Data/Events')
 require('Ferret/Data/Jobs')
 require('Ferret/Data/Name')
 require('Ferret/Data/Objects')
@@ -30,6 +33,8 @@ require('Ferret/Data/Version')
 require('Ferret/Data/Node')
 
 -- Other classes
+HookManager = require('Ferret/HookManager')
+EventManager = require('Ferret/EventManager')
 require('Ferret/Targetable')
 require('Ferret/Timer')
 require('Ferret/Sandtimer')

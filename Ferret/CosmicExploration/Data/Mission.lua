@@ -212,6 +212,8 @@ end
 
 ---@return boolean, string
 function Mission:craft_current()
+    HookManager:emit(Hooks.PRE_CRAFT, { mission = self })
+
     local name = Addons.WKSRecipeNotebook:get_current_recipe_name()
     self:log_debug('crafting_current', { name = name })
     local timer = Sandtimer(self.last_crafting_action_threshold)

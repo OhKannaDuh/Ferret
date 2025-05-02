@@ -5,6 +5,8 @@
 
 ---@class WKSRecipeNotebook : Addon
 local WKSRecipeNotebook = Addon:extend()
+WKSRecipeNotebook:implement(AddonMixins.GracefulClose)
+
 function WKSRecipeNotebook:new()
     WKSRecipeNotebook.super.new(self, 'WKSRecipeNotebook')
 end
@@ -35,6 +37,18 @@ end
 
 function WKSRecipeNotebook:get_current_craftable_amount()
     return self:get_node_number(24)
+end
+
+function WKSRecipeNotebook:open()
+    Addons.WKSMissionInfomation:open_craftinglog()
+end
+
+function WKSRecipeNotebook:graceful_open()
+    if self:is_ready() or Addons.WKSMission:is_ready() then
+        return false
+    end
+
+    return Addons.WKSMissionInfomation:graceful_open_craftinglog()
 end
 
 return WKSRecipeNotebook()

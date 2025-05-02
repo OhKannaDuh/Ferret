@@ -29,39 +29,53 @@ function CraftingConsumables:new()
 end
 
 function CraftingConsumables:init()
-    Ferret:subscribe(Hooks.PRE_CRAFT, function(context)
+    HookManager:subscribe(Hooks.PRE_CRAFT, function(context)
         Logger:debug_t('plugins.crafting_consumables.pre_craft_start')
-        -- Food
-        if self:should_eat(context) and (self.food ~= nil and self.food ~= '') then
-            local remaining = self:get_remaining_food_time()
-            if remaining <= self.food_threshold then
-                Logger:debug_t('plugins.crafting_consumables.eating_food', { food = self.food })
-                yield('/item ' .. self.food)
-                Ferret:wait_until(function()
-                    return self:get_remaining_food_time() > remaining
-                end)
 
-                if self:should_drink(context) and (self.medicine ~= nil and self.medicine ~= '') then
-                    Ferret:wait(self.wait_time)
-                end
-            else
-                Logger:debug_t('plugins.crafting_consumables.food_above_time', { time = self.food_threshold })
+        local food_remaining = self:get_remaining_food_time()
+        local should_eat = self:should_eat(context) and self.food ~= '' and food_remaining <= self.food_threshold
+
+        local medicine_remaining = self:get_remaining_medicine_time()
+        local should_drink = self:should_drink(context)
+            and self.medicine ~= ''
+            and medicine_remaining <= self.medicine_threshold
+
+        if not should_eat and not should_drink then
+            return
+        end
+
+        if should_eat then
+            Logger:info('EAT')
+        end
+
+        if should_drink then
+            Logger:info('DRIK')
+        end
+
+        EventManager:emit(Events.STOP_CRAFT)
+
+        if should_eat then
+            Logger:debug_t('plugins.crafting_consumables.eating_food', { food = self.food })
+            yield('/item ' .. self.food)
+            Ferret:wait_until(function()
+                return self:get_remaining_food_time() > food_remaining
+            end)
+
+            if should_drink then
+                Ferret:wait(self.wait_time)
             end
         end
 
         -- Medicine
-        if self:should_drink(context) and (self.medicine ~= nil and self.medicine ~= '') then
-            local remaining = self:get_remaining_medicine_time()
-            if remaining <= self.medicine_threshold then
-                Logger:debug_t('plugins.crafting_consumables.drinking_medicine', { medicine = self.medicine })
-                yield('/item ' .. self.medicine)
-                Ferret:wait_until(function()
-                    return self:get_remaining_medicine_time() > remaining
-                end)
-            else
-                Logger:debug_t('plugins.crafting_consumables.medicine_above_time', { time = self.medicine_threshold })
-            end
+        if should_drink then
+            Logger:debug_t('plugins.crafting_consumables.drinking_medicine', { medicine = self.medicine })
+            yield('/item ' .. self.medicine)
+            Ferret:wait_until(function()
+                return self:get_remaining_medicine_time() > medicine_remaining
+            end)
         end
+
+        EventManager:emit(Events.PREPARE_TO_CRAFT)
     end)
 end
 

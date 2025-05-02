@@ -10,9 +10,9 @@ function WKSHud:new()
 end
 
 function WKSHud:open_mission_menu()
-    if Addons.WKSMission:is_visible() or Addons.WKSMissionInfomation:is_visible() then
-        return
-    end
+    -- if Addons.WKSMission:is_visible() or Addons.WKSMissionInfomation:is_visible() then
+    --     return
+    -- end
 
     self:callback(true, 11)
 end

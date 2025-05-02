@@ -12,7 +12,7 @@ function Repair:new()
 end
 
 function Repair:init()
-    Ferret:subscribe(Hooks.PRE_LOOP, function(context)
+    HookManager:subscribe(Hooks.PRE_LOOP, function(context)
         Logger:debug_t('plugins.repair.check')
         if not NeedsRepair(self.threshold) then
             Logger:debug_t('plugins.repair.not_needed')

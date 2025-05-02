@@ -18,6 +18,7 @@ return {
             sprint = 'Sprint',
             mount_roulette = 'Mount Roulette',
             mount = 'Mount',
+            crafting_log = 'craftinglog',
         },
         addons = {
             messages = {
@@ -60,8 +61,22 @@ return {
             no_loop = 'No loop defined',
             setup_error = 'An error cocured during setup',
             starting_loop = 'Starting Ferret loop',
-            hook_subscription = 'Regsitering callback to hook: %{hook}',
-            emit_event = 'Emitting Event: %{event}',
+            adding_plugin = 'Adding Plugin: %{plugin}',
+            events = {
+                default_message = 'Running default %{event} event callback',
+                stop_caft = {
+                    quiting_synthesis = 'Quiting Synthesis',
+                    closing_recipe_note = 'Closing Recipe Note',
+                },
+            },
+        },
+        hook_manager = {
+            subscribe = 'Regsitering callback to hook: %{hook}',
+            emit = 'Emitting hook: %{hook}',
+        },
+        event_manager = {
+            subscribe = 'Regsitering callback to event: %{event}',
+            emit = 'Emitting event: %{event}',
         },
         world = {
             waiting = 'Waiting until Eorzea time is %{hour}',
@@ -153,6 +168,9 @@ return {
             ephemeral_gathering = {
                 name = 'Ephemeral Gathering',
                 no_node = 'No pathfinding node found',
+            },
+            red_alert = {
+                name = 'Red Alert Farmer',
             },
         },
     },

@@ -1,15 +1,20 @@
 require('Ferret/Actions/Action')
 
+local function require_action(name)
+    return require('Ferret/Actions/' .. name)
+end
+
 Actions = {
-    AetherialReduction = require('Ferret/Actions/AetherialReduction'),
-    AgelessWords = require('Ferret/Actions/AgelessWords'),
-    MateriaExtraction = require('Ferret/Actions/MateriaExtraction'),
-    MeticulouProspector = require('Ferret/Actions/MeticulouProspector'),
-    MeticulousWoodsman = require('Ferret/Actions/MeticulousWoodsman'),
-    Mount = require('Ferret/Actions/MountAction'),
-    MountRoulette = require('Ferret/Actions/MountRoulette'),
-    Repair = require('Ferret/Actions/RepairAction'),
-    SolidReason = require('Ferret/Actions/SolidReason'),
-    Sprint = require('Ferret/Actions/Sprint'),
-    WiseToTheWorld = require('Ferret/Actions/WiseToTheWorld'),
+    AetherialReduction = require_action('AetherialReduction'),
+    AgelessWords = require_action('AgelessWords'),
+    CraftingLog = require_action('CraftingLog'),
+    MateriaExtraction = require_action('MateriaExtraction'),
+    MeticulouProspector = require_action('MeticulouProspector'),
+    MeticulousWoodsman = require_action('MeticulousWoodsman'),
+    Mount = require_action('MountAction'),
+    MountRoulette = require_action('MountRoulette'),
+    Repair = require_action('RepairAction'),
+    SolidReason = require_action('SolidReason'),
+    Sprint = require_action('Sprint'),
+    WiseToTheWorld = require_action('WiseToTheWorld'),
 }

@@ -4,6 +4,7 @@
 --------------------------------------------------------------------------------
 
 ---@class Translation : Object
+---@field translation_path string
 ---@field log_info fun(string, table?)
 ---@field log_debug fun(string, table?)
 ---@field log_warn fun(string, table?)

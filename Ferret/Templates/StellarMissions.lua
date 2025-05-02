@@ -151,10 +151,10 @@ function StellarMissions:loop()
         Logger:debug('mission: ' .. mission:to_string())
 
         mission:start()
-        Ferret:wait(self.wait_timers.post_mission_start)
+
         Addons.WKSRecipeNotebook:wait_until_ready()
-        self:emit(Hooks.PRE_CRAFT, {
-            mission = mission
+        HookManager:emit(Hooks.PRE_CRAFT, {
+            mission = mission,
         })
 
         Addons.WKSHud:open_mission_menu()

@@ -10,7 +10,7 @@ function ExtractMateria:new()
 end
 
 function ExtractMateria:init()
-    Ferret:subscribe(Hooks.PRE_LOOP, function(context)
+    HookManager:subscribe(Hooks.PRE_LOOP, function(context)
         Logger:debug_t('plugins.extract_materia.check')
 
         if not CanExtractMateria() then

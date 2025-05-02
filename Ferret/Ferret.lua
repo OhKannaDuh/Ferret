@@ -5,27 +5,31 @@
 
 require('Ferret/Library')
 
----@class Ferret : Object
+---@class Ferret : Object, Translation
 ---@field name string
 ---@field run boolean
 ---@field language string en/de/fr/jp
 ---@field plugins Plugin[]
----@field hook_subscriptions table<Hook, fun(table)[]>
 ---@field timer Timer
 Ferret = Object:extend()
+Ferret:implement(Translation)
+
 function Ferret:new(name)
     self.name = name
     self.run = true
     self.language = 'en'
     self.plugins = {}
-    self.hook_subscriptions = {}
     self.timer = Timer()
     self.version = Version(0, 11, 4)
+
+    self.translation_path = 'ferret'
+
+    self:register_default_events()
 end
 
 ---@param plugin Plugin
 function Ferret:add_plugin(plugin)
-    Logger:debug_t('Adding plugin: ' .. plugin.name)
+    self:log_debug('adding_plugin', { plugin = plugin.name })
     plugin:init(self)
     self.plugins[plugin.key] = plugin
 end
@@ -93,65 +97,39 @@ function Ferret:start()
     self.timer:start()
     Logger:info_t('version', { name = 'Ferret', version = self.version:to_string() })
 
-    Logger:debug_t('ferret.running_setup')
+    self:log_debug('running_setup')
     if not self:setup() then
-        Logger:error_t('ferret.setup_error')
+        self:log_error('setup_error')
         return
     end
 
-    Logger:debug_t('ferret.starting_loop')
+    self:log_debug('starting_loop')
     while self.run do
-        self:emit(Hooks.PRE_LOOP)
+        HookManager:emit(Hooks.PRE_LOOP)
         self:loop()
         if self.run then
-            self:emit(Hooks.POST_LOOP)
+            HookManager:emit(Hooks.POST_LOOP)
         end
     end
 end
 
----@param hook Hook
----@param callback fun(table)
-function Ferret:subscribe(hook, callback)
-    Logger:debug_t('ferret.hook_subscription', { hook = hook })
-    if not self.hook_subscriptions[hook] then
-        self.hook_subscriptions[hook] = {}
-    end
+function Ferret:register_default_events()
+    EventManager:subscribe(Events.STOP_CRAFT, function(context)
+        self:log_debug('events.default_message', { event = Events.to_string(Events.STOP_CRAFT) })
 
-    table.insert(self.hook_subscriptions[hook], callback)
-end
+        if Addons.Synthesis:graceful_close() then
+            Addons.RecipeNote:wait_until_ready()
+        end
 
----@param event Hook
----@param context table?
-function Ferret:emit(event, context)
-    Logger:debug_t('ferret.emit_event', { event = event })
-    if not self.hook_subscriptions[event] then
-        return
-    end
+        Addons.RecipeNote:graceful_close()
 
-    for _, callback in pairs(self.hook_subscriptions[event]) do
-        callback(context)
-    end
-end
+        Character:wait_until_available()
+    end)
 
----@param name string
-function Ferret:action(name)
-    yield('/ac "' .. name .. '"')
-end
+    EventManager:subscribe(Events.PREPARE_TO_CRAFT, function(context)
+        self:log_debug('events.default_message', { event = Events.to_string(Events.PREPARE_TO_CRAFT) })
 
----@param addon Addon
----@param update_visiblity boolean
----@param ... integer
-function Ferret:callback(addon, update_visiblity, ...)
-    local command = '/callback ' .. addon.key
-    if update_visiblity then
-        command = command .. ' true'
-    else
-        command = command .. ' false'
-    end
-    for k, v in ipairs({ ... }) do
-        command = command .. ' ' .. v
-    end
-
-    Logger:debug_t('ferret.callback', { command = command })
-    yield(command)
+        Character:wait_until_available()
+        Addons.RecipeNote:graceful_open()
+    end)
 end

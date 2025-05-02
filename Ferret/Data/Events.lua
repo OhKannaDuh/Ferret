@@ -1,23 +1,22 @@
 --------------------------------------------------------------------------------
---   DESCRIPTION: Hooks for ferret callbacks
+--   DESCRIPTION: Events for ferret callbacks
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
----@alias Hook integer
-Hooks = {
-    PRE_LOOP = 1,
-    POST_LOOP = 2,
-    PRE_CRAFT = 3,
+---@alias Event integer
+Events = {
+    STOP_CRAFT = 1,
+    PREPARE_TO_CRAFT = 2,
 }
 
 --- Converts an event ID to its string representation.
----@param event Hook
+---@param event Event
 ---@return string
-function Hooks.to_string(event)
-    for name, id in pairs(Hooks) do
+function Events.to_string(event)
+    for name, id in pairs(Events) do
         if id == event then
             return name
         end
     end
-    return 'UNKNOWN_HOOK'
+    return 'UNKNOWN_EVENT'
 end

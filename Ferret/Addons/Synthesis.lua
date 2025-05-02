@@ -5,12 +5,10 @@
 
 ---@class Synthesis : Addon
 local Synthesis = Addon:extend()
+Synthesis:implement(AddonMixins.GracefulClose)
+
 function Synthesis:new()
     Synthesis.super.new(self, 'Synthesis')
-end
-
-function Synthesis:quit()
-    self:callback(true, -1)
 end
 
 return Synthesis()

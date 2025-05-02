@@ -16,7 +16,7 @@ function AethericReduction:new()
 end
 
 function AethericReduction:init()
-    Ferret:subscribe(Hooks.POST_LOOP, function(context)
+    HookManager:subscribe(Hooks.POST_LOOP, function(context)
         self:log_info('check')
         if GetInventoryFreeSlotCount() > self.reduce_at then
             self:log_info('not_needed')

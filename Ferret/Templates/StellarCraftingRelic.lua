@@ -134,9 +134,7 @@ function StellarCraftingRelic:loop()
         end
     end
 
-    Ferret:wait(self.wait_timers.pre_open_mission_list)
     Addons.WKSMission:open_basic_missions()
-    Ferret:wait(self.wait_timers.post_open_mission_list)
     if maxed then
         Logger:info_t('templates.stellar_crafting_relic.maxed')
         self:stop()
@@ -198,9 +196,8 @@ function StellarCraftingRelic:loop()
 
     mission:start()
 
-    Ferret:wait(self.wait_timers.post_mission_start)
     Addons.WKSRecipeNotebook:wait_until_ready()
-    self:emit(Hooks.PRE_CRAFT, {
+    HookManager:emit(Hooks.PRE_CRAFT, {
         mission = mission,
     })
 

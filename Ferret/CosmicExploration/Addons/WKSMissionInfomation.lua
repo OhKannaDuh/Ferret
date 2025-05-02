@@ -14,6 +14,23 @@ function WKSMissionInfomation:new()
 
     self.translation_path = 'modules.cosmic_exploration.wks_mission_information'
 end
+function WKSMissionInfomation:open()
+    Addons.WKSHud:open_mission_menu()
+end
+
+-- Requires it's own implementation because it shares an opening method with WKSMission
+function WKSMissionInfomation:graceful_open()
+    if self:is_ready() or Addons.WKSMission:is_ready() then
+        return false
+    end
+
+    repeat
+        self:open()
+        Wait:fps(30)
+    until self:is_ready() or Addons.WKSMission:is_ready()
+
+    return self:is_ready()
+end
 
 function WKSMissionInfomation:report()
     self:log_debug('report')
@@ -35,6 +52,30 @@ function WKSMissionInfomation:abandon()
         end
         Ferret:wait(0.1)
     until not WKSMissionInfomation:is_visible()
+end
+
+function WKSMissionInfomation:open_cosmopouch()
+    self:callback(true, 13)
+end
+
+function WKSMissionInfomation:graceful_open_cosmopouch()
+    -- if Addons.
+    return false
+end
+
+function WKSMissionInfomation:open_craftinglog()
+    self:callback(true, 14)
+end
+
+function WKSMissionInfomation:graceful_open_craftinglog()
+    if Addons.WKSRecipeNotebook:is_ready() then
+        return false
+    end
+
+    repeat
+        self:open_craftinglog()
+        Wait:fps(5)
+    until Addons.WKSRecipeNotebook:is_ready()
 end
 
 return WKSMissionInfomation()
