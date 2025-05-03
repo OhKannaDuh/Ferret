@@ -1,5 +1,5 @@
 local ferret = require('Ferret/Templates/Spearfishing')
-require('Ferret/Plugins/AethericReduction')
+require('Ferret/Extensions/AethericReduction')
 
 ferret.name = 'Sungilt Aethersand'
 ferret.fish = 'Sunlit Prism'

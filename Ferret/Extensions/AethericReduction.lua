@@ -1,22 +1,20 @@
 --------------------------------------------------------------------------------
---   DESCRIPTION: Plugin that Aetheric Reduces things
+--   DESCRIPTION: Extension that Aetheric Reduces things
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
----@class AethericReduction : Plugin, Translation
+---@class AethericReduction : Extension
 ---@field reduce_at integer
-AethericReduction = Plugin:extend()
-AethericReduction:implement(Translation)
+local AethericReduction = Extension:extend()
 
 function AethericReduction:new()
     AethericReduction.super.new(self, 'AethericReduction', 'aetheric_reduction')
-    self.reduce_at = 100
 
-    self.translation_path = 'plugins.aetheric_reduction'
+    self.reduce_at = 100
 end
 
 function AethericReduction:init()
-    HookManager:subscribe(Hooks.POST_LOOP, function(context)
+    EventManager:subscribe(Events.POST_LOOP, function(context)
         self:log_info('check')
         if GetInventoryFreeSlotCount() > self.reduce_at then
             self:log_info('not_needed')
@@ -48,4 +46,4 @@ function AethericReduction:init()
     end)
 end
 
-Ferret:add_plugin(AethericReduction())
+return AethericReduction()

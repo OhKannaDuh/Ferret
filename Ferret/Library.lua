@@ -7,22 +7,18 @@
 ---@field super Object
 ---@field new fun(Object, ...)
 Object = require('external/classic')
+
 i18n = require('external/i18n/init')
 i18n.setLocale(_language or 'en')
-i18n.load(require('Ferret/i18n/en'))
-i18n.load(require('Ferret/i18n/de'))
-i18n.load(require('Ferret/i18n/fr'))
-i18n.load(require('Ferret/i18n/jp'))
+i18n.load(require('Ferret/i18n/translations'))
 
 -- Mixins
 require('Ferret/Mixins/Translation')
 
-Wait = require('Ferret/Wait')
-
 -- Data enums and objects
 require('Ferret/Data/Translatable')
 require('Ferret/Data/Conditions')
-require('Ferret/Data/Hooks')
+require('Ferret/Data/Events')
 require('Ferret/Data/Requests')
 require('Ferret/Data/Jobs')
 require('Ferret/Data/Name')
@@ -32,15 +28,18 @@ require('Ferret/Data/Weather')
 require('Ferret/Data/Version')
 require('Ferret/Data/Node')
 
--- Other classes
-HookManager = require('Ferret/HookManager')
+-- Managers
+EventManager = require('Ferret/EventManager')
 RequestManager = require('Ferret/RequestManager')
+ExtensionManager = require('Ferret/ExtensionManager')
+
+-- Other classes
 require('Ferret/Targetable')
 require('Ferret/Timer')
 require('Ferret/Sandtimer')
 
--- Base plugin
-require('Ferret/Plugins/Plugin')
+-- Base extension
+require('Ferret/Extensions/Extension')
 
 -- Addons
 require('Ferret/Addons/Addons')
@@ -61,6 +60,4 @@ Logger = require('Ferret/Logger')
 Debug = require('Ferret/Debug')
 Table = require('Ferret/Table')
 String = require('Ferret/String')
-
--- Modules
-require('Ferret/CosmicExploration/Library')
+Wait = require('Ferret/Wait')

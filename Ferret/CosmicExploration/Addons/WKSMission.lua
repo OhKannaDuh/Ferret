@@ -49,19 +49,16 @@ function WKSMission:graceful_open()
 end
 
 function WKSMission:open_basic_missions()
-    self:open()
     self:log_debug('open_basic')
     self:callback(true, 15, 0)
 end
 
 function WKSMission:open_critical_missions()
-    self:open()
     self:log_debug('open_critical')
     self:callback(true, 15, 1)
 end
 
 function WKSMission:open_provisional_missions()
-    self:open()
     self:log_debug('open_provisional')
     self:callback(true, 15, 2)
 end
@@ -78,9 +75,9 @@ function WKSMission:get_available_missions()
 
     for tab = 0, 2 do
         self:callback(true, 15, tab)
-        Ferret:wait(0.5)
+        self:wait_until_ready()
 
-        for index = 2, 24 do
+        for index = 2, 400 do
             local mission_name = self:get_mission_name_by_index(index):gsub(' ', '')
             if mission_name == '' or Table:contains(names, mission_name) then
                 break
@@ -90,7 +87,7 @@ function WKSMission:get_available_missions()
             table.insert(names, mission_name)
 
             ---@diagnostic disable-next-line: undefined-field
-            local mission = Ferret.cosmic_exploration.mission_list:find_by_name(mission_name)
+            local mission = CosmicExploration.mission_list:find_by_name(mission_name)
             if mission ~= nil and mission:is_available() then
                 missions:add(mission)
             end

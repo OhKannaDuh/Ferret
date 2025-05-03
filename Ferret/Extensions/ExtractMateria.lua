@@ -1,20 +1,20 @@
 --------------------------------------------------------------------------------
---   DESCRIPTION: Plugin that extracts materia before a loop
+--   DESCRIPTION: Extension that extracts materia before a loop
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
----@class ExtractMateria : Plugin
-ExtractMateria = Plugin:extend()
+---@class ExtractMateria : Extension
+local ExtractMateria = Extension:extend()
 function ExtractMateria:new()
     ExtractMateria.super.new(self, 'Extract Materia', 'extract_materia')
 end
 
 function ExtractMateria:init()
-    HookManager:subscribe(Hooks.PRE_LOOP, function(context)
-        Logger:debug_t('plugins.extract_materia.check')
+    EventManager:subscribe(Events.PRE_LOOP, function(context)
+        self:log_debug('check')
 
         if not CanExtractMateria() then
-            Logger:debug_t('plugins.extract_materia.not_needed')
+            self:log_debug('not_needed')
             return
         end
 
@@ -23,7 +23,8 @@ function ExtractMateria:init()
             Addons.Materialize:wait_until_ready()
         end
 
-        Logger:debug_t('plugins.extract_materia.extracting')
+        self:log_debug('extracting')
+        RequestManager:request(Requests.STOP_CRAFT)
 
         while CanExtractMateria(100) do
             if Addons.Materialize:is_visible() then
@@ -46,8 +47,8 @@ function ExtractMateria:init()
         end
 
         Addons.Materialize:close()
-        Logger:debug_t('plugins.extract_materia.done')
+        self:log_debug('done')
     end)
 end
 
-Ferret:add_plugin(ExtractMateria())
+return ExtractMateria()

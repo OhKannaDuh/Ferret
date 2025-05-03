@@ -33,7 +33,7 @@ function StellarCraftingRelic:new()
         [Jobs.Culinarian] = 1,
     }
 
-    self.cosmic_exploration = CosmicExploration()
+    CosmicExploration = CosmicExploration()
 
     self.wait_timers = {
         pre_open_mission_list = 0,
@@ -124,8 +124,8 @@ function StellarCraftingRelic:loop()
         if rank < 9 then
             maxed = false
             if job ~= GetClassJobId() then
-                yield('/gearset change ' .. Jobs.get_name(job))
-                self.cosmic_exploration:set_job(job)
+                Jobs.change_to(job)
+                CosmicExploration:set_job(job)
                 self:setup_blacklist()
                 Ferret:wait(1)
             end
@@ -173,7 +173,7 @@ function StellarCraftingRelic:loop()
         Ferret:wait(1)
         Addons.SelectString:select_index(0)
         Ferret:wait(1)
-        Addons.SelectIconString:select_index(self.cosmic_exploration.job - 8)
+        Addons.SelectIconString:select_index(CosmicExploration.job - 8)
         Ferret:wait(1)
         Addons.SelectYesno:yes()
         Addons.Talk:wait_until_ready()
@@ -197,7 +197,7 @@ function StellarCraftingRelic:loop()
     mission:start()
 
     Addons.WKSRecipeNotebook:wait_until_ready()
-    HookManager:emit(Hooks.PRE_CRAFT, {
+    EventManager:emit(Events.PRE_CRAFT, {
         mission = mission,
     })
 

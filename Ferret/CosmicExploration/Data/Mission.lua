@@ -180,8 +180,17 @@ function Mission:is_available()
 end
 
 function Mission:start()
-    Addons.WKSMission:wait_until_ready()
-    Addons.WKSMission:start_mission(self.id)
+    Addons.WKSHud:wait_until_ready()
+    Addons.WKSMission:graceful_open()
+    if not Addons.WKSMission:is_ready() then
+        return false
+    end
+
+    repeat
+        Addons.WKSMission:start_mission(self.id)
+        Wait:fps(5)
+    until Addons.WKSRecipeNotebook:is_ready()
+    return true
 end
 
 ---@param goal MissionResult
@@ -212,7 +221,7 @@ end
 
 ---@return boolean, string
 function Mission:craft_current()
-    HookManager:emit(Hooks.PRE_CRAFT, { mission = self })
+    EventManager:emit(Events.PRE_CRAFT, { mission = self })
 
     local name = Addons.WKSRecipeNotebook:get_current_recipe_name()
     self:log_debug('crafting_current', { name = name })
@@ -324,13 +333,25 @@ function Mission:handle(goal)
 end
 
 function Mission:report()
-    Addons.WKSHud:open_mission_menu()
-    Addons.WKSMissionInfomation:report()
+    Addons.WKSHud:wait_until_ready()
+    Addons.WKSMission:graceful_open()
+    if not Addons.WKSMission:is_ready() then
+        Addons.WKSMissionInfomation:report()
+        return true
+    end
+
+    return false
 end
 
 function Mission:abandon()
-    Addons.WKSHud:open_mission_menu()
-    Addons.WKSMissionInfomation:abandon()
+    Addons.WKSHud:wait_until_ready()
+    Addons.WKSMission:graceful_open()
+    if not Addons.WKSMission:is_ready() then
+        Addons.WKSMissionInfomation:abandon()
+        return true
+    end
+
+    return false
 end
 
 ---@return string
@@ -342,4 +363,8 @@ function Mission:to_string()
         self.job,
         self.class
     )
+end
+
+function Mission:__tostring()
+    return self.name:get()
 end

@@ -23,7 +23,7 @@ end
 
 ---@param request Request
 ---@param context table?
-function RequestManager:emit(request, context)
+function RequestManager:request(request, context)
     self:log_debug('emit', { request = Requests.to_string(request) })
     if not self.subscriptions[request] then
         Logger:warn('NO EVENT ' .. request)

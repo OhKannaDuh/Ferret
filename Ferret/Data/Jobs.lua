@@ -34,6 +34,10 @@ Jobs.gearset_name_map = {
     [Jobs.Fisher] = i18n('jobs.fisher'),
 }
 
-function Jobs.get_name(job)
+function Jobs.to_string(job)
     return Jobs.gearset_name_map[job]
+end
+
+function Jobs.change_to(job)
+    yield('/gearset change ' .. Jobs.to_string(job))
 end

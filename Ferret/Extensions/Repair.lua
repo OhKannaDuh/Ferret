@@ -1,25 +1,25 @@
 --------------------------------------------------------------------------------
---   DESCRIPTION: Plugin that repairs your gear before a loop
+--   DESCRIPTION: Extension that repairs your gear before a loop
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
----@class Repair : Plugin
+---@class Repair : Extension
 ---@field threshold integer
-Repair = Plugin:extend()
+local Repair = Extension:extend()
 function Repair:new()
     Repair.super.new(self, 'Repair', 'repair')
     self.threshold = 50
 end
 
 function Repair:init()
-    HookManager:subscribe(Hooks.PRE_LOOP, function(context)
-        Logger:debug_t('plugins.repair.check')
+    EventManager:subscribe(Events.PRE_LOOP, function(context)
+        self:log_debug('check')
         if not NeedsRepair(self.threshold) then
-            Logger:debug_t('plugins.repair.not_needed')
+            self:log_debug('not_needed')
             return
         end
 
-        Logger:debug_t('plugins.repair.repairing')
+        self:log_debug('repairing')
         while not IsAddonVisible('Repair') do
             Actions.Repair:execute()
             Ferret:wait(0.5)
@@ -39,8 +39,8 @@ function Repair:init()
 
         Ferret:wait(1)
         yield('/callback Repair true -1')
-        Logger:debug_t('plugins.repair.done')
+        self:log_debug('done')
     end)
 end
 
-Ferret:add_plugin(Repair())
+return Repair()

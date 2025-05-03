@@ -7,6 +7,9 @@
   "settings": {
     "files.exclude": {
       "**/*.cs": true
-    }
+    },
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "editor.formatOnSave": true
   }
 }

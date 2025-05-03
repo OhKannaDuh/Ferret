@@ -4,7 +4,7 @@
 --------------------------------------------------------------------------------
 
 require('Ferret/Ferret')
-require('Ferret/CosmicExploration/CosmicExploration')
+require('Ferret/CosmicExploration/Library')
 
 ---@class RedAlert : Ferret, Translation
 RedAlert = Ferret:extend()
@@ -18,8 +18,6 @@ function RedAlert:new()
 
     self.mission = nil
     self.turn_in = Targetable('Collection Point')
-
-    self.cosmic_exploration = CosmicExploration()
 end
 
 function RedAlert:setup()
@@ -30,35 +28,29 @@ function RedAlert:setup()
         return false
     end
 
+    Jobs.change_to(self.mission.job)
+
     PauseYesAlready()
 
     return true
 end
 
 function RedAlert:loop()
-    Addons.WKSHud:wait_until_ready()
+    CosmicExploration:open_mission_menu()
+    Addons.WKSMission:open_provisional_missions()
 
-    repeat
-        Addons.WKSMission:open()
-        Ferret:wait(0.2)
-    until Addons.WKSMission:is_ready()
-
-    Addons.WKSMission:open_critical_missions()
-    self.mission:start()
-    Addons.WKSRecipeNotebook:wait_until_ready()
-    HookManager:emit(Hooks.PRE_CRAFT, {
-        mission = self.mission,
-    })
-
-    Addons.WKSHud:open_mission_menu()
+    if not self.mission:start() then
+        Logger:warn('Failed to start mission')
+        return
+    end
 
     self.mission:handle(MissionResult.Gold)
 
-    Addons.WKSHud:open_mission_menu()
-    Addons.WKSMissionInfomation:wait_until_ready()
+    CosmicExploration:open_mission_infomation()
+    RequestManager:request(Requests.STOP_CRAFT)
 
     self.turn_in:interact()
-    Ferret:wait(3) -- Adjust this wait time
+    Ferret:wait(3)
 end
 
 ---@return boolean

@@ -1,17 +1,18 @@
 --------------------------------------------------------------------------------
---   DESCRIPTION: Plugin that consumes food and medicine before crafting
+--   DESCRIPTION: Extension that consumes food and medicine before crafting
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
----@class CraftingConsumables : Plugin
+---@class CraftingConsumables : Extension
 ---@field food string
 ---@field food_threshold integer
 ---@field medicine string
 ---@field medicine_threshold integer
 ---@field wait_time integer The time to wait before drinking medicine after eating food
-CraftingConsumables = Plugin:extend()
+local CraftingConsumables = Extension:extend()
 function CraftingConsumables:new()
     CraftingConsumables.super.new(self, 'Crafting Consumables', 'crafting_consumables')
+
     self.food = ''
     self.food_threshold = 5
     self.medicine = ''
@@ -29,8 +30,8 @@ function CraftingConsumables:new()
 end
 
 function CraftingConsumables:init()
-    HookManager:subscribe(Hooks.PRE_CRAFT, function(context)
-        Logger:debug_t('plugins.crafting_consumables.pre_craft_start')
+    EventManager:subscribe(Events.PRE_CRAFT, function(context)
+        self:log_debug('pre_craft_start')
 
         local food_remaining = self:get_remaining_food_time()
         local should_eat = self:should_eat(context) and self.food ~= '' and food_remaining <= self.food_threshold
@@ -44,10 +45,11 @@ function CraftingConsumables:init()
             return
         end
 
-        RequestManager:emit(Requests.STOP_CRAFT)
+        RequestManager:request(Requests.STOP_CRAFT)
 
         if should_eat then
-            Logger:debug_t('plugins.crafting_consumables.eating_food', { food = self.food })
+            self:log_debug('eating_food', { food = self.food })
+
             yield('/item ' .. self.food)
             Ferret:wait_until(function()
                 return self:get_remaining_food_time() > food_remaining
@@ -60,14 +62,14 @@ function CraftingConsumables:init()
 
         -- Medicine
         if should_drink then
-            Logger:debug_t('plugins.crafting_consumables.drinking_medicine', { medicine = self.medicine })
+            self:log_debug('drinking_medicine', { medicine = self.medicine })
             yield('/item ' .. self.medicine)
             Ferret:wait_until(function()
                 return self:get_remaining_medicine_time() > medicine_remaining
             end)
         end
 
-        RequestManager:emit(Requests.PREPARE_TO_CRAFT)
+        RequestManager:request(Requests.PREPARE_TO_CRAFT)
     end)
 end
 
@@ -81,4 +83,4 @@ function CraftingConsumables:get_remaining_medicine_time()
     return math.floor(GetStatusTimeRemaining(Status.Medicated) / 60)
 end
 
-Ferret:add_plugin(CraftingConsumables())
+return CraftingConsumables()

@@ -33,6 +33,6 @@ The best way to get your issue noticed and not lost among messages is by submitt
 
 ```
 local stellar_missions = require("Ferret/Templates/StellarMissions") --example
-require("Ferret/Plugins/ExtractMateria") -- plugins are auto registered
-require("Ferret/Plugins/Repair")
+require("Ferret/Extensions/ExtractMateria") -- extensions are auto registered
+require("Ferret/Extensions/Repair")
 ```

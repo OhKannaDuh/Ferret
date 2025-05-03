@@ -10,48 +10,64 @@
 ---@field log_warn fun(string, table?)
 ---@field log_error fun(string, table?, boolean?)
 Translation = Object:extend()
-function Translation:new()
-    self.translation_path = nil
+function Translation:new(translation_path)
+    self.translation_path = translation_path
 end
 
 function Translation:build_key(key)
     return self.translation_path .. '.' .. key
 end
 
-function Translation:log_info(key, args)
+function Translation:log_info(key, args, should_log)
     if not self.translation_path then
         Logger:warn('No translation_path set')
         Debug:log_previous_call()
+        return
+    end
+
+    if should_log ~= nil and not should_log then
         return
     end
 
     Logger:info_t(self:build_key(key), args)
 end
 
-function Translation:log_debug(key, args)
+function Translation:log_debug(key, args, should_log)
     if not self.translation_path then
         Logger:warn('No translation_path set')
         Debug:log_previous_call()
+        return
+    end
+
+    if should_log ~= nil and not should_log then
         return
     end
 
     Logger:debug_t(self:build_key(key), args)
 end
 
-function Translation:log_warn(key, args)
+function Translation:log_warn(key, args, should_log)
     if not self.translation_path then
         Logger:warn('No translation_path set')
         Debug:log_previous_call()
         return
     end
 
+    if should_log ~= nil and not should_log then
+        return
+    end
+
     Logger:warn_t(self:build_key(key), args)
 end
 
-function Translation:log_error(key, args, show_backtrace)
+function Translation:log_error(key, args, show_backtrace, should_log)
     if not self.translation_path then
         Logger:warn('No translation_path set')
         Debug:log_previous_call()
+        return
+    end
+
+    if should_log ~= nil and not should_log then
         return
     end
 

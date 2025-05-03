@@ -5,37 +5,37 @@
 
 require('Ferret/Library')
 
----@class Ferret : Object, Translation
+---@class FerretCore : Object, Translation
 ---@field name string
 ---@field run boolean
 ---@field language string en/de/fr/jp
----@field plugins Plugin[]
 ---@field timer Timer
-Ferret = Object:extend()
-Ferret:implement(Translation)
+local FerretCore = Object:extend()
+FerretCore:implement(Translation)
 
-function Ferret:new(name)
-    self.name = name
+function FerretCore:new(name)
+    self.translation_path = 'ferret'
+
+    self.name = name or 'Ferret'
     self.run = true
     self.language = 'en'
-    self.plugins = {}
     self.timer = Timer()
     self.version = Version(0, 11, 4)
+end
 
-    self.translation_path = 'ferret'
+function FerretCore:init()
+    Ferret = self
+
+    Logger:init()
+
+    Logger:info_t('version', { name = 'Ferret', version = self.version })
 
     self:register_default_events()
 end
 
----@param plugin Plugin
-function Ferret:add_plugin(plugin)
-    self:log_debug('adding_plugin', { plugin = plugin.name })
-    plugin:init(self)
-    self.plugins[plugin.key] = plugin
-end
-
+---@deprecated
 ---@param interval number
-function Ferret:wait(interval)
+function FerretCore:wait(interval)
     yield('/wait ' .. interval)
 end
 
@@ -43,7 +43,7 @@ end
 ---@param condition fun(): boolean
 ---@param delay? number
 ---@param max? number
-function Ferret:repeat_until(action, condition, delay, max)
+function FerretCore:repeat_until(action, condition, delay, max)
     local delay = delay or 0.5
     local elapsed = 0
 
@@ -61,7 +61,7 @@ end
 ---@param condition fun(): boolean
 ---@param delay? number
 ---@param max? number
-function Ferret:wait_until(condition, delay, max)
+function FerretCore:wait_until(condition, delay, max)
     local delay = delay or 0.5
     local elapsed = 0
 
@@ -76,26 +76,25 @@ function Ferret:wait_until(condition, delay, max)
 end
 
 ---Stops the loop from running
-function Ferret:stop()
+function FerretCore:stop()
     Logger:debug_t('ferret.stopping')
     self.run = false
 end
 
 ---Base setup function
-function Ferret:setup()
+function FerretCore:setup()
     Logger:warn_t('ferret.no_setup')
 end
 
 ---Base loop function
-function Ferret:loop()
+function FerretCore:loop()
     Logger:warn_t('ferret.no_loop')
     self:stop()
 end
 
 ---Starts the loop
-function Ferret:start()
+function FerretCore:start()
     self.timer:start()
-    Logger:info_t('version', { name = 'Ferret', version = self.version:to_string() })
 
     self:log_debug('running_setup')
     if not self:setup() then
@@ -105,15 +104,18 @@ function Ferret:start()
 
     self:log_debug('starting_loop')
     while self.run do
-        HookManager:emit(Hooks.PRE_LOOP)
+        EventManager:emit(Events.PRE_LOOP)
+
         self:loop()
+
         if self.run then
-            HookManager:emit(Hooks.POST_LOOP)
+            EventManager:emit(Events.POST_LOOP)
         end
     end
 end
 
-function Ferret:register_default_events()
+function FerretCore:register_default_events()
+    self:log_debug('requests.registering_callbacks')
     RequestManager:subscribe(Requests.STOP_CRAFT, function(context)
         self:log_debug('requests.default_message', { request = Requests.to_string(Requests.STOP_CRAFT) })
 
@@ -133,3 +135,5 @@ function Ferret:register_default_events()
         Addons.RecipeNote:graceful_open()
     end)
 end
+
+return FerretCore

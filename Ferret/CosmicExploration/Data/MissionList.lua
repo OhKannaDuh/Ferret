@@ -3,10 +3,17 @@
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
----@class MissionList : Object
+---@class MissionList : Object, Translation
 ---@field missions Mission[]
 MissionList = Object:extend()
+MissionList:implement(Translation)
+
+MissionList.debug = {
+    finding_mission_by_name = false,
+}
+
 function MissionList:new()
+    self.translation_path = 'modules.cosmic_exploration.mission_list'
     self.missions = {}
 end
 
@@ -78,7 +85,8 @@ end
 
 ---@param name string
 function MissionList:find_by_name(name)
-    Logger:debug('Finding mission by name: ' .. name)
+    self:log_debug('find_by_name', { name = name }, MissionList.debug.finding_mission_by_name)
+
     name = string.upper(name)
     for _, mission in pairs(self.missions) do
         local start_index = string.find(string.upper(mission.name:get()), name, 0, true)
