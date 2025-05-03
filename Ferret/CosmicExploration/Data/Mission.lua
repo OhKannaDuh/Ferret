@@ -295,6 +295,10 @@ function Mission:multi_recipe(goal)
         end
 
         for index, count in pairs(self.multi_craft_config) do
+            if not self:has_base_crafting_material() then
+                return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
+            end
+
             Addons.WKSRecipeNotebook:wait_until_ready()
             Addons.WKSRecipeNotebook:set_index(index)
             Addons.WKSRecipeNotebook:set_hq()

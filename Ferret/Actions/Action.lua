@@ -3,11 +3,10 @@
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
----@class Action : Object
+---@class Action : Object, Translation
 ---@field name string
 ---@field is_ac_command boolean
 Action = Object:extend()
-
 ---@param name string
 function Action:new(name, is_ac_command)
     self.name = name

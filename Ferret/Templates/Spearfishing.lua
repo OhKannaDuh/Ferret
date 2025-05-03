@@ -3,17 +3,17 @@
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
-require('Ferret/Ferret')
+Template = require('Ferret/Templates/Template')
 
----@class Spearfishing : Ferret
+---@class Spearfishing : Template
 ---@field node Targetable
 ---@field agpreset string|nil
 ---@field fish string|nil
 ---@field starting_node Node|nil
-Spearfishing = Ferret:extend()
+Spearfishing = Template:extend()
+
 function Spearfishing:new()
-    Spearfishing.super.new(self, i18n('templates.spearfishing.name'))
-    self.template_version = Version(0, 1, 0)
+    Spearfishing.super.new(self, 'spearfishing', Version(0, 2, 0))
 
     self.node = Targetable(i18n('nodes.teeming_waters'))
     self.agpreset = nil
@@ -22,8 +22,6 @@ function Spearfishing:new()
 end
 
 function Spearfishing:setup()
-    Logger:info(self.name .. ': ' .. self.template_version:to_string())
-
     Character:wait_until_available()
     if self.agpreset ~= nil then
         yield('/agpreset ' .. self.agpreset)
@@ -50,7 +48,7 @@ end
 function Spearfishing:loop()
     local node = Pathfinding:next()
     if node == nil then
-        Logger:warn_t('templates.spearfishing.no_node')
+        self:log_warn('no_node')
         self:stop()
         return
     end
@@ -66,15 +64,12 @@ function Spearfishing:loop()
     Pathfinding:fly_to(Character:get_target_position())
 
     Addons.SpearFishing:wait_until_ready()
-    Ferret:wait(1)
+    Wait:seconds(1)
     Addons.SpearFishing:wait_until_not_ready()
 
     Pathfinding:stop()
     Pathfinding:wait_to_stop_moving()
-    Ferret:wait(3)
+    Wait:seconds(1)
 end
 
-local ferret = Spearfishing()
-Ferret = ferret
-
-return ferret
+return Spearfishing():init()
