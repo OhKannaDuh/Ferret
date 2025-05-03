@@ -19,6 +19,7 @@ function CraftingConsumables:new()
     self.medicine_threshold = 5
 
     self.wait_time = 5
+    self.max_attempts = 3
 
     self.should_eat = function(plugin, context)
         return true
@@ -49,13 +50,16 @@ function CraftingConsumables:init()
 
         if should_eat then
             self:log_debug('eating_food', { food = self.food })
+            local attempt = 0
 
             repeat
                 yield('/item ' .. self.food)
+                attempt = attempt + 1
+
                 Ferret:wait_until(function()
                     return self:get_remaining_food_time() > food_remaining
                 end, 0.5, self.wait_time * 2)
-            until self:get_remaining_food_time() > food_remaining
+            until self:get_remaining_food_time() > food_remaining or attempt >= self.max_attempts
 
             if should_drink then
                 Ferret:wait(self.wait_time)
@@ -65,13 +69,16 @@ function CraftingConsumables:init()
         -- Medicine
         if should_drink then
             self:log_debug('drinking_medicine', { medicine = self.medicine })
+            local attempt = 0
 
             repeat
                 yield('/item ' .. self.medicine)
+                attempt = attempt + 1
+
                 Ferret:wait_until(function()
                     return self:get_remaining_medicine_time() > medicine_remaining
                 end, 0.5, self.wait_time * 2)
-            until self:get_remaining_medicine_time() > medicine_remaining
+            until self:get_remaining_medicine_time() > medicine_remaining or attempt >= self.max_attempts
         end
 
         RequestManager:request(Requests.PREPARE_TO_CRAFT)
