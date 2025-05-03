@@ -100,7 +100,7 @@ function WKSMission:get_available_missions()
     return missions
 end
 
-function WKSMission:get_best_available_mission(blacklist)
+function WKSMission:get_best_available_mission(blacklist, progress)
     -- Function to select the best mission based on urgency-weighted progress
     local function select_best_mission(progress, rewards)
         local urgencies = {}
@@ -135,20 +135,6 @@ function WKSMission:get_best_available_mission(blacklist)
 
         return best_index
     end
-
-    Addons.WKSHud:close_cosmic_research()
-    Ferret:wait(1)
-
-    Addons.WKSHud:open_cosmic_research()
-    Addons.WKSHud:open_mission_menu()
-    Ferret:wait(1)
-
-    local progress = {
-        Addons.WKSToolCustomize:get_exp_1(),
-        Addons.WKSToolCustomize:get_exp_2(),
-        Addons.WKSToolCustomize:get_exp_3(),
-        Addons.WKSToolCustomize:get_exp_4(),
-    }
 
     local rewards = {}
     local missions = self:get_available_missions()

@@ -110,7 +110,7 @@ return {
     templates = {
         stellar_crafting_relic = {
             name = 'Stellar Crafting Relic',
-            maxed = 'All relics at rank 9! Exiting.',
+            maxed = 'All relics at rank 9! Proud of you!.',
             failed_to_get_mission = 'Failed to get mission.',
             mission_failed = 'Mission failed: %{mission}',
             mission = 'Mission: %{mission}',

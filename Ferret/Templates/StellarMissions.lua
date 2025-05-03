@@ -3,7 +3,7 @@
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
-Base = require('Ferret/FerretCore')
+Template = require('Ferret/Templates/Template')
 require('Ferret/CosmicExploration/Library')
 
 MissionOrder = {
@@ -11,10 +11,11 @@ MissionOrder = {
     Random = 2, -- Execute missions in random order
 }
 
-StellarMissions = Base:extend()
+---@class StellarMissions : Template
+StellarMissions = Template:extend()
+
 function StellarMissions:new()
-    StellarMissions.super.new(self, i18n('templates.stellar_missions.name'))
-    self.template_version = Version(2, 8, 2)
+    StellarMissions.super.new(self, 'stellar_missions', Version(2, 8, 2))
 
     self.mission_list = MissionList()
     self.mission_order = MissionOrder.TopPriority
@@ -23,9 +24,8 @@ function StellarMissions:new()
 end
 
 function StellarMissions:init()
-    Base.init(self)
+    Template.init(self)
 
-    Logger:info(self.name .. ': ' .. self.template_version:to_string())
     CosmicExploration:init()
 
     return self

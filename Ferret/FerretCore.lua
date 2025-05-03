@@ -96,13 +96,13 @@ end
 function FerretCore:start()
     self.timer:start()
 
-    self:log_debug('running_setup')
+    Logger:debug_t('ferret.running_setup')
     if not self:setup() then
         self:log_error('setup_error')
         return
     end
 
-    self:log_debug('starting_loop')
+    Logger:debug_t('ferret.starting_loop')
     while self.run do
         EventManager:emit(Events.PRE_LOOP)
 
@@ -115,9 +115,9 @@ function FerretCore:start()
 end
 
 function FerretCore:register_default_events()
-    self:log_debug('requests.registering_callbacks')
+    Logger:debug_t('ferret.requests.registering_callbacks')
     RequestManager:subscribe(Requests.STOP_CRAFT, function(context)
-        self:log_debug('requests.default_message', { request = Requests.to_string(Requests.STOP_CRAFT) })
+        Logger:debug_t('ferret.requests.default_message', { request = Requests.to_string(Requests.STOP_CRAFT) })
 
         if Addons.Synthesis:graceful_close() then
             Addons.RecipeNote:wait_until_ready()
@@ -129,7 +129,7 @@ function FerretCore:register_default_events()
     end)
 
     RequestManager:subscribe(Requests.PREPARE_TO_CRAFT, function(context)
-        self:log_debug('requests.default_message', { request = Requests.to_string(Requests.PREPARE_TO_CRAFT) })
+        Logger:debug_t('ferret.requests.default_message', { request = Requests.to_string(Requests.PREPARE_TO_CRAFT) })
 
         Character:wait_until_available()
         Addons.RecipeNote:graceful_open()

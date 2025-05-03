@@ -5,8 +5,27 @@
 
 ---@class WKSToolCustomize : Addon
 local WKSToolCustomize = Addon:extend()
+WKSToolCustomize:implement(AddonMixins.GracefulOpen, AddonMixins.GracefulClose)
+
 function WKSToolCustomize:new()
     WKSToolCustomize.super.new(self, 'WKSToolCustomize')
+end
+
+function WKSToolCustomize:open()
+    Addons.WKSHud:open_cosmic_research()
+end
+
+function WKSToolCustomize:close()
+    Addons.WKSHud:close_cosmic_research()
+end
+
+function WKSToolCustomize:get_progress()
+    return {
+        self:get_exp(2),
+        self:get_exp(3),
+        self:get_exp(4),
+        self:get_exp(5),
+    }
 end
 
 function WKSToolCustomize:get_exp(index)

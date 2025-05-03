@@ -27,7 +27,7 @@ end
 ---@param event Event
 ---@param context table?
 function EventManager:emit(event, context)
-    self:log_debug('emit', { event = event })
+    self:log_debug('emit', { event = Events.to_string(event) })
     if not self.subscriptions[event] then
         return
     end

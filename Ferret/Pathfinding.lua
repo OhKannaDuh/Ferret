@@ -67,6 +67,15 @@ function Pathfinding:fly_to(node)
         return
     end
 
+    if not Mount:is_mounted() then
+        self:walk_to(node)
+        Mount:mount()
+
+        Ferret:wait_until(function()
+            return Mount:is_mounted()
+        end, 1 / 60, 5)
+    end
+
     yield('/vnavmesh flyto ' .. node.x .. ' ' .. node.y .. ' ' .. node.z)
 end
 

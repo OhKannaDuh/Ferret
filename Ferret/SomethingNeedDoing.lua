@@ -265,6 +265,7 @@ function GetCp() end
 
 function GetCurrentBait() end
 
+---@return integer
 function GetCurrentEorzeaHour() end
 
 function GetCurrentEorzeaMinute() end
