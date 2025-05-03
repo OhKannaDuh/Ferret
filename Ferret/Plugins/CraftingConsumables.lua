@@ -44,15 +44,7 @@ function CraftingConsumables:init()
             return
         end
 
-        if should_eat then
-            Logger:info('EAT')
-        end
-
-        if should_drink then
-            Logger:info('DRIK')
-        end
-
-        EventManager:emit(Events.STOP_CRAFT)
+        RequestManager:emit(Requests.STOP_CRAFT)
 
         if should_eat then
             Logger:debug_t('plugins.crafting_consumables.eating_food', { food = self.food })
@@ -75,7 +67,7 @@ function CraftingConsumables:init()
             end)
         end
 
-        EventManager:emit(Events.PREPARE_TO_CRAFT)
+        RequestManager:emit(Requests.PREPARE_TO_CRAFT)
     end)
 end
 

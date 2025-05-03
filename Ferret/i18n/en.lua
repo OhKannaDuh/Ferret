@@ -62,8 +62,8 @@ return {
             setup_error = 'An error cocured during setup',
             starting_loop = 'Starting Ferret loop',
             adding_plugin = 'Adding Plugin: %{plugin}',
-            events = {
-                default_message = 'Running default %{event} event callback',
+            requests = {
+                default_message = 'Running default %{request} request callback',
                 stop_caft = {
                     quiting_synthesis = 'Quiting Synthesis',
                     closing_recipe_note = 'Closing Recipe Note',
@@ -74,9 +74,9 @@ return {
             subscribe = 'Regsitering callback to hook: %{hook}',
             emit = 'Emitting hook: %{hook}',
         },
-        event_manager = {
-            subscribe = 'Regsitering callback to event: %{event}',
-            emit = 'Emitting event: %{event}',
+        request_manager = {
+            subscribe = 'Regsitering callback to request: %{request}',
+            emit = 'Emitting request: %{request}',
         },
         world = {
             waiting = 'Waiting until Eorzea time is %{hour}',

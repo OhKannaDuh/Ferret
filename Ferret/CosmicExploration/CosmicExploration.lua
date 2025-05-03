@@ -11,8 +11,8 @@ function CosmicExploration:new()
     self.job = GetClassJobId()
     self.mission_list = MasterMissionList:filter_by_job(self.job)
 
-    EventManager:subscribe(Events.STOP_CRAFT, function(context)
-        Logger:debug('Event STOP_CRAFT called from Cosmic Exploration')
+    RequestManager:subscribe(Requests.STOP_CRAFT, function(context)
+        Logger:debug('Request STOP_CRAFT called from Cosmic Exploration')
 
         if Addons.Synthesis:graceful_close() then
             Addons.WKSRecipeNotebook:wait_until_ready()
@@ -23,8 +23,8 @@ function CosmicExploration:new()
         Character:wait_until_available()
     end)
 
-    EventManager:subscribe(Events.PREPARE_TO_CRAFT, function(context)
-        Logger:debug('Event PREPARE_TO_CRAFT called from Cosmic Exploration')
+    RequestManager:subscribe(Requests.PREPARE_TO_CRAFT, function(context)
+        Logger:debug('Request PREPARE_TO_CRAFT called from Cosmic Exploration')
 
         Character:wait_until_available()
 

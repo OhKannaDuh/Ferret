@@ -114,8 +114,8 @@ function Ferret:start()
 end
 
 function Ferret:register_default_events()
-    EventManager:subscribe(Events.STOP_CRAFT, function(context)
-        self:log_debug('events.default_message', { event = Events.to_string(Events.STOP_CRAFT) })
+    RequestManager:subscribe(Requests.STOP_CRAFT, function(context)
+        self:log_debug('requests.default_message', { request = Requests.to_string(Requests.STOP_CRAFT) })
 
         if Addons.Synthesis:graceful_close() then
             Addons.RecipeNote:wait_until_ready()
@@ -126,8 +126,8 @@ function Ferret:register_default_events()
         Character:wait_until_available()
     end)
 
-    EventManager:subscribe(Events.PREPARE_TO_CRAFT, function(context)
-        self:log_debug('events.default_message', { event = Events.to_string(Events.PREPARE_TO_CRAFT) })
+    RequestManager:subscribe(Requests.PREPARE_TO_CRAFT, function(context)
+        self:log_debug('requests.default_message', { request = Requests.to_string(Requests.PREPARE_TO_CRAFT) })
 
         Character:wait_until_available()
         Addons.RecipeNote:graceful_open()

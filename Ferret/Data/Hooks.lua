@@ -10,12 +10,12 @@ Hooks = {
     PRE_CRAFT = 3,
 }
 
---- Converts an event ID to its string representation.
----@param event Hook
+--- Converts an request ID to its string representation.
+---@param request Hook
 ---@return string
-function Hooks.to_string(event)
+function Hooks.to_string(request)
     for name, id in pairs(Hooks) do
-        if id == event then
+        if id == request then
             return name
         end
     end
