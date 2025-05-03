@@ -63,10 +63,6 @@ function WKSMission:open_provisional_missions()
     self:callback(true, 15, 2)
 end
 
-function WKSMission:get_mission_name_by_index(index)
-    return self:get_node_text(89, index, 8)
-end
-
 function WKSMission:get_available_missions()
     self:log_debug('getting_missions')
 
@@ -77,20 +73,27 @@ function WKSMission:get_available_missions()
         self:callback(true, 15, tab)
         self:wait_until_ready()
 
-        for index = 2, 400 do
-            local mission_name = self:get_mission_name_by_index(index):gsub(' ', '')
-            if mission_name == '' or Table:contains(names, mission_name) then
+        for index = 2, 1000000 do
+            local mission_name = self:get_node_text(89, index, 8) --
+            if mission_name == 8 or mission_name == '' then
                 break
             end
 
-            self:log_debug('mission_found', { mission = mission_name })
-            table.insert(names, mission_name)
+            mission_name = mission_name:gsub(' ', '')
 
-            ---@diagnostic disable-next-line: undefined-field
-            local mission = CosmicExploration.mission_list:find_by_name(mission_name)
-            if mission ~= nil and mission:is_available() then
-                missions:add(mission)
+            if not Table:contains(names, mission_name) then
+                self:log_debug('mission_found', { mission = mission_name })
+                table.insert(names, mission_name)
             end
+        end
+    end
+
+    for _, mission_name in ipairs(names) do
+        ---@diagnostic disable-next-line: undefined-field
+        local mission = CosmicExploration.mission_list:find_by_name(mission_name)
+
+        if mission ~= nil and mission:is_available() then
+            missions:add(mission)
         end
     end
 

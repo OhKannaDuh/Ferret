@@ -50,14 +50,47 @@ function StellarMissions:loop()
         return
     end
 
-    local timer = Timer()
-    timer:start()
+    local mission = self:select_mission()
+    if not mission then -- No mission to run, reloop
+        return
+    end
+
+    Logger:debug('mission: ' .. mission:to_string())
+
+    if not mission:start() then
+        Logger:warn('Failed to start mission')
+        return
+    end
+
+    local goal = CosmicExploration:get_target_result(mission)
+    Logger:info('Mission target: ' .. MissionResult.to_string(goal))
+
+    local result, reason = mission:handle(goal)
+    local acceptable = CosmicExploration:get_acceptable_result(mission)
+
+    Logger:debug('Result: ' .. MissionResult.to_string(result.tier))
+    Logger:debug('Acceptable: ' .. MissionResult.to_string(acceptable))
+
+    RequestManager:request(Requests.STOP_CRAFT)
+
+    if result.tier < acceptable then
+        Logger:warn('Mission failed: ' .. mission:to_string())
+        Logger:warn('Reason: ' .. reason)
+
+        if self.stop_on_failure then
+            Logger:info('Quiting Ferret ' .. self.version:to_string())
+            self:stop()
+        end
+    end
+
+    mission:finish(result.tier)
+end
+
+function StellarMissions:select_mission()
     local available_missions = Addons.WKSMission:get_available_missions()
-    Logger:list('Available Missions', available_missions.missions)
-    Logger:debug('Took: ' .. timer:seconds())
+    Logger:list('Available', available_missions.missions)
 
     local overlap = self.mission_list:get_overlap(available_missions)
-
     if overlap:is_empty() then
         Logger:debug('Selecting mission to abandon')
         local class = Table:random(self.mission_list:get_classes())
@@ -80,52 +113,25 @@ function StellarMissions:loop()
         mission:start()
         Addons.WKSRecipeNotebook:wait_until_ready()
         mission:abandon()
+
         return
-    else
-        Logger:debug('Selecting mission to run')
-        local mission = nil
-        if self.mission_order == MissionOrder.TopPriority then
-            mission = overlap:first()
-        elseif self.mission_order == MissionOrder.Random then
-            mission = overlap:random()
-        end
-
-        if mission == nil then
-            Logger:error('Error getting a mission.')
-            self:stop()
-            return
-        end
-
-        Logger:debug('mission: ' .. mission:to_string())
-
-        mission:start()
-
-        Addons.WKSRecipeNotebook:wait_until_ready()
-        Addons.WKSHud:open_mission_menu()
-
-        local goal = CosmicExploration:get_target_result(mission)
-        Logger:info('Mission target: ' .. MissionResult.to_string(goal))
-
-        local result, reason = mission:handle(goal)
-        local acceptable = CosmicExploration:get_acceptable_result(mission)
-
-        Logger:debug('Result: ' .. MissionResult.to_string(result.tier))
-        Logger:debug('Acceptable: ' .. MissionResult.to_string(acceptable))
-
-        RequestManager:request(Requests.STOP_CRAFT)
-
-        if result.tier < acceptable then
-            Logger:warn('Mission failed: ' .. mission:to_string())
-            Logger:warn('Reason: ' .. reason)
-
-            if self.stop_on_failure then
-                Logger:info('Quiting Ferret ' .. self.version:to_string())
-                self:stop()
-            end
-        end
-
-        mission:finish(result.tier)
     end
+
+    Logger:debug('Selecting mission to run')
+    local mission = nil
+    if self.mission_order == MissionOrder.TopPriority then
+        mission = overlap:first()
+    elseif self.mission_order == MissionOrder.Random then
+        mission = overlap:random()
+    end
+
+    if mission == nil then
+        Logger:error('Error getting a mission.')
+        self:stop()
+        return
+    end
+
+    return mission
 end
 
 return StellarMissions():init()
