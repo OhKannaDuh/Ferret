@@ -150,14 +150,9 @@ function StellarMissions:loop()
                 Logger:info('Quiting Ferret ' .. self.version:to_string())
                 self:stop()
             end
-
-            if result.tier == MissionResult.Fail then
-                mission:abandon()
-                return
-            end
         end
 
-        mission:report()
+        mission:finish(result.tier)
     end
 end
 

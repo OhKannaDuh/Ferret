@@ -11,6 +11,14 @@ CosmicExploration:implement(Translation)
 
 function CosmicExploration:new()
     self.translation_path = 'modules.cosmic_exploration'
+
+    self.mission_list = MissionList()
+
+    self.minimum_acceptable_result = MissionResult.Gold
+    self.per_mission_acceptable_result = {}
+
+    self.minimum_target_result = MissionResult.Gold
+    self.per_mission_target_result = {}
 end
 
 ---@param job Job
@@ -54,16 +62,41 @@ function CosmicExploration:init()
     end)
 end
 
+---@return MissionList
 function CosmicExploration:create_job_list(callback)
     return self.mission_list:filter(callback)
 end
 
+---@return MissionList
 function CosmicExploration:create_job_list_by_names(names)
     return self.mission_list:filter_by_names(names)
 end
 
+---@return MissionList
 function CosmicExploration:create_job_list_by_ids(ids)
     return self.mission_list:filter_by_ids(ids)
+end
+
+---@return MissionResult
+function CosmicExploration:get_acceptable_result(mission)
+    if self.per_mission_target_result[mission.id] then
+        return self.per_mission_target_result[mission.id]
+    end
+
+    if self.per_mission_acceptable_result[mission.id] then
+        return self.per_mission_acceptable_result[mission.id]
+    end
+
+    return math.min(self.minimum_target_result, self.minimum_acceptable_result)
+end
+
+---@return MissionResult
+function CosmicExploration:get_target_result(mission)
+    if self.per_mission_target_result[mission.id] then
+        return self.per_mission_target_result[mission.id]
+    end
+
+    return self.minimum_target_result
 end
 
 ---@return boolean
@@ -71,6 +104,7 @@ function CosmicExploration:open_mission_menu()
     Addons.WKSMission:graceful_open()
     if not Addons.WKSMission:is_ready() then
         Addons.WKSMissionInfomation:abandon()
+        Addons.WKSMissionInfomation:wait_until_not_ready()
         Addons.WKSMission:graceful_open()
     end
 

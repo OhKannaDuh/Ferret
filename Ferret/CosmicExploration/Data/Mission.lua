@@ -332,11 +332,21 @@ function Mission:handle(goal)
     end
 end
 
+function Mission:finish(result)
+    if result == MissionResult.Fail then
+        self:abandon()
+        return
+    end
+
+    self:report()
+end
+
 function Mission:report()
     Addons.WKSHud:wait_until_ready()
     Addons.WKSMission:graceful_open()
     if not Addons.WKSMission:is_ready() then
         Addons.WKSMissionInfomation:report()
+        Addons.WKSMissionInfomation:wait_until_not_ready()
         return true
     end
 
@@ -348,6 +358,7 @@ function Mission:abandon()
     Addons.WKSMission:graceful_open()
     if not Addons.WKSMission:is_ready() then
         Addons.WKSMissionInfomation:abandon()
+        Addons.WKSMissionInfomation:wait_until_not_ready()
         return true
     end
 
