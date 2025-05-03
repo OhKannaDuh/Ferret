@@ -40,11 +40,12 @@ function StellarCraftingRelic:new()
     self.researchingway = Targetable(i18n('npcs.researchingway'))
 end
 
-function StellarCraftingRelic:setup_blacklist()
-    self.actual_blacklist = MissionList()
-    for _, mission in ipairs(self.blacklist.missions) do
-        self.actual_blacklist:add(mission)
-    end
+function StellarCraftingRelic:init()
+    Template.init(self)
+
+    CosmicExploration:init()
+
+    return self
 end
 
 function StellarCraftingRelic:setup()
@@ -127,6 +128,13 @@ function StellarCraftingRelic:loop()
     Logger:debug_t('templates.stellar_crafting_relic.mission_complete')
 
     mission:finish(result.tier)
+end
+
+function StellarCraftingRelic:setup_blacklist()
+    self.actual_blacklist = MissionList()
+    for _, mission in ipairs(self.blacklist.missions) do
+        self.actual_blacklist:add(mission)
+    end
 end
 
 function StellarCraftingRelic:get_first_unmaxed_job()
