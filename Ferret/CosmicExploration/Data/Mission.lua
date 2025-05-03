@@ -290,10 +290,6 @@ function Mission:multi_recipe(goal)
     local crafted = 0
 
     repeat
-        if not self:has_base_crafting_material() then
-            return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
-        end
-
         for index, count in pairs(self.multi_craft_config) do
             if not self:has_base_crafting_material() then
                 return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
@@ -333,7 +329,7 @@ function Mission:handle(goal)
 end
 
 function Mission:finish(result)
-    if result == MissionResult.Fail then
+    if result == MissionResult.Fail and self:has_base_crafting_material() then
         self:abandon()
         return
     end

@@ -62,6 +62,8 @@ function StellarMissions:loop()
         return
     end
 
+    Addons.WKSMissionInfomation:graceful_open()
+
     local goal = CosmicExploration:get_target_result(mission)
     Logger:info('Mission target: ' .. MissionResult.to_string(goal))
 

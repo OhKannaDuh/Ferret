@@ -42,7 +42,7 @@ function WKSMission:graceful_open()
 
     repeat
         self:open()
-        Wait:fps(10)
+        Wait:fps(5)
     until self:is_ready() or Addons.WKSMissionInfomation:is_ready()
 
     return self:is_ready()
