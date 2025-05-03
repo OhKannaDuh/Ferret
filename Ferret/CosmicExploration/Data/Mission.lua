@@ -291,11 +291,11 @@ function Mission:multi_recipe(goal)
 
     repeat
         for index, count in pairs(self.multi_craft_config) do
-            if not self:has_base_crafting_material() then
+            Addons.WKSRecipeNotebook:wait_until_ready(nil, 2)
+            if not Addons.WKSRecipeNotebook:is_ready() then
                 return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
             end
 
-            Addons.WKSRecipeNotebook:wait_until_ready()
             Addons.WKSRecipeNotebook:set_index(index)
             Addons.WKSRecipeNotebook:set_hq()
             for i = 1, count do

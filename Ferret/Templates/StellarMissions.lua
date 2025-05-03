@@ -70,7 +70,7 @@ function StellarMissions:loop()
     local result, reason = mission:handle(goal)
     local acceptable = CosmicExploration:get_acceptable_result(mission)
 
-    Logger:debug('Result: ' .. MissionResult.to_string(result.tier))
+    Logger:debug('Result: ' .. tostring(result))
     Logger:debug('Acceptable: ' .. MissionResult.to_string(acceptable))
 
     RequestManager:request(Requests.STOP_CRAFT)

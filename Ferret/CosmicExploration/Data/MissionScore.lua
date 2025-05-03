@@ -20,3 +20,7 @@ end
 function MissionScore:to_string()
     return string.format('Tier: %s, Current: %d, Next: %d', MissionResult.to_string(self.tier), self.current, self.next)
 end
+
+function MissionScore:__tostring()
+    return self:to_string()
+end

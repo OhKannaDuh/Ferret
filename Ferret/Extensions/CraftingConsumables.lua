@@ -70,7 +70,7 @@ function CraftingConsumables:init()
                 yield('/item ' .. self.medicine)
                 Ferret:wait_until(function()
                     return self:get_remaining_medicine_time() > medicine_remaining
-                end)
+                end, 0.5, self.wait_time * 2)
             until self:get_remaining_medicine_time() > medicine_remaining
         end
 
