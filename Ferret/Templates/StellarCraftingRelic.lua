@@ -67,6 +67,7 @@ function StellarCraftingRelic:loop()
     Addons.WKSToolCustomize:graceful_open()
     Logger:info_t('templates.stellar_crafting_relic.checking_relic_ranks')
     self.relic_ranks = Addons.WKSToolCustomize:get_relic_ranks()
+    Addons.WKSToolCustomize:graceful_close()
 
     local job = self:get_first_unmaxed_job()
     if job == Jobs.Unknown then
@@ -160,7 +161,7 @@ function StellarCraftingRelic:is_ready_to_upgrade()
 end
 
 function StellarCraftingRelic:upgrade()
-    local text_advance = HasPlugin('TextAdvanc')
+    local text_advance = HasPlugin('TextAdvance')
     if text_advance then
         yield('/at disable')
     end
