@@ -84,7 +84,6 @@ function ToDoList:get_stellar_mission_craft_completions()
         :with_fr('.-fabriqué : (%d+)/(%d+)')
         :with_jp('.-作成済み: (%d+)/(%d+)')
 
-    -- for side = 1, 2 do
     for i = 1, self:get_count() do
         local node_text = self:get_node_text(i, 3)
         local crafted, required = string.match(node_text, pattern:get())
@@ -95,7 +94,6 @@ function ToDoList:get_stellar_mission_craft_completions()
             })
         end
     end
-    -- end
 
     return matches
 end

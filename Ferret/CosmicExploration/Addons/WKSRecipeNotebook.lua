@@ -22,12 +22,14 @@ function WKSRecipeNotebook:set_hq()
 end
 
 function WKSRecipeNotebook:synthesize()
+    self:callback(true, 6)
+end
+
+function WKSRecipeNotebook:graceful_synthesize()
     self:wait_until_ready()
     repeat
-        if self:is_ready() then
-            self:callback(true, 6)
-        end
-        Ferret:wait(0.1)
+        self:synthesize()
+        Wait:fps(60)
     until not WKSRecipeNotebook:is_visible()
 end
 

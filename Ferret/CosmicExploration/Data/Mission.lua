@@ -200,7 +200,7 @@ function Mission:is_complete(goal)
 end
 
 ---@return MissionScore
-function Mission:get_mission_score()
+function Mission:get_score()
     return Addons.ToDoList:get_stellar_mission_scores()
 end
 
@@ -222,22 +222,18 @@ end
 ---@return boolean, string
 function Mission:craft_current()
     EventManager:emit(Events.PRE_CRAFT, { mission = self })
+    RequestManager:request(Requests.PREPARE_TO_CRAFT)
 
     local name = Addons.WKSRecipeNotebook:get_current_recipe_name()
     self:log_debug('crafting_current', { name = name })
     local timer = Sandtimer(self.last_crafting_action_threshold)
-
-    Addons.WKSRecipeNotebook:wait_until_ready()
 
     local craftable = Addons.WKSRecipeNotebook:get_current_craftable_amount()
     if craftable <= 0 then
         return false, self:translate('not_craftable')
     end
 
-    Ferret:wait(Mission.wait_timers.pre_synthesize)
-
-    Addons.WKSRecipeNotebook:synthesize()
-
+    Addons.WKSRecipeNotebook:graceful_synthesize()
     Addons.Synthesis:wait_until_ready()
 
     timer:flip()
@@ -250,7 +246,7 @@ function Mission:craft_current()
             return false, self:translate('timeout')
         end
 
-        Ferret:wait(0.2)
+        Wait:fps(60)
     until not Addons.Synthesis:is_visible()
 
     return true, self:translate('finished_craft')
@@ -263,28 +259,26 @@ function Mission:single_recipe(goal)
     local crafted = 0
     repeat
         if not self:has_base_crafting_material() then
-            return self:get_mission_score(), self:translate('no_more_to_craft', { crafted = crafted })
+            return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
         end
-
-        Addons.WKSRecipeNotebook:wait_until_ready()
 
         local should_continue, reason = self:craft_current()
 
         self:log_debug('reason', { reason = reason })
         if not should_continue then
-            return self:get_mission_score(), reason
+            return self:get_score(), reason
         end
 
         crafted = crafted + 1
 
-        local score = self:get_mission_score()
+        local score = self:get_score()
         if score.tier >= goal then
             return score, self:translate('reached_goal', { crafted = crafted })
         end
 
     until self:is_complete(goal)
 
-    return self:get_mission_score(), self:translate('finished', { crafted = crafted })
+    return self:get_score(), self:translate('finished', { crafted = crafted })
 end
 
 ---@param goal MissionResult
@@ -295,7 +289,7 @@ function Mission:multi_recipe(goal)
 
     repeat
         if not self:has_base_crafting_material() then
-            return self:get_mission_score(), self:translate('no_more_to_craft', { crafted = crafted })
+            return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
         end
 
         for index, count in pairs(self.multi_craft_config) do
@@ -309,7 +303,7 @@ function Mission:multi_recipe(goal)
 
                 crafted = crafted + 1
 
-                local score = self:get_mission_score()
+                local score = self:get_score()
                 if score.tier >= goal then
                     return score, self:translate('reached_goal', { crafted = crafted })
                 end
@@ -317,7 +311,7 @@ function Mission:multi_recipe(goal)
         end
     until self:is_complete(goal)
 
-    return self:get_mission_score(), self:translate('finished', { crafted = crafted })
+    return self:get_score(), self:translate('finished', { crafted = crafted })
 end
 
 ---@param goal MissionResult

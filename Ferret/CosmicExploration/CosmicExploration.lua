@@ -49,7 +49,9 @@ function CosmicExploration:init()
     RequestManager:subscribe(Requests.PREPARE_TO_CRAFT, function(context)
         Logger:debug('Request PREPARE_TO_CRAFT called from Cosmic Exploration')
 
-        Character:wait_until_available()
+        if Addons.WKSRecipeNotebook:is_ready() then
+            return
+        end
 
         Addons.WKSMission:graceful_open()
         if Addons.WKSMission:is_ready() then

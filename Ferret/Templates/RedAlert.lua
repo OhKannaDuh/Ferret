@@ -3,11 +3,11 @@
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
-require('Ferret/Ferret')
+Base = require('Ferret/FerretCore')
 require('Ferret/CosmicExploration/Library')
 
----@class RedAlert : Ferret, Translation
-RedAlert = Ferret:extend()
+---@class RedAlert : FerretCore, Translation
+RedAlert = Base:extend()
 RedAlert:implement(Translation)
 
 function RedAlert:new()
@@ -50,7 +50,7 @@ function RedAlert:loop()
     RequestManager:request(Requests.STOP_CRAFT)
 
     self.turn_in:interact()
-    Ferret:wait(3)
+    Addons.WKSMissionInfomation:wait_until_not_ready()
 end
 
 ---@return boolean

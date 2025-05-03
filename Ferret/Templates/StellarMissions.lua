@@ -19,12 +19,6 @@ function StellarMissions:new()
     self.mission_list = MissionList()
     self.mission_order = MissionOrder.TopPriority
 
-    self.minimum_acceptable_result = MissionResult.Gold
-    self.per_mission_acceptable_result = {}
-
-    self.minimum_target_result = MissionResult.Gold
-    self.per_mission_target_result = {}
-
     self.stop_on_failure = false
 end
 
@@ -35,30 +29,6 @@ function StellarMissions:init()
     CosmicExploration:init()
 
     return self
-end
-
-function StellarMissions:get_acceptable_result(mission)
-    if self.per_mission_target_result[mission.id] then
-        return self.per_mission_target_result[mission.id]
-    end
-
-    if self.per_mission_acceptable_result[mission.id] then
-        return self.per_mission_acceptable_result[mission.id]
-    end
-
-    if self.minimum_target_result < self.minimum_acceptable_result then
-        return self.minimum_target_result
-    end
-
-    return self.minimum_acceptable_result
-end
-
-function StellarMissions:get_target_result(mission)
-    if self.per_mission_target_result[mission.id] then
-        return self.per_mission_target_result[mission.id]
-    end
-
-    return self.minimum_target_result
 end
 
 function StellarMissions:setup()
@@ -133,16 +103,18 @@ function StellarMissions:loop()
         Addons.WKSRecipeNotebook:wait_until_ready()
         Addons.WKSHud:open_mission_menu()
 
-        local goal = self:get_target_result(mission)
+        local goal = CosmicExploration:get_target_result(mission)
         Logger:info('Mission target: ' .. MissionResult.to_string(goal))
 
         local result, reason = mission:handle(goal)
+        local acceptable = CosmicExploration:get_acceptable_result(mission)
+
         Logger:debug('Result: ' .. MissionResult.to_string(result.tier))
-        Logger:debug('Acceptable: ' .. MissionResult.to_string(self:get_acceptable_result(mission)))
+        Logger:debug('Acceptable: ' .. MissionResult.to_string(acceptable))
 
         RequestManager:request(Requests.STOP_CRAFT)
 
-        if result.tier < self:get_acceptable_result(mission) then
+        if result.tier < acceptable then
             Logger:warn('Mission failed: ' .. mission:to_string())
             Logger:warn('Reason: ' .. reason)
 
