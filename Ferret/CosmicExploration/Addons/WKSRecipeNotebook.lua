@@ -29,7 +29,7 @@ function WKSRecipeNotebook:graceful_synthesize()
     self:wait_until_ready()
     repeat
         self:synthesize()
-        Wait:fps(60)
+        Wait:fps(5)
     until not WKSRecipeNotebook:is_visible()
 end
 

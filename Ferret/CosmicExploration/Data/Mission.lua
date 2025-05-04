@@ -248,7 +248,7 @@ function Mission:craft_current()
             return false, self:translate('timeout')
         end
 
-        Wait:fps(60)
+        Wait:fps(5)
     until not Addons.Synthesis:is_visible()
 
     return true, self:translate('finished_craft')

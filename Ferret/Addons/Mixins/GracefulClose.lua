@@ -17,7 +17,7 @@ function GracefulClose:graceful_close()
 
     repeat
         self:quit()
-        Wait:fps(60)
+        Wait:fps(5)
     until not self:is_ready()
 
     return true
