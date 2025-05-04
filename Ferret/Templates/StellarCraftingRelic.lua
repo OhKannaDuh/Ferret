@@ -82,6 +82,7 @@ function StellarCraftingRelic:loop()
         CosmicExploration:set_job(job)
         self:setup_blacklist()
         Character:wait_until_available()
+        Wait:seconds(2)
         return
     end
 
