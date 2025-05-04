@@ -223,9 +223,6 @@ end
 
 ---@return boolean, string
 function Mission:craft_current()
-    EventManager:emit(Events.PRE_CRAFT, { mission = self })
-    RequestManager:request(Requests.PREPARE_TO_CRAFT)
-
     local name = Addons.WKSRecipeNotebook:get_current_recipe_name()
     self:log_debug('crafting_current', { name = name })
     local timer = Sandtimer(self.last_crafting_action_threshold)
@@ -264,6 +261,9 @@ function Mission:single_recipe(goal)
             return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
         end
 
+        EventManager:emit(Events.PRE_CRAFT, { mission = self })
+        RequestManager:request(Requests.PREPARE_TO_CRAFT)
+
         local should_continue, reason = self:craft_current()
 
         self:log_debug('reason', { reason = reason })
@@ -295,6 +295,9 @@ function Mission:multi_recipe(goal)
             if not Addons.WKSRecipeNotebook:is_ready() then
                 return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
             end
+
+            EventManager:emit(Events.PRE_CRAFT, { mission = self })
+            RequestManager:request(Requests.PREPARE_TO_CRAFT)
 
             Addons.WKSRecipeNotebook:set_index(index)
             Addons.WKSRecipeNotebook:set_hq()
