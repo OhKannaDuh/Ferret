@@ -67,6 +67,7 @@ function StellarCraftingRelic:loop()
     Addons.WKSToolCustomize:graceful_open()
     Logger:info_t('templates.stellar_crafting_relic.checking_relic_ranks')
     self.relic_ranks = Addons.WKSToolCustomize:get_relic_ranks()
+    self.progress = Addons.WKSToolCustomize:get_progress()
     Addons.WKSToolCustomize:graceful_close()
 
     local job = self:get_first_unmaxed_job()
@@ -84,7 +85,6 @@ function StellarCraftingRelic:loop()
         return
     end
 
-    self.progress = Addons.WKSToolCustomize:get_progress()
     if self:is_ready_to_upgrade() then
         self:upgrade()
         return
