@@ -12,6 +12,8 @@ CosmicExploration:implement(Translation)
 function CosmicExploration:new()
     self.translation_path = 'modules.cosmic_exploration'
 
+    self.version = Version(0, 1, 1)
+
     self.mission_list = MissionList()
 
     self.minimum_acceptable_result = MissionResult.Gold
@@ -32,6 +34,8 @@ end
 
 function CosmicExploration:init()
     self:set_job(GetClassJobId())
+
+    self:log_info("Initialising Cosmic Exploration module " .. self.version:to_string())
 
     self:log_debug('messages.registering_callbacks')
     RequestManager:subscribe(Requests.STOP_CRAFT, function(context)
@@ -65,17 +69,17 @@ function CosmicExploration:init()
 end
 
 ---@return MissionList
-function CosmicExploration:create_job_list(callback)
+function CosmicExploration:create_mision_list(callback)
     return self.mission_list:filter(callback)
 end
 
 ---@return MissionList
-function CosmicExploration:create_job_list_by_names(names)
+function CosmicExploration:create_mission_list_from_names(names)
     return self.mission_list:filter_by_names(names)
 end
 
 ---@return MissionList
-function CosmicExploration:create_job_list_by_ids(ids)
+function CosmicExploration:create_mission_list_from_ids(ids)
     return self.mission_list:filter_by_ids(ids)
 end
 
