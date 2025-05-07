@@ -10,7 +10,7 @@ require('Ferret/CosmicExploration/Library')
 RelicAutomator = Template:extend()
 
 function RelicAutomator:new()
-    RelicAutomator.super.new(self, 'stellar_crafting_relic', Version(0, 10, 3))
+    RelicAutomator.super.new(self, 'stellar_crafting_relic', Version(0, 11, 0))
 
     self.job_order = {
         Jobs.Carpenter,

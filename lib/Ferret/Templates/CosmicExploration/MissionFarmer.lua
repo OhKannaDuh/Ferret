@@ -15,7 +15,7 @@ MissionOrder = {
 MissionFarmer = Template:extend()
 
 function MissionFarmer:new()
-    MissionFarmer.super.new(self, 'stellar_missions', Version(2, 8, 2))
+    MissionFarmer.super.new(self, 'stellar_missions', Version(2, 9, 0))
 
     self.mission_list = MissionList()
     self.mission_order = MissionOrder.TopPriority

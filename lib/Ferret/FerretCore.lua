@@ -20,7 +20,7 @@ function FerretCore:new(name)
     self.run = true
     self.language = 'en'
     self.timer = Timer()
-    self.version = Version(0, 11, 4)
+    self.version = Version(0, 12, 0)
 end
 
 function FerretCore:init()

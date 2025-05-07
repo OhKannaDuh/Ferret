@@ -14,7 +14,7 @@ function RedAlert:new()
     self.translation_path = 'templates.red_alert'
 
     RedAlert.super.new(self, self:translate('name'))
-    self.template_version = Version(0, 1, 0)
+    self.template_version = Version(0, 2, 0)
 
     self.mission = nil
     self.turn_in = Targetable('Collection Point')
