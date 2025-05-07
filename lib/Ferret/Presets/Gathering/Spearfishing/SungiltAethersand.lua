@@ -1,4 +1,4 @@
-local ferret = require('Ferret/Templates/Spearfishing')
+local ferret = require('Ferret/Templates/Gathering/Spearfishing')
 require('Ferret/Extensions/AethericReduction')
 
 ferret.name = 'Sungilt Aethersand'

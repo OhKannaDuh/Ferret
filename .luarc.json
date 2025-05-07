@@ -2,9 +2,9 @@
   "Lua.diagnostics.globals": [
     "_debug",
     "_language",
-    "i18n",
     "_log_directory",
-    "_log_name"
+    "_name",
+    "i18n"
   ],
   "diagnostics.disable": ["redundant-parameter", "lowercase-global"]
 }

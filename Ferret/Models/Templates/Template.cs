@@ -15,8 +15,4 @@ public abstract class Template : ScriptProfile
         InitialiseConfig(config);
         InitialiseExtensions(extensions);
     }
-
-    protected abstract void InitialiseConfig(ConfigManager config);
-
-    protected abstract void InitialiseExtensions(ExtensionManager extensions);
 }

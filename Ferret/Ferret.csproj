@@ -14,9 +14,13 @@
         </Content>
         <ProjectReference Include="..\external\ImGuiColorTextEditNetDalamud\src\TextEdit\ImGuiColorTextEditNet.csproj" />
         <ProjectReference Include="..\external\ECommons\ECommons\ECommons.csproj" />
-        <None Include="..\lua\**">
+        <None Include="..\lib\**">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-            <Link>lua\%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <Link>lib\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </None>
+        <None Include="..\logs\**">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <Link>logs\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </None>
     </ItemGroup>
 </Project>

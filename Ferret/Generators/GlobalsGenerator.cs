@@ -1,3 +1,5 @@
+using System.IO;
+using ECommons.DalamudServices;
 using Ferret.Configs;
 using Ferret.Enums;
 using Ferret.Formatters;
@@ -31,12 +33,13 @@ public class GlobalsGenerator : ILuaSectionGenerator
                         .WithTooltip("Tell the logger to log debug messages.")
         );
 
+        string logsPath = Path.Combine(Svc.PluginInterface.AssemblyLocation.Directory?.FullName!, "logs").Replace("\\", "/");
         logDirectory = config.Create(
             "log_directory",
             (context) =>
                 (StringConfig)
-                    new StringConfig(context, "")
-                        .WithRenderer(new StringRenderer("Log Directory"))
+                    new StringConfig(context, logsPath)
+                        .WithRenderer(new StringRenderer("Log Directory", 1024, true))
                         .WithFormatter(new StringFormatter("_log_directory"))
                         .WithTooltip("A directory whee log files should be stored. (Must exist)")
         );
@@ -70,11 +73,6 @@ public class GlobalsGenerator : ILuaSectionGenerator
         {
             hasChanged = true;
             script = script.AddLine(debug.Format());
-        }
-
-        if (logDirectory.hasChanged)
-        {
-            hasChanged = true;
             script = script.AddLine(logDirectory.Format());
         }
 

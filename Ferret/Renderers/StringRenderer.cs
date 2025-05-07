@@ -9,40 +9,27 @@ public class StringRenderer : Renderer<string>
 {
     private readonly string label;
 
-    private readonly int bufferSize;
+    private readonly uint bufferSize;
 
-    private readonly bool showClear = false;
+    private readonly bool readOnly = false;
 
-    public StringRenderer(string label, int bufferSize = 256, bool showClear = false)
+    public StringRenderer(string label, uint bufferSize = 256, bool readOnly = false)
     {
         this.label = label;
         this.bufferSize = bufferSize;
-        this.showClear = showClear;
+        this.readOnly = readOnly;
     }
 
     public override void Render(ConfigOption<string> option)
     {
         ImGui.BeginGroup();
 
-        if (showClear)
-        {
-            float generalWidth = ImGui.GetItemRectSize().X;
-
-            if (ImGuiEx.IconButton(Dalamud.Interface.FontAwesomeIcon.Trash, "Clear"))
-            {
-                option.value = "";
-            }
-            ImGui.SameLine();
-
-            // I have no idea why this is * 4
-            ImGui.SetNextItemWidth(generalWidth - ImGui.GetItemRectSize().X * 4);
-        }
-
         var buffer = new byte[bufferSize];
         var current = option.value ?? "";
         Encoding.UTF8.GetBytes(current, 0, current.Length, buffer, 0);
 
-        if (ImGui.InputText(label, buffer, (uint)buffer.Length, ImGuiInputTextFlags.None))
+        var flags = readOnly ? ImGuiInputTextFlags.ReadOnly : ImGuiInputTextFlags.None;
+        if (ImGui.InputText(label, buffer, (uint)buffer.Length, flags))
         {
             option.value = Encoding.UTF8.GetString(buffer).TrimEnd('\0');
         }

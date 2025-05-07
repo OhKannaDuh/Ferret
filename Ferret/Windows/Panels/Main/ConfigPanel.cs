@@ -42,11 +42,11 @@ public class ConfigPanel
             globals.Render();
 
             FerretGui.Separator();
-
-            FerretGui.Separator();
             if (FerretGui.ConfiguratorHeader("Template Configuration:"))
             {
                 templates.Reset();
+                extensions.Reset();
+                general.Reset();
             }
 
             templates.Render();

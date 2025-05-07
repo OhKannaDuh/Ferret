@@ -16,7 +16,7 @@ FerretCore:implement(Translation)
 function FerretCore:new(name)
     self.translation_path = 'ferret'
 
-    self.name = name or 'Ferret'
+    self.name = _name or name or 'Ferret'
     self.run = true
     self.language = 'en'
     self.timer = Timer()

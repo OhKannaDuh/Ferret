@@ -24,7 +24,7 @@ public class ExtensionsGenerator : ILuaSectionGenerator
 
         if (enabled.Count() > 0)
         {
-            script = script.NewLine().AddLine("--- Extensions");
+            script = script.NewLine().AddLine("---Extensions");
             var unchanged = template.extensions.Unchanged();
             if (unchanged.Count() > 0)
             {

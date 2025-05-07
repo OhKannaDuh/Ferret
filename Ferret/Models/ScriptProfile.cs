@@ -20,6 +20,10 @@ public abstract class ScriptProfile
 
     public virtual List<List<string>> layout => [];
 
+    protected abstract void InitialiseConfig(ConfigManager config);
+
+    protected abstract void InitialiseExtensions(ExtensionManager extensions);
+
     public virtual void ResetOptions() => config.context.options.Values.Each(o => o.Reset());
 
     public virtual void CopyFrom(ScriptProfile source)

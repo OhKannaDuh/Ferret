@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Numerics;
+using System.IO;
 using Dalamud.Interface.Windowing;
+using ECommons.DalamudServices;
 using ImGuiNET;
 
 namespace Ferret.Windows;
@@ -12,15 +13,17 @@ public class ConfigWindow : Window, IDisposable
     public ConfigWindow(Plugin plugin)
         : base("Ferret Config##config")
     {
-        Flags = ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse;
-
-        Size = new Vector2(232, 90);
-        SizeCondition = ImGuiCond.Always;
-
         config = plugin.config;
     }
 
     public void Dispose() { }
 
-    public override void Draw() { }
+    public override void Draw()
+    {
+        string libPath = Path.Combine(Svc.PluginInterface.AssemblyLocation.Directory?.FullName!, "lib").Replace("\\", "/");
+        ImGui.InputText("Library path", ref libPath, 256, ImGuiInputTextFlags.ReadOnly);
+
+        string logsPath = Path.Combine(Svc.PluginInterface.AssemblyLocation.Directory?.FullName!, "logs").Replace("\\", "/");
+        ImGui.InputText("Log path", ref logsPath, 256, ImGuiInputTextFlags.ReadOnly);
+    }
 }

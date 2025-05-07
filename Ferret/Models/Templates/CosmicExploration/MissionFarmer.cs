@@ -56,5 +56,10 @@ public class MissionFarmer : Template
         CosmicExplorationConfigHelper.PerMissionTargetResult(config, ref targetResult, ref whitelist);
     }
 
-    protected override void InitialiseExtensions(ExtensionManager extensions) { }
+    protected override void InitialiseExtensions(ExtensionManager extensions)
+    {
+        extensions.Add(new Repair());
+        extensions.Add(new ExtractMateria());
+        extensions.Add(new CraftingConsumables());
+    }
 }

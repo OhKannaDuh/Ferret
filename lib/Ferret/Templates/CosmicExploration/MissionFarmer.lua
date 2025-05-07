@@ -11,11 +11,11 @@ MissionOrder = {
     Random = 2, -- Execute missions in random order
 }
 
----@class StellarMissions : Template
-StellarMissions = Template:extend()
+---@class MissionFarmer : Template
+MissionFarmer = Template:extend()
 
-function StellarMissions:new()
-    StellarMissions.super.new(self, 'stellar_missions', Version(2, 8, 2))
+function MissionFarmer:new()
+    MissionFarmer.super.new(self, 'stellar_missions', Version(2, 8, 2))
 
     self.mission_list = MissionList()
     self.mission_order = MissionOrder.TopPriority
@@ -23,7 +23,7 @@ function StellarMissions:new()
     self.stop_on_failure = false
 end
 
-function StellarMissions:init()
+function MissionFarmer:init()
     Template.init(self)
 
     CosmicExploration:init()
@@ -31,7 +31,7 @@ function StellarMissions:init()
     return self
 end
 
-function StellarMissions:setup()
+function MissionFarmer:setup()
     if self.mission_list:is_empty() then
         Logger:warn('No missions taken from configured mission list')
         return false
@@ -42,7 +42,7 @@ function StellarMissions:setup()
     return true
 end
 
-function StellarMissions:loop()
+function MissionFarmer:loop()
     RequestManager:request(Requests.STOP_CRAFT)
     if not CosmicExploration:open_mission_menu() then
         Logger:warn('Sad times are upon us')
@@ -88,7 +88,7 @@ function StellarMissions:loop()
     mission:finish(result.tier)
 end
 
-function StellarMissions:select_mission()
+function MissionFarmer:select_mission()
     local available_missions = Addons.WKSMission:get_available_missions()
     Logger:list('Available', available_missions.missions)
 
@@ -136,4 +136,4 @@ function StellarMissions:select_mission()
     return mission
 end
 
-return StellarMissions():init()
+return MissionFarmer():init()

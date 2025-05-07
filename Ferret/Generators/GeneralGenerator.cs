@@ -1,5 +1,6 @@
 using Ferret.Configs;
 using Ferret.Models;
+using ImGuiNET;
 
 namespace Ferret.Generators;
 
@@ -42,6 +43,7 @@ public class GeneralGenerator : ILuaSectionGenerator
 
     public void Render()
     {
+        ImGui.TextUnformatted(templates.GetConfigured().name);
         if (templates.template.value.preset != null)
         {
             templates.template.value.preset.Render();

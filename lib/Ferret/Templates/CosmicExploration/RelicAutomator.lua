@@ -6,11 +6,11 @@
 Template = require('Ferret/Templates/Template')
 require('Ferret/CosmicExploration/Library')
 
----@class StellarCraftingRelic : Template
-StellarCraftingRelic = Template:extend()
+---@class RelicAutomator : Template
+RelicAutomator = Template:extend()
 
-function StellarCraftingRelic:new()
-    StellarCraftingRelic.super.new(self, 'stellar_crafting_relic', Version(0, 10, 3))
+function RelicAutomator:new()
+    RelicAutomator.super.new(self, 'stellar_crafting_relic', Version(0, 10, 3))
 
     self.job_order = {
         Jobs.Carpenter,
@@ -26,13 +26,6 @@ function StellarCraftingRelic:new()
     self.relic_ranks = {}
     self.progress = {}
 
-    self.wait_timers = {
-        pre_open_mission_list = 0,
-        post_open_mission_list = 0,
-        post_mission_start = 0,
-        post_mission_abandon = 0,
-    }
-
     self.blacklist = MissionList()
     self.actual_blacklist = MissionList()
     self.auto_blacklist = true
@@ -40,7 +33,7 @@ function StellarCraftingRelic:new()
     self.researchingway = Targetable(i18n('npcs.researchingway'))
 end
 
-function StellarCraftingRelic:init()
+function RelicAutomator:init()
     Template.init(self)
 
     CosmicExploration:init()
@@ -48,7 +41,7 @@ function StellarCraftingRelic:init()
     return self
 end
 
-function StellarCraftingRelic:setup()
+function RelicAutomator:setup()
     self:setup_blacklist()
 
     PauseYesAlready()
@@ -56,7 +49,7 @@ function StellarCraftingRelic:setup()
     return true
 end
 
-function StellarCraftingRelic:loop()
+function RelicAutomator:loop()
     RequestManager:request(Requests.STOP_CRAFT)
     if not CosmicExploration:open_mission_menu() then
         Logger:warn('Sad times are upon us')
@@ -132,14 +125,14 @@ function StellarCraftingRelic:loop()
     mission:finish(result.tier)
 end
 
-function StellarCraftingRelic:setup_blacklist()
+function RelicAutomator:setup_blacklist()
     self.actual_blacklist = MissionList()
     for _, mission in ipairs(self.blacklist.missions) do
         self.actual_blacklist:add(mission)
     end
 end
 
-function StellarCraftingRelic:get_first_unmaxed_job()
+function RelicAutomator:get_first_unmaxed_job()
     for _, job in ipairs(self.job_order) do
         if self.relic_ranks[job] < 9 then
             return job
@@ -149,7 +142,7 @@ function StellarCraftingRelic:get_first_unmaxed_job()
     return Jobs.Unknown
 end
 
-function StellarCraftingRelic:is_ready_to_upgrade()
+function RelicAutomator:is_ready_to_upgrade()
     for i, exp in ipairs(self.progress) do
         if Table:count(exp) > 0 then
             if exp.current < exp.required then
@@ -161,7 +154,7 @@ function StellarCraftingRelic:is_ready_to_upgrade()
     return true
 end
 
-function StellarCraftingRelic:upgrade()
+function RelicAutomator:upgrade()
     local text_advance = HasPlugin('TextAdvance')
     if text_advance then
         yield('/at disable')
@@ -190,4 +183,4 @@ function StellarCraftingRelic:upgrade()
     end
 end
 
-return StellarCraftingRelic():init()
+return RelicAutomator():init()
