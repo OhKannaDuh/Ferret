@@ -24,8 +24,6 @@ public sealed class Plugin : IDalamudPlugin
         Svc.Commands.AddHandler(Command, new CommandInfo(OnCommand) { HelpMessage = "Opens the ferret configurator." });
 
         windows = new WindowManager(this);
-
-        windows.ToggleMainUI();
     }
 
     private void OnCommand(string command, string args)
