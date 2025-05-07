@@ -2,7 +2,7 @@ _name = "Point Farm"
 local ferret = require('Ferret/Templates/CosmicExploration/MissionFarmer')
 
 
-ferret.mission_list = CosmicExploration:create_job_list_by_ids({
+ferret.mission_list = CosmicExploration:create_mission_list_from_ids({
     31,  32,  40,  34,  25,  24,  33,  26,  -- CRP
     76,  77,  85,  79,  70,  69,  78,  71,  -- BSM
     121, 122, 130, 124, 115, 114, 123, 116, -- ARM
