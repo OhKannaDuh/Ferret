@@ -1,0 +1,10 @@
+{
+    "Author": "Faye",
+    "Name": "Ferret",
+    "Punchline": "An SND library.",
+    "Description": "A library of goodies for working with Lua in SND",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 12,
+    "Tags": ["SND", "ferret", "library", "cosmic exploration"],
+    "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/Ferret/refs/heads/master/assets/icon.png"
+}

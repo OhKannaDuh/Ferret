@@ -1,0 +1,11 @@
+{
+    "msbuild": {
+        "useBundledOnly": false
+    },
+    "RoslynExtensionsOptions": {
+        "enableDecompilationSupport": true
+    },
+    "solution": {
+        "loadProjectsOnDemand": false
+    }
+}

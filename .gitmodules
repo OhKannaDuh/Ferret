@@ -1,0 +1,6 @@
+[submodule "external/ECommons"]
+	path = external/ECommons
+	url = https://github.com/NightmareXIV/ECommons.git
+[submodule "external/ImGuiColorTextEditNetDalamud"]
+	path = external/ImGuiColorTextEditNetDalamud
+	url = https://github.com/OhKannaDuh/ImGuiColorTextEditNetDalamud.git

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Dalamud.NET.Sdk/12.0.2">
+    <PropertyGroup>
+        <Version>0.0.0.1</Version>
+        <Description>Create easy SND macros for Ferret.</Description>
+        <PackageProjectUrl>https://github.com/OhKannaDuh/Ferret</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="..\assets\icon.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Visible>false</Visible>
+        </Content>
+        <ProjectReference Include="..\external\ImGuiColorTextEditNetDalamud\src\TextEdit\ImGuiColorTextEditNet.csproj" />
+        <ProjectReference Include="..\external\ECommons\ECommons\ECommons.csproj" />
+        <None Include="..\lua\**">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <Link>lua\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </None>
+    </ItemGroup>
+</Project>
