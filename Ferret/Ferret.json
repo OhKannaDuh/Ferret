@@ -1,10 +1,12 @@
 {
     "Author": "Faye",
     "Name": "Ferret",
+    "InternalName": "Ferret",
     "Punchline": "An SND library.",
     "Description": "A library of goodies for working with Lua in SND",
-    "ApplicableVersion": "any",
-    "DalamudApiLevel": 12,
     "Tags": ["SND", "ferret", "library"],
-    "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/Ferret/refs/heads/master/assets/icon.png"
+    "RepoUrl": "https://github.com/OhKannaDuh/Ferret",
+    "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/Ferret/refs/heads/master/assets/icon.png",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 12
 }
