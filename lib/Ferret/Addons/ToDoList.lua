@@ -77,6 +77,21 @@ function ToDoList:has_stellar_mission_bronze()
     return has_bronze
 end
 
+function ToDoList:get_stellar_mission_name()
+    for i = 1, self:get_count() do
+        local node_text = self:get_node_text(i, 13)
+        if String:starts_with(node_text, ' ') then
+            return node_text:gsub(' ', '')
+        end
+
+        if String:starts_with(node_text, 'A-') then
+            return node_text
+        end
+    end
+
+    return nil
+end
+
 function ToDoList:get_stellar_mission_craft_completions()
     local matches = {}
     local pattern = Translatable('.-crafted: (%d+)/(%d+)')
