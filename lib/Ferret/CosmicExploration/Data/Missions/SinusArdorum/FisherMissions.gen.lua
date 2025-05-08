@@ -517,7 +517,9 @@ return {
         :with_cosmocredit(41)
         :with_lunarcredit(42)
         :with_exp_reward(MissionReward(11, 4, 36))
-        :with_exp_reward(MissionReward(2, 4, 36)),
+        :with_exp_reward(MissionReward(2, 4, 36))
+        :with_recipe_table_id(374)
+        :with_recipes({ { recipe = 36672, item = 46973 } }),
     [509] = Mission(509, Name('A-2: Refined Moon Gel'), Jobs.Fisher, 'A2')
         :with_de_name('A-2: Verbessertes Mondgel')
         :with_fr_name('A-2 : Glu sélénienne améliorée')
@@ -528,7 +530,9 @@ return {
         :with_cosmocredit(42)
         :with_lunarcredit(42)
         :with_exp_reward(MissionReward(11, 4, 37))
-        :with_exp_reward(MissionReward(7, 4, 37)),
+        :with_exp_reward(MissionReward(7, 4, 37))
+        :with_recipe_table_id(375)
+        :with_recipes({ { recipe = 36682, item = 47593 } }),
     [510] = Mission(510, Name('A-3: Crystallic Gems'), Jobs.Fisher, 'A3')
         :with_de_name('A-3: Kristall-Juwel')
         :with_fr_name('A-3 : Pierre précieuse cristalline')
@@ -540,6 +544,8 @@ return {
         :with_lunarcredit(52)
         :with_exp_reward(MissionReward(11, 4, 41))
         :with_exp_reward(MissionReward(4, 4, 41))
+        :with_recipe_table_id(376)
+        :with_recipes({ { recipe = 36676, item = 47221 } })
         :with_weather_restriction(Weather.UmbralWind),
     [511] = Mission(511, Name('A-3: Eel Rations'), Jobs.Fisher, 'A3')
         :with_de_name('A-3: Aal-Rationen')
@@ -552,6 +558,8 @@ return {
         :with_lunarcredit(56)
         :with_exp_reward(MissionReward(11, 4, 45))
         :with_exp_reward(MissionReward(8, 4, 45))
+        :with_recipe_table_id(377)
+        :with_recipes({ { recipe = 36684, item = 47717 } })
         :with_weather_restriction(Weather.MoonDust),
     [542] = Mission(542, Name('Edible Fish'), Jobs.Fisher, 'D')
         :with_de_name('Speisefische')

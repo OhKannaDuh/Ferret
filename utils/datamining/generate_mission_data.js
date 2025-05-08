@@ -224,6 +224,21 @@ function get_restriction(mission) {
             if (recipe_link) {
                 datum.multi_recipe = recipe_link.recipe_id_2 != 0;
                 datum.multi_craft_config = parse_recipes(recipe_link, recipes);
+
+                datum.recipe_id = recipe_link.mission;
+                datum.recipes = [];
+
+                for (let index = 1; index <= 7; index++) {
+                    const key = `recipe_id_${index}`;
+                    if (!recipe_link[key] || recipe_link[key] == 0) {
+                        continue;
+                    }
+
+                    datum.recipes.push({
+                        recipe: recipe_link[key],
+                        item: recipes[recipe_link[key]].output_item,
+                    });
+                }
             }
 
             data[datum.id] = datum;
@@ -290,6 +305,29 @@ function get_restriction(mission) {
                     `:with_multi_craft_config(${parse_multi_craft_config(
                         datum.multi_craft_config
                     )})`;
+            }
+
+            if (datum.recipe_id) {
+                // datum.recipe_id = recipe_link.mission;
+                // datum.recipes = [];
+                // for (let index = 1; index <= 7; index++) {
+                //     const key = `recipe_id_${index}`;
+                //     if (!recipe_link[key] || recipe_link[key] == 0) {
+                //         continue;
+                //     }
+                //     datum.recipes.push({
+                //         recipe: recipe_link[key],
+                //         item: recipes[recipe_link[key]].output_item,
+                //     });
+                // }
+                output += "\n\t" + `:with_recipe_table_id(${datum.recipe_id})`;
+                output +=
+                    "\n\t" +
+                    `:with_recipes(${JSON.stringify(datum.recipes)
+                        .replaceAll("[", "{")
+                        .replaceAll("]", "}")
+                        .replaceAll('"', "")
+                        .replaceAll(":", " =")})`;
             }
 
             if (datum.restriction) {

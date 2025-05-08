@@ -517,7 +517,9 @@ return {
         :with_cosmocredit(24)
         :with_lunarcredit(25)
         :with_exp_reward(MissionReward(10, 4, 21))
-        :with_exp_reward(MissionReward(5, 4, 21)),
+        :with_exp_reward(MissionReward(5, 4, 21))
+        :with_recipe_table_id(368)
+        :with_recipes({ { recipe = 36678, item = 47345 } }),
     [503] = Mission(503, Name('A-2: Special Spongoi Processing'), Jobs.Botanist, 'A2')
         :with_de_name('A-2: Verarbeitung von Sonderhyphen')
         :with_fr_name('A-2 : Traitement de mycélium rare')
@@ -528,7 +530,9 @@ return {
         :with_cosmocredit(24)
         :with_lunarcredit(25)
         :with_exp_reward(MissionReward(10, 4, 21))
-        :with_exp_reward(MissionReward(6, 4, 21)),
+        :with_exp_reward(MissionReward(6, 4, 21))
+        :with_recipe_table_id(369)
+        :with_recipes({ { recipe = 36680, item = 47469 } }),
     [504] = Mission(504, Name('A-2: Freshness Preservation'), Jobs.Botanist, 'A2')
         :with_de_name('A-2: Verarbeitung gelagerter Lebensmittel')
         :with_fr_name('A-2 : Transformation d\'aliments frais')
@@ -539,7 +543,9 @@ return {
         :with_cosmocredit(24)
         :with_lunarcredit(25)
         :with_exp_reward(MissionReward(10, 4, 21))
-        :with_exp_reward(MissionReward(8, 4, 21)),
+        :with_exp_reward(MissionReward(8, 4, 21))
+        :with_recipe_table_id(370)
+        :with_recipes({ { recipe = 36683, item = 47716 } }),
     [505] = Mission(505, Name('A-3: Lunar Tools'), Jobs.Botanist, 'A3')
         :with_de_name('A-3: Sammlerwerkzeuge für Mondrohstoffe')
         :with_fr_name('A-3 : Outils pour la récolte de matériaux séléniens')
@@ -551,6 +557,8 @@ return {
         :with_lunarcredit(27)
         :with_exp_reward(MissionReward(10, 4, 21))
         :with_exp_reward(MissionReward(1, 4, 21))
+        :with_recipe_table_id(371)
+        :with_recipes({ { recipe = 36670, item = 46859 } })
         :with_weather_restriction(Weather.MoonDust),
     [506] = Mission(506, Name('A-3: High Burn Furnace'), Jobs.Botanist, 'A3')
         :with_de_name('A-3: Hochleistungs-Ofen')
@@ -563,6 +571,8 @@ return {
         :with_lunarcredit(27)
         :with_exp_reward(MissionReward(10, 4, 21))
         :with_exp_reward(MissionReward(3, 4, 21))
+        :with_recipe_table_id(372)
+        :with_recipes({ { recipe = 36674, item = 47097 } })
         :with_weather_restriction(Weather.UmbralWind),
     [507] = Mission(507, Name('A-3: Mushroom-borne Comfort'), Jobs.Botanist, 'A3')
         :with_de_name('A-3: Pilzwärme für daheim')
@@ -575,6 +585,8 @@ return {
         :with_lunarcredit(27)
         :with_exp_reward(MissionReward(10, 4, 21))
         :with_exp_reward(MissionReward(7, 4, 21))
+        :with_recipe_table_id(373)
+        :with_recipes({ { recipe = 36681, item = 47592 } })
         :with_weather_restriction(Weather.MoonDust),
     [539] = Mission(539, Name('Medicinal Sclerotia'), Jobs.Botanist, 'D')
         :with_de_name('Hyphen für Medikamente')

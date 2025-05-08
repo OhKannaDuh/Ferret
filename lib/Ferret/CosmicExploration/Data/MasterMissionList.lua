@@ -11,7 +11,7 @@ require('Ferret/Data/Name')
 MasterMissionList = MissionList()
 
 local function add_master_mission_list(zone, job)
-    local missions = require('Ferret/CosmicExploration/Data/' .. zone .. '/' .. job .. 'Missions.gen')
+    local missions = require('Ferret/CosmicExploration/Data/Missions/' .. zone .. '/' .. job .. 'Missions.gen')
     for k, v in pairs(missions) do
         MasterMissionList.missions[k] = v
     end

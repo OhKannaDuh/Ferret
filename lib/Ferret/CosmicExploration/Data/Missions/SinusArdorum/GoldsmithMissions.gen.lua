@@ -7,7 +7,9 @@ return {
         :with_gold_threshold(2400)
         :with_cosmocredit(2)
         :with_lunarcredit(5)
-        :with_exp_reward(MissionReward(4, 1, 7)),
+        :with_exp_reward(MissionReward(4, 1, 7))
+        :with_recipe_table_id(137)
+        :with_recipes({ { recipe = 36354, item = 48238 } }),
     [137] = Mission(137, Name('Spare Starship Parts'), Jobs.Goldsmith, 'D')
         :with_de_name('Ersatzteile (Raumschiff)')
         :with_fr_name('Pièces de rechange pour vaisseau')
@@ -16,7 +18,9 @@ return {
         :with_gold_threshold(2400)
         :with_cosmocredit(2)
         :with_lunarcredit(5)
-        :with_exp_reward(MissionReward(4, 1, 7)),
+        :with_exp_reward(MissionReward(4, 1, 7))
+        :with_recipe_table_id(138)
+        :with_recipes({ { recipe = 36355, item = 48239 } }),
     [138] = Mission(138, Name('Alloy Inspection'), Jobs.Goldsmith, 'D')
         :with_de_name('Legierungsinspektion')
         :with_fr_name('Étude de fabrication d\'alliages')
@@ -25,7 +29,9 @@ return {
         :with_gold_threshold(2400)
         :with_cosmocredit(2)
         :with_lunarcredit(5)
-        :with_exp_reward(MissionReward(4, 1, 8)),
+        :with_exp_reward(MissionReward(4, 1, 8))
+        :with_recipe_table_id(139)
+        :with_recipes({ { recipe = 36356, item = 48240 } }),
     [139] = Mission(139, Name('Custom Parts (Simple)'), Jobs.Goldsmith, 'D')
         :with_de_name('Anpassungsteile (Klasse I)')
         :with_fr_name('Pièces adaptables simples')
@@ -34,7 +40,9 @@ return {
         :with_gold_threshold(2400)
         :with_cosmocredit(2)
         :with_lunarcredit(5)
-        :with_exp_reward(MissionReward(4, 1, 7)),
+        :with_exp_reward(MissionReward(4, 1, 7))
+        :with_recipe_table_id(140)
+        :with_recipes({ { recipe = 36357, item = 48400 } }),
     [140] = Mission(140, Name('Multi-purpose Metal Components'), Jobs.Goldsmith, 'D')
         :with_de_name('Metallteile')
         :with_fr_name('Pièces métalliques multi-usage')
@@ -43,7 +51,9 @@ return {
         :with_gold_threshold(2400)
         :with_cosmocredit(2)
         :with_lunarcredit(5)
-        :with_exp_reward(MissionReward(4, 1, 7)),
+        :with_exp_reward(MissionReward(4, 1, 7))
+        :with_recipe_table_id(141)
+        :with_recipes({ { recipe = 36358, item = 48250 } }),
     [141] = Mission(141, Name('Mass-produced Necessities'), Jobs.Goldsmith, 'D')
         :with_de_name('Bedarfsartikel-Massenproduktion')
         :with_fr_name('Grosse production d\'articles de première nécessité')
@@ -52,7 +62,9 @@ return {
         :with_gold_threshold(2400)
         :with_cosmocredit(2)
         :with_lunarcredit(5)
-        :with_exp_reward(MissionReward(4, 1, 7)),
+        :with_exp_reward(MissionReward(4, 1, 7))
+        :with_recipe_table_id(142)
+        :with_recipes({ { recipe = 36359, item = 48401 } }),
     [142] = Mission(142, Name('Standardized Heavy Plating'), Jobs.Goldsmith, 'C')
         :with_de_name('Dicke Projektplatten')
         :with_fr_name('Plaques épaisses standard')
@@ -62,7 +74,9 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(4, 2, 3))
-        :with_exp_reward(MissionReward(4, 1, 5)),
+        :with_exp_reward(MissionReward(4, 1, 5))
+        :with_recipe_table_id(143)
+        :with_recipes({ { recipe = 36360, item = 48238 } }),
     [143] = Mission(143, Name('Starship Shafts'), Jobs.Goldsmith, 'C')
         :with_de_name('Triebachsen (Raumschiff)')
         :with_fr_name('Axes de transmission pour vaisseau spatial')
@@ -72,7 +86,9 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(4, 2, 6))
-        :with_exp_reward(MissionReward(4, 1, 4)),
+        :with_exp_reward(MissionReward(4, 1, 4))
+        :with_recipe_table_id(144)
+        :with_recipes({ { recipe = 36361, item = 48242 } }),
     [144] = Mission(144, Name('Worker\'s Grinding Tools'), Jobs.Goldsmith, 'C')
         :with_de_name('Arbeiter-Schleifwerkzeug')
         :with_fr_name('Outils de polissage')
@@ -82,7 +98,9 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(4, 2, 5))
-        :with_exp_reward(MissionReward(4, 1, 5)),
+        :with_exp_reward(MissionReward(4, 1, 5))
+        :with_recipe_table_id(145)
+        :with_recipes({ { recipe = 36362, item = 48402 } }),
     [145] = Mission(145, Name('Standardized Chainmail Sheets'), Jobs.Goldsmith, 'C')
         :with_de_name('Ketten')
         :with_fr_name('Chaînes standard')
@@ -94,7 +112,9 @@ return {
         :with_exp_reward(MissionReward(4, 2, 4))
         :with_exp_reward(MissionReward(4, 1, 6))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_recipe_table_id(146)
+        :with_recipes({ { recipe = 36363, item = 48370 }, { recipe = 36364, item = 48403 } }),
     [146] = Mission(146, Name('Eye Protection Equipment'), Jobs.Goldsmith, 'C')
         :with_de_name('Augenschutz-Ausrüstung')
         :with_fr_name('Protections pour les yeux')
@@ -106,7 +126,9 @@ return {
         :with_exp_reward(MissionReward(4, 2, 9))
         :with_exp_reward(MissionReward(4, 1, 5))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_recipe_table_id(147)
+        :with_recipes({ { recipe = 36365, item = 48251 }, { recipe = 36366, item = 48404 } }),
     [147] = Mission(147, Name('Custom Parts (Intermediate)'), Jobs.Goldsmith, 'C')
         :with_de_name('Anpassungsteile (Klasse II)')
         :with_fr_name('Pièces adaptables intermédiaires')
@@ -118,7 +140,9 @@ return {
         :with_exp_reward(MissionReward(4, 2, 7))
         :with_exp_reward(MissionReward(4, 1, 7))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 3, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 3, [1] = 1 })
+        :with_recipe_table_id(148)
+        :with_recipes({ { recipe = 36367, item = 48252 }, { recipe = 36368, item = 48405 } }),
     [148] = Mission(148, Name('Heat Dissipation Equipment'), Jobs.Goldsmith, 'C')
         :with_de_name('Abwärmevorrichtungen')
         :with_fr_name('Équipements thermorésistants')
@@ -130,7 +154,9 @@ return {
         :with_exp_reward(MissionReward(4, 2, 5))
         :with_exp_reward(MissionReward(4, 1, 5))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_recipe_table_id(149)
+        :with_recipes({ { recipe = 36369, item = 48253 }, { recipe = 36370, item = 48406 } }),
     [149] = Mission(149, Name('Rover Parts'), Jobs.Goldsmith, 'B')
         :with_de_name('Einzelteile (Vehikel)')
         :with_fr_name('Pièces pour rover')
@@ -140,7 +166,9 @@ return {
         :with_cosmocredit(7)
         :with_lunarcredit(10)
         :with_exp_reward(MissionReward(4, 2, 5))
-        :with_exp_reward(MissionReward(4, 1, 9)),
+        :with_exp_reward(MissionReward(4, 1, 9))
+        :with_recipe_table_id(150)
+        :with_recipes({ { recipe = 36371, item = 48407 } }),
     [150] = Mission(150, Name('Standardized Light Plating'), Jobs.Goldsmith, 'B')
         :with_de_name('Dünne Projektplatten')
         :with_fr_name('Plaques fines standard')
@@ -150,7 +178,9 @@ return {
         :with_cosmocredit(6)
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(4, 2, 7))
-        :with_exp_reward(MissionReward(4, 1, 4)),
+        :with_exp_reward(MissionReward(4, 1, 4))
+        :with_recipe_table_id(151)
+        :with_recipes({ { recipe = 36372, item = 48238 } }),
     [151] = Mission(151, Name('Worker\'s Weaving Tools'), Jobs.Goldsmith, 'B')
         :with_de_name('Arbeiter-Nähwerkzeug')
         :with_fr_name('Nécessaire de couture')
@@ -160,7 +190,9 @@ return {
         :with_cosmocredit(4)
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(4, 3, 5))
-        :with_exp_reward(MissionReward(4, 1, 3)),
+        :with_exp_reward(MissionReward(4, 1, 3))
+        :with_recipe_table_id(152)
+        :with_recipes({ { recipe = 36373, item = 48408 } }),
     [152] = Mission(152, Name('Observation Devices'), Jobs.Goldsmith, 'B')
         :with_de_name('Observations-Einrichtung')
         :with_fr_name('Mobilier d\'observation')
@@ -170,7 +202,9 @@ return {
         :with_cosmocredit(7)
         :with_lunarcredit(10)
         :with_exp_reward(MissionReward(4, 3, 9))
-        :with_exp_reward(MissionReward(4, 2, 5)),
+        :with_exp_reward(MissionReward(4, 2, 5))
+        :with_recipe_table_id(153)
+        :with_recipes({ { recipe = 36374, item = 48409 } }),
     [153] = Mission(153, Name('Fireplace Fixtures'), Jobs.Goldsmith, 'B')
         :with_de_name('Innenfeuerstelle')
         :with_fr_name('Cheminées pour intérieur')
@@ -180,7 +214,9 @@ return {
         :with_cosmocredit(8)
         :with_lunarcredit(11)
         :with_exp_reward(MissionReward(4, 3, 10))
-        :with_exp_reward(MissionReward(4, 1, 6)),
+        :with_exp_reward(MissionReward(4, 1, 6))
+        :with_recipe_table_id(154)
+        :with_recipes({ { recipe = 36375, item = 48410 } }),
     [154] = Mission(154, Name('Habitation Vanities'), Jobs.Goldsmith, 'B')
         :with_de_name('Habitationsmodul-Schminkspiegel')
         :with_fr_name('Miroirs de maquillage pour habitation')
@@ -190,7 +226,9 @@ return {
         :with_cosmocredit(8)
         :with_lunarcredit(11)
         :with_exp_reward(MissionReward(4, 3, 10))
-        :with_exp_reward(MissionReward(4, 2, 6)),
+        :with_exp_reward(MissionReward(4, 2, 6))
+        :with_recipe_table_id(155)
+        :with_recipes({ { recipe = 36376, item = 48411 } }),
     [155] = Mission(155, Name('Lunar Material Tool Processing'), Jobs.Goldsmith, 'B')
         :with_de_name('Veredlung von Mondwerkzeugen')
         :with_fr_name('Élaboration d\'outils en matériaux séléniens')
@@ -203,7 +241,9 @@ return {
         :with_exp_reward(MissionReward(4, 2, 5))
         :with_exp_reward(MissionReward(4, 1, 5))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_recipe_table_id(156)
+        :with_recipes({ { recipe = 36377, item = 48254 }, { recipe = 36378, item = 48412 } }),
     [156] = Mission(156, Name('Lunar Material Part Processing'), Jobs.Goldsmith, 'B')
         :with_de_name('Veredlung von Mondgüterbauteilen')
         :with_fr_name('Élaboration de pièces en matériaux séléniens')
@@ -216,7 +256,9 @@ return {
         :with_exp_reward(MissionReward(4, 2, 6))
         :with_exp_reward(MissionReward(4, 1, 6))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_recipe_table_id(157)
+        :with_recipes({ { recipe = 36379, item = 48255 }, { recipe = 36380, item = 48413 } }),
     [157] = Mission(157, Name('A-1: Key Facility Plating'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Stationsstruktur-Projektplatten')
         :with_fr_name('A-1 : Plaques pour infrastructure cruciale')
@@ -227,7 +269,9 @@ return {
         :with_cosmocredit(19)
         :with_lunarcredit(18)
         :with_exp_reward(MissionReward(4, 2, 13))
-        :with_exp_reward(MissionReward(4, 1, 19)),
+        :with_exp_reward(MissionReward(4, 1, 19))
+        :with_recipe_table_id(158)
+        :with_recipes({ { recipe = 36381, item = 48238 } }),
     [158] = Mission(158, Name('A-1: Rare Material Processing'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Seltene Materialien')
         :with_fr_name('A-1 : Traitement de ressources rares')
@@ -238,7 +282,9 @@ return {
         :with_cosmocredit(18)
         :with_lunarcredit(17)
         :with_exp_reward(MissionReward(4, 3, 18))
-        :with_exp_reward(MissionReward(4, 1, 12)),
+        :with_exp_reward(MissionReward(4, 1, 12))
+        :with_recipe_table_id(159)
+        :with_recipes({ { recipe = 36382, item = 48243 } }),
     [159] = Mission(159, Name('A-1: Construction Necessities'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Einrichtungsbauartikel')
         :with_fr_name('A-1 : Approvisionnement en pièces pour infrastructure')
@@ -248,7 +294,9 @@ return {
         :with_cosmocredit(19)
         :with_lunarcredit(17)
         :with_exp_reward(MissionReward(4, 3, 12))
-        :with_exp_reward(MissionReward(4, 2, 19)),
+        :with_exp_reward(MissionReward(4, 2, 19))
+        :with_recipe_table_id(160)
+        :with_recipes({ { recipe = 36383, item = 48414 } }),
     [160] = Mission(160, Name('A-1: Fine-grade Knives'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Präzise Messer')
         :with_fr_name('A-1 : Couteaux de précision')
@@ -259,7 +307,9 @@ return {
         :with_cosmocredit(15)
         :with_lunarcredit(14)
         :with_exp_reward(MissionReward(4, 4, 15))
-        :with_exp_reward(MissionReward(4, 1, 10)),
+        :with_exp_reward(MissionReward(4, 1, 10))
+        :with_recipe_table_id(161)
+        :with_recipes({ { recipe = 36384, item = 48415 } }),
     [161] = Mission(161, Name('A-1: Meteoric Material Test Processing'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Meteoreisenveredelungs-Inspektion')
         :with_fr_name('A-1 : Traitement expérimental de fragments de météorites')
@@ -272,7 +322,16 @@ return {
         :with_exp_reward(MissionReward(4, 4, 30))
         :with_exp_reward(MissionReward(4, 2, 20))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_recipe_table_id(162)
+        :with_recipes({
+            { recipe = 36385, item = 48244 },
+            { recipe = 36386, item = 48245 },
+            {
+                recipe = 36387,
+                item = 48246,
+            },
+        }),
     [162] = Mission(162, Name('A-2: Replica Bathing Fixtures'), Jobs.Goldsmith, 'A2')
         :with_de_name('A-2: Badeeinrichtungs-Nachbau')
         :with_fr_name('A-2 : Reproduction de mobilier de bain')
@@ -283,7 +342,9 @@ return {
         :with_cosmocredit(19)
         :with_lunarcredit(20)
         :with_exp_reward(MissionReward(4, 3, 19))
-        :with_exp_reward(MissionReward(4, 1, 13)),
+        :with_exp_reward(MissionReward(4, 1, 13))
+        :with_recipe_table_id(163)
+        :with_recipes({ { recipe = 36388, item = 48416 } }),
     [163] = Mission(163, Name('A-2: Fine-grade Material Processing'), Jobs.Goldsmith, 'A2')
         :with_de_name('A-2: Präzise Materialien')
         :with_fr_name('A-2 : Ouvrage minutieux de matériaux')
@@ -294,7 +355,9 @@ return {
         :with_cosmocredit(15)
         :with_lunarcredit(15)
         :with_exp_reward(MissionReward(4, 3, 10))
-        :with_exp_reward(MissionReward(4, 2, 15)),
+        :with_exp_reward(MissionReward(4, 2, 15))
+        :with_recipe_table_id(164)
+        :with_recipes({ { recipe = 36389, item = 48417 } }),
     [164] = Mission(164, Name('A-2: Moongate Hub Equipment'), Jobs.Goldsmith, 'A2')
         :with_de_name('A-2: Mondtor-Station-Ersatzausstattung')
         :with_fr_name('A-2 : Approvisionnement en matériel pour la station')
@@ -305,7 +368,9 @@ return {
         :with_cosmocredit(15)
         :with_lunarcredit(15)
         :with_exp_reward(MissionReward(4, 4, 15))
-        :with_exp_reward(MissionReward(4, 1, 10)),
+        :with_exp_reward(MissionReward(4, 1, 10))
+        :with_recipe_table_id(165)
+        :with_recipes({ { recipe = 36390, item = 48418 } }),
     [165] = Mission(165, Name('A-2: Work Support Mechanical Arms'), Jobs.Goldsmith, 'A2')
         :with_de_name('A-2: Arbeitsunterstützung-Arm')
         :with_fr_name('A-2 : Bras mécaniques pour aide au labeur')
@@ -320,6 +385,15 @@ return {
         :with_exp_reward(MissionReward(4, 1, 16))
         :with_multiple_recipes()
         :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_recipe_table_id(166)
+        :with_recipes({
+            { recipe = 36391, item = 48419 },
+            { recipe = 36392, item = 48420 },
+            {
+                recipe = 36393,
+                item = 48421,
+            },
+        })
         :with_weather_restriction(Weather.MoonDust),
     [166] = Mission(166, Name('A-3: High-durability Material Processing'), Jobs.Goldsmith, 'A3')
         :with_de_name('A-3: Erhöhung der Materialbelastung')
@@ -335,6 +409,8 @@ return {
         :with_exp_reward(MissionReward(4, 2, 15))
         :with_multiple_recipes()
         :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_recipe_table_id(167)
+        :with_recipes({ { recipe = 36394, item = 48432 }, { recipe = 36395, item = 48422 } })
         :with_weather_restriction(Weather.UmbralWind),
     [167] = Mission(167, Name('A-3: Impact-resistant Material Processing'), Jobs.Goldsmith, 'A3')
         :with_de_name('A-3: Erhöhung der Material-Schockresistenz')
@@ -350,6 +426,8 @@ return {
         :with_exp_reward(MissionReward(4, 1, 16))
         :with_multiple_recipes()
         :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_recipe_table_id(168)
+        :with_recipes({ { recipe = 36396, item = 48257 }, { recipe = 36397, item = 48423 } })
         :with_weather_restriction(Weather.MoonDust),
     [168] = Mission(168, Name('A-1: Hub Furnishings and Fixtures I'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Station-Möbelstücke I')
@@ -361,7 +439,9 @@ return {
         :with_cosmocredit(16)
         :with_lunarcredit(15)
         :with_exp_reward(MissionReward(4, 4, 16))
-        :with_exp_reward(MissionReward(4, 3, 11)),
+        :with_exp_reward(MissionReward(4, 3, 11))
+        :with_recipe_table_id(169)
+        :with_recipes({ { recipe = 36398, item = 48424 } }),
     [169] = Mission(169, Name('A-2: Hub Furnishings and Fixtures II'), Jobs.Goldsmith, 'A2')
         :with_de_name('A-2: Station-Möbelstücke II')
         :with_fr_name('A-2 : Amélioration de mobilier pour infrastructure')
@@ -373,7 +453,9 @@ return {
         :with_lunarcredit(21)
         :with_exp_reward(MissionReward(4, 3, 10))
         :with_exp_reward(MissionReward(4, 2, 10))
-        :with_exp_reward(MissionReward(4, 1, 10)),
+        :with_exp_reward(MissionReward(4, 1, 10))
+        :with_recipe_table_id(170)
+        :with_recipes({ { recipe = 36399, item = 48425 } }),
     [170] = Mission(170, Name('A-1: Specialized Materials I'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Verfeinerungsmaterialien I')
         :with_fr_name('A-1 : Préparation de matériaux de perfectionnement')
@@ -384,7 +466,9 @@ return {
         :with_cosmocredit(11)
         :with_lunarcredit(10)
         :with_exp_reward(MissionReward(4, 2, 7))
-        :with_exp_reward(MissionReward(4, 1, 11)),
+        :with_exp_reward(MissionReward(4, 1, 11))
+        :with_recipe_table_id(171)
+        :with_recipes({ { recipe = 36400, item = 48426 } }),
     [171] = Mission(171, Name('A-2: Specialized Materials II'), Jobs.Goldsmith, 'A2')
         :with_de_name('A-2: Verfeinerungsmaterialien II')
         :with_fr_name('A-2 : Amélioration de matériaux de perfectionnement')
@@ -396,7 +480,9 @@ return {
         :with_lunarcredit(16)
         :with_exp_reward(MissionReward(4, 4, 11))
         :with_exp_reward(MissionReward(4, 3, 8))
-        :with_exp_reward(MissionReward(4, 1, 8)),
+        :with_exp_reward(MissionReward(4, 1, 8))
+        :with_recipe_table_id(172)
+        :with_recipes({ { recipe = 36401, item = 48427 } }),
     [172] = Mission(172, Name('A-3: Vending Machines'), Jobs.Goldsmith, 'A3')
         :with_de_name('A-3: Automaten')
         :with_fr_name('A-3 : Distributeurs automatiques')
@@ -408,7 +494,9 @@ return {
         :with_lunarcredit(17)
         :with_exp_reward(MissionReward(4, 4, 10))
         :with_exp_reward(MissionReward(4, 3, 7))
-        :with_exp_reward(MissionReward(4, 2, 7)),
+        :with_exp_reward(MissionReward(4, 2, 7))
+        :with_recipe_table_id(173)
+        :with_recipes({ { recipe = 36402, item = 48428 } }),
     [173] = Mission(173, Name('A-2: Starship Building Materials'), Jobs.Goldsmith, 'A2')
         :with_de_name('A-2: Raumschiff-Materialien')
         :with_fr_name('A-2 : Matériaux pour vaisseau spatial')
@@ -419,7 +507,9 @@ return {
         :with_cosmocredit(15)
         :with_lunarcredit(15)
         :with_exp_reward(MissionReward(4, 4, 15))
-        :with_exp_reward(MissionReward(4, 2, 10)),
+        :with_exp_reward(MissionReward(4, 2, 10))
+        :with_recipe_table_id(174)
+        :with_recipes({ { recipe = 36403, item = 48247 } }),
     [174] = Mission(174, Name('A-3: Starship Building Material Processing'), Jobs.Goldsmith, 'A3')
         :with_de_name('A-3: Raumschiff-Materialien-Veredelung')
         :with_fr_name('A-3 : Traitement de matériaux pour vaisseau spatial')
@@ -431,7 +521,9 @@ return {
         :with_lunarcredit(18)
         :with_exp_reward(MissionReward(4, 4, 12))
         :with_exp_reward(MissionReward(4, 3, 8))
-        :with_exp_reward(MissionReward(4, 1, 8)),
+        :with_exp_reward(MissionReward(4, 1, 8))
+        :with_recipe_table_id(175)
+        :with_recipes({ { recipe = 36404, item = 48248 } }),
     [175] = Mission(175, Name('A-1: High-performance Drone Materials I'), Jobs.Goldsmith, 'A')
         :with_de_name('A-1: Hochfunktionsdrohnen-Materialien I')
         :with_fr_name('A-1 : Préparation de matériaux pour drones ultraperformants')
@@ -443,6 +535,8 @@ return {
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(4, 4, 17))
         :with_exp_reward(MissionReward(4, 3, 12))
+        :with_recipe_table_id(176)
+        :with_recipes({ { recipe = 36405, item = 48429 } })
         :with_time_restriction(12, 14),
     [176] = Mission(176, Name('A-2: High-performance Drone Materials II'), Jobs.Goldsmith, 'A2')
         :with_de_name('A-2: Hochfunktionsdrohnen-Materialien II')
@@ -455,7 +549,9 @@ return {
         :with_lunarcredit(23)
         :with_exp_reward(MissionReward(4, 3, 11))
         :with_exp_reward(MissionReward(4, 2, 11))
-        :with_exp_reward(MissionReward(4, 1, 11)),
+        :with_exp_reward(MissionReward(4, 1, 11))
+        :with_recipe_table_id(177)
+        :with_recipes({ { recipe = 36406, item = 48430 } }),
     [177] = Mission(177, Name('A-3: High-performance Drones'), Jobs.Goldsmith, 'A3')
         :with_de_name('A-3: Hochfunktionsdrohnen')
         :with_fr_name('A-3 : Conception de drones ultraperformants')
@@ -467,7 +563,9 @@ return {
         :with_lunarcredit(23)
         :with_exp_reward(MissionReward(4, 4, 14))
         :with_exp_reward(MissionReward(4, 2, 10))
-        :with_exp_reward(MissionReward(4, 1, 10)),
+        :with_exp_reward(MissionReward(4, 1, 10))
+        :with_recipe_table_id(178)
+        :with_recipes({ { recipe = 36407, item = 48249 } }),
     [178] = Mission(178, Name('A-3: Cosmotized Equipment Materials I'), Jobs.Goldsmith, 'A3')
         :with_de_name('A-3: Spezialausrüstungs-Materialien I')
         :with_fr_name('A-3 : Préparation de matériaux pour machine d\'un nouveau genre')
@@ -482,6 +580,8 @@ return {
         :with_exp_reward(MissionReward(4, 1, 17))
         :with_multiple_recipes()
         :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_recipe_table_id(179)
+        :with_recipes({ { recipe = 36408, item = 48433 }, { recipe = 36409, item = 48434 } })
         :with_time_restriction(0, 2),
     [179] = Mission(179, Name('A-3: Cosmotized Equipment Materials II'), Jobs.Goldsmith, 'A3')
         :with_de_name('A-3: Spezialausrüstungs-Materialien II')
@@ -496,7 +596,9 @@ return {
         :with_exp_reward(MissionReward(4, 3, 19))
         :with_exp_reward(MissionReward(4, 2, 19))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_recipe_table_id(180)
+        :with_recipes({ { recipe = 36411, item = 48435 }, { recipe = 36412, item = 48436 } }),
     [180] = Mission(180, Name('A-3: Cosmotized Equipment Materials III'), Jobs.Goldsmith, 'A3')
         :with_de_name('A-3: Spezialausrüstung (Feinschliff)')
         :with_fr_name('A-3 : Perfectionnement de la machine d\'un nouveau genre')
@@ -510,7 +612,9 @@ return {
         :with_exp_reward(MissionReward(4, 2, 51))
         :with_exp_reward(MissionReward(4, 1, 51))
         :with_multiple_recipes()
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_recipe_table_id(181)
+        :with_recipes({ { recipe = 36414, item = 48236 }, { recipe = 36416, item = 48431 } }),
     [521] = Mission(521, Name('Lighting Repair Tools'), Jobs.Goldsmith, 'D')
         :with_de_name('Werkzeuge zur Beleuchtungsreparatur')
         :with_fr_name('Outils de réparation pour l\'éclairage')
@@ -520,7 +624,9 @@ return {
         :with_lunarcredit(138)
         :with_exp_reward(MissionReward(4, 4, 18))
         :with_exp_reward(MissionReward(4, 2, 11))
-        :with_exp_reward(MissionReward(4, 1, 11)),
+        :with_exp_reward(MissionReward(4, 1, 11))
+        :with_recipe_table_id(393)
+        :with_recipes({ { recipe = 36700, item = 47223 } }),
     [522] = Mission(522, Name('Intricate Vacuum Parts'), Jobs.Goldsmith, 'D')
         :with_de_name('Präzise Bauteile (Saugmaschine)')
         :with_fr_name('Pièces de précision pour aspirateur')
@@ -530,7 +636,9 @@ return {
         :with_lunarcredit(145)
         :with_exp_reward(MissionReward(4, 4, 19))
         :with_exp_reward(MissionReward(4, 2, 12))
-        :with_exp_reward(MissionReward(4, 1, 12)),
+        :with_exp_reward(MissionReward(4, 1, 12))
+        :with_recipe_table_id(396)
+        :with_recipes({ { recipe = 36703, item = 47229 } }),
     [523] = Mission(523, Name('Spare Vehicle Parts'), Jobs.Goldsmith, 'D')
         :with_de_name('Ausbesserungskomponenten (Vehikel)')
         :with_fr_name('Pièces de rechange pour véhicule')
@@ -540,5 +648,7 @@ return {
         :with_lunarcredit(147)
         :with_exp_reward(MissionReward(4, 4, 20))
         :with_exp_reward(MissionReward(4, 2, 12))
-        :with_exp_reward(MissionReward(4, 1, 12)),
+        :with_exp_reward(MissionReward(4, 1, 12))
+        :with_recipe_table_id(394)
+        :with_recipes({ { recipe = 36701, item = 47225 } }),
 }

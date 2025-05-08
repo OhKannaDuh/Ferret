@@ -49,6 +49,9 @@ function Mission:new(id, name, job, class)
     self.has_multiple_recipes = false
     self.multi_craft_config = {}
 
+    self.recipe_table_id = 0
+    self.recipes = {}
+
     self.is_time_restricted = false
     self.time_restriction = {
         start = 0,
@@ -146,6 +149,16 @@ end
 ---@return Mission
 function Mission:with_multi_craft_config(config)
     self.multi_craft_config = config
+    return self
+end
+
+function Mission:with_recipe_table_id(id)
+    self.recipe_table_id = id
+    return self
+end
+
+function Mission:with_recipes(recipes)
+    self.recipes = recipes
     return self
 end
 

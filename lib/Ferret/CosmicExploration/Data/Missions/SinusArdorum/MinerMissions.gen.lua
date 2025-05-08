@@ -517,7 +517,9 @@ return {
         :with_cosmocredit(24)
         :with_lunarcredit(25)
         :with_exp_reward(MissionReward(9, 4, 21))
-        :with_exp_reward(MissionReward(1, 4, 21)),
+        :with_exp_reward(MissionReward(1, 4, 21))
+        :with_recipe_table_id(362)
+        :with_recipes({ { recipe = 36669, item = 46858 } }),
     [497] = Mission(497, Name('A-2: Impact-resistant Containers'), Jobs.Miner, 'A2')
         :with_de_name('A-2: Schockresistenter Behälter')
         :with_fr_name('A-2 : Conteneurs résistants aux chocs')
@@ -528,7 +530,9 @@ return {
         :with_cosmocredit(24)
         :with_lunarcredit(25)
         :with_exp_reward(MissionReward(9, 4, 21))
-        :with_exp_reward(MissionReward(3, 4, 21)),
+        :with_exp_reward(MissionReward(3, 4, 21))
+        :with_recipe_table_id(363)
+        :with_recipes({ { recipe = 36673, item = 47096 } }),
     [498] = Mission(498, Name('A-2: Soothing Censers'), Jobs.Miner, 'A2')
         :with_de_name('A-2: Räuchergefäß von Mutter Ætheris')
         :with_fr_name('A-2 : Brûleurs d\'encens de la planète-mère')
@@ -539,7 +543,9 @@ return {
         :with_cosmocredit(24)
         :with_lunarcredit(25)
         :with_exp_reward(MissionReward(9, 4, 21))
-        :with_exp_reward(MissionReward(4, 4, 21)),
+        :with_exp_reward(MissionReward(4, 4, 21))
+        :with_recipe_table_id(364)
+        :with_recipes({ { recipe = 36675, item = 47220 } }),
     [499] = Mission(499, Name('A-3: Automaton Digging'), Jobs.Miner, 'A3')
         :with_de_name('A-3: Ausweg durch Grundgesteinsabbau')
         :with_fr_name('A-3 : Étude de l\'extraction de roches souterraines')
@@ -551,6 +557,8 @@ return {
         :with_lunarcredit(27)
         :with_exp_reward(MissionReward(9, 4, 21))
         :with_exp_reward(MissionReward(2, 4, 21))
+        :with_recipe_table_id(365)
+        :with_recipes({ { recipe = 36671, item = 46972 } })
         :with_weather_restriction(Weather.UmbralWind),
     [500] = Mission(500, Name('A-3: Lunar Leather'), Jobs.Miner, 'A3')
         :with_de_name('A-3: Gerbleder für Mondrohstoffe')
@@ -563,6 +571,8 @@ return {
         :with_lunarcredit(27)
         :with_exp_reward(MissionReward(9, 4, 21))
         :with_exp_reward(MissionReward(5, 4, 21))
+        :with_recipe_table_id(366)
+        :with_recipes({ { recipe = 36677, item = 47344 } })
         :with_weather_restriction(Weather.MoonDust),
     [501] = Mission(501, Name('A-3: High-quality Floor Tiling'), Jobs.Miner, 'A3')
         :with_de_name('A-3: Blitzblanke Bodenplatten')
@@ -575,6 +585,8 @@ return {
         :with_lunarcredit(27)
         :with_exp_reward(MissionReward(9, 4, 21))
         :with_exp_reward(MissionReward(6, 4, 21))
+        :with_recipe_table_id(367)
+        :with_recipes({ { recipe = 36679, item = 47468 } })
         :with_weather_restriction(Weather.UmbralWind),
     [536] = Mission(536, Name('Insulating Material'), Jobs.Miner, 'D')
         :with_de_name('Isoliermaterialien')
