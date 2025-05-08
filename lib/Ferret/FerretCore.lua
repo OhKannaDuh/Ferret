@@ -10,7 +10,7 @@ require('Ferret/Library')
 ---@field run boolean
 ---@field language string en/de/fr/jp
 ---@field timer Timer
-local FerretCore = Object:extend()
+FerretCore = Object:extend()
 FerretCore:implement(Translation)
 
 function FerretCore:new(name)
@@ -135,5 +135,3 @@ function FerretCore:register_default_events()
         Addons.RecipeNote:graceful_open()
     end)
 end
-
-return FerretCore

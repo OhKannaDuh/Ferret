@@ -41,13 +41,13 @@ end
 function Gathering:wait_to_start(max)
     Ferret:wait_until(function()
         return self:is_gathering()
-    end, nil, max)
+    end, 0.0167, max)
 end
 
 function Gathering:wait_to_stop()
     Ferret:wait_until(function()
         return not self:is_gathering()
-    end)
+    end, 0.0167)
 end
 
 function Gathering:wait_to_start_collectable()
@@ -67,8 +67,8 @@ function Gathering:is_valid_node_name(name)
 end
 
 ---@return string[]
-function Gathering:get_nearby_nodes()
-    local list = GetNearbyObjectNames(self.scan_range, Objects.GatheringPoint)
+function Gathering:get_nearby_nodes(range)
+    local list = GetNearbyObjectNames(range or self.scan_range, Objects.GatheringPoint)
     local nodes = {}
 
     for i = 0, list.Count - 1 do
@@ -79,13 +79,13 @@ function Gathering:get_nearby_nodes()
 end
 
 ---@return string|nil
-function Gathering:get_nearest_node()
-    return Table:first(self:get_nearby_nodes())
+function Gathering:get_nearest_node(range)
+    return Targetable(Table:first(self:get_nearby_nodes(range)))
 end
 
 ---@return boolean
-function Gathering:has_nearby_nodes()
-    return not Table:is_empty(self:get_nearby_nodes())
+function Gathering:has_nearby_nodes(range)
+    return not Table:is_empty(self:get_nearby_nodes(range))
 end
 
 function Gathering:wait_for_nearby_nodes()

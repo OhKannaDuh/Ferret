@@ -173,6 +173,16 @@ function get_restriction(mission) {
     };
 }
 
+function mission_id_from_name(name, mission_names) {
+    for (const datum of Object.values(mission_names)) {
+        if (datum.en == name) {
+            return datum.mission;
+        }
+    }
+
+    throw "Unknown mission " + name;
+}
+
 (async () => {
     try {
         console.log("Loading missions.csv");
@@ -197,6 +207,12 @@ function get_restriction(mission) {
         const mission_names = array_to_json(
             await get_csv("names.csv"),
             "mission"
+        );
+
+        console.log("Loading gathering_data.csv");
+        const gathering_data = array_to_json(
+            await get_csv("gathering_data.csv"),
+            "mission_name"
         );
 
         const data = {};
@@ -308,18 +324,6 @@ function get_restriction(mission) {
             }
 
             if (datum.recipe_id) {
-                // datum.recipe_id = recipe_link.mission;
-                // datum.recipes = [];
-                // for (let index = 1; index <= 7; index++) {
-                //     const key = `recipe_id_${index}`;
-                //     if (!recipe_link[key] || recipe_link[key] == 0) {
-                //         continue;
-                //     }
-                //     datum.recipes.push({
-                //         recipe: recipe_link[key],
-                //         item: recipes[recipe_link[key]].output_item,
-                //     });
-                // }
                 output += "\n\t" + `:with_recipe_table_id(${datum.recipe_id})`;
                 output +=
                     "\n\t" +
@@ -344,6 +348,29 @@ function get_restriction(mission) {
                 }
             }
 
+            if (gathering_data[mission_names[datum.id].en]) {
+                const gathering_datum =
+                    gathering_data[mission_names[datum.id].en];
+
+                if (gathering_datum.type == "chain") {
+                    output +=
+                        "\n\t:with_gathering_node_layout(GatheringNodeLayout.Chain)";
+                    output +=
+                        "\n\t" + `:with_node(Node(${gathering_datum.nodes}))`;
+                }
+
+                // console.log(gathering_datum);
+                // console.log(datum);
+                if (gathering_datum.type == "clustered") {
+                    output +=
+                        "\n\t:with_gathering_node_layout(GatheringNodeLayout.Clustered)";
+
+                    const nodes = gathering_datum.nodes.split("|");
+                    for (const node of nodes) {
+                        output += "\n\t" + `:with_node(Node(${node}))`;
+                    }
+                }
+            }
             output += ",\n";
 
             master_output[datum.job_id] += output;

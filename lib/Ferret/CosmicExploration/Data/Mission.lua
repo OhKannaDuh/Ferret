@@ -21,11 +21,6 @@
 Mission = Object:extend()
 Mission:implement(Translation)
 
-Mission.wait_timers = {
-    pre_synthesize = 0,
-    post_synthesize = 0,
-}
-
 Mission.last_crafting_action_threshold = 5
 
 ---@param id integer
@@ -52,6 +47,8 @@ function Mission:new(id, name, job, class)
     self.recipe_table_id = 0
     self.recipes = {}
 
+    self.pathfinding = Pathfinding()
+
     self.is_time_restricted = false
     self.time_restriction = {
         start = 0,
@@ -59,6 +56,8 @@ function Mission:new(id, name, job, class)
     }
 
     self.weather_restriction = nil
+
+    self.gathering_node_layout = GatheringNodeLayout.Unknown
 
     self.translation_path = 'modules.cosmic_exploration.mission'
 end
@@ -179,6 +178,16 @@ function Mission:with_weather_restriction(weather)
     return self
 end
 
+function Mission:with_gathering_node_layout(layout)
+    self.gathering_node_layout = layout
+    return self
+end
+
+function Mission:with_node(node)
+    self.pathfinding:add_node(node)
+    return self
+end
+
 ---@return boolean
 function Mission:is_available()
     if self.is_time_restricted then
@@ -262,86 +271,6 @@ function Mission:craft_current()
     until not Addons.Synthesis:is_visible()
 
     return true, self:translate('finished_craft')
-end
-
----@param goal MissionResult
----@return MissionScore, string
-function Mission:single_recipe(goal)
-    self:log_debug('recipe_count', { count = 1 })
-    local crafted = 0
-    repeat
-        if not self:has_base_crafting_material() then
-            return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
-        end
-
-        EventManager:emit(Events.PRE_CRAFT, { mission = self })
-        RequestManager:request(Requests.PREPARE_TO_CRAFT)
-
-        local should_continue, reason = self:craft_current()
-
-        self:log_debug('reason', { reason = reason })
-        if not should_continue then
-            return self:get_score(), reason
-        end
-
-        crafted = crafted + 1
-
-        local score = self:get_score()
-        if score.tier >= goal then
-            return score, self:translate('reached_goal', { crafted = crafted })
-        end
-
-    until self:is_complete(goal)
-
-    return self:get_score(), self:translate('finished', { crafted = crafted })
-end
-
----@param goal MissionResult
----@return MissionScore, string
-function Mission:multi_recipe(goal)
-    self:log_debug('recipe_count', { count = Table:count(self.multi_craft_config) })
-    local crafted = 0
-
-    repeat
-        for index, count in pairs(self.multi_craft_config) do
-            Addons.WKSRecipeNotebook:wait_until_ready(nil, 2)
-            if not Addons.WKSRecipeNotebook:is_ready() then
-                return self:get_score(), self:translate('no_more_to_craft', { crafted = crafted })
-            end
-
-            EventManager:emit(Events.PRE_CRAFT, { mission = self })
-            RequestManager:request(Requests.PREPARE_TO_CRAFT)
-
-            Addons.WKSRecipeNotebook:set_index(index)
-            Addons.WKSRecipeNotebook:set_hq()
-            for i = 1, count do
-                Addons.WKSRecipeNotebook:wait_until_ready()
-                local should_continue, reason = self:craft_current()
-                self:log_debug('reason', { reason = reason })
-
-                crafted = crafted + 1
-
-                local score = self:get_score()
-                if score.tier >= goal then
-                    return score, self:translate('reached_goal', { crafted = crafted })
-                end
-            end
-        end
-    until self:is_complete(goal)
-
-    return self:get_score(), self:translate('finished', { crafted = crafted })
-end
-
----@param goal MissionResult
----@return MissionScore, string
-function Mission:handle(goal)
-    self:log_debug('starting_mission', { mission = self.name:get() })
-
-    if not self.has_multiple_recipes then
-        return self:single_recipe(goal)
-    else
-        return self:multi_recipe(goal)
-    end
 end
 
 function Mission:finish(result)

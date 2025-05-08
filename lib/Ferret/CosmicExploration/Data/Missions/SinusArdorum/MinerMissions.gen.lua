@@ -8,7 +8,9 @@ return {
         :with_gold_threshold(1700)
         :with_cosmocredit(3)
         :with_lunarcredit(7)
-        :with_exp_reward(MissionReward(9, 1, 11)),
+        :with_exp_reward(MissionReward(9, 1, 11))
+        :with_gathering_node_layout(GatheringNodeLayout.Chain)
+        :with_node(Node(-53.294933, 18.565538, -216.42952)),
     [362] = Mission(362, Name('Northwestern Vicinity Survey'), Jobs.Miner, 'D')
         :with_de_name('Rohstoff-Erforschung (Nordwestliche Station)')
         :with_fr_name('Étude des ressources au nord-ouest')
@@ -18,7 +20,9 @@ return {
         :with_gold_threshold(1700)
         :with_cosmocredit(3)
         :with_lunarcredit(7)
-        :with_exp_reward(MissionReward(9, 1, 11)),
+        :with_exp_reward(MissionReward(9, 1, 11))
+        :with_gathering_node_layout(GatheringNodeLayout.Chain)
+        :with_node(Node(-53.269756, 18.50535, -214.839813)),
     [363] = Mission(363, Name('Productivity Review'), Jobs.Miner, 'D')
         :with_de_name('Arbeitsstandardprüfung')
         :with_fr_name('Enquête sur les normes de travail')
@@ -28,7 +32,11 @@ return {
         :with_gold_threshold(520)
         :with_cosmocredit(2)
         :with_lunarcredit(4)
-        :with_exp_reward(MissionReward(9, 1, 7)),
+        :with_exp_reward(MissionReward(9, 1, 7))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(-113.97, 20.634, -228.305))
+        :with_node(Node(-166.546, 21.551, -120.283))
+        :with_node(Node(-227.244, 28.474, -172.1)),
     [364] = Mission(364, Name('Hydrofication Materials'), Jobs.Miner, 'D')
         :with_de_name('Experimentelle Wasseraufbereitungsstoffe')
         :with_fr_name('Matériaux d\'essai pour la purification de l\'eau')
@@ -38,7 +46,11 @@ return {
         :with_gold_threshold(520)
         :with_cosmocredit(2)
         :with_lunarcredit(4)
-        :with_exp_reward(MissionReward(9, 1, 7)),
+        :with_exp_reward(MissionReward(9, 1, 7))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(50.944, 21.841, 206.82))
+        :with_node(Node(70.321, 19.165, 320.814))
+        :with_node(Node(173.348, 23.526, 271.458)),
     [365] = Mission(365, Name('Multi-purpose Plating Materials'), Jobs.Miner, 'D')
         :with_de_name('Projektplatten (Materialien)')
         :with_fr_name('Matériaux pour plaques multi-usage')
@@ -48,7 +60,11 @@ return {
         :with_gold_threshold(1700)
         :with_cosmocredit(2)
         :with_lunarcredit(6)
-        :with_exp_reward(MissionReward(9, 1, 9)),
+        :with_exp_reward(MissionReward(9, 1, 9))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(-113.97, 20.634, -228.305))
+        :with_node(Node(-166.546, 21.551, -120.283))
+        :with_node(Node(-227.244, 28.474, -172.1)),
     [366] = Mission(366, Name('Air Filter Materials'), Jobs.Miner, 'D')
         :with_de_name('Luftfilter (Materialien)')
         :with_fr_name('Matériaux pour filtres à air')
@@ -58,7 +74,11 @@ return {
         :with_gold_threshold(1700)
         :with_cosmocredit(2)
         :with_lunarcredit(6)
-        :with_exp_reward(MissionReward(9, 1, 9)),
+        :with_exp_reward(MissionReward(9, 1, 9))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(173.348, 23.526, 271.458))
+        :with_node(Node(70.321, 19.165, 320.814))
+        :with_node(Node(50.944, 21.841, 206.82)),
     [367] = Mission(367, Name('Central Radius Survey'), Jobs.Miner, 'C')
         :with_de_name('Boden-Unter<SoftHyphen/>such<SoftHyphen/>ung (Zentraler Radius)')
         :with_fr_name('Étude géologique du secteur central')
@@ -69,7 +89,9 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(9, 2, 4))
-        :with_exp_reward(MissionReward(9, 1, 8)),
+        :with_exp_reward(MissionReward(9, 1, 8))
+        :with_gathering_node_layout(GatheringNodeLayout.Chain)
+        :with_node(Node(74.004974, 34.716091, -365.365082)),
     [368] = Mission(368, Name('Metal Processing Materials'), Jobs.Miner, 'C')
         :with_de_name('Veredelungs-Metalle')
         :with_fr_name('Métaux pour transformation')
@@ -80,7 +102,11 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(3)
         :with_exp_reward(MissionReward(9, 2, 3))
-        :with_exp_reward(MissionReward(9, 1, 2)),
+        :with_exp_reward(MissionReward(9, 1, 2))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(-434.693, 43.199, 98.787))
+        :with_node(Node(-397.246, 44.566, 190.506))
+        :with_node(Node(-543.155, 42.874, 85.139)),
     [369] = Mission(369, Name('Heavy Plating Materials'), Jobs.Miner, 'C')
         :with_de_name('Dicke Projektplatten (Materialien)')
         :with_fr_name('Matériaux pour plaques épaisses')
@@ -91,7 +117,11 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 2, 5))
-        :with_exp_reward(MissionReward(9, 1, 5)),
+        :with_exp_reward(MissionReward(9, 1, 5))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(24.352, 44.065, -523.923))
+        :with_node(Node(139.246, 47.411, -495.909))
+        :with_node(Node(82.329, 39.625, -424.443)),
     [370] = Mission(370, Name('Sustained Productivity Review'), Jobs.Miner, 'C')
         :with_de_name('Erfolgssträhnen-Prüfung')
         :with_fr_name('Évaluation des méthodes de récolte en continu')
@@ -102,7 +132,11 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 2, 4))
-        :with_exp_reward(MissionReward(9, 1, 6)),
+        :with_exp_reward(MissionReward(9, 1, 6))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(-397.246, 44.566, 190.506))
+        :with_node(Node(-434.693, 43.199, 98.787))
+        :with_node(Node(-543.155, 42.874, 85.139)),
     [371] = Mission(371, Name('Material Collection Appraisal'), Jobs.Miner, 'C')
         :with_de_name('Stückzahl-Bonus-Prüfung')
         :with_fr_name('Évaluation des méthodes d\'obtention de matériaux')
@@ -113,7 +147,11 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 2, 6))
-        :with_exp_reward(MissionReward(9, 1, 4)),
+        :with_exp_reward(MissionReward(9, 1, 4))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(-543.155, 42.874, 85.139))
+        :with_node(Node(-434.693, 43.199, 98.787))
+        :with_node(Node(-397.246, 44.566, 190.506)),
     [372] = Mission(372, Name('Additional Meteoric Deposits'), Jobs.Miner, 'C')
         :with_de_name('Meteoreisen-Abbaugebiet-Erforschung')
         :with_fr_name('Nouveaux points de collecte de métaux météoritiques')
@@ -124,7 +162,11 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 2, 5))
-        :with_exp_reward(MissionReward(9, 1, 5)),
+        :with_exp_reward(MissionReward(9, 1, 5))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(82.329, 39.625, -424.443))
+        :with_node(Node(139.246, 47.411, -495.909))
+        :with_node(Node(24.352, 44.065, -523.923)),
     [373] = Mission(373, Name('Water Filter Materials'), Jobs.Miner, 'C')
         :with_de_name('Wasserfilter (Materialien)')
         :with_fr_name('Matériaux pour filtres à eau')
@@ -135,7 +177,11 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(9, 2, 6))
-        :with_exp_reward(MissionReward(9, 1, 6)),
+        :with_exp_reward(MissionReward(9, 1, 6))
+        :with_gathering_node_layout(GatheringNodeLayout.Clustered)
+        :with_node(Node(24.352, 44.065, -523.923))
+        :with_node(Node(82.329, 39.625, -424.443))
+        :with_node(Node(139.246, 47.411, -495.909)),
     [374] = Mission(374, Name('Outer Sector Survey'), Jobs.Miner, 'B')
         :with_de_name('Boden-Unter<SoftHyphen/>such<SoftHyphen/>ung (Äußerer Radius)')
         :with_fr_name('Étude géologique du secteur extérieur')

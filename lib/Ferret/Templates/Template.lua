@@ -3,7 +3,7 @@
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
-FerretCore = require('Ferret/FerretCore')
+require('Ferret/FerretCore')
 
 ---@class Template : FerretCore, Translation
 Template = FerretCore:extend()

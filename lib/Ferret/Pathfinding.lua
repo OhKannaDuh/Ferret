@@ -7,7 +7,7 @@
 ---@field nodes Node[]
 ---@field index integer
 ---@field distance_for_sprint integer
-local Pathfinding = Object:extend()
+Pathfinding = Object:extend()
 function Pathfinding:new()
     self.nodes = {}
     self.index = 0
@@ -167,4 +167,6 @@ function Pathfinding:get_floor_near_node(node)
     return Node(fx, fy, fz)
 end
 
-return Pathfinding()
+function Pathfinding:reset()
+    self.index = 0
+end

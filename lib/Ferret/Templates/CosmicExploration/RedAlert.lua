@@ -3,11 +3,11 @@
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
-Base = require('Ferret/FerretCore')
+require('Ferret/FerretCore')
 require('Ferret/CosmicExploration/Library')
 
 ---@class RedAlert : FerretCore, Translation
-RedAlert = Base:extend()
+RedAlert = FerretCore:extend()
 RedAlert:implement(Translation)
 
 function RedAlert:new()

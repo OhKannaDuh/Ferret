@@ -78,4 +78,28 @@ function WKSMissionInfomation:graceful_open_craftinglog()
     until Addons.WKSRecipeNotebook:is_ready()
 end
 
+function WKSMissionInfomation:get_silver_requirement()
+    return self:get_node_number(11)
+end
+
+function WKSMissionInfomation:get_gold_requirement()
+    return self:get_node_number(15)
+end
+
+function WKSMissionInfomation:get_time_limit()
+    return self:get_node_text(24)
+end
+
+function WKSMissionInfomation:get_current_score()
+    return self:get_node_number(24)
+end
+
+function WKSMissionInfomation:get_time_limit_label()
+    return self:get_node_text(25)
+end
+
+function WKSMissionInfomation:get_mission_name()
+    return self:get_node_text(29)
+end
+
 return WKSMissionInfomation()

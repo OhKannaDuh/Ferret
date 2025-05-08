@@ -19,6 +19,8 @@ function Spearfishing:new()
     self.agpreset = nil
     self.fish = nil
     self.starting_node = nil
+
+    self.pathfinding = Pathfinding()
 end
 
 function Spearfishing:setup()
@@ -35,18 +37,18 @@ function Spearfishing:setup()
 
     local first = self.starting_node
     if first == nil then
-        first = Pathfinding:next()
-        Pathfinding.index = 0
+        first = self.pathfinding:next()
+        self.pathfinding.index = 0
     end
 
-    Pathfinding:fly_to(first)
-    Pathfinding:wait_until_at_node(first)
+    self.pathfinding:fly_to(first)
+    self.pathfinding:wait_until_at_node(first)
 
     return true
 end
 
 function Spearfishing:loop()
-    local node = Pathfinding:next()
+    local node = self.pathfinding:next()
     if node == nil then
         self:log_warn('no_node')
         self:stop()
@@ -57,18 +59,18 @@ function Spearfishing:loop()
         Mount:mount()
     end
 
-    Pathfinding:fly_to(node)
+    self.pathfinding:fly_to(node)
 
     Character:wait_for_target(self.node)
 
-    Pathfinding:fly_to(Character:get_target_position())
+    self.pathfinding:fly_to(Character:get_target_position())
 
     Addons.SpearFishing:wait_until_ready()
     Wait:seconds(1)
     Addons.SpearFishing:wait_until_not_ready()
 
-    Pathfinding:stop()
-    Pathfinding:wait_to_stop_moving()
+    self.pathfinding:stop()
+    self.pathfinding:wait_to_stop_moving()
     Wait:seconds(1)
 end
 
