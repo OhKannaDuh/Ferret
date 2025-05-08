@@ -189,7 +189,7 @@ function Mission:start()
     repeat
         Addons.WKSMission:start_mission(self.id)
         Wait:fps(5)
-    until Addons.WKSRecipeNotebook:is_ready()
+    until not Addons.WKSMission:is_ready()
 
     Addons.WKSMissionInfomation:graceful_open()
     return true

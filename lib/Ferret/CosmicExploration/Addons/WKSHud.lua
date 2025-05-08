@@ -33,6 +33,22 @@ function WKSHud:close_cosmic_research()
     self:callback(true, 15)
 end
 
+function WKSHud:get_cosmic_credits()
+    if not self:is_ready() then
+        return 0
+    end
+
+    return self:get_node_number(5, 3)
+end
+
+function WKSHud:get_lunar_credits()
+    if not self:is_ready() then
+        return 0
+    end
+
+    return self:get_node_number(4, 3)
+end
+
 function WKSHud:has_mission()
     self:open_mission_menu()
     Ferret:wait_until(function()
@@ -41,5 +57,6 @@ function WKSHud:has_mission()
 
     return Addons.WKSMissionInfomation:is_visible()
 end
+
 
 return WKSHud()
