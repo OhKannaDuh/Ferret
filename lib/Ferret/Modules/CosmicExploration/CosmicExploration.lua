@@ -3,16 +3,15 @@
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
----@class CosmicExploration : Object, Translation
+---@class CosmicExploration : Module, Translation
 ---@field job Job
 ---@field mission_list MissionList
-local CosmicExploration = Object:extend()
+local CosmicExploration = Module:extend()
 CosmicExploration:implement(Translation)
 
 function CosmicExploration:new()
+    CosmicExploration.super.new(self, 'CosmicExploration', Version(0, 1, 1))
     self.translation_path = 'modules.cosmic_exploration'
-
-    self.version = Version(0, 1, 1)
 
     self.mission_list = MissionList()
 
@@ -21,6 +20,34 @@ function CosmicExploration:new()
 
     self.minimum_target_result = MissionResult.Gold
     self.per_mission_target_result = {}
+end
+
+function CosmicExploration:get_addons()
+    return {
+        'WKSHud',
+        'WKSMission',
+        'WKSMissionInfomation',
+        'WKSRecipeNotebook',
+        'WKSToolCustomize',
+    }
+end
+
+function CosmicExploration:get_models()
+    return {
+        'MissionReward',
+        'MissionResult',
+        'MissionScore',
+        'Mission',
+        'MissionList',
+        'ResearchProgressBar',
+        'GatheringNodeLayout',
+    }
+end
+
+function CosmicExploration:load_static()
+    MasterMissionList = self:require('Data/MasterMissionList')
+    CraftingMissionHandler = self:require('CraftingMissionHandler')
+    GatheringMissionHandler = self:require('GatheringMissionHandler')
 end
 
 ---@param job Job
@@ -33,9 +60,11 @@ function CosmicExploration:set_job(job)
 end
 
 function CosmicExploration:init()
+    CosmicExploration.super.init(self)
+
     self:set_job(GetClassJobId())
 
-    self:log_info("Initialising Cosmic Exploration module " .. self.version:to_string())
+    self:log_info('Initialising Cosmic Exploration module ' .. self.version:to_string())
 
     self:log_debug('messages.registering_callbacks')
     RequestManager:subscribe(Requests.STOP_CRAFT, function(context)
@@ -66,6 +95,8 @@ function CosmicExploration:init()
 
         Addons.WKSRecipeNotebook:graceful_open()
     end)
+
+    return self
 end
 
 ---@return MissionList
@@ -123,4 +154,4 @@ function CosmicExploration:open_mission_infomation()
     return not Addons.WKSMissionInfomation:is_ready()
 end
 
-return CosmicExploration()
+return CosmicExploration():init()

@@ -4,7 +4,7 @@
 --------------------------------------------------------------------------------
 
 Template = require('Ferret/Templates/Template')
-require('Ferret/CosmicExploration/Library')
+load_module('CosmicExploration')
 
 ---@class NodeCrowdsourcing : Template
 ---@field item string|nil

@@ -4,7 +4,7 @@
 --------------------------------------------------------------------------------
 
 require('Ferret/FerretCore')
-require('Ferret/CosmicExploration/Library')
+load_module('CosmicExploration')
 
 ---@class RedAlert : FerretCore, Translation
 RedAlert = FerretCore:extend()

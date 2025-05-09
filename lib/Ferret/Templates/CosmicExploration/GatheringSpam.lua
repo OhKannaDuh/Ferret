@@ -4,7 +4,7 @@
 --------------------------------------------------------------------------------
 
 Template = require('Ferret/Templates/Template')
-require('Ferret/CosmicExploration/Library')
+load_module('CosmicExploration')
 
 ---@class GatheringSpam : Template
 GatheringSpam = Template:extend()

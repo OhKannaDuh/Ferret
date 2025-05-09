@@ -12,6 +12,9 @@ i18n = require('external/i18n/init')
 i18n.setLocale(_language or 'en')
 i18n.load(require('Ferret/i18n/translations'))
 
+require('Ferret/Helpers')
+require('Ferret/Modules/Module')
+
 -- Mixins
 require('Ferret/Mixins/Translation')
 

@@ -4,7 +4,7 @@
 --------------------------------------------------------------------------------
 
 Template = require('Ferret/Templates/Template')
-require('Ferret/CosmicExploration/Library')
+CosmicExploration = load_module('CosmicExploration')
 
 MissionOrder = {
     TopPriority = 1, -- Execute missions in the order they are listed
