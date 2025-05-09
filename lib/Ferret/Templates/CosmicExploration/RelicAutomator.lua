@@ -102,7 +102,7 @@ function RelicAutomator:loop()
     local goal = CosmicExploration:get_target_result(mission)
     Logger:info('Mission target: ' .. MissionResult.to_string(goal))
 
-    local result, reason = mission:handle(goal)
+    local result, reason = CraftingMissionHandler:handle(mission, goal)
     local acceptable = CosmicExploration:get_acceptable_result(mission)
 
     Logger:debug('Result: ' .. tostring(result))
