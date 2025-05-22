@@ -12,7 +12,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 1, 11))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48635] = 25 })
+        :with_gathering_config({ ['48635'] = { amount = 25, name = 'Lunar Meteorite' } })
         :with_node(Node(-129.5339, 27.93935, -170.3365))
         :with_node(Node(-135.6489, 28.19612, -156.8232))
         :with_node(Node(-142.321, 27.13721, -139.6976))
@@ -36,7 +36,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 1, 11))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48635] = 25 })
+        :with_gathering_config({ ['48635'] = { amount = 25, name = 'Lunar Meteorite' } })
         :with_node(Node(-90.9526, 22.51999, -194.1135))
         :with_node(Node(-109.7708, 24.82264, -187.3674))
         :with_node(Node(-73.09966, 20.16425, -204.2859))
@@ -60,7 +60,7 @@ return {
         :with_lunarcredit(4)
         :with_exp_reward(MissionReward(9, 1, 7))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48635] = 24 })
+        :with_gathering_config({ ['48635'] = { amount = 24, name = 'Lunar Meteorite' } })
         :with_node(Node(-110.8568, 20.37079, -226.3371))
         :with_node(Node(-117.0825, 20.89624, -230.2739))
         :with_node(Node(-162.6947, 22.16422, -124.1553))
@@ -84,7 +84,7 @@ return {
         :with_lunarcredit(4)
         :with_exp_reward(MissionReward(9, 1, 7))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48641] = 24 })
+        :with_gathering_config({ ['48641'] = { amount = 24, name = 'Lunar Chromite Ore' } })
         :with_node(Node(60.93913, 22.62565, 204.9416))
         :with_node(Node(40.94824, 21.05605, 208.6975))
         :with_node(Node(65.52242, 18.93597, 318.7625))
@@ -108,7 +108,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 1, 9))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48635] = 28 })
+        :with_gathering_config({ ['48635'] = { amount = 28, name = 'Lunar Meteorite' } })
         :with_node(Node(-110.8568, 20.37079, -226.3371))
         :with_node(Node(-117.0825, 20.89624, -230.2739))
         :with_node(Node(-162.6947, 22.16422, -124.1553))
@@ -132,7 +132,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 1, 9))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48641] = 28 })
+        :with_gathering_config({ ['48641'] = { amount = 28, name = 'Lunar Chromite Ore' } })
         :with_node(Node(60.93913, 22.62565, 204.9416))
         :with_node(Node(40.94824, 21.05605, 208.6975))
         :with_node(Node(174.3744, 23.41426, 267.8382))
@@ -157,7 +157,10 @@ return {
         :with_exp_reward(MissionReward(9, 2, 4))
         :with_exp_reward(MissionReward(9, 1, 8))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48649] = 10, [48650] = 15 })
+        :with_gathering_config({
+            ['48649'] = { amount = 10, name = 'Lunar Earth Fragment' },
+            ['48650'] = { amount = 15, name = 'Lunar Rock' },
+        })
         :with_node(Node(45.23248, 41.4314, -473.6463))
         :with_node(Node(56.58758, 40.23825, -453.9622))
         :with_node(Node(49.70176, 41.82733, -481.2601))
@@ -182,7 +185,7 @@ return {
         :with_exp_reward(MissionReward(9, 2, 3))
         :with_exp_reward(MissionReward(9, 1, 2))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48644] = 24 })
+        :with_gathering_config({ ['48644'] = { amount = 24, name = 'Lunar Cobalt Ore' } })
         :with_node(Node(-430.4723, 42.52686, 96.48267))
         :with_node(Node(-438.9142, 43.87041, 101.0909))
         :with_node(Node(-542.4783, 44.35872, 91.48441))
@@ -207,7 +210,10 @@ return {
         :with_exp_reward(MissionReward(9, 2, 5))
         :with_exp_reward(MissionReward(9, 1, 5))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48649] = 12, [48650] = 16 })
+        :with_gathering_config({
+            ['48649'] = { amount = 12, name = 'Lunar Earth Fragment' },
+            ['48650'] = { amount = 16, name = 'Lunar Rock' },
+        })
         :with_node(Node(77.5591, 39.47883, -424.0021))
         :with_node(Node(87.09818, 39.77031, -424.8834))
         :with_node(Node(32.76464, 43.73592, -521.1357))
@@ -328,7 +334,11 @@ return {
         :with_exp_reward(MissionReward(9, 2, 4))
         :with_exp_reward(MissionReward(9, 1, 8))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48654] = 5, [48655] = 5, [48656] = 15 })
+        :with_gathering_config({
+            ['48654'] = { amount = 5, name = 'Lunar Yellow Copper Ore' },
+            ['48655'] = { amount = 5, name = 'Lunar Gold Ore' },
+            ['48656'] = { amount = 15, name = 'Lunar Yellow Alumen' },
+        })
         :with_node(Node(-419.9435, 66.79915, -692.3002))
         :with_node(Node(-428.3906, 67.88835, -704.0055))
         :with_node(Node(-447.2757, 68.51237, -707.1489))
@@ -353,7 +363,7 @@ return {
         :with_exp_reward(MissionReward(9, 2, 3))
         :with_exp_reward(MissionReward(9, 1, 2))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48654] = 24 })
+        :with_gathering_config({ ['48654'] = { amount = 24, name = 'Lunar Yellow Copper Ore' } })
         :with_node(Node(-621.5858, 75.07944, -715.8904))
         :with_node(Node(-635.2172, 73.96651, -704.6745))
         :with_node(Node(-671.1783, 93.37208, -819.3888))
@@ -378,7 +388,11 @@ return {
         :with_exp_reward(MissionReward(9, 3, 6))
         :with_exp_reward(MissionReward(9, 1, 4))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48654] = 8, [48655] = 8, [48656] = 12 })
+        :with_gathering_config({
+            ['48654'] = { amount = 8, name = 'Lunar Yellow Copper Ore' },
+            ['48655'] = { amount = 8, name = 'Lunar Gold Ore' },
+            ['48656'] = { amount = 12, name = 'Lunar Yellow Alumen' },
+        })
         :with_node(Node(-652.3953, 71.71996, -564.6855))
         :with_node(Node(-640.9552, 60.56299, -463.859))
         :with_node(Node(-727.8103, 79.13322, -503.0137))
@@ -501,7 +515,7 @@ return {
         :with_exp_reward(MissionReward(9, 2, 9))
         :with_exp_reward(MissionReward(9, 1, 9))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48661] = 10 })
+        :with_gathering_config({ ['48661'] = { amount = 10, name = 'Moonlit Aethersand' } })
         :with_node(Node(-652.3953, 71.71996, -564.6855))
         :with_node(Node(-640.9552, 60.56299, -463.859))
         :with_node(Node(-727.8103, 79.13322, -503.0137))
@@ -526,7 +540,11 @@ return {
         :with_exp_reward(MissionReward(9, 2, 7))
         :with_exp_reward(MissionReward(9, 1, 10))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48654] = 15, [48655] = 15, [48656] = 20 })
+        :with_gathering_config({
+            ['48654'] = { amount = 15, name = 'Lunar Yellow Copper Ore' },
+            ['48655'] = { amount = 15, name = 'Lunar Gold Ore' },
+            ['48656'] = { amount = 20, name = 'Lunar Yellow Alumen' },
+        })
         :with_node(Node(-461.6617, 69.70596, -713.8323))
         :with_node(Node(-447.2757, 68.51237, -707.1489))
         :with_node(Node(-462.913, 71.27371, -731.5966))
@@ -551,7 +569,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 7))
         :with_exp_reward(MissionReward(9, 1, 5))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48649] = 48 })
+        :with_gathering_config({ ['48649'] = { amount = 48, name = 'Lunar Earth Fragment' } })
         :with_node(Node(77.5591, 39.47883, -424.0021))
         :with_node(Node(87.09818, 39.77031, -424.8834))
         :with_node(Node(32.76464, 43.73592, -521.1357))
@@ -576,7 +594,11 @@ return {
         :with_exp_reward(MissionReward(9, 3, 7))
         :with_exp_reward(MissionReward(9, 2, 10))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48644] = 15, [48645] = 15, [48646] = 20 })
+        :with_gathering_config({
+            ['48644'] = { amount = 15, name = 'Lunar Cobalt Ore' },
+            ['48645'] = { amount = 15, name = 'Lunar Hardsilver Ore' },
+            ['48646'] = { amount = 20, name = 'Lunar Anorthosite Whetstone' },
+        })
         :with_node(Node(-438.9142, 43.87041, 101.0909))
         :with_node(Node(-430.4723, 42.52686, 96.48267))
         :with_node(Node(-400.2417, 45.00196, 191.3021))
@@ -649,7 +671,11 @@ return {
         :with_exp_reward(MissionReward(9, 3, 10))
         :with_exp_reward(MissionReward(9, 1, 7))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48649] = 15, [48650] = 15, [48651] = 21 }),
+        :with_gathering_config({
+            ['48649'] = { amount = 15, name = 'Lunar Earth Fragment' },
+            ['48650'] = { amount = 15, name = 'Lunar Rock' },
+            ['48651'] = { amount = 21, name = 'Lunar Rhodium Sand' },
+        }),
     [388] = Mission(388, Jobs.Miner, 'A', 2)
         :with_en_name('A-2: Alchemical Refinement Materials')
         :with_de_name('A-2: Alchemisten-Raffinationsmaterialien')
@@ -664,7 +690,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 9))
         :with_exp_reward(MissionReward(9, 2, 14))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48639] = 25 })
+        :with_gathering_config({ ['48639'] = { amount = 25, name = 'Ardorum Aethersand' } })
         :with_node(Node(-117.0825, 20.89624, -230.2739))
         :with_node(Node(-110.8568, 20.37079, -226.3371))
         :with_node(Node(-162.6947, 22.16422, -124.1553))
@@ -731,7 +757,7 @@ return {
         :with_exp_reward(MissionReward(9, 2, 5))
         :with_weather_restriction(Weather.UmbralWind)
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48661] = 35 }),
+        :with_gathering_config({ ['48661'] = { amount = 35, name = 'Moonlit Aethersand' } }),
     [392] = Mission(392, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: Supplemental Processing Materials')
         :with_de_name('A-3: Veredelungs-Hilfsstoffe')
@@ -762,7 +788,11 @@ return {
         :with_exp_reward(MissionReward(9, 4, 10))
         :with_exp_reward(MissionReward(9, 3, 7))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48635] = 15, [48636] = 15, [48637] = 20 })
+        :with_gathering_config({
+            ['48635'] = { amount = 15, name = 'Lunar Meteorite' },
+            ['48636'] = { amount = 15, name = 'Lunar Zinc Ore' },
+            ['48637'] = { amount = 20, name = 'Lunar Magnesia Powder' },
+        })
         :with_node(Node(-90.9526, 22.51999, -194.1135))
         :with_node(Node(-109.7708, 24.82264, -187.3674))
         :with_node(Node(-73.09966, 20.16425, -204.2859))
@@ -802,7 +832,7 @@ return {
         :with_exp_reward(MissionReward(9, 2, 5))
         :with_exp_reward(MissionReward(9, 1, 7))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48644] = 48 })
+        :with_gathering_config({ ['48644'] = { amount = 48, name = 'Lunar Cobalt Ore' } })
         :with_node(Node(-430.4723, 42.52686, 96.48267))
         :with_node(Node(-438.9142, 43.87041, 101.0909))
         :with_node(Node(-400.2417, 45.00196, 191.3021))
@@ -857,7 +887,11 @@ return {
         :with_exp_reward(MissionReward(9, 4, 10))
         :with_exp_reward(MissionReward(9, 2, 7))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48649] = 15, [48650] = 15, [48651] = 20 })
+        :with_gathering_config({
+            ['48649'] = { amount = 15, name = 'Lunar Earth Fragment' },
+            ['48650'] = { amount = 15, name = 'Lunar Rock' },
+            ['48651'] = { amount = 20, name = 'Lunar Rhodium Sand' },
+        })
         :with_node(Node(77.5591, 39.47883, -424.0021))
         :with_node(Node(87.09818, 39.77031, -424.8834))
         :with_node(Node(142.5868, 47.46085, -491.2795))
@@ -883,7 +917,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 8))
         :with_exp_reward(MissionReward(9, 1, 8))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48673] = 25 }),
+        :with_gathering_config({ ['48673'] = { amount = 25, name = 'Moonfall Aethersand' } }),
     [400] = Mission(400, Jobs.Miner, 'A', 1)
         :with_en_name('A-1: Fine-grade Air Filter Materials I')
         :with_de_name('A-1: Präzise Luftfilter (Materialien)')
@@ -899,7 +933,11 @@ return {
         :with_exp_reward(MissionReward(9, 3, 7))
         :with_time_restriction(2, 4)
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48641] = 15, [48642] = 15, [48643] = 20 }),
+        :with_gathering_config({
+            ['48641'] = { amount = 15, name = 'Lunar Chromite Ore' },
+            ['48642'] = { amount = 15, name = 'Lunar Silver Ore' },
+            ['48643'] = { amount = 20, name = 'Lunar Pumice' },
+        }),
     [401] = Mission(401, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: Fine-grade Air Filter Materials II')
         :with_de_name('A-3: Präzise Luftfilter (Materialien)')
@@ -946,7 +984,7 @@ return {
         :with_exp_reward(MissionReward(9, 1, 5))
         :with_time_restriction(14, 16)
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48669] = 35 }),
+        :with_gathering_config({ ['48669'] = { amount = 35, name = 'Moonblue Aethersand' } }),
     [404] = Mission(404, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: Folkloric Materials II')
         :with_de_name('A-3: Almanachmaterialien-Erforschung II')
@@ -977,7 +1015,7 @@ return {
         :with_exp_reward(MissionReward(9, 2, 8))
         :with_exp_reward(MissionReward(9, 1, 8))
         :with_gathering_type(GatheringType.ItemCount)
-        :with_gathering_config({ [48669] = 25 }),
+        :with_gathering_config({ ['48669'] = { amount = 25, name = 'Moonblue Aethersand' } }),
     [496] = Mission(496, Jobs.Miner, 'A', 2)
         :with_en_name('A-2: Aquatic Resource Research Tanks')
         :with_de_name('A-2: Behälter für Meeresforschung')

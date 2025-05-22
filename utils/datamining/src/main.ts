@@ -10,36 +10,21 @@ import { Name } from "./Models/Name";
 import { Todo } from "./Models/Todo";
 import { MoonItemInfo } from "./Models/MoonItemInfo";
 import { TodoText } from "./Models/TodoText";
+import { Item } from "./Models/Item";
 
-const missions = new CsvRepository<Mission>(
-    "data/missions.csv",
-    (row) => new Mission(row)
-);
-const mission_rewards = new CsvRepository<MissionReward>(
-    "data/mission_reward.csv",
-    (row) => new MissionReward(row)
-);
-const mission_recipe = new CsvRepository<MissionRecipeSet>(
-    "data/mission_recipe.csv",
-    (row) => new MissionRecipeSet(row)
-);
-const recipes = new CsvRepository<Recipe>(
-    "data/recipes.csv",
-    (row) => new Recipe(row)
-);
+const missions = new CsvRepository<Mission>("data/missions.csv", (row) => new Mission(row));
+const mission_rewards = new CsvRepository<MissionReward>("data/mission_reward.csv", (row) => new MissionReward(row));
+const mission_recipe = new CsvRepository<MissionRecipeSet>("data/mission_recipe.csv", (row) => new MissionRecipeSet(row));
+const recipes = new CsvRepository<Recipe>("data/recipes.csv", (row) => new Recipe(row));
 const names = new CsvRepository<Name>("names.csv", (row) => new Name(row));
 
 const todo = new CsvRepository<Todo>("data/todo.csv", (row) => new Todo(row));
 
-const todo_text = new CsvRepository<TodoText>(
-    "data/todo_text.csv",
-    (row) => new TodoText(row)
-);
+const todo_text = new CsvRepository<TodoText>("data/todo_text.csv", (row) => new TodoText(row));
 
-const moon_item_info = new CsvRepository<MoonItemInfo>(
-    "data/moon_item_info.csv",
-    (row) => new MoonItemInfo(row)
-);
+const moon_item_info = new CsvRepository<MoonItemInfo>("data/moon_item_info.csv", (row) => new MoonItemInfo(row));
+
+const items = new CsvRepository<Item>("data/items.csv", (row) => new Item(row));
 
 Model.registerRepository(Mission, missions);
 Model.registerRepository(MissionReward, mission_rewards);
@@ -49,6 +34,7 @@ Model.registerRepository(Name, names);
 Model.registerRepository(Todo, todo);
 Model.registerRepository(TodoText, todo_text);
 Model.registerRepository(MoonItemInfo, moon_item_info);
+Model.registerRepository(Item, items);
 
 const formatter = new Formatter();
 const jobs: Record<string, string[]> = {};

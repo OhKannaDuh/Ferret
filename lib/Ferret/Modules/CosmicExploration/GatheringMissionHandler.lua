@@ -94,7 +94,31 @@ function GatheringMissionHandler:chain(mission, goal)
         Addons.Gathering:wait_until_ready()
         Wait:seconds(0.5)
         local items = Addons.Gathering:get_items()
-        Logger:table(items)
+
+        repeat
+            local index = -1
+            for id, config in pairs(mission.gathering_config) do
+                local item_id = tonumber(id)
+                local count = GetItemCount(item_id)
+
+                if count < config.amount then
+                    for _, item_data in pairs(items) do
+                        if config.name == item_data.item then
+                            -- mission.gathering_config[id].index = item_data.index
+                            index = item_data.index
+                            break
+                        end
+                    end
+                end
+
+                if index ~= ~1 then
+                    break
+                end
+            end
+
+            Addons.Gathering:gather(index)
+            Character:wait_until_ready_to_gather()
+        until not Gathering:is_gathering()
 
         Gathering:wait_to_stop()
     until Addons.ToDoList:get_stellar_mission_scores().tier >= goal

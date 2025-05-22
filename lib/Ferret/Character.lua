@@ -80,4 +80,10 @@ function Character:wait_until_done_crafting()
     end, 0.1)
 end
 
+function Character:wait_until_ready_to_gather()
+    Ferret:wait_until(function()
+        return not self:has_condition(Conditions.Gathering42)
+    end, 0.1)
+end
+
 return Character()

@@ -105,21 +105,35 @@ export class Formatter {
 
         if (type == "Gathering") {
             if (todo?.moon_item_1_id != 0) {
-                let gathering_config: { [key: string]: number } = {};
+                let gathering_config: { [key: string]: { amount: number; name: string } } = {};
                 if (todo?.moon_item_1_id) {
-                    gathering_config[`[${todo.moon_item_1_info().get()?.item_id}]`] = todo?.moon_item_1_amount;
+                    gathering_config[`${todo.moon_item_1_info().get()?.item_id}`] = {
+                        amount: todo?.moon_item_1_amount,
+                        name: todo?.moon_item_1_info().get()?.item()?.get()?.name ?? "",
+                    };
                 }
 
                 if (todo?.moon_item_2_id) {
-                    gathering_config[`[${todo.moon_item_2_info().get()?.item_id}]`] = todo?.moon_item_2_amount;
+                    gathering_config[`${todo.moon_item_2_info().get()?.item_id}`] = {
+                        amount: todo?.moon_item_2_amount,
+                        name: todo?.moon_item_2_info().get()?.item()?.get()?.name ?? "",
+                    };
                 }
 
                 if (todo?.moon_item_3_id) {
-                    gathering_config[`[${todo.moon_item_3_info().get()?.item_id}]`] = todo?.moon_item_3_amount;
-                }
+                    gathering_config[`${todo.moon_item_3_info().get()?.item_id}`] = {
+                        amount: todo?.moon_item_3_amount,
+                        name: todo?.moon_item_3_info().get()?.item()?.get()?.name ?? "",
+                    };
 
+                    // const items = Object.entries(obj).map(([key, value]) => {
+                    //     const luaKey = /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(key) ? key : `["${key.replace(/"/g, '\\"')}"]`;
+                    //     return `${luaKey} = ${jsonToLua(value)}`;
+                    // });
+                    // return `{ ${items.join(", ")} }`;
+                }
                 output.push(":with_gathering_type(GatheringType.ItemCount)");
-                output.push(`:with_gathering_config(${JSON.stringify(gathering_config).replaceAll(":", "=").replaceAll('"', "")})`);
+                output.push(`:with_gathering_config(${this.jsonToLua(gathering_config)})`);
             } else {
                 let todo_text = todo?.text()?.get()?.text ?? "";
                 todo_text = todo_text.replaceAll("\n", "\n --- ");
@@ -201,5 +215,34 @@ export class Formatter {
         }
 
         return output.join("\n    ") + ",";
+    }
+
+    jsonToLua(obj: any): string {
+        if (obj === null) return "nil";
+
+        const objType = typeof obj;
+
+        if (objType === "number" || objType === "boolean") {
+            return String(obj);
+        }
+
+        if (objType === "string") {
+            return `"${obj.replace(/"/g, '\\"')}"`;
+        }
+
+        if (Array.isArray(obj)) {
+            const items = obj.map(this.jsonToLua);
+            return `{ ${items.join(", ")} }`;
+        }
+
+        if (objType === "object") {
+            const items = Object.entries(obj).map(([key, value]) => {
+                const luaKey = /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(key) ? key : `["${key.replace(/"/g, '\\"')}"]`;
+                return `${luaKey} = ${this.jsonToLua(value)}`;
+            });
+            return `{ ${items.join(", ")} }`;
+        }
+
+        throw new Error("Unsupported data type: " + objType);
     }
 }
