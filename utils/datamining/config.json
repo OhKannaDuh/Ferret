@@ -1,0 +1,44 @@
+[
+    {
+        "input": "ffxiv-datamining/csv/WKSMissionUnit.csv",
+        "output": "missions.csv",
+        "lines_to_remove": 4,
+        "header": "id,name,unk_1,job,secondary_job,unk_4,is_critical,class,time_limit,id,silver,gold,todo,unk_12,zone,restriction,unk_15,unk_16,unk_17,recipe,unk_19,unk_20"
+    },
+    {
+        "input": "ffxiv-datamining/csv/WKSMissionRecipe.csv",
+        "output": "mission_recipe.csv",
+        "lines_to_remove": 5,
+        "header": "mission_id,recipe_id_1,recipe_id_2,recipe_id_3,recipe_id_4,recipe_id_5"
+    },
+    {
+        "input": "ffxiv-datamining/csv/WKSMissionReward.csv",
+        "output": "mission_reward.csv",
+        "lines_to_remove": 4,
+        "header": "mission_id,0,1,2,cosmic_credits,lunar_credits,5,job_index_1,exp_tier_1,exp_amount_1,job_index_2,exp_tier_2,exp_amount_2,job_index_3,exp_tier_3,exp_amount_3"
+    },
+    {
+        "input": "ffxiv-datamining/csv/Recipe.csv",
+        "output": "recipes.csv",
+        "lines_to_remove": 12576,
+        "header": "id,Number,CraftType,RecipeLevelTable,unk_1,output_item,output_amount,input_0_item,input_0_amount,input_1_item,input_1_amount,input_2_item,input_2_amount,input_3_item,input_3_amount,input_4_item,input_4_amount,input_5_item,input_5_amount,input_6_item,input_6_amount,input_7_item,input_7_amount,RecipeNotebookList,DisplayPriority,IsSecondary,MaterialQualityFactor,DifficultyFactor,QualityFactor,DurabilityFactor,RequiredQuality,RequiredCraftsmanship,RequiredControl,QuickSynthCraftsmanship,QuickSynthControl,SecretRecipeBook,Quest,CanQuickSynth,CanHq,ExpRewarded,Status{Required},Item{Required},IsSpecializationRequired,IsExpert,unk_2,unk_3,PatchNumber,unk_4"
+    },
+    {
+        "input": "ffxiv-datamining/csv/WKSMissionToDo.csv",
+        "output": "todo.csv",
+        "lines_to_remove": 4,
+        "header": "id,0,1,2,3,moon_item_1_id,moon_item_1_amount,moon_item_2_id,moon_item_2_amount,moon_item_3_id,moon_item_3_amount,10,11,12,13,14,15,16,17,18,todo_text_id"
+    },
+    {
+        "input": "ffxiv-datamining/csv/WKSItemInfo.csv",
+        "output": "moon_item_info.csv",
+        "lines_to_remove": 4,
+        "header": "todo_item_id,item_id,unk_1,unk_2,unk_3"
+    },
+    {
+        "input": "ffxiv-datamining/csv/WKSMissionText.csv",
+        "output": "todo_text.csv",
+        "lines_to_remove": 4,
+        "header": "id,text"
+    }
+]

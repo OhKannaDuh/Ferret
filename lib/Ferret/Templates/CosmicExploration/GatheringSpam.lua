@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
---   DESCRIPTION: Stellar Crafting Mission automator
+--   DESCRIPTION: Stellar Gathering Mission automator
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
 Template = require('Ferret/Templates/Template')
-load_module('CosmicExploration')
+CosmicExploration = load_module('CosmicExploration')
 
 ---@class GatheringSpam : Template
 GatheringSpam = Template:extend()

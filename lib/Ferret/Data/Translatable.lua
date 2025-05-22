@@ -18,6 +18,13 @@ function Translatable:new(en)
     self.jp = en
 end
 
+---@param en string
+---@return Translatable
+function Translatable:with_en(en)
+    self.en = en
+    return self
+end
+
 ---@param de string
 ---@return Translatable
 function Translatable:with_de(de)

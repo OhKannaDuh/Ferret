@@ -16,6 +16,7 @@ end
 
 ---@param node Node
 function Pathfinding:add_node(node)
+    Logger:debug('Pathfinding:add_node ' .. node:to_string())
     table.insert(self.nodes, node)
 end
 

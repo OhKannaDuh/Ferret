@@ -41,6 +41,8 @@ function CosmicExploration:get_models()
         'MissionList',
         'ResearchProgressBar',
         'GatheringNodeLayout',
+        'MissionType',
+        'GatheringType',
     }
 end
 

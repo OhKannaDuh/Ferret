@@ -4,3 +4,6 @@
 [submodule "external/ImGuiColorTextEditNetDalamud"]
 	path = external/ImGuiColorTextEditNetDalamud
 	url = https://github.com/OhKannaDuh/ImGuiColorTextEditNetDalamud.git
+[submodule "utils/datamining/ffxiv-datamining"]
+	path = utils/datamining/ffxiv-datamining
+	url = https://github.com/xivapi/ffxiv-datamining.git

@@ -27,6 +27,7 @@ local jobs = {
     'Miner',
     'Botanist',
     'Fisher',
+    'Critical',
 }
 
 for _, zone in pairs(zones) do

@@ -27,11 +27,15 @@ Mission.last_crafting_action_threshold = 5
 ---@param name Translatable
 ---@param job Job
 ---@param class string
-function Mission:new(id, name, job, class)
+function Mission:new(id, job, class, tier)
     self.id = id
-    self.name = name
+    self.name = Name('')
     self.job = job
     self.class = class
+    self.tier = tier
+
+    self.mission_type = MissionType.Unknown
+    self.critical = false
 
     self.time_limit = 0
     self.silver_threshold = 0
@@ -47,7 +51,13 @@ function Mission:new(id, name, job, class)
     self.recipe_table_id = 0
     self.recipes = {}
 
-    self.pathfinding = Pathfinding()
+    self.nodes = {}
+
+    self.gathering_type = GatheringType.Unknown
+    self.gathering_config = {}
+
+    self.chain_ends = {}
+    self.clusters = {}
 
     self.is_time_restricted = false
     self.time_restriction = {
@@ -60,6 +70,26 @@ function Mission:new(id, name, job, class)
     self.gathering_node_layout = GatheringNodeLayout.Unknown
 
     self.translation_path = 'modules.cosmic_exploration.mission'
+end
+
+---@param mission_type MissionType
+---@return Mission
+function Mission:with_mission_type(mission_type)
+    self.mission_type = mission_type
+    return self
+end
+
+---@return Mission
+function Mission:is_critical()
+    self.critical = true
+    return self
+end
+
+---@param name string
+---@return Mission
+function Mission:with_en_name(name)
+    self.name = self.name:with_en(name)
+    return self
 end
 
 ---@param name string
@@ -161,6 +191,20 @@ function Mission:with_recipes(recipes)
     return self
 end
 
+---@param gathering_type GatheringType
+---@return Mission
+function Mission:with_gathering_type(gathering_type)
+    self.gathering_type = gathering_type
+    return self
+end
+
+---@param config table
+---@return Mission
+function Mission:with_gathering_config(config)
+    self.gathering_config = config
+    return self
+end
+
 ---@param start integer
 ---@param finish integer
 ---@return Mission
@@ -184,7 +228,21 @@ function Mission:with_gathering_node_layout(layout)
 end
 
 function Mission:with_node(node)
-    self.pathfinding:add_node(node)
+    table.insert(self.nodes, node)
+    return self
+end
+
+---@param chain_ends table
+---@return Mission
+function Mission:with_chain_ends(chain_ends)
+    self.chain_ends = chain_ends
+    return self
+end
+
+---@param cluster table
+---@return Mission
+function Mission:with_cluster(cluster)
+    table.insert(self.clusters, cluster)
     return self
 end
 

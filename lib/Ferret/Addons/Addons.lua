@@ -30,6 +30,7 @@ Addons = {
     SelectIconString = require_addon('SelectIconString'),
     SelectString = require_addon('SelectString'),
     SelectYesno = require_addon('SelectYesno'),
+    ShopExchangeCurrency = require_addon('ShopExchangeCurrency'),
     SpearFishing = require_addon('SpearFishing'),
     Synthesis = require_addon('Synthesis'),
     Talk = require_addon('Talk'),
