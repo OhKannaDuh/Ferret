@@ -90,12 +90,12 @@ function WKSMissionInfomation:get_time_limit()
     return self:get_node_text(24)
 end
 
-function WKSMissionInfomation:get_current_score()
-    return self:get_node_number(24)
-end
-
 function WKSMissionInfomation:get_time_limit_label()
     return self:get_node_text(25)
+end
+
+function WKSMissionInfomation:get_current_score()
+    return self:get_node_number(27)
 end
 
 function WKSMissionInfomation:get_mission_name()

@@ -53,6 +53,8 @@ function Mission:new(id, job, class, tier)
 
     self.nodes = {}
 
+    self.bronze_requirement = {}
+
     self.gathering_type = GatheringType.Unknown
     self.gathering_config = {}
 
@@ -70,6 +72,8 @@ function Mission:new(id, job, class, tier)
     self.gathering_node_layout = GatheringNodeLayout.Unknown
 
     self.translation_path = 'modules.cosmic_exploration.mission'
+
+    self.scorer = MissionScorer
 end
 
 ---@param mission_type MissionType
@@ -198,6 +202,13 @@ function Mission:with_gathering_type(gathering_type)
     return self
 end
 
+---@param bronze_requirement table
+---@return Mission
+function Mission:with_bronze_requirement(bronze_requirement)
+    self.bronze_requirement = bronze_requirement
+    return self
+end
+
 ---@param config table
 ---@return Mission
 function Mission:with_gathering_config(config)
@@ -275,30 +286,19 @@ function Mission:start()
     return true
 end
 
----@param goal MissionResult
----@return boolean
-function Mission:is_complete(goal)
-    return Addons.ToDoList:get_stellar_mission_scores().tier >= goal or not self:has_base_crafting_material()
-end
-
 ---@return MissionScore
 function Mission:get_score()
-    return Addons.ToDoList:get_stellar_mission_scores()
-end
-
----@param goal MissionResult
-function Mission:wait_for_crafting_ui_or_mission_complete(goal)
-    self:log_debug('waiting_for_crafting_ui_or_mission_complete')
-    Ferret:wait_until(function()
-        return Addons.WKSRecipeNotebook:is_ready() or self:is_complete(goal)
-    end)
-    Ferret:wait(1)
-    self:log_debug('crafting_ui_or_mission_complete')
+    return self.scorer:score(self)
 end
 
 ---@return boolean
 function Mission:has_base_crafting_material()
     return GetItemCount(48233) > 0
+end
+
+function Mission:is_collectable_mission()
+    return self.gathering_type == GatheringType.Collectability
+        or self.gathering_type == GatheringType.CollectabilityItemCount
 end
 
 ---@return boolean, string

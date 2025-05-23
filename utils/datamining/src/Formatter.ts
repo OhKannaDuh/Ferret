@@ -103,6 +103,21 @@ export class Formatter {
             }
         }
 
+        let bronze_requirement: { [key: string]: number } = {};
+        if (todo?.moon_item_1_id) {
+            bronze_requirement[`${todo.moon_item_1_info().get()?.item_id}`] = todo?.moon_item_1_amount;
+        }
+
+        if (todo?.moon_item_2_id) {
+            bronze_requirement[`${todo.moon_item_2_info().get()?.item_id}`] = todo?.moon_item_2_amount;
+        }
+
+        if (todo?.moon_item_3_id) {
+            bronze_requirement[`${todo.moon_item_3_info().get()?.item_id}`] = todo?.moon_item_3_amount;
+        }
+
+        output.push(`:with_bronze_requirement(${this.jsonToLua(bronze_requirement)})`);
+
         if (type == "Gathering") {
             if (todo?.moon_item_1_id != 0) {
                 let gathering_config: { [key: string]: { amount: number; name: string } } = {};

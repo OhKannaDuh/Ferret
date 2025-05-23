@@ -30,6 +30,7 @@ require('Ferret/Data/Status')
 require('Ferret/Data/Weather')
 require('Ferret/Data/Version')
 require('Ferret/Data/Node')
+require('Ferret/Data/GatheringActions')
 
 -- Managers
 EventManager = require('Ferret/EventManager')

@@ -11,6 +11,7 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 1, 11))
+        :with_bronze_requirement({ ['48635'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48635'] = { amount = 25, name = 'Lunar Meteorite' } })
         :with_node(Node(-129.5339, 27.93935, -170.3365))
@@ -35,6 +36,7 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 1, 11))
+        :with_bronze_requirement({ ['48635'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48635'] = { amount = 25, name = 'Lunar Meteorite' } })
         :with_node(Node(-90.9526, 22.51999, -194.1135))
@@ -59,6 +61,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(4)
         :with_exp_reward(MissionReward(9, 1, 7))
+        :with_bronze_requirement({ ['48635'] = 24 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48635'] = { amount = 24, name = 'Lunar Meteorite' } })
         :with_node(Node(-110.8568, 20.37079, -226.3371))
@@ -83,6 +86,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(4)
         :with_exp_reward(MissionReward(9, 1, 7))
+        :with_bronze_requirement({ ['48641'] = 24 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48641'] = { amount = 24, name = 'Lunar Chromite Ore' } })
         :with_node(Node(60.93913, 22.62565, 204.9416))
@@ -107,6 +111,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 1, 9))
+        :with_bronze_requirement({ ['48635'] = 28 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48635'] = { amount = 28, name = 'Lunar Meteorite' } })
         :with_node(Node(-110.8568, 20.37079, -226.3371))
@@ -131,6 +136,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 1, 9))
+        :with_bronze_requirement({ ['48641'] = 28 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48641'] = { amount = 28, name = 'Lunar Chromite Ore' } })
         :with_node(Node(60.93913, 22.62565, 204.9416))
@@ -156,6 +162,7 @@ return {
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(9, 2, 4))
         :with_exp_reward(MissionReward(9, 1, 8))
+        :with_bronze_requirement({ ['48649'] = 10, ['48650'] = 15 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48649'] = { amount = 10, name = 'Lunar Earth Fragment' },
@@ -184,6 +191,7 @@ return {
         :with_lunarcredit(3)
         :with_exp_reward(MissionReward(9, 2, 3))
         :with_exp_reward(MissionReward(9, 1, 2))
+        :with_bronze_requirement({ ['48644'] = 24 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48644'] = { amount = 24, name = 'Lunar Cobalt Ore' } })
         :with_node(Node(-430.4723, 42.52686, 96.48267))
@@ -209,6 +217,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 2, 5))
         :with_exp_reward(MissionReward(9, 1, 5))
+        :with_bronze_requirement({ ['48649'] = 12, ['48650'] = 16 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48649'] = { amount = 12, name = 'Lunar Earth Fragment' },
@@ -237,6 +246,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 2, 4))
         :with_exp_reward(MissionReward(9, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Chain)
         :with_node(Node(-438.9142, 43.87041, 101.0909))
         :with_node(Node(-430.4723, 42.52686, 96.48267))
@@ -261,6 +271,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 2, 6))
         :with_exp_reward(MissionReward(9, 1, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Boon)
         :with_node(Node(-438.9142, 43.87041, 101.0909))
         :with_node(Node(-430.4723, 42.52686, 96.48267))
@@ -285,6 +296,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(9, 2, 5))
         :with_exp_reward(MissionReward(9, 1, 5))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.ChainBoon)
         :with_node(Node(77.5591, 39.47883, -424.0021))
         :with_node(Node(87.09818, 39.77031, -424.8834))
@@ -309,6 +321,7 @@ return {
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(9, 2, 6))
         :with_exp_reward(MissionReward(9, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability)
         :with_node(Node(32.76464, 43.73592, -521.1357))
         :with_node(Node(77.5591, 39.47883, -424.0021))
@@ -333,6 +346,7 @@ return {
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(9, 2, 4))
         :with_exp_reward(MissionReward(9, 1, 8))
+        :with_bronze_requirement({ ['48654'] = 5, ['48655'] = 5, ['48656'] = 15 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48654'] = { amount = 5, name = 'Lunar Yellow Copper Ore' },
@@ -362,6 +376,7 @@ return {
         :with_lunarcredit(3)
         :with_exp_reward(MissionReward(9, 2, 3))
         :with_exp_reward(MissionReward(9, 1, 2))
+        :with_bronze_requirement({ ['48654'] = 24 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48654'] = { amount = 24, name = 'Lunar Yellow Copper Ore' } })
         :with_node(Node(-621.5858, 75.07944, -715.8904))
@@ -387,6 +402,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 3, 6))
         :with_exp_reward(MissionReward(9, 1, 4))
+        :with_bronze_requirement({ ['48654'] = 8, ['48655'] = 8, ['48656'] = 12 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48654'] = { amount = 8, name = 'Lunar Yellow Copper Ore' },
@@ -416,6 +432,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 3, 6))
         :with_exp_reward(MissionReward(9, 2, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Chain)
         :with_node(Node(-635.2172, 73.96651, -704.6745))
         :with_node(Node(-621.5858, 75.07944, -715.8904))
@@ -440,6 +457,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 3, 6))
         :with_exp_reward(MissionReward(9, 1, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Boon)
         :with_node(Node(-727.8103, 79.13322, -503.0137))
         :with_node(Node(-731.6289, 79.66474, -509.575))
@@ -464,6 +482,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 3, 6))
         :with_exp_reward(MissionReward(9, 2, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.ChainBoon)
         :with_node(Node(-635.2172, 73.96651, -704.6745))
         :with_node(Node(-621.5858, 75.07944, -715.8904))
@@ -489,6 +508,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 5))
         :with_exp_reward(MissionReward(9, 2, 4))
         :with_exp_reward(MissionReward(9, 1, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability)
         :with_node(Node(-635.2172, 73.96651, -704.6745))
         :with_node(Node(-621.5858, 75.07944, -715.8904))
@@ -514,6 +534,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 9))
         :with_exp_reward(MissionReward(9, 2, 9))
         :with_exp_reward(MissionReward(9, 1, 9))
+        :with_bronze_requirement({ ['48661'] = 10 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48661'] = { amount = 10, name = 'Moonlit Aethersand' } })
         :with_node(Node(-652.3953, 71.71996, -564.6855))
@@ -539,6 +560,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(9, 2, 7))
         :with_exp_reward(MissionReward(9, 1, 10))
+        :with_bronze_requirement({ ['48654'] = 15, ['48655'] = 15, ['48656'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48654'] = { amount = 15, name = 'Lunar Yellow Copper Ore' },
@@ -568,6 +590,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 3, 7))
         :with_exp_reward(MissionReward(9, 1, 5))
+        :with_bronze_requirement({ ['48649'] = 48 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48649'] = { amount = 48, name = 'Lunar Earth Fragment' } })
         :with_node(Node(77.5591, 39.47883, -424.0021))
@@ -593,6 +616,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(9, 3, 7))
         :with_exp_reward(MissionReward(9, 2, 10))
+        :with_bronze_requirement({ ['48644'] = 15, ['48645'] = 15, ['48646'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48644'] = { amount = 15, name = 'Lunar Cobalt Ore' },
@@ -622,6 +646,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(9, 4, 10))
         :with_exp_reward(MissionReward(9, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Chain)
         :with_node(Node(174.3744, 23.41426, 267.8382))
         :with_node(Node(172.3219, 23.63787, 275.0779))
@@ -646,6 +671,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(9, 4, 10))
         :with_exp_reward(MissionReward(9, 2, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Boon)
         :with_node(Node(77.5591, 39.47883, -424.0021))
         :with_node(Node(87.09818, 39.77031, -424.8834))
@@ -670,6 +696,7 @@ return {
         :with_lunarcredit(10)
         :with_exp_reward(MissionReward(9, 3, 10))
         :with_exp_reward(MissionReward(9, 1, 7))
+        :with_bronze_requirement({ ['48649'] = 15, ['48650'] = 15, ['48651'] = 21 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48649'] = { amount = 15, name = 'Lunar Earth Fragment' },
@@ -689,6 +716,7 @@ return {
         :with_lunarcredit(14)
         :with_exp_reward(MissionReward(9, 3, 9))
         :with_exp_reward(MissionReward(9, 2, 14))
+        :with_bronze_requirement({ ['48639'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48639'] = { amount = 25, name = 'Ardorum Aethersand' } })
         :with_node(Node(-117.0825, 20.89624, -230.2739))
@@ -714,6 +742,7 @@ return {
         :with_lunarcredit(16)
         :with_exp_reward(MissionReward(9, 4, 15))
         :with_exp_reward(MissionReward(9, 1, 10))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.CollectabilityItemCount)
         :with_node(Node(-547.847, 53.53079, 446.8909))
         :with_node(Node(-452.781, 60.37219, 379.1627))
@@ -740,6 +769,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 6))
         :with_exp_reward(MissionReward(9, 1, 6))
         :with_weather_restriction(Weather.MoonDust)
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [391] = Mission(391, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: Rare Material Extraction')
@@ -756,6 +786,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 5))
         :with_exp_reward(MissionReward(9, 2, 5))
         :with_weather_restriction(Weather.UmbralWind)
+        :with_bronze_requirement({ ['48661'] = 35 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48661'] = { amount = 35, name = 'Moonlit Aethersand' } }),
     [392] = Mission(392, Jobs.Miner, 'A', 3)
@@ -773,6 +804,7 @@ return {
         :with_exp_reward(MissionReward(9, 2, 8))
         :with_exp_reward(MissionReward(9, 1, 8))
         :with_weather_restriction(Weather.MoonDust)
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.CollectabilityItemCount),
     [393] = Mission(393, Jobs.Miner, 'A', 1)
         :with_en_name('A-1: Hub Vicinity Gathering I')
@@ -787,6 +819,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(9, 4, 10))
         :with_exp_reward(MissionReward(9, 3, 7))
+        :with_bronze_requirement({ ['48635'] = 15, ['48636'] = 15, ['48637'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48635'] = { amount = 15, name = 'Lunar Meteorite' },
@@ -817,6 +850,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 5))
         :with_exp_reward(MissionReward(9, 2, 5))
         :with_exp_reward(MissionReward(9, 1, 5))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Chain),
     [395] = Mission(395, Jobs.Miner, 'A', 1)
         :with_en_name('A-1: High-grade Energization Materials I')
@@ -831,6 +865,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(9, 2, 5))
         :with_exp_reward(MissionReward(9, 1, 7))
+        :with_bronze_requirement({ ['48644'] = 48 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48644'] = { amount = 48, name = 'Lunar Cobalt Ore' } })
         :with_node(Node(-430.4723, 42.52686, 96.48267))
@@ -857,6 +892,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 8))
         :with_exp_reward(MissionReward(9, 3, 5))
         :with_exp_reward(MissionReward(9, 1, 5))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Boon),
     [397] = Mission(397, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: High-grade Energization Materials III')
@@ -872,6 +908,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 8))
         :with_exp_reward(MissionReward(9, 3, 6))
         :with_exp_reward(MissionReward(9, 2, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [398] = Mission(398, Jobs.Miner, 'A', 2)
         :with_en_name('A-2: Fine-grade Water Filter Materials I')
@@ -886,6 +923,7 @@ return {
         :with_lunarcredit(10)
         :with_exp_reward(MissionReward(9, 4, 10))
         :with_exp_reward(MissionReward(9, 2, 7))
+        :with_bronze_requirement({ ['48649'] = 15, ['48650'] = 15, ['48651'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48649'] = { amount = 15, name = 'Lunar Earth Fragment' },
@@ -916,6 +954,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 11))
         :with_exp_reward(MissionReward(9, 3, 8))
         :with_exp_reward(MissionReward(9, 1, 8))
+        :with_bronze_requirement({ ['48673'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48673'] = { amount = 25, name = 'Moonfall Aethersand' } }),
     [400] = Mission(400, Jobs.Miner, 'A', 1)
@@ -932,6 +971,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 10))
         :with_exp_reward(MissionReward(9, 3, 7))
         :with_time_restriction(2, 4)
+        :with_bronze_requirement({ ['48641'] = 15, ['48642'] = 15, ['48643'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48641'] = { amount = 15, name = 'Lunar Chromite Ore' },
@@ -952,6 +992,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 6))
         :with_exp_reward(MissionReward(9, 2, 6))
         :with_exp_reward(MissionReward(9, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.ChainBoon),
     [402] = Mission(402, Jobs.Miner, 'A', 2)
         :with_en_name('A-2: Fine-grade Air Filter Materials III')
@@ -967,6 +1008,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 9))
         :with_exp_reward(MissionReward(9, 2, 6))
         :with_exp_reward(MissionReward(9, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [403] = Mission(403, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: Folkloric Materials I')
@@ -983,6 +1025,7 @@ return {
         :with_exp_reward(MissionReward(9, 3, 5))
         :with_exp_reward(MissionReward(9, 1, 5))
         :with_time_restriction(14, 16)
+        :with_bronze_requirement({ ['48669'] = 35 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48669'] = { amount = 35, name = 'Moonblue Aethersand' } }),
     [404] = Mission(404, Jobs.Miner, 'A', 3)
@@ -999,6 +1042,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 13))
         :with_exp_reward(MissionReward(9, 3, 9))
         :with_exp_reward(MissionReward(9, 2, 9))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.CollectabilityItemCount),
     [405] = Mission(405, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: Folkloric Materials III')
@@ -1014,6 +1058,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 13))
         :with_exp_reward(MissionReward(9, 2, 8))
         :with_exp_reward(MissionReward(9, 1, 8))
+        :with_bronze_requirement({ ['48669'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48669'] = { amount = 25, name = 'Moonblue Aethersand' } }),
     [496] = Mission(496, Jobs.Miner, 'A', 2)
@@ -1031,7 +1076,8 @@ return {
         :with_exp_reward(MissionReward(9, 4, 21))
         :with_exp_reward(MissionReward(1, 4, 21))
         :with_recipe_table_id(362)
-        :with_recipes({ { recipe = 36669, item = 46858 } }),
+        :with_recipes({ { recipe = 36669, item = 46858 } })
+        :with_bronze_requirement({}),
     [497] = Mission(497, Jobs.Miner, 'A', 2)
         :with_en_name('A-2: Impact-resistant Containers')
         :with_de_name('A-2: Schockresistenter Behälter')
@@ -1047,7 +1093,8 @@ return {
         :with_exp_reward(MissionReward(9, 4, 21))
         :with_exp_reward(MissionReward(3, 4, 21))
         :with_recipe_table_id(363)
-        :with_recipes({ { recipe = 36673, item = 47096 } }),
+        :with_recipes({ { recipe = 36673, item = 47096 } })
+        :with_bronze_requirement({}),
     [498] = Mission(498, Jobs.Miner, 'A', 2)
         :with_en_name('A-2: Soothing Censers')
         :with_de_name('A-2: Räuchergefäß von Mutter Ætheris')
@@ -1063,7 +1110,8 @@ return {
         :with_exp_reward(MissionReward(9, 4, 21))
         :with_exp_reward(MissionReward(4, 4, 21))
         :with_recipe_table_id(364)
-        :with_recipes({ { recipe = 36675, item = 47220 } }),
+        :with_recipes({ { recipe = 36675, item = 47220 } })
+        :with_bronze_requirement({}),
     [499] = Mission(499, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: Automaton Digging')
         :with_de_name('A-3: Ausweg durch Grundgesteinsabbau')
@@ -1080,7 +1128,8 @@ return {
         :with_exp_reward(MissionReward(2, 4, 21))
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(365)
-        :with_recipes({ { recipe = 36671, item = 46972 } }),
+        :with_recipes({ { recipe = 36671, item = 46972 } })
+        :with_bronze_requirement({}),
     [500] = Mission(500, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: Lunar Leather')
         :with_de_name('A-3: Gerbleder für Mondrohstoffe')
@@ -1097,7 +1146,8 @@ return {
         :with_exp_reward(MissionReward(5, 4, 21))
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(366)
-        :with_recipes({ { recipe = 36677, item = 47344 } }),
+        :with_recipes({ { recipe = 36677, item = 47344 } })
+        :with_bronze_requirement({}),
     [501] = Mission(501, Jobs.Miner, 'A', 3)
         :with_en_name('A-3: High-quality Floor Tiling')
         :with_de_name('A-3: Blitzblanke Bodenplatten')
@@ -1114,5 +1164,6 @@ return {
         :with_exp_reward(MissionReward(6, 4, 21))
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(367)
-        :with_recipes({ { recipe = 36679, item = 47468 } }),
+        :with_recipes({ { recipe = 36679, item = 47468 } })
+        :with_bronze_requirement({}),
 }

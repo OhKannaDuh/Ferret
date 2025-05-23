@@ -11,7 +11,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(8, 1, 7))
         :with_recipe_table_id(317)
-        :with_recipes({ { recipe = 36606, item = 48273 } }),
+        :with_recipes({ { recipe = 36606, item = 48273 } })
+        :with_bronze_requirement({ ['48273'] = 3 }),
     [317] = Mission(317, Jobs.Culinarian, 'D', 1)
         :with_en_name('Spice Processing')
         :with_de_name('Gewürz-Verarbeitung')
@@ -24,7 +25,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(8, 1, 7))
         :with_recipe_table_id(318)
-        :with_recipes({ { recipe = 36607, item = 48269 } }),
+        :with_recipes({ { recipe = 36607, item = 48269 } })
+        :with_bronze_requirement({ ['48269'] = 3 }),
     [318] = Mission(318, Jobs.Culinarian, 'D', 1)
         :with_en_name('Building Adhesive')
         :with_de_name('Baumaterial-Klebstoff')
@@ -37,7 +39,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(8, 1, 8))
         :with_recipe_table_id(319)
-        :with_recipes({ { recipe = 36608, item = 48586 } }),
+        :with_recipes({ { recipe = 36608, item = 48586 } })
+        :with_bronze_requirement({ ['48586'] = 3 }),
     [319] = Mission(319, Jobs.Culinarian, 'D', 1)
         :with_en_name('Aquatic Nutrient Concentrate')
         :with_de_name('Meeresfrüchte-Nährwertverdichtung')
@@ -50,7 +53,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(8, 1, 7))
         :with_recipe_table_id(320)
-        :with_recipes({ { recipe = 36609, item = 48587 } }),
+        :with_recipes({ { recipe = 36609, item = 48587 } })
+        :with_bronze_requirement({ ['48587'] = 3 }),
     [320] = Mission(320, Jobs.Culinarian, 'D', 1)
         :with_en_name('Aquatic Ink')
         :with_de_name('Unterwasser-Tinte')
@@ -63,7 +67,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(8, 1, 7))
         :with_recipe_table_id(321)
-        :with_recipes({ { recipe = 36610, item = 48588 } }),
+        :with_recipes({ { recipe = 36610, item = 48588 } })
+        :with_bronze_requirement({ ['48588'] = 3 }),
     [321] = Mission(321, Jobs.Culinarian, 'D', 1)
         :with_en_name('Medicated Feed Research')
         :with_de_name('Unterstützung zur Medikamentenforschung')
@@ -76,7 +81,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(8, 1, 7))
         :with_recipe_table_id(322)
-        :with_recipes({ { recipe = 36611, item = 48270 } }),
+        :with_recipes({ { recipe = 36611, item = 48270 } })
+        :with_bronze_requirement({ ['48270'] = 3 }),
     [322] = Mission(322, Jobs.Culinarian, 'C', 1)
         :with_en_name('Heat-resistant Lubricant')
         :with_de_name('Hitzebeständiges Schmieröl')
@@ -90,7 +96,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 3))
         :with_exp_reward(MissionReward(8, 1, 5))
         :with_recipe_table_id(323)
-        :with_recipes({ { recipe = 36612, item = 48273 } }),
+        :with_recipes({ { recipe = 36612, item = 48273 } })
+        :with_bronze_requirement({ ['48273'] = 3 }),
     [323] = Mission(323, Jobs.Culinarian, 'C', 1)
         :with_en_name('Nutrient-rich Foodstuffs')
         :with_de_name('Nährstoffregulierende Lebensmittel')
@@ -104,7 +111,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 6))
         :with_exp_reward(MissionReward(8, 1, 4))
         :with_recipe_table_id(324)
-        :with_recipes({ { recipe = 36613, item = 48589 } }),
+        :with_recipes({ { recipe = 36613, item = 48589 } })
+        :with_bronze_requirement({ ['48589'] = 3 }),
     [324] = Mission(324, Jobs.Culinarian, 'C', 1)
         :with_en_name('Construction Paint')
         :with_de_name('Baumaterial-Farbstoff')
@@ -118,7 +126,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 5))
         :with_exp_reward(MissionReward(8, 1, 5))
         :with_recipe_table_id(325)
-        :with_recipes({ { recipe = 36614, item = 48590 } }),
+        :with_recipes({ { recipe = 36614, item = 48590 } })
+        :with_bronze_requirement({ ['48590'] = 3 }),
     [325] = Mission(325, Jobs.Culinarian, 'C', 1)
         :with_en_name('Portable Foodstuffs')
         :with_de_name('Tragbare Mahlzeiten')
@@ -133,7 +142,8 @@ return {
         :with_exp_reward(MissionReward(8, 1, 6))
         :with_recipe_table_id(326)
         :with_recipes({ { recipe = 36615, item = 48595 }, { recipe = 36616, item = 48591 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48591'] = 1 }),
     [326] = Mission(326, Jobs.Culinarian, 'C', 1)
         :with_en_name('Nutrient-rich Seafood Processing')
         :with_de_name('Nährreiche Meeresfrüchte')
@@ -148,7 +158,8 @@ return {
         :with_exp_reward(MissionReward(8, 1, 5))
         :with_recipe_table_id(327)
         :with_recipes({ { recipe = 36617, item = 48596 }, { recipe = 36618, item = 48592 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48592'] = 2 }),
     [327] = Mission(327, Jobs.Culinarian, 'C', 1)
         :with_en_name('Emergency Foodstuff Development')
         :with_de_name('Notfall-Lebensmittel')
@@ -163,7 +174,8 @@ return {
         :with_exp_reward(MissionReward(8, 1, 7))
         :with_recipe_table_id(328)
         :with_recipes({ { recipe = 36619, item = 48597 }, { recipe = 36620, item = 48593 } })
-        :with_multi_craft_config({ [0] = 3, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 3, [1] = 1 })
+        :with_bronze_requirement({ ['48593'] = 1 }),
     [328] = Mission(328, Jobs.Culinarian, 'C', 1)
         :with_en_name('Essential Whole Meals')
         :with_de_name('Notwendige Vollwertnahrung')
@@ -178,7 +190,8 @@ return {
         :with_exp_reward(MissionReward(8, 1, 5))
         :with_recipe_table_id(329)
         :with_recipes({ { recipe = 36621, item = 48598 }, { recipe = 36622, item = 48594 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48594'] = 1 }),
     [329] = Mission(329, Jobs.Culinarian, 'B', 1)
         :with_en_name('Experimental Foodstuffs')
         :with_de_name('Experimentelle Langzeitnahrung')
@@ -192,7 +205,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 5))
         :with_exp_reward(MissionReward(8, 1, 9))
         :with_recipe_table_id(330)
-        :with_recipes({ { recipe = 36623, item = 48599 } }),
+        :with_recipes({ { recipe = 36623, item = 48599 } })
+        :with_bronze_requirement({ ['48599'] = 3 }),
     [330] = Mission(330, Jobs.Culinarian, 'B', 1)
         :with_en_name('Water-resistant Lubricant')
         :with_de_name('Wasserabweisendes Schmieröl')
@@ -206,7 +220,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 7))
         :with_exp_reward(MissionReward(8, 1, 4))
         :with_recipe_table_id(331)
-        :with_recipes({ { recipe = 36624, item = 48273 } }),
+        :with_recipes({ { recipe = 36624, item = 48273 } })
+        :with_bronze_requirement({ ['48273'] = 3 }),
     [331] = Mission(331, Jobs.Culinarian, 'B', 1)
         :with_en_name('Experimental Potables')
         :with_de_name('Zukunfts-Getränk')
@@ -220,7 +235,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 5))
         :with_exp_reward(MissionReward(8, 1, 3))
         :with_recipe_table_id(332)
-        :with_recipes({ { recipe = 36625, item = 48600 } }),
+        :with_recipes({ { recipe = 36625, item = 48600 } })
+        :with_bronze_requirement({ ['48600'] = 2 }),
     [332] = Mission(332, Jobs.Culinarian, 'B', 1)
         :with_en_name('Launch Party Foodstuffs')
         :with_de_name('Belohnungs-Mahlzeit')
@@ -234,7 +250,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 9))
         :with_exp_reward(MissionReward(8, 2, 5))
         :with_recipe_table_id(333)
-        :with_recipes({ { recipe = 36626, item = 48601 } }),
+        :with_recipes({ { recipe = 36626, item = 48601 } })
+        :with_bronze_requirement({ ['48601'] = 3 }),
     [333] = Mission(333, Jobs.Culinarian, 'B', 1)
         :with_en_name('Home-cooked Seafood Meal')
         :with_de_name('Heimatliche Mahlzeit')
@@ -248,7 +265,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 10))
         :with_exp_reward(MissionReward(8, 1, 6))
         :with_recipe_table_id(334)
-        :with_recipes({ { recipe = 36627, item = 48602 } }),
+        :with_recipes({ { recipe = 36627, item = 48602 } })
+        :with_bronze_requirement({ ['48602'] = 3 }),
     [334] = Mission(334, Jobs.Culinarian, 'B', 1)
         :with_en_name('Nutrient-rich Lunar Food')
         :with_de_name('Mondprodukte-Nährwertregulierung')
@@ -262,7 +280,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 10))
         :with_exp_reward(MissionReward(8, 2, 6))
         :with_recipe_table_id(335)
-        :with_recipes({ { recipe = 36628, item = 48603 } }),
+        :with_recipes({ { recipe = 36628, item = 48603 } })
+        :with_bronze_requirement({ ['48603'] = 3 }),
     [335] = Mission(335, Jobs.Culinarian, 'B', 1)
         :with_en_name('Bakery Inspection')
         :with_de_name('Bäckereibau-Inspektion')
@@ -278,7 +297,8 @@ return {
         :with_exp_reward(MissionReward(8, 1, 5))
         :with_recipe_table_id(336)
         :with_recipes({ { recipe = 36629, item = 48606 }, { recipe = 36630, item = 48604 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48604'] = 1 }),
     [336] = Mission(336, Jobs.Culinarian, 'B', 1)
         :with_en_name('Mushroom Processing')
         :with_de_name('Pilz-Verarbeitung')
@@ -294,7 +314,8 @@ return {
         :with_exp_reward(MissionReward(8, 1, 6))
         :with_recipe_table_id(337)
         :with_recipes({ { recipe = 36631, item = 48607 }, { recipe = 36632, item = 48605 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48605'] = 1 }),
     [337] = Mission(337, Jobs.Culinarian, 'A', 1)
         :with_en_name('A-1: Water-resistant Lubricant')
         :with_de_name('A-1: Wasserabweisendes Schmieröl')
@@ -309,7 +330,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 13))
         :with_exp_reward(MissionReward(8, 1, 19))
         :with_recipe_table_id(338)
-        :with_recipes({ { recipe = 36633, item = 48273 } }),
+        :with_recipes({ { recipe = 36633, item = 48273 } })
+        :with_bronze_requirement({ ['48273'] = 3 }),
     [338] = Mission(338, Jobs.Culinarian, 'A', 1)
         :with_en_name('A-1: Stellar Adhesive')
         :with_de_name('A-1: Hochwertiger Klebstoff')
@@ -324,7 +346,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 18))
         :with_exp_reward(MissionReward(8, 1, 12))
         :with_recipe_table_id(339)
-        :with_recipes({ { recipe = 36634, item = 48608 } }),
+        :with_recipes({ { recipe = 36634, item = 48608 } })
+        :with_bronze_requirement({ ['48608'] = 3 }),
     [339] = Mission(339, Jobs.Culinarian, 'A', 1)
         :with_en_name('A-1: Liquid Nutrient Supplements')
         :with_de_name('A-1: Nahrungsergänzungsdrinks')
@@ -338,7 +361,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 12))
         :with_exp_reward(MissionReward(8, 2, 19))
         :with_recipe_table_id(340)
-        :with_recipes({ { recipe = 36635, item = 48609 } }),
+        :with_recipes({ { recipe = 36635, item = 48609 } })
+        :with_bronze_requirement({ ['48609'] = 1 }),
     [340] = Mission(340, Jobs.Culinarian, 'A', 1)
         :with_en_name('A-1: Cafeteria Goods')
         :with_de_name('A-1: Speisesaal-Besteck')
@@ -353,7 +377,8 @@ return {
         :with_exp_reward(MissionReward(8, 4, 15))
         :with_exp_reward(MissionReward(8, 1, 10))
         :with_recipe_table_id(341)
-        :with_recipes({ { recipe = 36636, item = 48610 } }),
+        :with_recipes({ { recipe = 36636, item = 48610 } })
+        :with_bronze_requirement({ ['48610'] = 1 }),
     [341] = Mission(341, Jobs.Culinarian, 'A', 1)
         :with_en_name('A-1: Lunar Seafood Processing')
         :with_de_name('A-1: Wasserprodukte-Inspektion')
@@ -369,7 +394,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 20))
         :with_recipe_table_id(342)
         :with_recipes({ { recipe = 36637, item = 48611 }, { recipe = 36638, item = 48612 }, { recipe = 36639, item = 48613 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48611'] = 1, ['48612'] = 1, ['48613'] = 1 }),
     [342] = Mission(342, Jobs.Culinarian, 'A', 2)
         :with_en_name('A-2: Stable Food Mass Production')
         :with_de_name('A-2: Langzeit-Lebensmittel-Massenproduktion')
@@ -384,7 +410,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 19))
         :with_exp_reward(MissionReward(8, 1, 13))
         :with_recipe_table_id(343)
-        :with_recipes({ { recipe = 36640, item = 48614 } }),
+        :with_recipes({ { recipe = 36640, item = 48614 } })
+        :with_bronze_requirement({ ['48614'] = 3 }),
     [343] = Mission(343, Jobs.Culinarian, 'A', 2)
         :with_en_name('A-2: Sharlayan Dish Inspection')
         :with_de_name('A-2: Nachbildung sharlayanischer Gerichte')
@@ -399,7 +426,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 10))
         :with_exp_reward(MissionReward(8, 2, 15))
         :with_recipe_table_id(344)
-        :with_recipes({ { recipe = 36641, item = 48615 } }),
+        :with_recipes({ { recipe = 36641, item = 48615 } })
+        :with_bronze_requirement({ ['48615'] = 1 }),
     [344] = Mission(344, Jobs.Culinarian, 'A', 2)
         :with_en_name('A-2: Simple Field Rations')
         :with_de_name('A-2: Nachbildung einfacher Außennahrung')
@@ -414,7 +442,8 @@ return {
         :with_exp_reward(MissionReward(8, 4, 15))
         :with_exp_reward(MissionReward(8, 1, 10))
         :with_recipe_table_id(345)
-        :with_recipes({ { recipe = 36642, item = 48616 } }),
+        :with_recipes({ { recipe = 36642, item = 48616 } })
+        :with_bronze_requirement({ ['48616'] = 1 }),
     [345] = Mission(345, Jobs.Culinarian, 'A', 2)
         :with_en_name('A-2: Portable Nutrients')
         :with_de_name('A-2: Tragbare Nahrungsergänzungsmittel')
@@ -432,7 +461,8 @@ return {
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(346)
         :with_recipes({ { recipe = 36643, item = 48617 }, { recipe = 36644, item = 48618 }, { recipe = 36645, item = 48619 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48617'] = 1, ['48618'] = 1, ['48619'] = 1 }),
     [346] = Mission(346, Jobs.Culinarian, 'A', 3)
         :with_en_name('A-3: Cured Seafood')
         :with_de_name('A-3: Wasserprodukt-Räucherung')
@@ -450,7 +480,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(347)
         :with_recipes({ { recipe = 36646, item = 48275 }, { recipe = 36647, item = 48620 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48620'] = 1 }),
     [347] = Mission(347, Jobs.Culinarian, 'A', 3)
         :with_en_name('A-3: Cured Meat')
         :with_de_name('A-3: Tierfleisch-Räucherung')
@@ -468,7 +499,8 @@ return {
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(348)
         :with_recipes({ { recipe = 36648, item = 48275 }, { recipe = 36649, item = 48621 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48621'] = 1 }),
     [348] = Mission(348, Jobs.Culinarian, 'A', 1)
         :with_en_name('A-1: Worker\'s Banquet Preparation I')
         :with_de_name('A-1: Arbeiter-Mahlzeitausgabe I')
@@ -483,7 +515,8 @@ return {
         :with_exp_reward(MissionReward(8, 4, 16))
         :with_exp_reward(MissionReward(8, 3, 11))
         :with_recipe_table_id(349)
-        :with_recipes({ { recipe = 36650, item = 48622 } }),
+        :with_recipes({ { recipe = 36650, item = 48622 } })
+        :with_bronze_requirement({ ['48622'] = 3 }),
     [349] = Mission(349, Jobs.Culinarian, 'A', 2)
         :with_en_name('A-2: Worker\'s Banquet Preparation II')
         :with_de_name('A-2: Arbeiter-Mahlzeitausgabe II')
@@ -499,7 +532,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 10))
         :with_exp_reward(MissionReward(8, 1, 10))
         :with_recipe_table_id(350)
-        :with_recipes({ { recipe = 36651, item = 48623 } }),
+        :with_recipes({ { recipe = 36651, item = 48623 } })
+        :with_bronze_requirement({ ['48623'] = 3 }),
     [350] = Mission(350, Jobs.Culinarian, 'A', 1)
         :with_en_name('A-1: Loporrit Dietary Improvement I')
         :with_de_name('A-1: Loporrit-Ernährungsverbesserung I')
@@ -514,7 +548,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 7))
         :with_exp_reward(MissionReward(8, 1, 11))
         :with_recipe_table_id(351)
-        :with_recipes({ { recipe = 36652, item = 48624 } }),
+        :with_recipes({ { recipe = 36652, item = 48624 } })
+        :with_bronze_requirement({ ['48624'] = 2 }),
     [351] = Mission(351, Jobs.Culinarian, 'A', 2)
         :with_en_name('A-2: Loporrit Dietary Improvement II')
         :with_de_name('A-2: Loporrit-Ernährungsverbesserung II')
@@ -530,7 +565,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 8))
         :with_exp_reward(MissionReward(8, 1, 8))
         :with_recipe_table_id(352)
-        :with_recipes({ { recipe = 36653, item = 48625 } }),
+        :with_recipes({ { recipe = 36653, item = 48625 } })
+        :with_bronze_requirement({ ['48625'] = 2 }),
     [352] = Mission(352, Jobs.Culinarian, 'A', 3)
         :with_en_name('A-3: Loporrit Dietary Improvement III')
         :with_de_name('A-3: Loporrit-Ernährungsverbesserung III')
@@ -546,7 +582,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 7))
         :with_exp_reward(MissionReward(8, 2, 7))
         :with_recipe_table_id(353)
-        :with_recipes({ { recipe = 36654, item = 48626 } }),
+        :with_recipes({ { recipe = 36654, item = 48626 } })
+        :with_bronze_requirement({ ['48626'] = 2 }),
     [353] = Mission(353, Jobs.Culinarian, 'A', 2)
         :with_en_name('A-2: Aquaculture Feed I')
         :with_de_name('A-2: Weichfutter für Tierzüchtungen I')
@@ -561,7 +598,8 @@ return {
         :with_exp_reward(MissionReward(8, 4, 15))
         :with_exp_reward(MissionReward(8, 2, 10))
         :with_recipe_table_id(354)
-        :with_recipes({ { recipe = 36655, item = 48271 } }),
+        :with_recipes({ { recipe = 36655, item = 48271 } })
+        :with_bronze_requirement({ ['48271'] = 1 }),
     [354] = Mission(354, Jobs.Culinarian, 'A', 3)
         :with_en_name('A-3: Aquaculture Feed II')
         :with_de_name('A-3: Weichfutter für Tierzüchtungen III')
@@ -577,7 +615,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 8))
         :with_exp_reward(MissionReward(8, 1, 8))
         :with_recipe_table_id(355)
-        :with_recipes({ { recipe = 36656, item = 48272 } }),
+        :with_recipes({ { recipe = 36656, item = 48272 } })
+        :with_bronze_requirement({ ['48272'] = 1 }),
     [355] = Mission(355, Jobs.Culinarian, 'A', 1)
         :with_en_name('A-1: Nutrient-rich Foodstuffs I')
         :with_de_name('A-1: Nährreiche Lebensmittel I')
@@ -593,7 +632,8 @@ return {
         :with_exp_reward(MissionReward(8, 3, 12))
         :with_time_restriction(4, 6)
         :with_recipe_table_id(356)
-        :with_recipes({ { recipe = 36657, item = 48627 } }),
+        :with_recipes({ { recipe = 36657, item = 48627 } })
+        :with_bronze_requirement({ ['48627'] = 3 }),
     [356] = Mission(356, Jobs.Culinarian, 'A', 2)
         :with_en_name('A-2: Nutrient-rich Foodstuffs II')
         :with_de_name('A-2: Nährreiche Lebensmittel II')
@@ -609,7 +649,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 11))
         :with_exp_reward(MissionReward(8, 1, 11))
         :with_recipe_table_id(357)
-        :with_recipes({ { recipe = 36658, item = 48628 } }),
+        :with_recipes({ { recipe = 36658, item = 48628 } })
+        :with_bronze_requirement({ ['48628'] = 3 }),
     [357] = Mission(357, Jobs.Culinarian, 'A', 3)
         :with_en_name('A-3: Nutrient-rich Foodstuffs III')
         :with_de_name('A-3: Nährreiche Lebensmittel')
@@ -625,7 +666,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 10))
         :with_exp_reward(MissionReward(8, 1, 10))
         :with_recipe_table_id(358)
-        :with_recipes({ { recipe = 36659, item = 48629 } }),
+        :with_recipes({ { recipe = 36659, item = 48629 } })
+        :with_bronze_requirement({ ['48629'] = 3 }),
     [358] = Mission(358, Jobs.Culinarian, 'A', 3)
         :with_en_name('A-3: Whole Meals I')
         :with_de_name('A-3: Vollwertnahrung I')
@@ -643,7 +685,8 @@ return {
         :with_time_restriction(16, 18)
         :with_recipe_table_id(359)
         :with_recipes({ { recipe = 36660, item = 48631 }, { recipe = 36661, item = 48632 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48632'] = 1 }),
     [359] = Mission(359, Jobs.Culinarian, 'A', 3)
         :with_en_name('A-3: Whole Meals II')
         :with_de_name('A-3: Vollwertnahrung II')
@@ -660,7 +703,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 19))
         :with_recipe_table_id(360)
         :with_recipes({ { recipe = 36663, item = 48633 }, { recipe = 36664, item = 48634 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48634'] = 1 }),
     [360] = Mission(360, Jobs.Culinarian, 'A', 3)
         :with_en_name('A-3: Whole Meals III')
         :with_de_name('A-3: Vollwertnahrung III')
@@ -677,5 +721,6 @@ return {
         :with_exp_reward(MissionReward(8, 1, 51))
         :with_recipe_table_id(361)
         :with_recipes({ { recipe = 36666, item = 48236 }, { recipe = 36668, item = 48630 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48630'] = 1 }),
 }

@@ -68,7 +68,9 @@ function MissionFarmer:loop()
     Logger:info('Mission target: ' .. MissionResult.to_string(goal))
 
     local result, reason = CraftingMissionHandler:handle(mission, goal)
+    Logger:debug('2')
     local acceptable = CosmicExploration:get_acceptable_result(mission)
+    Logger:debug('2.1')
 
     Logger:debug('Result: ' .. tostring(result))
     Logger:debug('Acceptable: ' .. MissionResult.to_string(acceptable))

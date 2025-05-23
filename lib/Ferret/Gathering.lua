@@ -148,4 +148,42 @@ function Gathering:integrity_action()
     end
 end
 
+function Gathering:wait_to_start_action()
+    Ferret:wait_until(function()
+        return Character:has_condition(Conditions.ExecutingGatheringAction)
+    end, 0.1)
+end
+
+function Gathering:wait_to_stop_action()
+    Ferret:wait_until(function()
+        return not Character:has_condition(Conditions.ExecutingGatheringAction)
+    end, 0.1)
+end
+
+function Gathering:execute(action)
+    Logger:debug('Executing gathering action: ' .. action)
+    local cost = GatheringActionCosts[action]
+    if cost > self:get_gp() then
+        return false
+    end
+
+    ExecuteAction(GatheringActions[GetClassJobId()][action])
+    Gathering:wait_to_start_action()
+    Gathering:wait_to_stop_action()
+    Wait:seconds(0.5)
+
+    return true
+end
+
+function Gathering:gather(index)
+    Addons.Gathering:gather(index)
+    Gathering:wait_to_start_action()
+    Gathering:wait_to_stop_action()
+end
+
+function Gathering:start_collect(index)
+    Addons.Gathering:gather(index)
+    Addons.GatheringMasterpiece:wait_until_ready()
+end
+
 return Gathering()

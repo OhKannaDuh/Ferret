@@ -11,7 +11,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(5, 1, 7))
         :with_recipe_table_id(182)
-        :with_recipes({ { recipe = 36417, item = 48259 } }),
+        :with_recipes({ { recipe = 36417, item = 48259 } })
+        :with_bronze_requirement({ ['48259'] = 3 }),
     [182] = Mission(182, Jobs.Leatherworker, 'D', 1)
         :with_en_name('First-aid Leather')
         :with_de_name('Notfall-Ledertücher')
@@ -24,7 +25,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(5, 1, 7))
         :with_recipe_table_id(183)
-        :with_recipes({ { recipe = 36418, item = 48437 } }),
+        :with_recipes({ { recipe = 36418, item = 48437 } })
+        :with_bronze_requirement({ ['48437'] = 3 }),
     [183] = Mission(183, Jobs.Leatherworker, 'D', 1)
         :with_en_name('Gatherer\'s Gloves')
         :with_de_name('Sammler-Handschutz')
@@ -37,7 +39,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(5, 1, 8))
         :with_recipe_table_id(184)
-        :with_recipes({ { recipe = 36419, item = 48438 } }),
+        :with_recipes({ { recipe = 36419, item = 48438 } })
+        :with_bronze_requirement({ ['48438'] = 3 }),
     [184] = Mission(184, Jobs.Leatherworker, 'D', 1)
         :with_en_name('Essential Research Materials')
         :with_de_name('Forschungsmaterialien')
@@ -50,7 +53,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(5, 1, 7))
         :with_recipe_table_id(185)
-        :with_recipes({ { recipe = 36420, item = 48439 } }),
+        :with_recipes({ { recipe = 36420, item = 48439 } })
+        :with_bronze_requirement({ ['48439'] = 3 }),
     [185] = Mission(185, Jobs.Leatherworker, 'D', 1)
         :with_en_name('Work Pouches')
         :with_de_name('Arbeiter-Beutel')
@@ -63,7 +67,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(5, 1, 7))
         :with_recipe_table_id(186)
-        :with_recipes({ { recipe = 36421, item = 48440 } }),
+        :with_recipes({ { recipe = 36421, item = 48440 } })
+        :with_bronze_requirement({ ['48440'] = 3 }),
     [186] = Mission(186, Jobs.Leatherworker, 'D', 1)
         :with_en_name('Leather Room Shoes')
         :with_de_name('Leder-Hausschuhe')
@@ -76,7 +81,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(5, 1, 7))
         :with_recipe_table_id(187)
-        :with_recipes({ { recipe = 36422, item = 48441 } }),
+        :with_recipes({ { recipe = 36422, item = 48441 } })
+        :with_bronze_requirement({ ['48441'] = 3 }),
     [187] = Mission(187, Jobs.Leatherworker, 'C', 1)
         :with_en_name('Heat-resistant Leather String')
         :with_de_name('Hitzebeständige Lederriemen')
@@ -90,7 +96,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 3))
         :with_exp_reward(MissionReward(5, 1, 5))
         :with_recipe_table_id(188)
-        :with_recipes({ { recipe = 36423, item = 48259 } }),
+        :with_recipes({ { recipe = 36423, item = 48259 } })
+        :with_bronze_requirement({ ['48259'] = 3 }),
     [188] = Mission(188, Jobs.Leatherworker, 'C', 1)
         :with_en_name('Worker\'s Bags')
         :with_de_name('Große Arbeiter-Taschen')
@@ -104,7 +111,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 6))
         :with_exp_reward(MissionReward(5, 1, 4))
         :with_recipe_table_id(189)
-        :with_recipes({ { recipe = 36424, item = 48442 } }),
+        :with_recipes({ { recipe = 36424, item = 48442 } })
+        :with_bronze_requirement({ ['48442'] = 3 }),
     [189] = Mission(189, Jobs.Leatherworker, 'C', 1)
         :with_en_name('Worker\'s Belts')
         :with_de_name('Arbeiter-Gürtel')
@@ -118,7 +126,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 5))
         :with_exp_reward(MissionReward(5, 1, 5))
         :with_recipe_table_id(190)
-        :with_recipes({ { recipe = 36425, item = 48443 } }),
+        :with_recipes({ { recipe = 36425, item = 48443 } })
+        :with_bronze_requirement({ ['48443'] = 3 }),
     [190] = Mission(190, Jobs.Leatherworker, 'C', 1)
         :with_en_name('High-grade Paper')
         :with_de_name('Hochwertiges Papier')
@@ -133,7 +142,8 @@ return {
         :with_exp_reward(MissionReward(5, 1, 6))
         :with_recipe_table_id(191)
         :with_recipes({ { recipe = 36426, item = 48448 }, { recipe = 36427, item = 48444 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48444'] = 1 }),
     [191] = Mission(191, Jobs.Leatherworker, 'C', 1)
         :with_en_name('Sheep Rugs')
         :with_de_name('Schafs-Unterlagen')
@@ -148,7 +158,8 @@ return {
         :with_exp_reward(MissionReward(5, 1, 5))
         :with_recipe_table_id(192)
         :with_recipes({ { recipe = 36428, item = 48449 }, { recipe = 36429, item = 48445 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48445'] = 2 }),
     [192] = Mission(192, Jobs.Leatherworker, 'C', 1)
         :with_en_name('Cosmoliner Materials')
         :with_de_name('Kosmozapper-Rohmaterialien')
@@ -163,7 +174,8 @@ return {
         :with_exp_reward(MissionReward(5, 1, 7))
         :with_recipe_table_id(193)
         :with_recipes({ { recipe = 36430, item = 48450 }, { recipe = 36431, item = 48446 } })
-        :with_multi_craft_config({ [0] = 3, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 3, [1] = 1 })
+        :with_bronze_requirement({ ['48446'] = 1 }),
     [193] = Mission(193, Jobs.Leatherworker, 'C', 1)
         :with_en_name('New Material Jackets')
         :with_de_name('Prototyp-Jacken')
@@ -178,7 +190,8 @@ return {
         :with_exp_reward(MissionReward(5, 1, 5))
         :with_recipe_table_id(194)
         :with_recipes({ { recipe = 36432, item = 48451 }, { recipe = 36433, item = 48447 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48447'] = 1 }),
     [194] = Mission(194, Jobs.Leatherworker, 'B', 1)
         :with_en_name('Leather First-aid Bags')
         :with_de_name('Notfall-Lederbeutel')
@@ -192,7 +205,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 5))
         :with_exp_reward(MissionReward(5, 1, 9))
         :with_recipe_table_id(195)
-        :with_recipes({ { recipe = 36434, item = 48452 } }),
+        :with_recipes({ { recipe = 36434, item = 48452 } })
+        :with_bronze_requirement({ ['48452'] = 3 }),
     [195] = Mission(195, Jobs.Leatherworker, 'B', 1)
         :with_en_name('Sterile Leather String')
         :with_de_name('Antibakterielle Lederriemen')
@@ -206,7 +220,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 7))
         :with_exp_reward(MissionReward(5, 1, 4))
         :with_recipe_table_id(196)
-        :with_recipes({ { recipe = 36435, item = 48259 } }),
+        :with_recipes({ { recipe = 36435, item = 48259 } })
+        :with_bronze_requirement({ ['48259'] = 3 }),
     [196] = Mission(196, Jobs.Leatherworker, 'B', 1)
         :with_en_name('High-grade Rugs')
         :with_de_name('Hochwertige Unterlage')
@@ -220,7 +235,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 5))
         :with_exp_reward(MissionReward(5, 1, 3))
         :with_recipe_table_id(197)
-        :with_recipes({ { recipe = 36436, item = 48453 } }),
+        :with_recipes({ { recipe = 36436, item = 48453 } })
+        :with_bronze_requirement({ ['48453'] = 2 }),
     [197] = Mission(197, Jobs.Leatherworker, 'B', 1)
         :with_en_name('Transport Leather')
         :with_de_name('Transport-Leder')
@@ -234,7 +250,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 9))
         :with_exp_reward(MissionReward(5, 2, 5))
         :with_recipe_table_id(198)
-        :with_recipes({ { recipe = 36437, item = 48454 } }),
+        :with_recipes({ { recipe = 36437, item = 48454 } })
+        :with_bronze_requirement({ ['48454'] = 3 }),
     [198] = Mission(198, Jobs.Leatherworker, 'B', 1)
         :with_en_name('Long-term Storage Paper')
         :with_de_name('Papier zur Langzeitlagerung')
@@ -248,7 +265,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 10))
         :with_exp_reward(MissionReward(5, 1, 6))
         :with_recipe_table_id(199)
-        :with_recipes({ { recipe = 36438, item = 48455 } }),
+        :with_recipes({ { recipe = 36438, item = 48455 } })
+        :with_bronze_requirement({ ['48455'] = 3 }),
     [199] = Mission(199, Jobs.Leatherworker, 'B', 1)
         :with_en_name('High-grade Rest Chairs')
         :with_de_name('Hochwertiger Pausen-Stuhl')
@@ -262,7 +280,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 10))
         :with_exp_reward(MissionReward(5, 2, 6))
         :with_recipe_table_id(200)
-        :with_recipes({ { recipe = 36439, item = 48456 } }),
+        :with_recipes({ { recipe = 36439, item = 48456 } })
+        :with_bronze_requirement({ ['48456'] = 3 }),
     [200] = Mission(200, Jobs.Leatherworker, 'B', 1)
         :with_en_name('Test Material Gloves')
         :with_de_name('Experimentelle Handschuhe')
@@ -278,7 +297,8 @@ return {
         :with_exp_reward(MissionReward(5, 1, 5))
         :with_recipe_table_id(201)
         :with_recipes({ { recipe = 36440, item = 48264 }, { recipe = 36441, item = 48457 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48457'] = 1 }),
     [201] = Mission(201, Jobs.Leatherworker, 'B', 1)
         :with_en_name('High-grade Rest Lounges')
         :with_de_name('Hochwertiger Pausen-Sessel')
@@ -294,7 +314,8 @@ return {
         :with_exp_reward(MissionReward(5, 1, 6))
         :with_recipe_table_id(202)
         :with_recipes({ { recipe = 36442, item = 48264 }, { recipe = 36443, item = 48458 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48458'] = 1 }),
     [202] = Mission(202, Jobs.Leatherworker, 'A', 1)
         :with_en_name('A-1: High-durability Leather String')
         :with_de_name('A-1: Hochbelastbare Lederriemen')
@@ -309,7 +330,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 13))
         :with_exp_reward(MissionReward(5, 1, 19))
         :with_recipe_table_id(203)
-        :with_recipes({ { recipe = 36444, item = 48259 } }),
+        :with_recipes({ { recipe = 36444, item = 48259 } })
+        :with_bronze_requirement({ ['48259'] = 3 }),
     [203] = Mission(203, Jobs.Leatherworker, 'A', 1)
         :with_en_name('A-1: High-grade Paper')
         :with_de_name('A-1: Premium-Papier')
@@ -324,7 +346,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 18))
         :with_exp_reward(MissionReward(5, 1, 12))
         :with_recipe_table_id(204)
-        :with_recipes({ { recipe = 36445, item = 48459 } }),
+        :with_recipes({ { recipe = 36445, item = 48459 } })
+        :with_bronze_requirement({ ['48459'] = 3 }),
     [204] = Mission(204, Jobs.Leatherworker, 'A', 1)
         :with_en_name('A-1: Research Plant Rug')
         :with_de_name('A-1: Forschungs-Pflanzenteppiche')
@@ -338,7 +361,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 12))
         :with_exp_reward(MissionReward(5, 2, 19))
         :with_recipe_table_id(205)
-        :with_recipes({ { recipe = 36446, item = 48460 } }),
+        :with_recipes({ { recipe = 36446, item = 48460 } })
+        :with_bronze_requirement({ ['48460'] = 1 }),
     [205] = Mission(205, Jobs.Leatherworker, 'A', 1)
         :with_en_name('A-1: Thermal Leather')
         :with_de_name('A-1: Wärmespeichernde Ledertücher')
@@ -353,7 +377,8 @@ return {
         :with_exp_reward(MissionReward(5, 4, 15))
         :with_exp_reward(MissionReward(5, 1, 10))
         :with_recipe_table_id(206)
-        :with_recipes({ { recipe = 36447, item = 48461 } }),
+        :with_recipes({ { recipe = 36447, item = 48461 } })
+        :with_bronze_requirement({ ['48461'] = 1 }),
     [206] = Mission(206, Jobs.Leatherworker, 'A', 1)
         :with_en_name('A-1: Lunar Flora Test Processing')
         :with_de_name('A-1: Mondpflanzen-Inspektion')
@@ -369,7 +394,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 20))
         :with_recipe_table_id(207)
         :with_recipes({ { recipe = 36448, item = 48462 }, { recipe = 36449, item = 48463 }, { recipe = 36450, item = 48464 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48462'] = 1, ['48463'] = 1, ['48464'] = 1 }),
     [207] = Mission(207, Jobs.Leatherworker, 'A', 2)
         :with_en_name('A-2: Test Material Final Processing')
         :with_de_name('A-2: Final-Inspektion für Prüfmaterialien')
@@ -384,7 +410,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 19))
         :with_exp_reward(MissionReward(5, 1, 13))
         :with_recipe_table_id(208)
-        :with_recipes({ { recipe = 36451, item = 48465 } }),
+        :with_recipes({ { recipe = 36451, item = 48465 } })
+        :with_bronze_requirement({ ['48465'] = 3 }),
     [208] = Mission(208, Jobs.Leatherworker, 'A', 2)
         :with_en_name('A-2: Work Pouches')
         :with_de_name('A-2: Kleine Arbeiter-Beutel')
@@ -399,7 +426,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 10))
         :with_exp_reward(MissionReward(5, 2, 15))
         :with_recipe_table_id(209)
-        :with_recipes({ { recipe = 36452, item = 48466 } }),
+        :with_recipes({ { recipe = 36452, item = 48466 } })
+        :with_bronze_requirement({ ['48466'] = 1 }),
     [209] = Mission(209, Jobs.Leatherworker, 'A', 2)
         :with_en_name('A-2: High-grade Sofas')
         :with_de_name('A-2: Hochwertige Sofas')
@@ -414,7 +442,8 @@ return {
         :with_exp_reward(MissionReward(5, 4, 15))
         :with_exp_reward(MissionReward(5, 1, 10))
         :with_recipe_table_id(210)
-        :with_recipes({ { recipe = 36453, item = 48467 } }),
+        :with_recipes({ { recipe = 36453, item = 48467 } })
+        :with_bronze_requirement({ ['48467'] = 1 }),
     [210] = Mission(210, Jobs.Leatherworker, 'A', 2)
         :with_en_name('A-2: Familiar Furnishings')
         :with_de_name('A-2: Heimatliche Einrichtung')
@@ -432,7 +461,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(211)
         :with_recipes({ { recipe = 36454, item = 48468 }, { recipe = 36455, item = 48469 }, { recipe = 36456, item = 48470 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48468'] = 1, ['48469'] = 1, ['48470'] = 1 }),
     [211] = Mission(211, Jobs.Leatherworker, 'A', 3)
         :with_en_name('A-3: Safety Shoes')
         :with_de_name('A-3: Arbeiter-Sicherheitsschuhe')
@@ -450,7 +480,8 @@ return {
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(212)
         :with_recipes({ { recipe = 36457, item = 48265 }, { recipe = 36458, item = 48471 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48471'] = 1 }),
     [212] = Mission(212, Jobs.Leatherworker, 'A', 3)
         :with_en_name('A-3: Gatherer\'s Overalls')
         :with_de_name('A-3: Sammler-Arbeitskleidung')
@@ -468,7 +499,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(213)
         :with_recipes({ { recipe = 36459, item = 48265 }, { recipe = 36460, item = 48472 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48472'] = 1 }),
     [213] = Mission(213, Jobs.Leatherworker, 'A', 1)
         :with_en_name('A-1: Base Supplies I')
         :with_de_name('A-1: Basis-Ausstattung I')
@@ -483,7 +515,8 @@ return {
         :with_exp_reward(MissionReward(5, 4, 16))
         :with_exp_reward(MissionReward(5, 3, 11))
         :with_recipe_table_id(214)
-        :with_recipes({ { recipe = 36461, item = 48473 } }),
+        :with_recipes({ { recipe = 36461, item = 48473 } })
+        :with_bronze_requirement({ ['48473'] = 3 }),
     [214] = Mission(214, Jobs.Leatherworker, 'A', 2)
         :with_en_name('A-2: Base Supplies II')
         :with_de_name('A-2: Basis-Ausstattung II')
@@ -499,7 +532,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 10))
         :with_exp_reward(MissionReward(5, 1, 10))
         :with_recipe_table_id(215)
-        :with_recipes({ { recipe = 36462, item = 48474 } }),
+        :with_recipes({ { recipe = 36462, item = 48474 } })
+        :with_bronze_requirement({ ['48474'] = 3 }),
     [215] = Mission(215, Jobs.Leatherworker, 'A', 1)
         :with_en_name('A-1: Specialized Materials I')
         :with_de_name('A-1: Verfeinerungsmaterialien I')
@@ -514,7 +548,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 7))
         :with_exp_reward(MissionReward(5, 1, 11))
         :with_recipe_table_id(216)
-        :with_recipes({ { recipe = 36463, item = 48475 } }),
+        :with_recipes({ { recipe = 36463, item = 48475 } })
+        :with_bronze_requirement({ ['48475'] = 2 }),
     [216] = Mission(216, Jobs.Leatherworker, 'A', 2)
         :with_en_name('A-2: Specialized Materials II')
         :with_de_name('A-2: Verfeinerungsmaterialien II')
@@ -530,7 +565,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 8))
         :with_exp_reward(MissionReward(5, 1, 8))
         :with_recipe_table_id(217)
-        :with_recipes({ { recipe = 36464, item = 48476 } }),
+        :with_recipes({ { recipe = 36464, item = 48476 } })
+        :with_bronze_requirement({ ['48476'] = 2 }),
     [217] = Mission(217, Jobs.Leatherworker, 'A', 3)
         :with_en_name('A-3: Large Research Materials')
         :with_de_name('A-3: Forschungs-Großmaterialien')
@@ -546,7 +582,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 7))
         :with_exp_reward(MissionReward(5, 2, 7))
         :with_recipe_table_id(218)
-        :with_recipes({ { recipe = 36465, item = 48477 } }),
+        :with_recipes({ { recipe = 36465, item = 48477 } })
+        :with_bronze_requirement({ ['48477'] = 2 }),
     [218] = Mission(218, Jobs.Leatherworker, 'A', 2)
         :with_en_name('A-2: Rest Facility Materials')
         :with_de_name('A-2: Pausenraum-Materialien')
@@ -561,7 +598,8 @@ return {
         :with_exp_reward(MissionReward(5, 4, 15))
         :with_exp_reward(MissionReward(5, 2, 10))
         :with_recipe_table_id(219)
-        :with_recipes({ { recipe = 36466, item = 48478 } }),
+        :with_recipes({ { recipe = 36466, item = 48478 } })
+        :with_bronze_requirement({ ['48478'] = 1 }),
     [219] = Mission(219, Jobs.Leatherworker, 'A', 3)
         :with_en_name('A-3: Rest Facility Furnishings')
         :with_de_name('A-3: Pausenraum-Einrichtung')
@@ -577,7 +615,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 8))
         :with_exp_reward(MissionReward(5, 1, 8))
         :with_recipe_table_id(220)
-        :with_recipes({ { recipe = 36467, item = 48479 } }),
+        :with_recipes({ { recipe = 36467, item = 48479 } })
+        :with_bronze_requirement({ ['48479'] = 1 }),
     [220] = Mission(220, Jobs.Leatherworker, 'A', 1)
         :with_en_name('A-1: Packing Materials I')
         :with_de_name('A-1: Verpackungsmaterialien I')
@@ -593,7 +632,8 @@ return {
         :with_exp_reward(MissionReward(5, 3, 12))
         :with_time_restriction(16, 18)
         :with_recipe_table_id(221)
-        :with_recipes({ { recipe = 36468, item = 48480 } }),
+        :with_recipes({ { recipe = 36468, item = 48480 } })
+        :with_bronze_requirement({ ['48480'] = 3 }),
     [221] = Mission(221, Jobs.Leatherworker, 'A', 2)
         :with_en_name('A-2: Packing Materials II')
         :with_de_name('A-2: Verpackungsmaterialien II')
@@ -609,7 +649,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 11))
         :with_exp_reward(MissionReward(5, 1, 11))
         :with_recipe_table_id(222)
-        :with_recipes({ { recipe = 36469, item = 48481 } }),
+        :with_recipes({ { recipe = 36469, item = 48481 } })
+        :with_bronze_requirement({ ['48481'] = 3 }),
     [222] = Mission(222, Jobs.Leatherworker, 'A', 3)
         :with_en_name('A-3: Rover Packing Materials')
         :with_de_name('A-3: Verpackungsmaterialien (Vehikel)')
@@ -625,7 +666,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 10))
         :with_exp_reward(MissionReward(5, 1, 10))
         :with_recipe_table_id(223)
-        :with_recipes({ { recipe = 36470, item = 48261 } }),
+        :with_recipes({ { recipe = 36470, item = 48261 } })
+        :with_bronze_requirement({ ['48261'] = 3 }),
     [223] = Mission(223, Jobs.Leatherworker, 'A', 3)
         :with_en_name('A-3: Cosmic Suits I')
         :with_de_name('A-3: Raumanzug I')
@@ -643,7 +685,8 @@ return {
         :with_time_restriction(4, 6)
         :with_recipe_table_id(224)
         :with_recipes({ { recipe = 36471, item = 48483 }, { recipe = 36472, item = 48484 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48484'] = 1 }),
     [224] = Mission(224, Jobs.Leatherworker, 'A', 3)
         :with_en_name('A-3: Cosmic Suits II')
         :with_de_name('A-3: Raumanzug II')
@@ -660,7 +703,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 19))
         :with_recipe_table_id(225)
         :with_recipes({ { recipe = 36474, item = 48485 }, { recipe = 36475, item = 48486 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48486'] = 1 }),
     [225] = Mission(225, Jobs.Leatherworker, 'A', 3)
         :with_en_name('A-3: Cosmic Suits III')
         :with_de_name('A-3: Raumanzug III')
@@ -677,5 +721,6 @@ return {
         :with_exp_reward(MissionReward(5, 1, 51))
         :with_recipe_table_id(226)
         :with_recipes({ { recipe = 36477, item = 48236 }, { recipe = 36479, item = 48482 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48482'] = 1 }),
 }

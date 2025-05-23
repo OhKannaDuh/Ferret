@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
---   DESCRIPTION: Handler for doing crafting missions
+--   DESCRIPTION: Handler for doing gathering missions
 --        AUTHOR: Faye (OhKannaDuh)
 --------------------------------------------------------------------------------
 
@@ -96,27 +96,10 @@ function GatheringMissionHandler:chain(mission, goal)
         local items = Addons.Gathering:get_items()
 
         repeat
-            local index = -1
-            for id, config in pairs(mission.gathering_config) do
-                local item_id = tonumber(id)
-                local count = GetItemCount(item_id)
+            local index = self:get_index(mission, items)
 
-                if count < config.amount then
-                    for _, item_data in pairs(items) do
-                        if config.name == item_data.item then
-                            -- mission.gathering_config[id].index = item_data.index
-                            index = item_data.index
-                            break
-                        end
-                    end
-                end
+            GatheringMissionRotationHandler:handle(mission, index)
 
-                if index ~= ~1 then
-                    break
-                end
-            end
-
-            Addons.Gathering:gather(index)
             Character:wait_until_ready_to_gather()
         until not Gathering:is_gathering()
 
@@ -126,16 +109,33 @@ function GatheringMissionHandler:chain(mission, goal)
     mission:finish(goal)
 end
 
-function GatheringMissionHandler:gather_cluster()
+function GatheringMissionHandler:gather_cluster(mission)
     repeat
         local nearest = Gathering:get_nearest_node()
         nearest:target()
+
         local node = Character:get_target_position()
         self.pathfinding:walk_to(node)
+
+        repeat
+            Wait:fps(5)
+            nearest:interact()
+        until Gathering:is_gathering()
+
         Gathering:wait_to_start()
         self.pathfinding:stop()
-        Gathering:wait_to_stop()
+
+        Addons.Gathering:wait_until_ready()
         Wait:seconds(0.5)
+        local items = Addons.Gathering:get_items()
+
+        repeat
+            local index = self:get_index(mission, items)
+
+            GatheringMissionRotationHandler:handle(mission, index)
+
+            Character:wait_until_ready_to_gather()
+        until not Gathering:is_gathering()
     until not Gathering:has_nearby_nodes(20)
 end
 
@@ -160,6 +160,34 @@ function GatheringMissionHandler:clustered(mission, goal)
 
     Wait:seconds(1)
     mission:finish(goal)
+end
+
+function GatheringMissionHandler:get_index(mission, items)
+    local index = -1
+    for id, config in pairs(mission.gathering_config) do
+        local item_id = tonumber(id)
+        local count = GetItemCount(item_id)
+
+        if count < config.amount then
+            for _, item_data in pairs(items) do
+                if config.name == item_data.item then
+                    index = item_data.index
+                    break
+                end
+            end
+        end
+
+        if index ~= ~1 then
+            break
+        end
+    end
+
+    if index == -1 then
+        Logger:table(items)
+        index = Table:first(items).index
+    end
+
+    return index
 end
 
 return GatheringMissionHandler()

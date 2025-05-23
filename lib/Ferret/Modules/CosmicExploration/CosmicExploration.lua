@@ -47,9 +47,11 @@ function CosmicExploration:get_models()
 end
 
 function CosmicExploration:load_static()
+    MissionScorer = self:require('MissionScorer')
     MasterMissionList = self:require('Data/MasterMissionList')
     CraftingMissionHandler = self:require('CraftingMissionHandler')
     GatheringMissionHandler = self:require('GatheringMissionHandler')
+    GatheringMissionRotationHandler = self:require('GatheringMissionRotationHandler')
 end
 
 ---@param job Job
@@ -62,7 +64,7 @@ function CosmicExploration:set_job(job)
 end
 
 function CosmicExploration:init()
-    CosmicExploration.super.init(self)
+    Module.init(self)
 
     self:set_job(GetClassJobId())
 

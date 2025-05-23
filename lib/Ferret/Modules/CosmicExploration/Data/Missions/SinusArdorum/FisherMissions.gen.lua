@@ -11,6 +11,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(11, 1, 7))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [452] = Mission(452, Jobs.Fisher, 'D', 1)
         :with_en_name('Large Aquatic Specimens')
@@ -24,6 +25,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(11, 1, 8))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.LargeFish),
     [453] = Mission(453, Jobs.Fisher, 'D', 1)
         :with_en_name('Western Water Inspection')
@@ -37,6 +39,7 @@ return {
         :with_cosmocredit(4)
         :with_lunarcredit(12)
         :with_exp_reward(MissionReward(11, 1, 19))
+        :with_bronze_requirement({ ['45701'] = 2 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['45701'] = { amount = 2, name = 'Cobalt Eel' } }),
     [454] = Mission(454, Jobs.Fisher, 'D', 1)
@@ -51,6 +54,7 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(10)
         :with_exp_reward(MissionReward(11, 1, 14))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishCountSize),
     [455] = Mission(455, Jobs.Fisher, 'D', 1)
         :with_en_name('Weeping Pool Ecological Survey')
@@ -64,6 +68,7 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(11, 1, 12))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [456] = Mission(456, Jobs.Fisher, 'D', 1)
         :with_en_name('Assorted Alchemical Materials')
@@ -77,6 +82,7 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(11, 1, 12))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishSize),
     [457] = Mission(457, Jobs.Fisher, 'C', 1)
         :with_en_name('Big Fish')
@@ -91,6 +97,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(11, 2, 3))
         :with_exp_reward(MissionReward(11, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.LargeFish),
     [458] = Mission(458, Jobs.Fisher, 'C', 1)
         :with_en_name('Environmental Inspection')
@@ -105,6 +112,7 @@ return {
         :with_lunarcredit(13)
         :with_exp_reward(MissionReward(11, 2, 13))
         :with_exp_reward(MissionReward(11, 1, 7))
+        :with_bronze_requirement({ ['45717'] = 1, ['45718'] = 1 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['45717'] = { amount = 1, name = 'Weepingeye' },
@@ -123,6 +131,7 @@ return {
         :with_lunarcredit(14)
         :with_exp_reward(MissionReward(11, 2, 11))
         :with_exp_reward(MissionReward(11, 1, 11))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishCountSize),
     [460] = Mission(460, Jobs.Fisher, 'C', 1)
         :with_en_name('Southeast Well Ecological Survey')
@@ -137,6 +146,7 @@ return {
         :with_lunarcredit(14)
         :with_exp_reward(MissionReward(11, 2, 8))
         :with_exp_reward(MissionReward(11, 1, 14))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Variety),
     [461] = Mission(461, Jobs.Fisher, 'C', 1)
         :with_en_name('Fish Sauce Ingredients')
@@ -151,6 +161,7 @@ return {
         :with_lunarcredit(14)
         :with_exp_reward(MissionReward(11, 2, 14))
         :with_exp_reward(MissionReward(11, 1, 8))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishSize),
     [462] = Mission(462, Jobs.Fisher, 'C', 1)
         :with_en_name('Aquatic Samples')
@@ -165,6 +176,7 @@ return {
         :with_lunarcredit(13)
         :with_exp_reward(MissionReward(11, 2, 10))
         :with_exp_reward(MissionReward(11, 1, 10))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [463] = Mission(463, Jobs.Fisher, 'C', 1)
         :with_en_name('Northwestern Water Inspection')
@@ -179,6 +191,7 @@ return {
         :with_lunarcredit(24)
         :with_exp_reward(MissionReward(11, 2, 19))
         :with_exp_reward(MissionReward(11, 1, 19))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [464] = Mission(464, Jobs.Fisher, 'B', 1)
         :with_en_name('Hollow Harbor Water Inspection')
@@ -193,6 +206,7 @@ return {
         :with_lunarcredit(11)
         :with_exp_reward(MissionReward(11, 2, 6))
         :with_exp_reward(MissionReward(11, 1, 10))
+        :with_bronze_requirement({ ['45743'] = 3 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['45743'] = { amount = 3, name = 'Prismatic Fish' } }),
     [465] = Mission(465, Jobs.Fisher, 'B', 1)
@@ -208,6 +222,7 @@ return {
         :with_lunarcredit(15)
         :with_exp_reward(MissionReward(11, 2, 14))
         :with_exp_reward(MissionReward(11, 1, 8))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishCountSize),
     [466] = Mission(466, Jobs.Fisher, 'B', 1)
         :with_en_name('Hollow Harbor Ecological Survey')
@@ -222,6 +237,7 @@ return {
         :with_lunarcredit(13)
         :with_exp_reward(MissionReward(11, 3, 12))
         :with_exp_reward(MissionReward(11, 1, 7))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Variety),
     [467] = Mission(467, Jobs.Fisher, 'B', 1)
         :with_en_name('Absolute Specimen')
@@ -236,6 +252,7 @@ return {
         :with_lunarcredit(16)
         :with_exp_reward(MissionReward(11, 3, 15))
         :with_exp_reward(MissionReward(11, 2, 9))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.LargeFish),
     [468] = Mission(468, Jobs.Fisher, 'B', 1)
         :with_en_name('Aetherochemical Creatures')
@@ -250,6 +267,7 @@ return {
         :with_lunarcredit(17)
         :with_exp_reward(MissionReward(11, 3, 16))
         :with_exp_reward(MissionReward(11, 1, 9))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [469] = Mission(469, Jobs.Fisher, 'B', 1)
         :with_en_name('Westward Ecological Survey')
@@ -264,6 +282,7 @@ return {
         :with_lunarcredit(12)
         :with_exp_reward(MissionReward(11, 3, 11))
         :with_exp_reward(MissionReward(11, 2, 7))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [470] = Mission(470, Jobs.Fisher, 'B', 1)
         :with_en_name('Supper Emergency')
@@ -279,6 +298,7 @@ return {
         :with_exp_reward(MissionReward(11, 3, 10))
         :with_exp_reward(MissionReward(11, 2, 7))
         :with_exp_reward(MissionReward(11, 1, 7))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [471] = Mission(471, Jobs.Fisher, 'B', 1)
         :with_en_name('Alchemical Resources')
@@ -294,6 +314,7 @@ return {
         :with_exp_reward(MissionReward(11, 3, 8))
         :with_exp_reward(MissionReward(11, 2, 8))
         :with_exp_reward(MissionReward(11, 1, 8))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishSize),
     [472] = Mission(472, Jobs.Fisher, 'A', 1)
         :with_en_name('A-1: Northward Ecological Survey')
@@ -308,6 +329,7 @@ return {
         :with_lunarcredit(15)
         :with_exp_reward(MissionReward(11, 2, 11))
         :with_exp_reward(MissionReward(11, 1, 16))
+        :with_bronze_requirement({ ['45783'] = 1 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['45783'] = { amount = 1, name = 'Platinum Bichir' } }),
     [473] = Mission(473, Jobs.Fisher, 'A', 1)
@@ -323,6 +345,7 @@ return {
         :with_lunarcredit(18)
         :with_exp_reward(MissionReward(11, 3, 20))
         :with_exp_reward(MissionReward(11, 1, 13))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [474] = Mission(474, Jobs.Fisher, 'A', 1)
         :with_en_name('A-1: Foodstuff Emergency')
@@ -337,6 +360,7 @@ return {
         :with_lunarcredit(18)
         :with_exp_reward(MissionReward(11, 3, 13))
         :with_exp_reward(MissionReward(11, 2, 19))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [475] = Mission(475, Jobs.Fisher, 'A', 1)
         :with_en_name('A-1: Precise Water Survey')
@@ -351,6 +375,7 @@ return {
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(11, 4, 21))
         :with_exp_reward(MissionReward(11, 1, 14))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishCountSize),
     [476] = Mission(476, Jobs.Fisher, 'A', 1)
         :with_en_name('A-1: Fine-grade Aquatic Processing Materials')
@@ -365,6 +390,7 @@ return {
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(11, 4, 20))
         :with_exp_reward(MissionReward(11, 2, 14))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [477] = Mission(477, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Large Aquatic Specimens')
@@ -379,6 +405,7 @@ return {
         :with_lunarcredit(21)
         :with_exp_reward(MissionReward(11, 3, 21))
         :with_exp_reward(MissionReward(11, 1, 14))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.LargeFish),
     [478] = Mission(478, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Assorted Alchemical Materials')
@@ -393,6 +420,7 @@ return {
         :with_lunarcredit(14)
         :with_exp_reward(MissionReward(11, 3, 9))
         :with_exp_reward(MissionReward(11, 2, 14))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishSize),
     [479] = Mission(479, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Aetherial Falls Experiment')
@@ -407,6 +435,7 @@ return {
         :with_lunarcredit(19)
         :with_exp_reward(MissionReward(11, 4, 18))
         :with_exp_reward(MissionReward(11, 1, 12))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [480] = Mission(480, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Foodstuff Emergency')
@@ -423,6 +452,7 @@ return {
         :with_exp_reward(MissionReward(11, 3, 11))
         :with_exp_reward(MissionReward(11, 1, 11))
         :with_weather_restriction(Weather.MoonDust)
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [481] = Mission(481, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Palus Arsenici Ecological Survey')
@@ -439,6 +469,7 @@ return {
         :with_exp_reward(MissionReward(11, 3, 10))
         :with_exp_reward(MissionReward(11, 2, 10))
         :with_weather_restriction(Weather.UmbralWind)
+        :with_bronze_requirement({ ['45870'] = 1 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['45870'] = { amount = 1, name = 'Eyeballingway' } }),
     [482] = Mission(482, Jobs.Fisher, 'A', 3)
@@ -456,6 +487,7 @@ return {
         :with_exp_reward(MissionReward(11, 2, 14))
         :with_exp_reward(MissionReward(11, 1, 14))
         :with_weather_restriction(Weather.MoonDust)
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.LargeFish),
     [483] = Mission(483, Jobs.Fisher, 'A', 1)
         :with_en_name('A-1: Aquatic Inspection I')
@@ -470,6 +502,7 @@ return {
         :with_lunarcredit(29)
         :with_exp_reward(MissionReward(11, 4, 31))
         :with_exp_reward(MissionReward(11, 3, 21))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Variety),
     [484] = Mission(484, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Aquatic Inspection II')
@@ -485,6 +518,7 @@ return {
         :with_exp_reward(MissionReward(11, 3, 15))
         :with_exp_reward(MissionReward(11, 2, 15))
         :with_exp_reward(MissionReward(11, 1, 15))
+        :with_bronze_requirement({ ['45846'] = 1 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['45846'] = { amount = 1, name = 'Lunar Sturgeon' } }),
     [485] = Mission(485, Jobs.Fisher, 'A', 1)
@@ -500,6 +534,7 @@ return {
         :with_lunarcredit(12)
         :with_exp_reward(MissionReward(11, 2, 9))
         :with_exp_reward(MissionReward(11, 1, 13))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.LargeFish),
     [486] = Mission(486, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Fine-grade Water Filter Materials II')
@@ -515,6 +550,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 13))
         :with_exp_reward(MissionReward(11, 3, 9))
         :with_exp_reward(MissionReward(11, 1, 9))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [487] = Mission(487, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Fine-grade Water Filter Materials III')
@@ -530,6 +566,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 23))
         :with_exp_reward(MissionReward(11, 3, 16))
         :with_exp_reward(MissionReward(11, 2, 16))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishCountSize),
     [488] = Mission(488, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Coexisting Species I')
@@ -544,6 +581,7 @@ return {
         :with_lunarcredit(25)
         :with_exp_reward(MissionReward(11, 4, 25))
         :with_exp_reward(MissionReward(11, 2, 17))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishCountSize),
     [489] = Mission(489, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Coexisting Species II')
@@ -559,6 +597,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 21))
         :with_exp_reward(MissionReward(11, 3, 15))
         :with_exp_reward(MissionReward(11, 1, 15))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [490] = Mission(490, Jobs.Fisher, 'A', 1)
         :with_en_name('A-1: Aetherochemical Samples I')
@@ -574,6 +613,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 20))
         :with_exp_reward(MissionReward(11, 3, 13))
         :with_time_restriction(6, 8)
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.LargeFish),
     [491] = Mission(491, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Aetherochemical Samples II')
@@ -589,6 +629,7 @@ return {
         :with_exp_reward(MissionReward(11, 3, 21))
         :with_exp_reward(MissionReward(11, 2, 21))
         :with_exp_reward(MissionReward(11, 1, 21))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Variety),
     [492] = Mission(492, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Aetherochemical Samples III')
@@ -604,6 +645,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 26))
         :with_exp_reward(MissionReward(11, 2, 19))
         :with_exp_reward(MissionReward(11, 1, 19))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.LargeFish),
     [493] = Mission(493, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Unidentified Aquatic Specimens I')
@@ -620,6 +662,7 @@ return {
         :with_exp_reward(MissionReward(11, 3, 11))
         :with_exp_reward(MissionReward(11, 1, 11))
         :with_time_restriction(18, 20)
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [494] = Mission(494, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Unidentified Aquatic Specimens II')
@@ -635,6 +678,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 35))
         :with_exp_reward(MissionReward(11, 3, 25))
         :with_exp_reward(MissionReward(11, 2, 25))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.TimeTrial),
     [495] = Mission(495, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Unidentified Aquatic Specimens III')
@@ -650,6 +694,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 50))
         :with_exp_reward(MissionReward(11, 2, 30))
         :with_exp_reward(MissionReward(11, 1, 30))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.FishCountSize),
     [508] = Mission(508, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Processed Aquatic Metals')
@@ -666,7 +711,8 @@ return {
         :with_exp_reward(MissionReward(11, 4, 36))
         :with_exp_reward(MissionReward(2, 4, 36))
         :with_recipe_table_id(374)
-        :with_recipes({ { recipe = 36672, item = 46973 } }),
+        :with_recipes({ { recipe = 36672, item = 46973 } })
+        :with_bronze_requirement({}),
     [509] = Mission(509, Jobs.Fisher, 'A', 2)
         :with_en_name('A-2: Refined Moon Gel')
         :with_de_name('A-2: Verbessertes Mondgel')
@@ -682,7 +728,8 @@ return {
         :with_exp_reward(MissionReward(11, 4, 37))
         :with_exp_reward(MissionReward(7, 4, 37))
         :with_recipe_table_id(375)
-        :with_recipes({ { recipe = 36682, item = 47593 } }),
+        :with_recipes({ { recipe = 36682, item = 47593 } })
+        :with_bronze_requirement({}),
     [510] = Mission(510, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Crystallic Gems')
         :with_de_name('A-3: Kristall-Juwel')
@@ -699,7 +746,8 @@ return {
         :with_exp_reward(MissionReward(4, 4, 41))
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(376)
-        :with_recipes({ { recipe = 36676, item = 47221 } }),
+        :with_recipes({ { recipe = 36676, item = 47221 } })
+        :with_bronze_requirement({}),
     [511] = Mission(511, Jobs.Fisher, 'A', 3)
         :with_en_name('A-3: Eel Rations')
         :with_de_name('A-3: Aal-Rationen')
@@ -716,5 +764,6 @@ return {
         :with_exp_reward(MissionReward(8, 4, 45))
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(377)
-        :with_recipes({ { recipe = 36684, item = 47717 } }),
+        :with_recipes({ { recipe = 36684, item = 47717 } })
+        :with_bronze_requirement({}),
 }

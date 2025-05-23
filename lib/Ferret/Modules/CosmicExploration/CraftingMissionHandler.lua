@@ -32,7 +32,8 @@ function CraftingMissionHandler:single_recipe(mission, goal)
 
         local should_continue, reason = mission:craft_current()
 
-        -- self:log_debug('reason', { reason = reason })
+        Logger:debug(mission:get_score().tier)
+
         if not should_continue then
             return mission:get_score(), reason
         end
@@ -40,11 +41,12 @@ function CraftingMissionHandler:single_recipe(mission, goal)
         crafted = crafted + 1
 
         local score = mission:get_score()
+
         if score.tier >= goal then
             return score, mission:translate('reached_goal', { crafted = crafted })
         end
 
-    until mission:is_complete(goal)
+    until MissionScorer:score(mission).tier >= goal or not mission:has_base_crafting_material()
 
     return mission:get_score(), mission:translate('finished', { crafted = crafted })
 end
@@ -81,7 +83,7 @@ function CraftingMissionHandler:multi_recipe(mission, goal)
                 end
             end
         end
-    until mission:is_complete(goal)
+    until MissionScorer:score(mission).tier >= goal or not mission:has_base_crafting_material()
 
     return mission:get_score(), mission:translate('finished', { crafted = crafted })
 end

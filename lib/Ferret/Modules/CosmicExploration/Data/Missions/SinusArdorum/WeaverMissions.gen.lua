@@ -11,7 +11,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(6, 1, 7))
         :with_recipe_table_id(227)
-        :with_recipes({ { recipe = 36480, item = 48260 } }),
+        :with_recipes({ { recipe = 36480, item = 48260 } })
+        :with_bronze_requirement({ ['48260'] = 3 }),
     [227] = Mission(227, Jobs.Weaver, 'D', 1)
         :with_en_name('First-aid Cloth')
         :with_de_name('Notfall-Stoff')
@@ -24,7 +25,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(6, 1, 7))
         :with_recipe_table_id(228)
-        :with_recipes({ { recipe = 36481, item = 48487 } }),
+        :with_recipes({ { recipe = 36481, item = 48487 } })
+        :with_bronze_requirement({ ['48487'] = 3 }),
     [228] = Mission(228, Jobs.Weaver, 'D', 1)
         :with_en_name('Gatherer\'s Helmets')
         :with_de_name('Sammler-Kopfschutz')
@@ -37,7 +39,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(6, 1, 8))
         :with_recipe_table_id(229)
-        :with_recipes({ { recipe = 36482, item = 48488 } }),
+        :with_recipes({ { recipe = 36482, item = 48488 } })
+        :with_bronze_requirement({ ['48488'] = 3 }),
     [229] = Mission(229, Jobs.Weaver, 'D', 1)
         :with_en_name('Essential Research Materials')
         :with_de_name('Forschungsmaterialien')
@@ -50,7 +53,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(6, 1, 7))
         :with_recipe_table_id(230)
-        :with_recipes({ { recipe = 36483, item = 48489 } }),
+        :with_recipes({ { recipe = 36483, item = 48489 } })
+        :with_bronze_requirement({ ['48489'] = 3 }),
     [230] = Mission(230, Jobs.Weaver, 'D', 1)
         :with_en_name('Multi-purpose String')
         :with_de_name('Arbeiter-Stricke')
@@ -63,7 +67,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(6, 1, 7))
         :with_recipe_table_id(231)
-        :with_recipes({ { recipe = 36484, item = 48490 } }),
+        :with_recipes({ { recipe = 36484, item = 48490 } })
+        :with_bronze_requirement({ ['48490'] = 3 }),
     [231] = Mission(231, Jobs.Weaver, 'D', 1)
         :with_en_name('Divider Curtains')
         :with_de_name('Unterteilungs-Vorhänge')
@@ -76,7 +81,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(6, 1, 7))
         :with_recipe_table_id(232)
-        :with_recipes({ { recipe = 36485, item = 48491 } }),
+        :with_recipes({ { recipe = 36485, item = 48491 } })
+        :with_bronze_requirement({ ['48491'] = 3 }),
     [232] = Mission(232, Jobs.Weaver, 'C', 1)
         :with_en_name('Heat-resistant Yarn')
         :with_de_name('Hitzebeständiges Baumwollgarn')
@@ -90,7 +96,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 3))
         :with_exp_reward(MissionReward(6, 1, 5))
         :with_recipe_table_id(233)
-        :with_recipes({ { recipe = 36486, item = 48260 } }),
+        :with_recipes({ { recipe = 36486, item = 48260 } })
+        :with_bronze_requirement({ ['48260'] = 3 }),
     [233] = Mission(233, Jobs.Weaver, 'C', 1)
         :with_en_name('Room Garments')
         :with_de_name('Hauskleidung')
@@ -104,7 +111,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 6))
         :with_exp_reward(MissionReward(6, 1, 4))
         :with_recipe_table_id(234)
-        :with_recipes({ { recipe = 36487, item = 48492 } }),
+        :with_recipes({ { recipe = 36487, item = 48492 } })
+        :with_bronze_requirement({ ['48492'] = 3 }),
     [234] = Mission(234, Jobs.Weaver, 'C', 1)
         :with_en_name('Multi-purpose Fabric')
         :with_de_name('Ersatz-Geschirrtücher')
@@ -118,7 +126,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 5))
         :with_exp_reward(MissionReward(6, 1, 5))
         :with_recipe_table_id(235)
-        :with_recipes({ { recipe = 36488, item = 48493 } }),
+        :with_recipes({ { recipe = 36488, item = 48493 } })
+        :with_bronze_requirement({ ['48493'] = 3 }),
     [235] = Mission(235, Jobs.Weaver, 'C', 1)
         :with_en_name('Composite Fiber')
         :with_de_name('Verbundfasern')
@@ -133,7 +142,8 @@ return {
         :with_exp_reward(MissionReward(6, 1, 6))
         :with_recipe_table_id(236)
         :with_recipes({ { recipe = 36489, item = 48498 }, { recipe = 36490, item = 48494 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48494'] = 1 }),
     [236] = Mission(236, Jobs.Weaver, 'C', 1)
         :with_en_name('Infirmary Curtains')
         :with_de_name('Krankenstations-Vorhang')
@@ -148,7 +158,8 @@ return {
         :with_exp_reward(MissionReward(6, 1, 5))
         :with_recipe_table_id(237)
         :with_recipes({ { recipe = 36491, item = 48499 }, { recipe = 36492, item = 48495 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48495'] = 2 }),
     [237] = Mission(237, Jobs.Weaver, 'C', 1)
         :with_en_name('Cosmoliner Materials')
         :with_de_name('Kosmozapper-Rohmaterialien')
@@ -163,7 +174,8 @@ return {
         :with_exp_reward(MissionReward(6, 1, 7))
         :with_recipe_table_id(238)
         :with_recipes({ { recipe = 36493, item = 48500 }, { recipe = 36494, item = 48496 } })
-        :with_multi_craft_config({ [0] = 3, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 3, [1] = 1 })
+        :with_bronze_requirement({ ['48496'] = 1 }),
     [238] = Mission(238, Jobs.Weaver, 'C', 1)
         :with_en_name('New Material Trousers')
         :with_de_name('Prototyp-Hosen')
@@ -178,7 +190,8 @@ return {
         :with_exp_reward(MissionReward(6, 1, 5))
         :with_recipe_table_id(239)
         :with_recipes({ { recipe = 36495, item = 48501 }, { recipe = 36496, item = 48497 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48497'] = 1 }),
     [239] = Mission(239, Jobs.Weaver, 'B', 1)
         :with_en_name('Work Rope')
         :with_de_name('Arbeiter-Seile')
@@ -192,7 +205,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 5))
         :with_exp_reward(MissionReward(6, 1, 9))
         :with_recipe_table_id(240)
-        :with_recipes({ { recipe = 36497, item = 48502 } }),
+        :with_recipes({ { recipe = 36497, item = 48502 } })
+        :with_bronze_requirement({ ['48502'] = 3 }),
     [240] = Mission(240, Jobs.Weaver, 'B', 1)
         :with_en_name('Sterile Yarn')
         :with_de_name('Antibakterielles Baumwollgarn')
@@ -206,7 +220,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 7))
         :with_exp_reward(MissionReward(6, 1, 4))
         :with_recipe_table_id(241)
-        :with_recipes({ { recipe = 36498, item = 48260 } }),
+        :with_recipes({ { recipe = 36498, item = 48260 } })
+        :with_bronze_requirement({ ['48260'] = 3 }),
     [241] = Mission(241, Jobs.Weaver, 'B', 1)
         :with_en_name('High-grade Curtains')
         :with_de_name('Hochwertige Vorhänge')
@@ -220,7 +235,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 5))
         :with_exp_reward(MissionReward(6, 1, 3))
         :with_recipe_table_id(242)
-        :with_recipes({ { recipe = 36499, item = 48503 } }),
+        :with_recipes({ { recipe = 36499, item = 48503 } })
+        :with_bronze_requirement({ ['48503'] = 2 }),
     [242] = Mission(242, Jobs.Weaver, 'B', 1)
         :with_en_name('Transport Yarn')
         :with_de_name('Transport-Baumwolle')
@@ -234,7 +250,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 9))
         :with_exp_reward(MissionReward(6, 2, 5))
         :with_recipe_table_id(243)
-        :with_recipes({ { recipe = 36500, item = 48504 } }),
+        :with_recipes({ { recipe = 36500, item = 48504 } })
+        :with_bronze_requirement({ ['48504'] = 3 }),
     [243] = Mission(243, Jobs.Weaver, 'B', 1)
         :with_en_name('Heat-resistant Composite Fiber')
         :with_de_name('Hochbelastbare Verbundfasern')
@@ -248,7 +265,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 10))
         :with_exp_reward(MissionReward(6, 1, 6))
         :with_recipe_table_id(244)
-        :with_recipes({ { recipe = 36501, item = 48505 } }),
+        :with_recipes({ { recipe = 36501, item = 48505 } })
+        :with_bronze_requirement({ ['48505'] = 3 }),
     [244] = Mission(244, Jobs.Weaver, 'B', 1)
         :with_en_name('Rest Supplies')
         :with_de_name('Pausenraum-Vorräte')
@@ -262,7 +280,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 10))
         :with_exp_reward(MissionReward(6, 2, 6))
         :with_recipe_table_id(245)
-        :with_recipes({ { recipe = 36502, item = 48506 } }),
+        :with_recipes({ { recipe = 36502, item = 48506 } })
+        :with_bronze_requirement({ ['48506'] = 3 }),
     [245] = Mission(245, Jobs.Weaver, 'B', 1)
         :with_en_name('Test Material Hats')
         :with_de_name('Experimentelle Hüte')
@@ -278,7 +297,8 @@ return {
         :with_exp_reward(MissionReward(6, 1, 5))
         :with_recipe_table_id(246)
         :with_recipes({ { recipe = 36503, item = 48266 }, { recipe = 36504, item = 48507 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48507'] = 1 }),
     [246] = Mission(246, Jobs.Weaver, 'B', 1)
         :with_en_name('Rest Cushions')
         :with_de_name('Pausenraum-Sitzkissen')
@@ -294,7 +314,8 @@ return {
         :with_exp_reward(MissionReward(6, 1, 6))
         :with_recipe_table_id(247)
         :with_recipes({ { recipe = 36505, item = 48266 }, { recipe = 36506, item = 48508 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48508'] = 1 }),
     [247] = Mission(247, Jobs.Weaver, 'A', 1)
         :with_en_name('A-1: High-durability Yarn')
         :with_de_name('A-1: Hochbelastbares Baumwollgarn')
@@ -309,7 +330,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 13))
         :with_exp_reward(MissionReward(6, 1, 19))
         :with_recipe_table_id(248)
-        :with_recipes({ { recipe = 36507, item = 48260 } }),
+        :with_recipes({ { recipe = 36507, item = 48260 } })
+        :with_bronze_requirement({ ['48260'] = 3 }),
     [248] = Mission(248, Jobs.Weaver, 'A', 1)
         :with_en_name('A-1: High-grade Composite Fiber')
         :with_de_name('A-1: Hochwertige Verbundfasern')
@@ -324,7 +346,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 18))
         :with_exp_reward(MissionReward(6, 1, 12))
         :with_recipe_table_id(249)
-        :with_recipes({ { recipe = 36508, item = 48509 } }),
+        :with_recipes({ { recipe = 36508, item = 48509 } })
+        :with_bronze_requirement({ ['48509'] = 3 }),
     [249] = Mission(249, Jobs.Weaver, 'A', 1)
         :with_en_name('A-1: High-grade Bedroom Curtains')
         :with_de_name('A-1: Hochwertige Schlafvorhänge')
@@ -338,7 +361,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 12))
         :with_exp_reward(MissionReward(6, 2, 19))
         :with_recipe_table_id(250)
-        :with_recipes({ { recipe = 36509, item = 48510 } }),
+        :with_recipes({ { recipe = 36509, item = 48510 } })
+        :with_bronze_requirement({ ['48510'] = 1 }),
     [250] = Mission(250, Jobs.Weaver, 'A', 1)
         :with_en_name('A-1: First-aid Bandaging')
         :with_de_name('A-1: Notfall-Verbände')
@@ -353,7 +377,8 @@ return {
         :with_exp_reward(MissionReward(6, 4, 15))
         :with_exp_reward(MissionReward(6, 1, 10))
         :with_recipe_table_id(251)
-        :with_recipes({ { recipe = 36510, item = 48511 } }),
+        :with_recipes({ { recipe = 36510, item = 48511 } })
+        :with_bronze_requirement({ ['48511'] = 1 }),
     [251] = Mission(251, Jobs.Weaver, 'A', 1)
         :with_en_name('A-1: Lunar Flora Test Processing')
         :with_de_name('A-1: Mondpflanzen-Inspektion')
@@ -373,7 +398,8 @@ return {
             { recipe = 36512, item = 48513 },
             { recipe = 36513, item = 48514 },
         })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48512'] = 1, ['48513'] = 1, ['48514'] = 1 }),
     [252] = Mission(252, Jobs.Weaver, 'A', 2)
         :with_en_name('A-2: Test Material Final Processing')
         :with_de_name('A-2: Final-Inspektion für Prüfmaterialien')
@@ -388,7 +414,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 19))
         :with_exp_reward(MissionReward(6, 1, 13))
         :with_recipe_table_id(253)
-        :with_recipes({ { recipe = 36514, item = 48515 } }),
+        :with_recipes({ { recipe = 36514, item = 48515 } })
+        :with_bronze_requirement({ ['48515'] = 3 }),
     [253] = Mission(253, Jobs.Weaver, 'A', 2)
         :with_en_name('A-2: Weaving Materials')
         :with_de_name('A-2: Nähmaterialien')
@@ -403,7 +430,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 10))
         :with_exp_reward(MissionReward(6, 2, 15))
         :with_recipe_table_id(254)
-        :with_recipes({ { recipe = 36515, item = 48516 } }),
+        :with_recipes({ { recipe = 36515, item = 48516 } })
+        :with_bronze_requirement({ ['48516'] = 1 }),
     [254] = Mission(254, Jobs.Weaver, 'A', 2)
         :with_en_name('A-2: Rest Cushions')
         :with_de_name('A-2: Pausen-Kissensets')
@@ -418,7 +446,8 @@ return {
         :with_exp_reward(MissionReward(6, 4, 15))
         :with_exp_reward(MissionReward(6, 1, 10))
         :with_recipe_table_id(255)
-        :with_recipes({ { recipe = 36516, item = 48517 } }),
+        :with_recipes({ { recipe = 36516, item = 48517 } })
+        :with_bronze_requirement({ ['48517'] = 1 }),
     [255] = Mission(255, Jobs.Weaver, 'A', 2)
         :with_en_name('A-2: Familiar Furnishings')
         :with_de_name('A-2: Heimatliche Einrichtung')
@@ -440,7 +469,8 @@ return {
             { recipe = 36518, item = 48519 },
             { recipe = 36519, item = 48520 },
         })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48518'] = 1, ['48519'] = 1, ['48520'] = 1 }),
     [256] = Mission(256, Jobs.Weaver, 'A', 3)
         :with_en_name('A-3: Cold-weather Work Hats')
         :with_de_name('A-3: Arbeiter-Wintermützen')
@@ -458,7 +488,8 @@ return {
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(257)
         :with_recipes({ { recipe = 36520, item = 48267 }, { recipe = 36521, item = 48521 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48521'] = 1 }),
     [257] = Mission(257, Jobs.Weaver, 'A', 3)
         :with_en_name('A-3: Crafter\'s Overalls')
         :with_de_name('A-3: Handwerker-Arbeitskleidung')
@@ -476,7 +507,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(258)
         :with_recipes({ { recipe = 36522, item = 48267 }, { recipe = 36523, item = 48522 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48522'] = 1 }),
     [258] = Mission(258, Jobs.Weaver, 'A', 1)
         :with_en_name('A-1: Cosmoliner Materials I')
         :with_de_name('A-1: Kosmozapper-Materialien I')
@@ -491,7 +523,8 @@ return {
         :with_exp_reward(MissionReward(6, 4, 16))
         :with_exp_reward(MissionReward(6, 3, 11))
         :with_recipe_table_id(259)
-        :with_recipes({ { recipe = 36524, item = 48523 } }),
+        :with_recipes({ { recipe = 36524, item = 48523 } })
+        :with_bronze_requirement({ ['48523'] = 3 }),
     [259] = Mission(259, Jobs.Weaver, 'A', 2)
         :with_en_name('A-2: Cosmoliner Materials II')
         :with_de_name('A-2: Kosmozapper-Materialien II')
@@ -507,7 +540,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 10))
         :with_exp_reward(MissionReward(6, 1, 10))
         :with_recipe_table_id(260)
-        :with_recipes({ { recipe = 36525, item = 48524 } }),
+        :with_recipes({ { recipe = 36525, item = 48524 } })
+        :with_bronze_requirement({ ['48524'] = 3 }),
     [260] = Mission(260, Jobs.Weaver, 'A', 1)
         :with_en_name('A-1: Specialized Materials I')
         :with_de_name('A-1: Verfeinerungsmaterialien I')
@@ -522,7 +556,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 7))
         :with_exp_reward(MissionReward(6, 1, 11))
         :with_recipe_table_id(261)
-        :with_recipes({ { recipe = 36526, item = 48525 } }),
+        :with_recipes({ { recipe = 36526, item = 48525 } })
+        :with_bronze_requirement({ ['48525'] = 2 }),
     [261] = Mission(261, Jobs.Weaver, 'A', 2)
         :with_en_name('A-2: Specialized Materials II')
         :with_de_name('A-2: Verfeinerungsmaterialien II')
@@ -538,7 +573,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 8))
         :with_exp_reward(MissionReward(6, 1, 8))
         :with_recipe_table_id(262)
-        :with_recipes({ { recipe = 36527, item = 48526 } }),
+        :with_recipes({ { recipe = 36527, item = 48526 } })
+        :with_bronze_requirement({ ['48526'] = 2 }),
     [262] = Mission(262, Jobs.Weaver, 'A', 3)
         :with_en_name('A-3: Large Research Materials')
         :with_de_name('A-3: Forschungs-Großmaterialien')
@@ -554,7 +590,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 7))
         :with_exp_reward(MissionReward(6, 2, 7))
         :with_recipe_table_id(263)
-        :with_recipes({ { recipe = 36528, item = 48527 } }),
+        :with_recipes({ { recipe = 36528, item = 48527 } })
+        :with_bronze_requirement({ ['48527'] = 2 }),
     [263] = Mission(263, Jobs.Weaver, 'A', 2)
         :with_en_name('A-2: Rest Facility Materials')
         :with_de_name('A-2: Pausenraum-Materialien')
@@ -569,7 +606,8 @@ return {
         :with_exp_reward(MissionReward(6, 4, 15))
         :with_exp_reward(MissionReward(6, 2, 10))
         :with_recipe_table_id(264)
-        :with_recipes({ { recipe = 36529, item = 48528 } }),
+        :with_recipes({ { recipe = 36529, item = 48528 } })
+        :with_bronze_requirement({ ['48528'] = 1 }),
     [264] = Mission(264, Jobs.Weaver, 'A', 3)
         :with_en_name('A-3: Rest Facility Furnishings')
         :with_de_name('A-3: Pausenraum-Einrichtung')
@@ -585,7 +623,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 8))
         :with_exp_reward(MissionReward(6, 1, 8))
         :with_recipe_table_id(265)
-        :with_recipes({ { recipe = 36530, item = 48529 } }),
+        :with_recipes({ { recipe = 36530, item = 48529 } })
+        :with_bronze_requirement({ ['48529'] = 1 }),
     [265] = Mission(265, Jobs.Weaver, 'A', 1)
         :with_en_name('A-1: Packing Materials I')
         :with_de_name('A-1: Verpackungsmaterialien I')
@@ -601,7 +640,8 @@ return {
         :with_exp_reward(MissionReward(6, 3, 12))
         :with_time_restriction(20, 22)
         :with_recipe_table_id(266)
-        :with_recipes({ { recipe = 36531, item = 48530 } }),
+        :with_recipes({ { recipe = 36531, item = 48530 } })
+        :with_bronze_requirement({ ['48530'] = 3 }),
     [266] = Mission(266, Jobs.Weaver, 'A', 2)
         :with_en_name('A-2: Packing Materials II')
         :with_de_name('A-2: Verpackungsmaterialien II')
@@ -617,7 +657,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 11))
         :with_exp_reward(MissionReward(6, 1, 11))
         :with_recipe_table_id(267)
-        :with_recipes({ { recipe = 36532, item = 48531 } }),
+        :with_recipes({ { recipe = 36532, item = 48531 } })
+        :with_bronze_requirement({ ['48531'] = 3 }),
     [267] = Mission(267, Jobs.Weaver, 'A', 3)
         :with_en_name('A-3: Rover Packing Materials')
         :with_de_name('A-3: Verpackungsmaterialien (Vehikel)')
@@ -633,7 +674,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 10))
         :with_exp_reward(MissionReward(6, 1, 10))
         :with_recipe_table_id(268)
-        :with_recipes({ { recipe = 36533, item = 48261 } }),
+        :with_recipes({ { recipe = 36533, item = 48261 } })
+        :with_bronze_requirement({ ['48261'] = 3 }),
     [268] = Mission(268, Jobs.Weaver, 'A', 3)
         :with_en_name('A-3: Crew Suits I')
         :with_de_name('A-3: Besatzungsuniformen I')
@@ -651,7 +693,8 @@ return {
         :with_time_restriction(8, 10)
         :with_recipe_table_id(269)
         :with_recipes({ { recipe = 36534, item = 48533 }, { recipe = 36535, item = 48534 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48534'] = 1 }),
     [269] = Mission(269, Jobs.Weaver, 'A', 3)
         :with_en_name('A-3: Crew Suits II')
         :with_de_name('A-3: Besatzungsuniformen II')
@@ -668,7 +711,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 19))
         :with_recipe_table_id(270)
         :with_recipes({ { recipe = 36537, item = 48535 }, { recipe = 36538, item = 48536 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48536'] = 1 }),
     [270] = Mission(270, Jobs.Weaver, 'A', 3)
         :with_en_name('A-3: Crew Suits III')
         :with_de_name('A-3: Besatzungsuniformen III')
@@ -685,5 +729,6 @@ return {
         :with_exp_reward(MissionReward(6, 1, 51))
         :with_recipe_table_id(271)
         :with_recipes({ { recipe = 36540, item = 48236 }, { recipe = 36542, item = 48532 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48532'] = 1 }),
 }

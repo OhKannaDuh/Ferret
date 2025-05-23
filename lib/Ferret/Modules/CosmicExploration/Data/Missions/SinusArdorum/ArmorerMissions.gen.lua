@@ -11,7 +11,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(3, 1, 7))
         :with_recipe_table_id(92)
-        :with_recipes({ { recipe = 36291, item = 48238 } }),
+        :with_recipes({ { recipe = 36291, item = 48238 } })
+        :with_bronze_requirement({ ['48238'] = 3 }),
     [92] = Mission(92, Jobs.Armorer, 'D', 1)
         :with_en_name('Spare Starship Parts')
         :with_de_name('Ersatzteile (Raumschiff)')
@@ -24,7 +25,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(3, 1, 7))
         :with_recipe_table_id(93)
-        :with_recipes({ { recipe = 36292, item = 48239 } }),
+        :with_recipes({ { recipe = 36292, item = 48239 } })
+        :with_bronze_requirement({ ['48239'] = 3 }),
     [93] = Mission(93, Jobs.Armorer, 'D', 1)
         :with_en_name('Alloy Inspection')
         :with_de_name('Legierungsinspektion')
@@ -37,7 +39,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(3, 1, 8))
         :with_recipe_table_id(94)
-        :with_recipes({ { recipe = 36293, item = 48240 } }),
+        :with_recipes({ { recipe = 36293, item = 48240 } })
+        :with_bronze_requirement({ ['48240'] = 3 }),
     [94] = Mission(94, Jobs.Armorer, 'D', 1)
         :with_en_name('Custom Parts (Simple)')
         :with_de_name('Anpassungsteile (Klasse I)')
@@ -50,7 +53,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(3, 1, 7))
         :with_recipe_table_id(95)
-        :with_recipes({ { recipe = 36294, item = 48364 } }),
+        :with_recipes({ { recipe = 36294, item = 48364 } })
+        :with_bronze_requirement({ ['48364'] = 3 }),
     [95] = Mission(95, Jobs.Armorer, 'D', 1)
         :with_en_name('Multi-purpose Metal Components')
         :with_de_name('Metallteile')
@@ -63,7 +67,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(3, 1, 7))
         :with_recipe_table_id(96)
-        :with_recipes({ { recipe = 36295, item = 48250 } }),
+        :with_recipes({ { recipe = 36295, item = 48250 } })
+        :with_bronze_requirement({ ['48250'] = 3 }),
     [96] = Mission(96, Jobs.Armorer, 'D', 1)
         :with_en_name('Mass-produced Necessities')
         :with_de_name('Bedarfsartikel-Massenproduktion')
@@ -76,7 +81,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(3, 1, 7))
         :with_recipe_table_id(97)
-        :with_recipes({ { recipe = 36296, item = 48241 } }),
+        :with_recipes({ { recipe = 36296, item = 48241 } })
+        :with_bronze_requirement({ ['48241'] = 3 }),
     [97] = Mission(97, Jobs.Armorer, 'C', 1)
         :with_en_name('Standardized Heavy Plating')
         :with_de_name('Dicke Projektplatten')
@@ -90,7 +96,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 3))
         :with_exp_reward(MissionReward(3, 1, 5))
         :with_recipe_table_id(98)
-        :with_recipes({ { recipe = 36297, item = 48238 } }),
+        :with_recipes({ { recipe = 36297, item = 48238 } })
+        :with_bronze_requirement({ ['48238'] = 3 }),
     [98] = Mission(98, Jobs.Armorer, 'C', 1)
         :with_en_name('Starship Shafts')
         :with_de_name('Triebachsen (Raumschiff)')
@@ -104,7 +111,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 6))
         :with_exp_reward(MissionReward(3, 1, 4))
         :with_recipe_table_id(99)
-        :with_recipes({ { recipe = 36298, item = 48242 } }),
+        :with_recipes({ { recipe = 36298, item = 48242 } })
+        :with_bronze_requirement({ ['48242'] = 3 }),
     [99] = Mission(99, Jobs.Armorer, 'C', 1)
         :with_en_name('Worker\'s Culinary Tools I')
         :with_de_name('Arbeiter-Gourmetzeug I')
@@ -118,7 +126,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 5))
         :with_exp_reward(MissionReward(3, 1, 5))
         :with_recipe_table_id(100)
-        :with_recipes({ { recipe = 36299, item = 48365 } }),
+        :with_recipes({ { recipe = 36299, item = 48365 } })
+        :with_bronze_requirement({ ['48365'] = 3 }),
     [100] = Mission(100, Jobs.Armorer, 'C', 1)
         :with_en_name('Standardized Chainmail Sheets')
         :with_de_name('Ringplatten')
@@ -133,7 +142,8 @@ return {
         :with_exp_reward(MissionReward(3, 1, 6))
         :with_recipe_table_id(101)
         :with_recipes({ { recipe = 36300, item = 48370 }, { recipe = 36301, item = 48366 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48366'] = 1 }),
     [101] = Mission(101, Jobs.Armorer, 'C', 1)
         :with_en_name('Dust-filtering Equipment')
         :with_de_name('Staubfeste Ausrüstung')
@@ -148,7 +158,8 @@ return {
         :with_exp_reward(MissionReward(3, 1, 5))
         :with_recipe_table_id(102)
         :with_recipes({ { recipe = 36302, item = 48251 }, { recipe = 36303, item = 48367 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48367'] = 2 }),
     [102] = Mission(102, Jobs.Armorer, 'C', 1)
         :with_en_name('Custom Parts (Intermediate)')
         :with_de_name('Anpassungsteile (Klasse II)')
@@ -163,7 +174,8 @@ return {
         :with_exp_reward(MissionReward(3, 1, 7))
         :with_recipe_table_id(103)
         :with_recipes({ { recipe = 36304, item = 48252 }, { recipe = 36305, item = 48368 } })
-        :with_multi_craft_config({ [0] = 3, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 3, [1] = 1 })
+        :with_bronze_requirement({ ['48368'] = 1 }),
     [103] = Mission(103, Jobs.Armorer, 'C', 1)
         :with_en_name('Insulated Equipment')
         :with_de_name('Isolierungsvorrichtungen')
@@ -178,7 +190,8 @@ return {
         :with_exp_reward(MissionReward(3, 1, 5))
         :with_recipe_table_id(104)
         :with_recipes({ { recipe = 36306, item = 48253 }, { recipe = 36307, item = 48369 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48369'] = 1 }),
     [104] = Mission(104, Jobs.Armorer, 'B', 1)
         :with_en_name('Rover Parts')
         :with_de_name('Einzelteile (Vehikel)')
@@ -192,7 +205,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 5))
         :with_exp_reward(MissionReward(3, 1, 9))
         :with_recipe_table_id(105)
-        :with_recipes({ { recipe = 36308, item = 48371 } }),
+        :with_recipes({ { recipe = 36308, item = 48371 } })
+        :with_bronze_requirement({ ['48371'] = 3 }),
     [105] = Mission(105, Jobs.Armorer, 'B', 1)
         :with_en_name('Standardized Light Plating')
         :with_de_name('Dünne Projektplatten')
@@ -206,7 +220,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 7))
         :with_exp_reward(MissionReward(3, 1, 4))
         :with_recipe_table_id(106)
-        :with_recipes({ { recipe = 36309, item = 48238 } }),
+        :with_recipes({ { recipe = 36309, item = 48238 } })
+        :with_bronze_requirement({ ['48238'] = 3 }),
     [106] = Mission(106, Jobs.Armorer, 'B', 1)
         :with_en_name('Worker\'s Culinary Tools II')
         :with_de_name('Arbeiter-Gourmetzeug II')
@@ -220,7 +235,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 5))
         :with_exp_reward(MissionReward(3, 1, 3))
         :with_recipe_table_id(107)
-        :with_recipes({ { recipe = 36310, item = 48372 } }),
+        :with_recipes({ { recipe = 36310, item = 48372 } })
+        :with_bronze_requirement({ ['48372'] = 2 }),
     [107] = Mission(107, Jobs.Armorer, 'B', 1)
         :with_en_name('Beverage Stations')
         :with_de_name('Café-Einrichtung')
@@ -234,7 +250,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 9))
         :with_exp_reward(MissionReward(3, 2, 5))
         :with_recipe_table_id(108)
-        :with_recipes({ { recipe = 36311, item = 48373 } }),
+        :with_recipes({ { recipe = 36311, item = 48373 } })
+        :with_bronze_requirement({ ['48373'] = 3 }),
     [108] = Mission(108, Jobs.Armorer, 'B', 1)
         :with_en_name('Campfire Fixtures')
         :with_de_name('Außenfeuerstelle')
@@ -248,7 +265,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 10))
         :with_exp_reward(MissionReward(3, 1, 6))
         :with_recipe_table_id(109)
-        :with_recipes({ { recipe = 36312, item = 48374 } }),
+        :with_recipes({ { recipe = 36312, item = 48374 } })
+        :with_bronze_requirement({ ['48374'] = 3 }),
     [109] = Mission(109, Jobs.Armorer, 'B', 1)
         :with_en_name('Habitation Storage')
         :with_de_name('Habitationsmodul-Schuppen')
@@ -262,7 +280,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 10))
         :with_exp_reward(MissionReward(3, 2, 6))
         :with_recipe_table_id(110)
-        :with_recipes({ { recipe = 36313, item = 48375 } }),
+        :with_recipes({ { recipe = 36313, item = 48375 } })
+        :with_bronze_requirement({ ['48375'] = 3 }),
     [110] = Mission(110, Jobs.Armorer, 'B', 1)
         :with_en_name('Lunar Material Tool Processing')
         :with_de_name('Veredlung von Mondwerkzeugen')
@@ -278,7 +297,8 @@ return {
         :with_exp_reward(MissionReward(3, 1, 5))
         :with_recipe_table_id(111)
         :with_recipes({ { recipe = 36314, item = 48254 }, { recipe = 36315, item = 48376 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48376'] = 1 }),
     [111] = Mission(111, Jobs.Armorer, 'B', 1)
         :with_en_name('Lunar Material Part Processing')
         :with_de_name('Veredlung von Mondgüterbauteilen')
@@ -294,7 +314,8 @@ return {
         :with_exp_reward(MissionReward(3, 1, 6))
         :with_recipe_table_id(112)
         :with_recipes({ { recipe = 36316, item = 48255 }, { recipe = 36317, item = 48377 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48377'] = 1 }),
     [112] = Mission(112, Jobs.Armorer, 'A', 1)
         :with_en_name('A-1: Key Facility Plating')
         :with_de_name('A-1: Stationsstruktur-Projektplatten')
@@ -309,7 +330,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 13))
         :with_exp_reward(MissionReward(3, 1, 19))
         :with_recipe_table_id(113)
-        :with_recipes({ { recipe = 36318, item = 48238 } }),
+        :with_recipes({ { recipe = 36318, item = 48238 } })
+        :with_bronze_requirement({ ['48238'] = 3 }),
     [113] = Mission(113, Jobs.Armorer, 'A', 1)
         :with_en_name('A-1: Rare Material Processing')
         :with_de_name('A-1: Seltene Materialien')
@@ -324,7 +346,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 18))
         :with_exp_reward(MissionReward(3, 1, 12))
         :with_recipe_table_id(114)
-        :with_recipes({ { recipe = 36319, item = 48243 } }),
+        :with_recipes({ { recipe = 36319, item = 48243 } })
+        :with_bronze_requirement({ ['48243'] = 3 }),
     [114] = Mission(114, Jobs.Armorer, 'A', 1)
         :with_en_name('A-1: Construction Necessities')
         :with_de_name('A-1: Ersatz für Einrichtungsbauartikel')
@@ -338,7 +361,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 12))
         :with_exp_reward(MissionReward(3, 2, 19))
         :with_recipe_table_id(115)
-        :with_recipes({ { recipe = 36320, item = 48378 } }),
+        :with_recipes({ { recipe = 36320, item = 48378 } })
+        :with_bronze_requirement({ ['48378'] = 1 }),
     [115] = Mission(115, Jobs.Armorer, 'A', 1)
         :with_en_name('A-1: High-conductivity Culinary Tools')
         :with_de_name('A-1: Hyperleiter-Gourmetzeug')
@@ -353,7 +377,8 @@ return {
         :with_exp_reward(MissionReward(3, 4, 15))
         :with_exp_reward(MissionReward(3, 1, 10))
         :with_recipe_table_id(116)
-        :with_recipes({ { recipe = 36321, item = 48379 } }),
+        :with_recipes({ { recipe = 36321, item = 48379 } })
+        :with_bronze_requirement({ ['48379'] = 1 }),
     [116] = Mission(116, Jobs.Armorer, 'A', 1)
         :with_en_name('A-1: Meteoric Material Test Processing')
         :with_de_name('A-1: Meteoreisen-Inspektion')
@@ -369,7 +394,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 20))
         :with_recipe_table_id(117)
         :with_recipes({ { recipe = 36322, item = 48244 }, { recipe = 36323, item = 48245 }, { recipe = 36324, item = 48246 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48244'] = 1, ['48245'] = 1, ['48246'] = 1 }),
     [117] = Mission(117, Jobs.Armorer, 'A', 2)
         :with_en_name('A-2: Replica Incensories')
         :with_de_name('A-2: Räuchergefäß-Nachbau')
@@ -384,7 +410,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 19))
         :with_exp_reward(MissionReward(3, 1, 13))
         :with_recipe_table_id(118)
-        :with_recipes({ { recipe = 36325, item = 48380 } }),
+        :with_recipes({ { recipe = 36325, item = 48380 } })
+        :with_bronze_requirement({ ['48380'] = 3 }),
     [118] = Mission(118, Jobs.Armorer, 'A', 2)
         :with_en_name('A-2: Fine-grade Material Processing')
         :with_de_name('A-2: Präzise Materialien')
@@ -399,7 +426,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 10))
         :with_exp_reward(MissionReward(3, 2, 15))
         :with_recipe_table_id(119)
-        :with_recipes({ { recipe = 36326, item = 48381 } }),
+        :with_recipes({ { recipe = 36326, item = 48381 } })
+        :with_bronze_requirement({ ['48381'] = 1 }),
     [119] = Mission(119, Jobs.Armorer, 'A', 2)
         :with_en_name('A-2: Moongate Hub Equipment')
         :with_de_name('A-2: Mondtor-Station-Ersatzausstattung')
@@ -414,7 +442,8 @@ return {
         :with_exp_reward(MissionReward(3, 4, 15))
         :with_exp_reward(MissionReward(3, 1, 10))
         :with_recipe_table_id(120)
-        :with_recipes({ { recipe = 36327, item = 48382 } }),
+        :with_recipes({ { recipe = 36327, item = 48382 } })
+        :with_bronze_requirement({ ['48382'] = 1 }),
     [120] = Mission(120, Jobs.Armorer, 'A', 2)
         :with_en_name('A-2: Workspace Lighting')
         :with_de_name('A-2: Arbeitsbeleuchtung-Sicherstellung')
@@ -432,7 +461,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(121)
         :with_recipes({ { recipe = 36328, item = 48383 }, { recipe = 36329, item = 48384 }, { recipe = 36330, item = 48385 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48383'] = 1, ['48384'] = 1, ['48385'] = 1 }),
     [121] = Mission(121, Jobs.Armorer, 'A', 3)
         :with_en_name('A-3: High-durability Material Processing')
         :with_de_name('A-3: Erhöhung der Materialbelastung')
@@ -450,7 +480,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(122)
         :with_recipes({ { recipe = 36331, item = 48256 }, { recipe = 36332, item = 48386 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48386'] = 1 }),
     [122] = Mission(122, Jobs.Armorer, 'A', 3)
         :with_en_name('A-3: Impact-resistant Material Processing')
         :with_de_name('A-3: Erhöhung der Material-Schockresistenz')
@@ -468,7 +499,8 @@ return {
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(123)
         :with_recipes({ { recipe = 36333, item = 48257 }, { recipe = 36334, item = 48387 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48387'] = 1 }),
     [123] = Mission(123, Jobs.Armorer, 'A', 1)
         :with_en_name('A-1: Hub Furnishings and Fixtures I')
         :with_de_name('A-1: Station-Möbelstücke I')
@@ -483,7 +515,8 @@ return {
         :with_exp_reward(MissionReward(3, 4, 16))
         :with_exp_reward(MissionReward(3, 3, 11))
         :with_recipe_table_id(124)
-        :with_recipes({ { recipe = 36335, item = 48388 } }),
+        :with_recipes({ { recipe = 36335, item = 48388 } })
+        :with_bronze_requirement({ ['48388'] = 3 }),
     [124] = Mission(124, Jobs.Armorer, 'A', 2)
         :with_en_name('A-2: Hub Furnishings and Fixtures II')
         :with_de_name('A-2: Station-Möbelstücke II')
@@ -499,7 +532,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 10))
         :with_exp_reward(MissionReward(3, 1, 10))
         :with_recipe_table_id(125)
-        :with_recipes({ { recipe = 36336, item = 48389 } }),
+        :with_recipes({ { recipe = 36336, item = 48389 } })
+        :with_bronze_requirement({ ['48389'] = 3 }),
     [125] = Mission(125, Jobs.Armorer, 'A', 1)
         :with_en_name('A-1: Specialized Materials I')
         :with_de_name('A-1: Verfeinerungsmaterialien I')
@@ -514,7 +548,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 7))
         :with_exp_reward(MissionReward(3, 1, 11))
         :with_recipe_table_id(126)
-        :with_recipes({ { recipe = 36337, item = 48390 } }),
+        :with_recipes({ { recipe = 36337, item = 48390 } })
+        :with_bronze_requirement({ ['48390'] = 2 }),
     [126] = Mission(126, Jobs.Armorer, 'A', 2)
         :with_en_name('A-2: Specialized Materials II')
         :with_de_name('A-2: Verfeinerungsmaterialien II')
@@ -530,7 +565,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 8))
         :with_exp_reward(MissionReward(3, 1, 8))
         :with_recipe_table_id(127)
-        :with_recipes({ { recipe = 36338, item = 48391 } }),
+        :with_recipes({ { recipe = 36338, item = 48391 } })
+        :with_bronze_requirement({ ['48391'] = 2 }),
     [127] = Mission(127, Jobs.Armorer, 'A', 3)
         :with_en_name('A-3: Priority Sample Storage')
         :with_de_name('A-3: Probenspeicher')
@@ -546,7 +582,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 7))
         :with_exp_reward(MissionReward(3, 2, 7))
         :with_recipe_table_id(128)
-        :with_recipes({ { recipe = 36339, item = 48392 } }),
+        :with_recipes({ { recipe = 36339, item = 48392 } })
+        :with_bronze_requirement({ ['48392'] = 2 }),
     [128] = Mission(128, Jobs.Armorer, 'A', 2)
         :with_en_name('A-2: Starship Building Materials')
         :with_de_name('A-2: Raumschiff-Materialien')
@@ -561,7 +598,8 @@ return {
         :with_exp_reward(MissionReward(3, 4, 15))
         :with_exp_reward(MissionReward(3, 2, 10))
         :with_recipe_table_id(129)
-        :with_recipes({ { recipe = 36340, item = 48247 } }),
+        :with_recipes({ { recipe = 36340, item = 48247 } })
+        :with_bronze_requirement({ ['48247'] = 1 }),
     [129] = Mission(129, Jobs.Armorer, 'A', 3)
         :with_en_name('A-3: Starship Building Material Processing')
         :with_de_name('A-3: Raumschiff-Materialien-Veredelung')
@@ -577,7 +615,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 8))
         :with_exp_reward(MissionReward(3, 1, 8))
         :with_recipe_table_id(130)
-        :with_recipes({ { recipe = 36341, item = 48248 } }),
+        :with_recipes({ { recipe = 36341, item = 48248 } })
+        :with_bronze_requirement({ ['48248'] = 1 }),
     [130] = Mission(130, Jobs.Armorer, 'A', 1)
         :with_en_name('A-1: High-performance Drone Materials I')
         :with_de_name('A-1: Hochfunktionsdrohnen-Materialien I')
@@ -593,7 +632,8 @@ return {
         :with_exp_reward(MissionReward(3, 3, 12))
         :with_time_restriction(8, 10)
         :with_recipe_table_id(131)
-        :with_recipes({ { recipe = 36342, item = 48393 } }),
+        :with_recipes({ { recipe = 36342, item = 48393 } })
+        :with_bronze_requirement({ ['48393'] = 3 }),
     [131] = Mission(131, Jobs.Armorer, 'A', 2)
         :with_en_name('A-2: High-performance Drone Materials II')
         :with_de_name('A-2: Hochfunktionsdrohnen-Materialien II')
@@ -609,7 +649,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 11))
         :with_exp_reward(MissionReward(3, 1, 11))
         :with_recipe_table_id(132)
-        :with_recipes({ { recipe = 36343, item = 48394 } }),
+        :with_recipes({ { recipe = 36343, item = 48394 } })
+        :with_bronze_requirement({ ['48394'] = 3 }),
     [132] = Mission(132, Jobs.Armorer, 'A', 3)
         :with_en_name('A-3: High-performance Drones')
         :with_de_name('A-3: Hochfunktionsdrohnen')
@@ -625,7 +666,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 10))
         :with_exp_reward(MissionReward(3, 1, 10))
         :with_recipe_table_id(133)
-        :with_recipes({ { recipe = 36344, item = 48249 } }),
+        :with_recipes({ { recipe = 36344, item = 48249 } })
+        :with_bronze_requirement({ ['48249'] = 3 }),
     [133] = Mission(133, Jobs.Armorer, 'A', 3)
         :with_en_name('A-3: Cosmotized Equipment Materials I')
         :with_de_name('A-3: Spezialausrüstungs-Materialien I')
@@ -643,7 +685,8 @@ return {
         :with_time_restriction(20, 22)
         :with_recipe_table_id(134)
         :with_recipes({ { recipe = 36345, item = 48396 }, { recipe = 36346, item = 48397 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48397'] = 1 }),
     [134] = Mission(134, Jobs.Armorer, 'A', 3)
         :with_en_name('A-3: Cosmotized Equipment Materials II')
         :with_de_name('A-3: Spezialausrüstungs-Materialien II')
@@ -660,7 +703,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 19))
         :with_recipe_table_id(135)
         :with_recipes({ { recipe = 36348, item = 48398 }, { recipe = 36349, item = 48399 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48399'] = 1 }),
     [135] = Mission(135, Jobs.Armorer, 'A', 3)
         :with_en_name('A-3: Cosmotized Equipment Materials III')
         :with_de_name('A-3: Spezialausrüstung (Feinschliff)')
@@ -677,5 +721,6 @@ return {
         :with_exp_reward(MissionReward(3, 1, 51))
         :with_recipe_table_id(136)
         :with_recipes({ { recipe = 36351, item = 48236 }, { recipe = 36353, item = 48395 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48395'] = 1 }),
 }

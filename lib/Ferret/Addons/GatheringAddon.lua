@@ -39,4 +39,16 @@ function GatheringAddon:gather(index)
     self:callback(true, index)
 end
 
+function GatheringAddon:get_boon_chance(index)
+    local actual_index = 25 - index
+
+    return self:get_node_number(actual_index, 21)
+end
+
+function GatheringAddon:get_gather_chance(index)
+    local actual_index = 25 - index
+
+    return self:get_node_number(actual_index, 27)
+end
+
 return GatheringAddon()

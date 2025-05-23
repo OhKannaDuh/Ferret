@@ -11,7 +11,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(1, 1, 7))
         :with_recipe_table_id(2)
-        :with_recipes({ { recipe = 36165, item = 48258 } }),
+        :with_recipes({ { recipe = 36165, item = 48258 } })
+        :with_bronze_requirement({ ['48258'] = 3 }),
     [2] = Mission(2, Jobs.Carpenter, 'D', 1)
         :with_en_name('Fieldwork Fuel')
         :with_de_name('Brennstoff für Außeneinsätze')
@@ -24,7 +25,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(1, 1, 7))
         :with_recipe_table_id(3)
-        :with_recipes({ { recipe = 36166, item = 48276 } }),
+        :with_recipes({ { recipe = 36166, item = 48276 } })
+        :with_bronze_requirement({ ['48276'] = 3 }),
     [3] = Mission(3, Jobs.Carpenter, 'D', 1)
         :with_en_name('Gathering Miscellany')
         :with_de_name('Sammler-Accessoires')
@@ -37,7 +39,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(1, 1, 8))
         :with_recipe_table_id(4)
-        :with_recipes({ { recipe = 36167, item = 48277 } }),
+        :with_recipes({ { recipe = 36167, item = 48277 } })
+        :with_bronze_requirement({ ['48277'] = 3 }),
     [4] = Mission(4, Jobs.Carpenter, 'D', 1)
         :with_en_name('Essential Research Materials')
         :with_de_name('Forschungsmaterialien')
@@ -50,7 +53,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(1, 1, 7))
         :with_recipe_table_id(5)
-        :with_recipes({ { recipe = 36168, item = 48278 } }),
+        :with_recipes({ { recipe = 36168, item = 48278 } })
+        :with_bronze_requirement({ ['48278'] = 3 }),
     [5] = Mission(5, Jobs.Carpenter, 'D', 1)
         :with_en_name('Charcoal Longevity Testing')
         :with_de_name('Holzkohlenvorrat-Inspektion')
@@ -63,7 +67,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(1, 1, 7))
         :with_recipe_table_id(6)
-        :with_recipes({ { recipe = 36169, item = 48279 } }),
+        :with_recipes({ { recipe = 36169, item = 48279 } })
+        :with_bronze_requirement({ ['48279'] = 3 }),
     [6] = Mission(6, Jobs.Carpenter, 'D', 1)
         :with_en_name('General-purpose Bedding')
         :with_de_name('Schlafzeug')
@@ -76,7 +81,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(1, 1, 7))
         :with_recipe_table_id(7)
-        :with_recipes({ { recipe = 36170, item = 48280 } }),
+        :with_recipes({ { recipe = 36170, item = 48280 } })
+        :with_bronze_requirement({ ['48280'] = 3 }),
     [7] = Mission(7, Jobs.Carpenter, 'C', 1)
         :with_en_name('Thin Fiberboard')
         :with_de_name('Dünne Faserplatten')
@@ -90,7 +96,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 3))
         :with_exp_reward(MissionReward(1, 1, 5))
         :with_recipe_table_id(8)
-        :with_recipes({ { recipe = 36171, item = 48258 } }),
+        :with_recipes({ { recipe = 36171, item = 48258 } })
+        :with_bronze_requirement({ ['48258'] = 3 }),
     [8] = Mission(8, Jobs.Carpenter, 'C', 1)
         :with_en_name('Carpentry Provisions')
         :with_de_name('Zimmerer-Hilfsmaterialien')
@@ -104,7 +111,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 6))
         :with_exp_reward(MissionReward(1, 1, 4))
         :with_recipe_table_id(9)
-        :with_recipes({ { recipe = 36172, item = 48281 } }),
+        :with_recipes({ { recipe = 36172, item = 48281 } })
+        :with_bronze_requirement({ ['48281'] = 3 }),
     [9] = Mission(9, Jobs.Carpenter, 'C', 1)
         :with_en_name('Worker\'s Weaving Tools')
         :with_de_name('Arbeiter-Nähwerkzeuge')
@@ -118,7 +126,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 5))
         :with_exp_reward(MissionReward(1, 1, 5))
         :with_recipe_table_id(10)
-        :with_recipes({ { recipe = 36173, item = 48282 } }),
+        :with_recipes({ { recipe = 36173, item = 48282 } })
+        :with_bronze_requirement({ ['48282'] = 3 }),
     [10] = Mission(10, Jobs.Carpenter, 'C', 1)
         :with_en_name('Data Entry Paper')
         :with_de_name('Papier zur Dateneintragung')
@@ -133,7 +142,8 @@ return {
         :with_exp_reward(MissionReward(1, 1, 6))
         :with_recipe_table_id(11)
         :with_recipes({ { recipe = 36174, item = 48287 }, { recipe = 36175, item = 48283 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48283'] = 1 }),
     [11] = Mission(11, Jobs.Carpenter, 'C', 1)
         :with_en_name('Interior Insulation Materials')
         :with_de_name('Wärmeisolation-Materialien')
@@ -148,7 +158,8 @@ return {
         :with_exp_reward(MissionReward(1, 1, 5))
         :with_recipe_table_id(12)
         :with_recipes({ { recipe = 36176, item = 48288 }, { recipe = 36177, item = 48284 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48284'] = 2 }),
     [12] = Mission(12, Jobs.Carpenter, 'C', 1)
         :with_en_name('Cosmoliner Supplies')
         :with_de_name('Kosmozapper-Grundkomponenten')
@@ -163,7 +174,8 @@ return {
         :with_exp_reward(MissionReward(1, 1, 7))
         :with_recipe_table_id(13)
         :with_recipes({ { recipe = 36178, item = 48289 }, { recipe = 36179, item = 48285 } })
-        :with_multi_craft_config({ [0] = 3, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 3, [1] = 1 })
+        :with_bronze_requirement({ ['48285'] = 1 }),
     [13] = Mission(13, Jobs.Carpenter, 'C', 1)
         :with_en_name('New Material Earrings')
         :with_de_name('Prototyp-Ohrringe')
@@ -178,7 +190,8 @@ return {
         :with_exp_reward(MissionReward(1, 1, 5))
         :with_recipe_table_id(14)
         :with_recipes({ { recipe = 36180, item = 48290 }, { recipe = 36181, item = 48286 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48286'] = 1 }),
     [14] = Mission(14, Jobs.Carpenter, 'B', 1)
         :with_en_name('Resupplying Containers')
         :with_de_name('Versorgungsbehälter')
@@ -192,7 +205,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 5))
         :with_exp_reward(MissionReward(1, 1, 9))
         :with_recipe_table_id(15)
-        :with_recipes({ { recipe = 36182, item = 48291 } }),
+        :with_recipes({ { recipe = 36182, item = 48291 } })
+        :with_bronze_requirement({ ['48291'] = 3 }),
     [15] = Mission(15, Jobs.Carpenter, 'B', 1)
         :with_en_name('Thick Fiberboard')
         :with_de_name('Dicke Faserplatten')
@@ -206,7 +220,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 7))
         :with_exp_reward(MissionReward(1, 1, 4))
         :with_recipe_table_id(16)
-        :with_recipes({ { recipe = 36183, item = 48258 } }),
+        :with_recipes({ { recipe = 36183, item = 48258 } })
+        :with_bronze_requirement({ ['48258'] = 3 }),
     [16] = Mission(16, Jobs.Carpenter, 'B', 1)
         :with_en_name('High-quality Insulation Materials')
         :with_de_name('Hochwertige Isoliermaterialien')
@@ -220,7 +235,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 5))
         :with_exp_reward(MissionReward(1, 1, 3))
         :with_recipe_table_id(17)
-        :with_recipes({ { recipe = 36184, item = 48292 } }),
+        :with_recipes({ { recipe = 36184, item = 48292 } })
+        :with_bronze_requirement({ ['48292'] = 2 }),
     [17] = Mission(17, Jobs.Carpenter, 'B', 1)
         :with_en_name('Heat-resistant Resin')
         :with_de_name('Hitzebeständiges Baumharz')
@@ -234,7 +250,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 9))
         :with_exp_reward(MissionReward(1, 2, 5))
         :with_recipe_table_id(18)
-        :with_recipes({ { recipe = 36185, item = 48293 } }),
+        :with_recipes({ { recipe = 36185, item = 48293 } })
+        :with_bronze_requirement({ ['48293'] = 3 }),
     [18] = Mission(18, Jobs.Carpenter, 'B', 1)
         :with_en_name('Long-term Storage Paper')
         :with_de_name('Papier zur Langzeitlagerung')
@@ -248,7 +265,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 10))
         :with_exp_reward(MissionReward(1, 1, 6))
         :with_recipe_table_id(19)
-        :with_recipes({ { recipe = 36186, item = 48294 } }),
+        :with_recipes({ { recipe = 36186, item = 48294 } })
+        :with_bronze_requirement({ ['48294'] = 3 }),
     [19] = Mission(19, Jobs.Carpenter, 'B', 1)
         :with_en_name('Habitation Module Chairs')
         :with_de_name('Habitationsmodul-Stühle')
@@ -262,7 +280,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 10))
         :with_exp_reward(MissionReward(1, 2, 6))
         :with_recipe_table_id(20)
-        :with_recipes({ { recipe = 36187, item = 48295 } }),
+        :with_recipes({ { recipe = 36187, item = 48295 } })
+        :with_bronze_requirement({ ['48295'] = 3 }),
     [20] = Mission(20, Jobs.Carpenter, 'B', 1)
         :with_en_name('Test Material Gathering Tools')
         :with_de_name('Experimentelle Sammler-Werkzeuge')
@@ -278,7 +297,8 @@ return {
         :with_exp_reward(MissionReward(1, 1, 5))
         :with_recipe_table_id(21)
         :with_recipes({ { recipe = 36188, item = 48262 }, { recipe = 36189, item = 48296 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48296'] = 1 }),
     [21] = Mission(21, Jobs.Carpenter, 'B', 1)
         :with_en_name('High-quality Rest Beds')
         :with_de_name('Hochwertige Betten')
@@ -294,7 +314,8 @@ return {
         :with_exp_reward(MissionReward(1, 1, 6))
         :with_recipe_table_id(22)
         :with_recipes({ { recipe = 36190, item = 48262 }, { recipe = 36191, item = 48297 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48297'] = 1 }),
     [22] = Mission(22, Jobs.Carpenter, 'A', 1)
         :with_en_name('A-1: High-durability Fiberboard')
         :with_de_name('A-1: Hochbelastbare Faserplatten')
@@ -309,7 +330,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 13))
         :with_exp_reward(MissionReward(1, 1, 19))
         :with_recipe_table_id(23)
-        :with_recipes({ { recipe = 36192, item = 48258 } }),
+        :with_recipes({ { recipe = 36192, item = 48258 } })
+        :with_bronze_requirement({ ['48258'] = 3 }),
     [23] = Mission(23, Jobs.Carpenter, 'A', 1)
         :with_en_name('A-1: High-grade Paper')
         :with_de_name('A-1: Premium-Papier')
@@ -324,7 +346,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 18))
         :with_exp_reward(MissionReward(1, 1, 12))
         :with_recipe_table_id(24)
-        :with_recipes({ { recipe = 36193, item = 48298 } }),
+        :with_recipes({ { recipe = 36193, item = 48298 } })
+        :with_bronze_requirement({ ['48298'] = 3 }),
     [24] = Mission(24, Jobs.Carpenter, 'A', 1)
         :with_en_name('A-1: Starship Insulation')
         :with_de_name('A-1: Raumschiff-Isoliermaterialien')
@@ -338,7 +361,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 12))
         :with_exp_reward(MissionReward(1, 2, 19))
         :with_recipe_table_id(25)
-        :with_recipes({ { recipe = 36194, item = 48299 } }),
+        :with_recipes({ { recipe = 36194, item = 48299 } })
+        :with_bronze_requirement({ ['48299'] = 1 }),
     [25] = Mission(25, Jobs.Carpenter, 'A', 1)
         :with_en_name('A-1: High Burn Charcoal')
         :with_de_name('A-1: Hochleistungs-Holzkohle')
@@ -353,7 +377,8 @@ return {
         :with_exp_reward(MissionReward(1, 4, 15))
         :with_exp_reward(MissionReward(1, 1, 10))
         :with_recipe_table_id(26)
-        :with_recipes({ { recipe = 36195, item = 48300 } }),
+        :with_recipes({ { recipe = 36195, item = 48300 } })
+        :with_bronze_requirement({ ['48300'] = 1 }),
     [26] = Mission(26, Jobs.Carpenter, 'A', 1)
         :with_en_name('A-1: Lunar Flora Test Processing')
         :with_de_name('A-1: Mondpflanzen-Inspektion')
@@ -369,7 +394,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 20))
         :with_recipe_table_id(27)
         :with_recipes({ { recipe = 36196, item = 48301 }, { recipe = 36197, item = 48302 }, { recipe = 36198, item = 48303 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48301'] = 1, ['48302'] = 1, ['48303'] = 1 }),
     [27] = Mission(27, Jobs.Carpenter, 'A', 2)
         :with_en_name('A-2: Test Material Final Processing')
         :with_de_name('A-2: Final-Inspektion für Experimentalmaterialien')
@@ -384,7 +410,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 19))
         :with_exp_reward(MissionReward(1, 1, 13))
         :with_recipe_table_id(28)
-        :with_recipes({ { recipe = 36199, item = 48304 } }),
+        :with_recipes({ { recipe = 36199, item = 48304 } })
+        :with_bronze_requirement({ ['48304'] = 3 }),
     [28] = Mission(28, Jobs.Carpenter, 'A', 2)
         :with_en_name('A-2: Serving Trays')
         :with_de_name('A-2: Serviertabletts')
@@ -399,7 +426,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 10))
         :with_exp_reward(MissionReward(1, 2, 15))
         :with_recipe_table_id(29)
-        :with_recipes({ { recipe = 36200, item = 48305 } }),
+        :with_recipes({ { recipe = 36200, item = 48305 } })
+        :with_bronze_requirement({ ['48305'] = 1 }),
     [29] = Mission(29, Jobs.Carpenter, 'A', 2)
         :with_en_name('A-2: Bunk Beds')
         :with_de_name('A-2: Etagenbetten')
@@ -414,7 +442,8 @@ return {
         :with_exp_reward(MissionReward(1, 4, 15))
         :with_exp_reward(MissionReward(1, 1, 10))
         :with_recipe_table_id(30)
-        :with_recipes({ { recipe = 36201, item = 48306 } }),
+        :with_recipes({ { recipe = 36201, item = 48306 } })
+        :with_bronze_requirement({ ['48306'] = 1 }),
     [30] = Mission(30, Jobs.Carpenter, 'A', 2)
         :with_en_name('A-2: Work Support Equipment')
         :with_de_name('A-2: Arbeitsunterstützungsvorrichtungen')
@@ -432,7 +461,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(31)
         :with_recipes({ { recipe = 36202, item = 48307 }, { recipe = 36203, item = 48308 }, { recipe = 36204, item = 48309 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48307'] = 1, ['48308'] = 1, ['48309'] = 1 }),
     [31] = Mission(31, Jobs.Carpenter, 'A', 3)
         :with_en_name('A-3: High-quality Crafting Tools')
         :with_de_name('A-3: Hochwertige Ersatz-Werkzeuge')
@@ -450,7 +480,8 @@ return {
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(32)
         :with_recipes({ { recipe = 36205, item = 48263 }, { recipe = 36206, item = 48310 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48310'] = 1 }),
     [32] = Mission(32, Jobs.Carpenter, 'A', 3)
         :with_en_name('A-3: Elevating Platforms')
         :with_de_name('A-3: Höhenverstellbare Podeste')
@@ -468,7 +499,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(33)
         :with_recipes({ { recipe = 36207, item = 48263 }, { recipe = 36208, item = 48311 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48311'] = 1 }),
     [33] = Mission(33, Jobs.Carpenter, 'A', 1)
         :with_en_name('A-1: Power Transmission Shafts I')
         :with_de_name('A-1: Kraftübertragungs-Pfosten I')
@@ -483,7 +515,8 @@ return {
         :with_exp_reward(MissionReward(1, 4, 16))
         :with_exp_reward(MissionReward(1, 3, 11))
         :with_recipe_table_id(34)
-        :with_recipes({ { recipe = 36209, item = 48312 } }),
+        :with_recipes({ { recipe = 36209, item = 48312 } })
+        :with_bronze_requirement({ ['48312'] = 3 }),
     [34] = Mission(34, Jobs.Carpenter, 'A', 2)
         :with_en_name('A-2: Power Transmission Shafts II')
         :with_de_name('A-2: Kraftübertragungs-Pfosten II')
@@ -499,7 +532,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 10))
         :with_exp_reward(MissionReward(1, 1, 10))
         :with_recipe_table_id(35)
-        :with_recipes({ { recipe = 36210, item = 48313 } }),
+        :with_recipes({ { recipe = 36210, item = 48313 } })
+        :with_bronze_requirement({ ['48313'] = 3 }),
     [35] = Mission(35, Jobs.Carpenter, 'A', 1)
         :with_en_name('A-1: Specialized Materials I')
         :with_de_name('A-1: Verfeinerungsmaterialien I')
@@ -514,7 +548,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 7))
         :with_exp_reward(MissionReward(1, 1, 11))
         :with_recipe_table_id(36)
-        :with_recipes({ { recipe = 36211, item = 48314 } }),
+        :with_recipes({ { recipe = 36211, item = 48314 } })
+        :with_bronze_requirement({ ['48314'] = 2 }),
     [36] = Mission(36, Jobs.Carpenter, 'A', 2)
         :with_en_name('A-2: Specialized Materials II')
         :with_de_name('A-2: Verfeinerungsmaterialien II')
@@ -530,7 +565,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 8))
         :with_exp_reward(MissionReward(1, 1, 8))
         :with_recipe_table_id(37)
-        :with_recipes({ { recipe = 36212, item = 48315 } }),
+        :with_recipes({ { recipe = 36212, item = 48315 } })
+        :with_bronze_requirement({ ['48315'] = 2 }),
     [37] = Mission(37, Jobs.Carpenter, 'A', 3)
         :with_en_name('A-3: Research Water Tank')
         :with_de_name('A-3: Großer Forschungs-Wasserspeicher')
@@ -546,7 +582,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 7))
         :with_exp_reward(MissionReward(1, 2, 7))
         :with_recipe_table_id(38)
-        :with_recipes({ { recipe = 36213, item = 48316 } }),
+        :with_recipes({ { recipe = 36213, item = 48316 } })
+        :with_bronze_requirement({ ['48316'] = 2 }),
     [38] = Mission(38, Jobs.Carpenter, 'A', 2)
         :with_en_name('A-2: Rest Facility Materials')
         :with_de_name('A-2: Pausenraummaterialien')
@@ -561,7 +598,8 @@ return {
         :with_exp_reward(MissionReward(1, 4, 15))
         :with_exp_reward(MissionReward(1, 2, 10))
         :with_recipe_table_id(39)
-        :with_recipes({ { recipe = 36214, item = 48317 } }),
+        :with_recipes({ { recipe = 36214, item = 48317 } })
+        :with_bronze_requirement({ ['48317'] = 1 }),
     [39] = Mission(39, Jobs.Carpenter, 'A', 3)
         :with_en_name('A-3: Rest Facility Furnishings')
         :with_de_name('A-3: Pausenraum-Einrichtungsgegenstände')
@@ -577,7 +615,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 8))
         :with_exp_reward(MissionReward(1, 1, 8))
         :with_recipe_table_id(40)
-        :with_recipes({ { recipe = 36215, item = 48318 } }),
+        :with_recipes({ { recipe = 36215, item = 48318 } })
+        :with_bronze_requirement({ ['48318'] = 1 }),
     [40] = Mission(40, Jobs.Carpenter, 'A', 1)
         :with_en_name('A-1: Packing Materials I')
         :with_de_name('A-1: Verpackungsmaterialien I')
@@ -593,7 +632,8 @@ return {
         :with_exp_reward(MissionReward(1, 3, 12))
         :with_time_restriction(0, 2)
         :with_recipe_table_id(41)
-        :with_recipes({ { recipe = 36216, item = 48319 } }),
+        :with_recipes({ { recipe = 36216, item = 48319 } })
+        :with_bronze_requirement({ ['48319'] = 3 }),
     [41] = Mission(41, Jobs.Carpenter, 'A', 2)
         :with_en_name('A-2: Packing Materials II')
         :with_de_name('A-2: Verpackungsmaterialien II')
@@ -609,7 +649,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 11))
         :with_exp_reward(MissionReward(1, 1, 11))
         :with_recipe_table_id(42)
-        :with_recipes({ { recipe = 36217, item = 48320 } }),
+        :with_recipes({ { recipe = 36217, item = 48320 } })
+        :with_bronze_requirement({ ['48320'] = 3 }),
     [42] = Mission(42, Jobs.Carpenter, 'A', 3)
         :with_en_name('A-3: Rover Packing Materials')
         :with_de_name('A-3: Verpackungsmaterialien (Vehikel)')
@@ -625,7 +666,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 10))
         :with_exp_reward(MissionReward(1, 1, 10))
         :with_recipe_table_id(43)
-        :with_recipes({ { recipe = 36218, item = 48261 } }),
+        :with_recipes({ { recipe = 36218, item = 48261 } })
+        :with_bronze_requirement({ ['48261'] = 3 }),
     [43] = Mission(43, Jobs.Carpenter, 'A', 3)
         :with_en_name('A-3: Biofuel I')
         :with_de_name('A-3: Biotreibstoff I')
@@ -643,7 +685,8 @@ return {
         :with_time_restriction(12, 14)
         :with_recipe_table_id(44)
         :with_recipes({ { recipe = 36219, item = 48322 }, { recipe = 36220, item = 48323 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48323'] = 1 }),
     [44] = Mission(44, Jobs.Carpenter, 'A', 3)
         :with_en_name('A-3: Biofuel II')
         :with_de_name('A-3: Biotreibstoff II')
@@ -660,7 +703,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 19))
         :with_recipe_table_id(45)
         :with_recipes({ { recipe = 36222, item = 48324 }, { recipe = 36223, item = 48325 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48325'] = 1 }),
     [45] = Mission(45, Jobs.Carpenter, 'A', 3)
         :with_en_name('A-3: Biofuel III')
         :with_de_name('A-3: Biotreibstoff III')
@@ -677,5 +721,6 @@ return {
         :with_exp_reward(MissionReward(1, 1, 51))
         :with_recipe_table_id(46)
         :with_recipes({ { recipe = 36225, item = 48236 }, { recipe = 36227, item = 48321 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48321'] = 1 }),
 }

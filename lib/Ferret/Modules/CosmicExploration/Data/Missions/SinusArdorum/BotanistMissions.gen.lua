@@ -11,6 +11,7 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(10, 1, 11))
+        :with_bronze_requirement({ ['48674'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48674'] = { amount = 25, name = 'Moonwheat' } })
         :with_node(Node(238.31, 21.42444, -64.91874))
@@ -35,6 +36,7 @@ return {
         :with_cosmocredit(3)
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(10, 1, 11))
+        :with_bronze_requirement({ ['48674'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48674'] = { amount = 25, name = 'Moonwheat' } })
         :with_node(Node(221.9113, 20.143, 1.221095))
@@ -59,6 +61,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(4)
         :with_exp_reward(MissionReward(10, 1, 7))
+        :with_bronze_requirement({ ['48675'] = 24 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48675'] = { amount = 24, name = 'Goldeye Scales' } })
         :with_node(Node(223.9877, 20.31077, 15.83446))
@@ -83,6 +86,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(4)
         :with_exp_reward(MissionReward(10, 1, 7))
+        :with_bronze_requirement({ ['48680'] = 24 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48680'] = { amount = 24, name = 'Red Spider Fungus' } })
         :with_node(Node(-228.044, 17.30947, -13.58715))
@@ -107,6 +111,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(10, 1, 9))
+        :with_bronze_requirement({ ['48675'] = 28 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48675'] = { amount = 28, name = 'Goldeye Scales' } })
         :with_node(Node(285.2979, 18.87537, 108.1406))
@@ -131,6 +136,7 @@ return {
         :with_cosmocredit(2)
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(10, 1, 9))
+        :with_bronze_requirement({ ['48680'] = 28 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48680'] = { amount = 28, name = 'Red Spider Fungus' } })
         :with_node(Node(-288.9527, 25.49417, 44.37719))
@@ -156,6 +162,7 @@ return {
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(10, 2, 4))
         :with_exp_reward(MissionReward(10, 1, 8))
+        :with_bronze_requirement({ ['48686'] = 10, ['48687'] = 15 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48686'] = { amount = 10, name = 'Turquoise Shag Leaf' },
@@ -184,6 +191,7 @@ return {
         :with_lunarcredit(3)
         :with_exp_reward(MissionReward(10, 2, 3))
         :with_exp_reward(MissionReward(10, 1, 2))
+        :with_bronze_requirement({ ['48681'] = 24 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48681'] = { amount = 24, name = 'Coraleaf' } })
         :with_node(Node(-110.1564, 34.3611, 427.5251))
@@ -209,6 +217,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(10, 2, 5))
         :with_exp_reward(MissionReward(10, 1, 5))
+        :with_bronze_requirement({ ['48689'] = 12, ['48690'] = 16 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48689'] = { amount = 12, name = 'Red Mycophlox Log' },
@@ -237,6 +246,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(10, 2, 4))
         :with_exp_reward(MissionReward(10, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Chain)
         :with_node(Node(-110.1564, 34.3611, 427.5251))
         :with_node(Node(-69.82823, 27.94126, 330.9909))
@@ -261,6 +271,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(10, 2, 6))
         :with_exp_reward(MissionReward(10, 1, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Boon)
         :with_node(Node(-69.82823, 27.94126, 330.9909))
         :with_node(Node(-110.1564, 34.3611, 427.5251))
@@ -285,6 +296,7 @@ return {
         :with_lunarcredit(6)
         :with_exp_reward(MissionReward(10, 2, 5))
         :with_exp_reward(MissionReward(10, 1, 5))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.ChainBoon)
         :with_node(Node(441.9445, 36.47694, 176.0708))
         :with_node(Node(490.1872, 36.56799, 174.0818))
@@ -309,6 +321,7 @@ return {
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(10, 2, 6))
         :with_exp_reward(MissionReward(10, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability)
         :with_node(Node(476.8278, 40.68208, 297.1044))
         :with_node(Node(441.9445, 36.47694, 176.0708))
@@ -333,6 +346,7 @@ return {
         :with_lunarcredit(8)
         :with_exp_reward(MissionReward(10, 2, 4))
         :with_exp_reward(MissionReward(10, 1, 8))
+        :with_bronze_requirement({ ['48702'] = 5, ['48703'] = 5, ['48704'] = 15 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48702'] = { amount = 5, name = 'Pink Shag Leaf' },
@@ -362,6 +376,7 @@ return {
         :with_lunarcredit(3)
         :with_exp_reward(MissionReward(10, 2, 3))
         :with_exp_reward(MissionReward(10, 1, 2))
+        :with_bronze_requirement({ ['48693'] = 24 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48693'] = { amount = 24, name = 'Blue Mycophlox Log' } })
         :with_node(Node(592.2935, 54.45821, 429.0499))
@@ -387,6 +402,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(10, 3, 6))
         :with_exp_reward(MissionReward(10, 1, 4))
+        :with_bronze_requirement({ ['48705'] = 8, ['48706'] = 8, ['48707'] = 12 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48705'] = { amount = 8, name = 'Moonglory Log' },
@@ -416,6 +432,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(10, 3, 6))
         :with_exp_reward(MissionReward(10, 2, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Chain)
         :with_node(Node(592.2935, 54.45821, 429.0499))
         :with_node(Node(529.6815, 54.04319, 488.3041))
@@ -440,6 +457,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(10, 3, 6))
         :with_exp_reward(MissionReward(10, 1, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Boon)
         :with_node(Node(492.0846, 54.20736, 574.3498))
         :with_node(Node(468.7721, 55.87343, 591.8965))
@@ -464,6 +482,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(10, 3, 6))
         :with_exp_reward(MissionReward(10, 2, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.ChainBoon)
         :with_node(Node(651.1269, 57.95092, 522.0274))
         :with_node(Node(522.2183, 53.1992, 514.2222))
@@ -489,6 +508,7 @@ return {
         :with_exp_reward(MissionReward(10, 3, 5))
         :with_exp_reward(MissionReward(10, 2, 4))
         :with_exp_reward(MissionReward(10, 1, 4))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability)
         :with_node(Node(522.2183, 53.1992, 514.2222))
         :with_node(Node(529.6815, 54.04319, 488.3041))
@@ -514,6 +534,7 @@ return {
         :with_exp_reward(MissionReward(10, 3, 9))
         :with_exp_reward(MissionReward(10, 2, 9))
         :with_exp_reward(MissionReward(10, 1, 9))
+        :with_bronze_requirement({ ['48709'] = 10 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48709'] = { amount = 10, name = 'Moonglory Glioaether' } })
         :with_node(Node(484.4297, 56.59435, 676.5251))
@@ -539,6 +560,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(10, 2, 7))
         :with_exp_reward(MissionReward(10, 1, 10))
+        :with_bronze_requirement({ ['48702'] = 15, ['48703'] = 15, ['48704'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48702'] = { amount = 15, name = 'Pink Shag Leaf' },
@@ -558,6 +580,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(10, 3, 7))
         :with_exp_reward(MissionReward(10, 1, 5))
+        :with_bronze_requirement({ ['48689'] = 48 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48689'] = { amount = 48, name = 'Red Mycophlox Log' } }),
     [429] = Mission(429, Jobs.Botanist, 'A', 1)
@@ -573,6 +596,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(10, 3, 7))
         :with_exp_reward(MissionReward(10, 2, 10))
+        :with_bronze_requirement({ ['48681'] = 15, ['48682'] = 15, ['48683'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48681'] = { amount = 15, name = 'Coraleaf' },
@@ -602,6 +626,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(10, 4, 10))
         :with_exp_reward(MissionReward(10, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Chain),
     [431] = Mission(431, Jobs.Botanist, 'A', 1)
         :with_en_name('A-1: Fiber Collection Appraisal')
@@ -616,6 +641,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(10, 4, 10))
         :with_exp_reward(MissionReward(10, 2, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Boon)
         :with_node(Node(490.1872, 36.56799, 174.0818))
         :with_node(Node(510.8353, 37.40287, 283.4099))
@@ -640,6 +666,7 @@ return {
         :with_lunarcredit(10)
         :with_exp_reward(MissionReward(10, 3, 10))
         :with_exp_reward(MissionReward(10, 1, 7))
+        :with_bronze_requirement({ ['48686'] = 15, ['48687'] = 15, ['48688'] = 21 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48686'] = { amount = 15, name = 'Turquoise Shag Leaf' },
@@ -668,6 +695,7 @@ return {
         :with_lunarcredit(14)
         :with_exp_reward(MissionReward(10, 3, 9))
         :with_exp_reward(MissionReward(10, 2, 14))
+        :with_bronze_requirement({ ['48677'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48677'] = { amount = 25, name = 'Goldeye Nectar' } })
         :with_node(Node(223.4384, 20.25617, 8.421583))
@@ -693,6 +721,7 @@ return {
         :with_lunarcredit(16)
         :with_exp_reward(MissionReward(10, 4, 15))
         :with_exp_reward(MissionReward(10, 1, 10))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.CollectabilityItemCount),
     [435] = Mission(435, Jobs.Botanist, 'A', 2)
         :with_en_name('A-2: Precise Lunar Nadir Survey')
@@ -709,6 +738,7 @@ return {
         :with_exp_reward(MissionReward(10, 3, 6))
         :with_exp_reward(MissionReward(10, 1, 6))
         :with_weather_restriction(Weather.UmbralWind)
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [436] = Mission(436, Jobs.Botanist, 'A', 3)
         :with_en_name('A-3: Rare Material Extraction')
@@ -725,6 +755,7 @@ return {
         :with_exp_reward(MissionReward(10, 3, 5))
         :with_exp_reward(MissionReward(10, 2, 5))
         :with_weather_restriction(Weather.MoonDust)
+        :with_bronze_requirement({ ['48700'] = 35 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48700'] = { amount = 35, name = 'Blue Mycelium Glioaether' } })
         :with_node(Node(522.2183, 53.1992, 514.2222))
@@ -752,6 +783,7 @@ return {
         :with_exp_reward(MissionReward(10, 2, 8))
         :with_exp_reward(MissionReward(10, 1, 8))
         :with_weather_restriction(Weather.UmbralWind)
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.CollectabilityItemCount)
         :with_node(Node(-110.1564, 34.3611, 427.5251))
         :with_node(Node(-116.4846, 34.47072, 438.2055))
@@ -776,6 +808,7 @@ return {
         :with_lunarcredit(9)
         :with_exp_reward(MissionReward(10, 4, 10))
         :with_exp_reward(MissionReward(10, 3, 7))
+        :with_bronze_requirement({ ['48686'] = 15, ['48687'] = 15, ['48688'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48686'] = { amount = 15, name = 'Turquoise Shag Leaf' },
@@ -806,6 +839,7 @@ return {
         :with_exp_reward(MissionReward(10, 3, 5))
         :with_exp_reward(MissionReward(10, 2, 5))
         :with_exp_reward(MissionReward(10, 1, 5))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Chain)
         :with_node(Node(-110.1564, 34.3611, 427.5251))
         :with_node(Node(-116.4846, 34.47072, 438.2055))
@@ -830,6 +864,7 @@ return {
         :with_lunarcredit(7)
         :with_exp_reward(MissionReward(10, 2, 5))
         :with_exp_reward(MissionReward(10, 1, 7))
+        :with_bronze_requirement({ ['48679'] = 48 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48679'] = { amount = 48, name = 'Moonwheat Spores' } })
         :with_node(Node(223.4384, 20.25617, 8.421583))
@@ -856,6 +891,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 8))
         :with_exp_reward(MissionReward(10, 3, 5))
         :with_exp_reward(MissionReward(10, 1, 5))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Boon)
         :with_node(Node(492.0846, 54.20736, 574.3498))
         :with_node(Node(468.7721, 55.87343, 591.8965))
@@ -881,6 +917,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 8))
         :with_exp_reward(MissionReward(10, 3, 6))
         :with_exp_reward(MissionReward(10, 2, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability)
         :with_node(Node(522.2183, 53.1992, 514.2222))
         :with_node(Node(529.6815, 54.04319, 488.3041))
@@ -905,6 +942,7 @@ return {
         :with_lunarcredit(10)
         :with_exp_reward(MissionReward(10, 4, 10))
         :with_exp_reward(MissionReward(10, 2, 7))
+        :with_bronze_requirement({ ['48681'] = 15, ['48682'] = 15, ['48683'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48681'] = { amount = 15, name = 'Coraleaf' },
@@ -935,6 +973,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 11))
         :with_exp_reward(MissionReward(10, 3, 8))
         :with_exp_reward(MissionReward(10, 1, 8))
+        :with_bronze_requirement({ ['48722'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48722'] = { amount = 25, name = 'Mycophos Glioaether' } }),
     [445] = Mission(445, Jobs.Botanist, 'A', 1)
@@ -951,6 +990,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 10))
         :with_exp_reward(MissionReward(10, 3, 7))
         :with_time_restriction(10, 12)
+        :with_bronze_requirement({ ['48689'] = 15, ['48690'] = 15, ['48691'] = 20 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({
             ['48689'] = { amount = 15, name = 'Red Mycophlox Log' },
@@ -981,6 +1021,7 @@ return {
         :with_exp_reward(MissionReward(10, 3, 6))
         :with_exp_reward(MissionReward(10, 2, 6))
         :with_exp_reward(MissionReward(10, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.ChainBoon),
     [447] = Mission(447, Jobs.Botanist, 'A', 2)
         :with_en_name('A-2: Fine-grade Air Filter Materials III')
@@ -996,6 +1037,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 9))
         :with_exp_reward(MissionReward(10, 2, 6))
         :with_exp_reward(MissionReward(10, 1, 6))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.Collectability),
     [448] = Mission(448, Jobs.Botanist, 'A', 3)
         :with_en_name('A-3: Folkloric Materials I')
@@ -1012,6 +1054,7 @@ return {
         :with_exp_reward(MissionReward(10, 3, 5))
         :with_exp_reward(MissionReward(10, 1, 5))
         :with_time_restriction(22, 24)
+        :with_bronze_requirement({ ['48716'] = 35 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48716'] = { amount = 35, name = 'Red Fungal Glioaether' } }),
     [449] = Mission(449, Jobs.Botanist, 'A', 3)
@@ -1028,6 +1071,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 13))
         :with_exp_reward(MissionReward(10, 3, 9))
         :with_exp_reward(MissionReward(10, 2, 9))
+        :with_bronze_requirement({})
         :with_gathering_type(GatheringType.CollectabilityItemCount),
     [450] = Mission(450, Jobs.Botanist, 'A', 3)
         :with_en_name('A-3: Folkloric Materials III')
@@ -1043,6 +1087,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 13))
         :with_exp_reward(MissionReward(10, 2, 8))
         :with_exp_reward(MissionReward(10, 1, 8))
+        :with_bronze_requirement({ ['48719'] = 25 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['48719'] = { amount = 25, name = 'Lilac Fungal Glioaether' } }),
     [502] = Mission(502, Jobs.Botanist, 'A', 2)
@@ -1060,7 +1105,8 @@ return {
         :with_exp_reward(MissionReward(10, 4, 21))
         :with_exp_reward(MissionReward(5, 4, 21))
         :with_recipe_table_id(368)
-        :with_recipes({ { recipe = 36678, item = 47345 } }),
+        :with_recipes({ { recipe = 36678, item = 47345 } })
+        :with_bronze_requirement({}),
     [503] = Mission(503, Jobs.Botanist, 'A', 2)
         :with_en_name('A-2: Special Spongoi Processing')
         :with_de_name('A-2: Verarbeitung von Sonderhyphen')
@@ -1076,7 +1122,8 @@ return {
         :with_exp_reward(MissionReward(10, 4, 21))
         :with_exp_reward(MissionReward(6, 4, 21))
         :with_recipe_table_id(369)
-        :with_recipes({ { recipe = 36680, item = 47469 } }),
+        :with_recipes({ { recipe = 36680, item = 47469 } })
+        :with_bronze_requirement({}),
     [504] = Mission(504, Jobs.Botanist, 'A', 2)
         :with_en_name('A-2: Freshness Preservation')
         :with_de_name('A-2: Verarbeitung gelagerter Lebensmittel')
@@ -1092,7 +1139,8 @@ return {
         :with_exp_reward(MissionReward(10, 4, 21))
         :with_exp_reward(MissionReward(8, 4, 21))
         :with_recipe_table_id(370)
-        :with_recipes({ { recipe = 36683, item = 47716 } }),
+        :with_recipes({ { recipe = 36683, item = 47716 } })
+        :with_bronze_requirement({}),
     [505] = Mission(505, Jobs.Botanist, 'A', 3)
         :with_en_name('A-3: Lunar Tools')
         :with_de_name('A-3: Sammlerwerkzeuge für Mondrohstoffe')
@@ -1109,7 +1157,8 @@ return {
         :with_exp_reward(MissionReward(1, 4, 21))
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(371)
-        :with_recipes({ { recipe = 36670, item = 46859 } }),
+        :with_recipes({ { recipe = 36670, item = 46859 } })
+        :with_bronze_requirement({}),
     [506] = Mission(506, Jobs.Botanist, 'A', 3)
         :with_en_name('A-3: High Burn Furnace')
         :with_de_name('A-3: Hochleistungs-Ofen')
@@ -1126,7 +1175,8 @@ return {
         :with_exp_reward(MissionReward(3, 4, 21))
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(372)
-        :with_recipes({ { recipe = 36674, item = 47097 } }),
+        :with_recipes({ { recipe = 36674, item = 47097 } })
+        :with_bronze_requirement({}),
     [507] = Mission(507, Jobs.Botanist, 'A', 3)
         :with_en_name('A-3: Mushroom-borne Comfort')
         :with_de_name('A-3: Pilzwärme für daheim')
@@ -1143,5 +1193,6 @@ return {
         :with_exp_reward(MissionReward(7, 4, 21))
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(373)
-        :with_recipes({ { recipe = 36681, item = 47592 } }),
+        :with_recipes({ { recipe = 36681, item = 47592 } })
+        :with_bronze_requirement({}),
 }

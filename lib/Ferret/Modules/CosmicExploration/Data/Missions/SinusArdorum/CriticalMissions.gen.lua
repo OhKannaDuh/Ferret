@@ -15,7 +15,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 11))
         :with_exp_reward(MissionReward(1, 1, 11))
         :with_recipe_table_id(378)
-        :with_recipes({ { recipe = 36685, item = 46849 } }),
+        :with_recipes({ { recipe = 36685, item = 46849 } })
+        :with_bronze_requirement({}),
     [513] = Mission(513, Jobs.Carpenter, 'D', 1)
         :with_en_name('Kindling')
         :with_de_name('Verbrennungsmaterialien')
@@ -32,7 +33,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 12))
         :with_exp_reward(MissionReward(1, 1, 12))
         :with_recipe_table_id(379)
-        :with_recipes({ { recipe = 36686, item = 46851 } }),
+        :with_recipes({ { recipe = 36686, item = 46851 } })
+        :with_bronze_requirement({}),
     [514] = Mission(514, Jobs.Carpenter, 'D', 1)
         :with_en_name('Fungal Building Materials')
         :with_de_name('Prototyp-Hyphen-Baustoff')
@@ -49,7 +51,8 @@ return {
         :with_exp_reward(MissionReward(1, 2, 12))
         :with_exp_reward(MissionReward(1, 1, 12))
         :with_recipe_table_id(380)
-        :with_recipes({ { recipe = 36687, item = 46853 } }),
+        :with_recipes({ { recipe = 36687, item = 46853 } })
+        :with_bronze_requirement({}),
     [515] = Mission(515, Jobs.Blacksmith, 'D', 1)
         :with_en_name('Meteorite Drills')
         :with_de_name('Meteorbohrer')
@@ -66,7 +69,8 @@ return {
         :with_exp_reward(MissionReward(2, 2, 11))
         :with_exp_reward(MissionReward(2, 1, 11))
         :with_recipe_table_id(383)
-        :with_recipes({ { recipe = 36690, item = 46975 } }),
+        :with_recipes({ { recipe = 36690, item = 46975 } })
+        :with_bronze_requirement({}),
     [516] = Mission(516, Jobs.Blacksmith, 'D', 1)
         :with_en_name('Vacuum Muzzles')
         :with_de_name('Saugmündung')
@@ -83,7 +87,8 @@ return {
         :with_exp_reward(MissionReward(2, 2, 11))
         :with_exp_reward(MissionReward(2, 1, 11))
         :with_recipe_table_id(387)
-        :with_recipes({ { recipe = 36694, item = 46983 } }),
+        :with_recipes({ { recipe = 36694, item = 46983 } })
+        :with_bronze_requirement({}),
     [517] = Mission(517, Jobs.Blacksmith, 'D', 1)
         :with_en_name('Flamethrower Parts')
         :with_de_name('Kosmobrenner-Bauteile')
@@ -100,7 +105,8 @@ return {
         :with_exp_reward(MissionReward(2, 2, 12))
         :with_exp_reward(MissionReward(2, 1, 12))
         :with_recipe_table_id(384)
-        :with_recipes({ { recipe = 36691, item = 46977 } }),
+        :with_recipes({ { recipe = 36691, item = 46977 } })
+        :with_bronze_requirement({}),
     [518] = Mission(518, Jobs.Armorer, 'D', 1)
         :with_en_name('Spare Vacuum Tanks')
         :with_de_name('Reserve-Tank (Saugmaschine)')
@@ -117,7 +123,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 11))
         :with_exp_reward(MissionReward(3, 1, 11))
         :with_recipe_table_id(388)
-        :with_recipes({ { recipe = 36695, item = 47099 } }),
+        :with_recipes({ { recipe = 36695, item = 47099 } })
+        :with_bronze_requirement({}),
     [519] = Mission(519, Jobs.Armorer, 'D', 1)
         :with_en_name('Vehicular Plating')
         :with_de_name('Ausbesserungsplatten (Vehikel)')
@@ -134,7 +141,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 11))
         :with_exp_reward(MissionReward(3, 1, 11))
         :with_recipe_table_id(390)
-        :with_recipes({ { recipe = 36697, item = 47103 } }),
+        :with_recipes({ { recipe = 36697, item = 47103 } })
+        :with_bronze_requirement({}),
     [520] = Mission(520, Jobs.Armorer, 'D', 1)
         :with_en_name('Gas Tanks')
         :with_de_name('Gastank')
@@ -151,7 +159,8 @@ return {
         :with_exp_reward(MissionReward(3, 2, 12))
         :with_exp_reward(MissionReward(3, 1, 12))
         :with_recipe_table_id(392)
-        :with_recipes({ { recipe = 36699, item = 47107 } }),
+        :with_recipes({ { recipe = 36699, item = 47107 } })
+        :with_bronze_requirement({}),
     [521] = Mission(521, Jobs.Goldsmith, 'D', 1)
         :with_en_name('Lighting Repair Tools')
         :with_de_name('Werkzeuge zur Beleuchtungsreparatur')
@@ -168,7 +177,8 @@ return {
         :with_exp_reward(MissionReward(4, 2, 11))
         :with_exp_reward(MissionReward(4, 1, 11))
         :with_recipe_table_id(393)
-        :with_recipes({ { recipe = 36700, item = 47223 } }),
+        :with_recipes({ { recipe = 36700, item = 47223 } })
+        :with_bronze_requirement({}),
     [522] = Mission(522, Jobs.Goldsmith, 'D', 1)
         :with_en_name('Intricate Vacuum Parts')
         :with_de_name('Präzise Bauteile (Saugmaschine)')
@@ -185,7 +195,8 @@ return {
         :with_exp_reward(MissionReward(4, 2, 12))
         :with_exp_reward(MissionReward(4, 1, 12))
         :with_recipe_table_id(396)
-        :with_recipes({ { recipe = 36703, item = 47229 } }),
+        :with_recipes({ { recipe = 36703, item = 47229 } })
+        :with_bronze_requirement({}),
     [523] = Mission(523, Jobs.Goldsmith, 'D', 1)
         :with_en_name('Spare Vehicle Parts')
         :with_de_name('Ausbesserungskomponenten (Vehikel)')
@@ -202,7 +213,8 @@ return {
         :with_exp_reward(MissionReward(4, 2, 12))
         :with_exp_reward(MissionReward(4, 1, 12))
         :with_recipe_table_id(394)
-        :with_recipes({ { recipe = 36701, item = 47225 } }),
+        :with_recipes({ { recipe = 36701, item = 47225 } })
+        :with_bronze_requirement({}),
     [524] = Mission(524, Jobs.Leatherworker, 'D', 1)
         :with_en_name('Impenetrable Gloves')
         :with_de_name('Sicherheitshandschuhe')
@@ -219,7 +231,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 11))
         :with_exp_reward(MissionReward(5, 1, 11))
         :with_recipe_table_id(398)
-        :with_recipes({ { recipe = 36705, item = 47347 } }),
+        :with_recipes({ { recipe = 36705, item = 47347 } })
+        :with_bronze_requirement({}),
     [525] = Mission(525, Jobs.Leatherworker, 'D', 1)
         :with_en_name('Reinforced Gas Masks')
         :with_de_name('Gasmaske')
@@ -236,7 +249,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 11))
         :with_exp_reward(MissionReward(5, 1, 11))
         :with_recipe_table_id(400)
-        :with_recipes({ { recipe = 36707, item = 47351 } }),
+        :with_recipes({ { recipe = 36707, item = 47351 } })
+        :with_bronze_requirement({}),
     [526] = Mission(526, Jobs.Leatherworker, 'D', 1)
         :with_en_name('Flame-resistant Workboots')
         :with_de_name('Feuerresistente Arbeiter-Stiefel')
@@ -253,7 +267,8 @@ return {
         :with_exp_reward(MissionReward(5, 2, 12))
         :with_exp_reward(MissionReward(5, 1, 12))
         :with_recipe_table_id(401)
-        :with_recipes({ { recipe = 36708, item = 47353 } }),
+        :with_recipes({ { recipe = 36708, item = 47353 } })
+        :with_bronze_requirement({}),
     [527] = Mission(527, Jobs.Weaver, 'D', 1)
         :with_en_name('Spare Cloth')
         :with_de_name('Wartungsstoff')
@@ -270,7 +285,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 11))
         :with_exp_reward(MissionReward(6, 1, 11))
         :with_recipe_table_id(404)
-        :with_recipes({ { recipe = 36711, item = 47473 } }),
+        :with_recipes({ { recipe = 36711, item = 47473 } })
+        :with_bronze_requirement({}),
     [528] = Mission(528, Jobs.Weaver, 'D', 1)
         :with_en_name('Flame-resistant Work Cloth')
         :with_de_name('Feuerresistenter Arbeiter-Stoff')
@@ -287,7 +303,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 12))
         :with_exp_reward(MissionReward(6, 1, 12))
         :with_recipe_table_id(405)
-        :with_recipes({ { recipe = 36712, item = 47475 } }),
+        :with_recipes({ { recipe = 36712, item = 47475 } })
+        :with_bronze_requirement({}),
     [529] = Mission(529, Jobs.Weaver, 'D', 1)
         :with_en_name('Fungal Cloth')
         :with_de_name('Prototyp-Hyphen-Stoff')
@@ -304,7 +321,8 @@ return {
         :with_exp_reward(MissionReward(6, 2, 12))
         :with_exp_reward(MissionReward(6, 1, 12))
         :with_recipe_table_id(403)
-        :with_recipes({ { recipe = 36710, item = 47471 } }),
+        :with_recipes({ { recipe = 36710, item = 47471 } })
+        :with_bronze_requirement({}),
     [530] = Mission(530, Jobs.Alchemist, 'D', 1)
         :with_en_name('Aether-resistant Agent')
         :with_de_name('Sonder-Schutzmittel')
@@ -321,7 +339,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 11))
         :with_exp_reward(MissionReward(7, 1, 11))
         :with_recipe_table_id(408)
-        :with_recipes({ { recipe = 36715, item = 47595 } }),
+        :with_recipes({ { recipe = 36715, item = 47595 } })
+        :with_bronze_requirement({}),
     [531] = Mission(531, Jobs.Alchemist, 'D', 1)
         :with_en_name('Gas Poisoning Antidote')
         :with_de_name('Entgiftungsmittel')
@@ -338,7 +357,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 11))
         :with_exp_reward(MissionReward(7, 1, 11))
         :with_recipe_table_id(412)
-        :with_recipes({ { recipe = 36719, item = 47603 } }),
+        :with_recipes({ { recipe = 36719, item = 47603 } })
+        :with_bronze_requirement({}),
     [532] = Mission(532, Jobs.Alchemist, 'D', 1)
         :with_en_name('Flamethrower Fuel')
         :with_de_name('Kosmobrenner-Brennstoff')
@@ -355,7 +375,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 12))
         :with_exp_reward(MissionReward(7, 1, 12))
         :with_recipe_table_id(411)
-        :with_recipes({ { recipe = 36718, item = 47601 } }),
+        :with_recipes({ { recipe = 36718, item = 47601 } })
+        :with_bronze_requirement({}),
     [533] = Mission(533, Jobs.Culinarian, 'D', 1)
         :with_en_name('Cured Foodstuffs')
         :with_de_name('Haltbare Lebensmittel')
@@ -372,7 +393,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 11))
         :with_exp_reward(MissionReward(8, 1, 11))
         :with_recipe_table_id(413)
-        :with_recipes({ { recipe = 36720, item = 47719 } }),
+        :with_recipes({ { recipe = 36720, item = 47719 } })
+        :with_bronze_requirement({}),
     [534] = Mission(534, Jobs.Culinarian, 'D', 1)
         :with_en_name('Nutrient Supplement Jelly')
         :with_de_name('Nahrungsergänzungsgel')
@@ -389,7 +411,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 11))
         :with_exp_reward(MissionReward(8, 1, 11))
         :with_recipe_table_id(414)
-        :with_recipes({ { recipe = 36721, item = 47721 } }),
+        :with_recipes({ { recipe = 36721, item = 47721 } })
+        :with_bronze_requirement({}),
     [535] = Mission(535, Jobs.Culinarian, 'D', 1)
         :with_en_name('Irregular Spongoi Analysis')
         :with_de_name('Struktur-Analyse unnatürlicher Hyphen')
@@ -406,7 +429,8 @@ return {
         :with_exp_reward(MissionReward(8, 2, 12))
         :with_exp_reward(MissionReward(8, 1, 12))
         :with_recipe_table_id(415)
-        :with_recipes({ { recipe = 36722, item = 47723 } }),
+        :with_recipes({ { recipe = 36722, item = 47723 } })
+        :with_bronze_requirement({}),
     [536] = Mission(536, Jobs.Miner, 'D', 1)
         :with_en_name('Insulating Material')
         :with_de_name('Isoliermaterialien')
@@ -422,6 +446,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 19))
         :with_exp_reward(MissionReward(9, 2, 11))
         :with_exp_reward(MissionReward(9, 1, 11))
+        :with_bronze_requirement({ ['46181'] = 16 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['46181'] = { amount = 16, name = 'Lunar Insulating Material' } }),
     [537] = Mission(537, Jobs.Miner, 'D', 1)
@@ -439,6 +464,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 13))
         :with_exp_reward(MissionReward(9, 2, 8))
         :with_exp_reward(MissionReward(9, 1, 8))
+        :with_bronze_requirement({ ['46182'] = 16 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['46182'] = { amount = 16, name = 'Fallen Drone' } }),
     [538] = Mission(538, Jobs.Miner, 'D', 1)
@@ -456,6 +482,7 @@ return {
         :with_exp_reward(MissionReward(9, 4, 13))
         :with_exp_reward(MissionReward(9, 2, 8))
         :with_exp_reward(MissionReward(9, 1, 8))
+        :with_bronze_requirement({ ['46184'] = 16 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['46184'] = { amount = 16, name = 'Siderite' } }),
     [539] = Mission(539, Jobs.Botanist, 'D', 1)
@@ -473,6 +500,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 12))
         :with_exp_reward(MissionReward(10, 2, 7))
         :with_exp_reward(MissionReward(10, 1, 7))
+        :with_bronze_requirement({ ['46282'] = 16 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['46282'] = { amount = 16, name = 'Mycophos Sclerotium' } }),
     [540] = Mission(540, Jobs.Botanist, 'D', 1)
@@ -490,6 +518,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 11))
         :with_exp_reward(MissionReward(10, 2, 7))
         :with_exp_reward(MissionReward(10, 1, 7))
+        :with_bronze_requirement({ ['46281'] = 16 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['46281'] = { amount = 16, name = 'Vegetation Sample' } }),
     [541] = Mission(541, Jobs.Botanist, 'D', 1)
@@ -507,6 +536,7 @@ return {
         :with_exp_reward(MissionReward(10, 4, 13))
         :with_exp_reward(MissionReward(10, 2, 8))
         :with_exp_reward(MissionReward(10, 1, 8))
+        :with_bronze_requirement({ ['46279'] = 16 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['46279'] = { amount = 16, name = 'Mutated Spongos' } }),
     [542] = Mission(542, Jobs.Fisher, 'D', 1)
@@ -524,6 +554,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 29))
         :with_exp_reward(MissionReward(11, 2, 18))
         :with_exp_reward(MissionReward(11, 1, 18))
+        :with_bronze_requirement({ ['45937'] = 3 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['45937'] = { amount = 3, name = 'Moon Bluetail' } }),
     [543] = Mission(543, Jobs.Fisher, 'D', 1)
@@ -541,6 +572,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 30))
         :with_exp_reward(MissionReward(11, 2, 18))
         :with_exp_reward(MissionReward(11, 1, 18))
+        :with_bronze_requirement({ ['45939'] = 3 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['45939'] = { amount = 3, name = 'Sunken Drone' } }),
     [544] = Mission(544, Jobs.Fisher, 'D', 1)
@@ -558,6 +590,7 @@ return {
         :with_exp_reward(MissionReward(11, 4, 29))
         :with_exp_reward(MissionReward(11, 2, 18))
         :with_exp_reward(MissionReward(11, 1, 18))
+        :with_bronze_requirement({ ['45945'] = 3 })
         :with_gathering_type(GatheringType.ItemCount)
         :with_gathering_config({ ['45945'] = { amount = 3, name = 'Moonlight Pleco' } }),
 }

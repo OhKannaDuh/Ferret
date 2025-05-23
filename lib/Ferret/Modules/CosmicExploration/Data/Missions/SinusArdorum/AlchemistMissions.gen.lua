@@ -11,7 +11,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(7, 1, 7))
         :with_recipe_table_id(272)
-        :with_recipes({ { recipe = 36543, item = 48268 } }),
+        :with_recipes({ { recipe = 36543, item = 48268 } })
+        :with_bronze_requirement({ ['48268'] = 3 }),
     [272] = Mission(272, Jobs.Alchemist, 'D', 1)
         :with_en_name('Spice Processing')
         :with_de_name('Gewürz-Verarbeitung')
@@ -24,7 +25,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(7, 1, 7))
         :with_recipe_table_id(273)
-        :with_recipes({ { recipe = 36544, item = 48269 } }),
+        :with_recipes({ { recipe = 36544, item = 48269 } })
+        :with_bronze_requirement({ ['48269'] = 3 }),
     [273] = Mission(273, Jobs.Alchemist, 'D', 1)
         :with_en_name('Building Adhesive')
         :with_de_name('Baumaterial-Klebstoff')
@@ -37,7 +39,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(7, 1, 8))
         :with_recipe_table_id(274)
-        :with_recipes({ { recipe = 36545, item = 48537 } }),
+        :with_recipes({ { recipe = 36545, item = 48537 } })
+        :with_bronze_requirement({ ['48537'] = 3 }),
     [274] = Mission(274, Jobs.Alchemist, 'D', 1)
         :with_en_name('Nutrient Supplements')
         :with_de_name('Nahrungsergänzungsmittel')
@@ -50,7 +53,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(7, 1, 7))
         :with_recipe_table_id(275)
-        :with_recipes({ { recipe = 36546, item = 48538 } }),
+        :with_recipes({ { recipe = 36546, item = 48538 } })
+        :with_bronze_requirement({ ['48538'] = 3 }),
     [275] = Mission(275, Jobs.Alchemist, 'D', 1)
         :with_en_name('Aquatic Adhesive')
         :with_de_name('Unterwasser-Klebstoff')
@@ -63,7 +67,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(7, 1, 7))
         :with_recipe_table_id(276)
-        :with_recipes({ { recipe = 36547, item = 48539 } }),
+        :with_recipes({ { recipe = 36547, item = 48539 } })
+        :with_bronze_requirement({ ['48539'] = 3 }),
     [276] = Mission(276, Jobs.Alchemist, 'D', 1)
         :with_en_name('Medicated Feed Research')
         :with_de_name('Medizinforschung-Unterstützung')
@@ -76,7 +81,8 @@ return {
         :with_lunarcredit(5)
         :with_exp_reward(MissionReward(7, 1, 7))
         :with_recipe_table_id(277)
-        :with_recipes({ { recipe = 36548, item = 48270 } }),
+        :with_recipes({ { recipe = 36548, item = 48270 } })
+        :with_bronze_requirement({ ['48270'] = 3 }),
     [277] = Mission(277, Jobs.Alchemist, 'C', 1)
         :with_en_name('Heat-resistant Bricks')
         :with_de_name('Hitzebeständige Ziegelsteine')
@@ -90,7 +96,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 3))
         :with_exp_reward(MissionReward(7, 1, 5))
         :with_recipe_table_id(278)
-        :with_recipes({ { recipe = 36549, item = 48268 } }),
+        :with_recipes({ { recipe = 36549, item = 48268 } })
+        :with_bronze_requirement({ ['48268'] = 3 }),
     [278] = Mission(278, Jobs.Alchemist, 'C', 1)
         :with_en_name('Health Drinks')
         :with_de_name('Gesunde Getränke')
@@ -104,7 +111,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 6))
         :with_exp_reward(MissionReward(7, 1, 4))
         :with_recipe_table_id(279)
-        :with_recipes({ { recipe = 36550, item = 48540 } }),
+        :with_recipes({ { recipe = 36550, item = 48540 } })
+        :with_bronze_requirement({ ['48540'] = 3 }),
     [279] = Mission(279, Jobs.Alchemist, 'C', 1)
         :with_en_name('Construction Paint')
         :with_de_name('Baumaterial-Farbstoff')
@@ -118,7 +126,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 5))
         :with_exp_reward(MissionReward(7, 1, 5))
         :with_recipe_table_id(280)
-        :with_recipes({ { recipe = 36551, item = 48541 } }),
+        :with_recipes({ { recipe = 36551, item = 48541 } })
+        :with_bronze_requirement({ ['48541'] = 3 }),
     [280] = Mission(280, Jobs.Alchemist, 'C', 1)
         :with_en_name('Traditional Veneer')
         :with_de_name('Traditioneller Bodenbelag')
@@ -133,7 +142,8 @@ return {
         :with_exp_reward(MissionReward(7, 1, 6))
         :with_recipe_table_id(281)
         :with_recipes({ { recipe = 36552, item = 48546 }, { recipe = 36553, item = 48542 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48542'] = 1 }),
     [281] = Mission(281, Jobs.Alchemist, 'C', 1)
         :with_en_name('Night Lighting')
         :with_de_name('Nachtbeleuchtung')
@@ -148,7 +158,8 @@ return {
         :with_exp_reward(MissionReward(7, 1, 5))
         :with_recipe_table_id(282)
         :with_recipes({ { recipe = 36554, item = 48547 }, { recipe = 36555, item = 48543 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48543'] = 2 }),
     [282] = Mission(282, Jobs.Alchemist, 'C', 1)
         :with_en_name('Emergency Foodstuffs Development')
         :with_de_name('Notfall-Lebensmittel')
@@ -163,7 +174,8 @@ return {
         :with_exp_reward(MissionReward(7, 1, 7))
         :with_recipe_table_id(283)
         :with_recipes({ { recipe = 36556, item = 48548 }, { recipe = 36557, item = 48544 } })
-        :with_multi_craft_config({ [0] = 3, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 3, [1] = 1 })
+        :with_bronze_requirement({ ['48544'] = 1 }),
     [283] = Mission(283, Jobs.Alchemist, 'C', 1)
         :with_en_name('Experimental Potables')
         :with_de_name('Zukunfts-Getränk')
@@ -178,7 +190,8 @@ return {
         :with_exp_reward(MissionReward(7, 1, 5))
         :with_recipe_table_id(284)
         :with_recipes({ { recipe = 36558, item = 48549 }, { recipe = 36559, item = 48545 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48545'] = 1 }),
     [284] = Mission(284, Jobs.Alchemist, 'B', 1)
         :with_en_name('Lunar Spice Processing')
         :with_de_name('Mondgewürz-Verarbeitung')
@@ -192,7 +205,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 5))
         :with_exp_reward(MissionReward(7, 1, 9))
         :with_recipe_table_id(285)
-        :with_recipes({ { recipe = 36560, item = 48550 } }),
+        :with_recipes({ { recipe = 36560, item = 48550 } })
+        :with_bronze_requirement({ ['48550'] = 3 }),
     [285] = Mission(285, Jobs.Alchemist, 'B', 1)
         :with_en_name('Water-resistant Bricks')
         :with_de_name('Wasserabweisende Ziegelsteine')
@@ -206,7 +220,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 7))
         :with_exp_reward(MissionReward(7, 1, 4))
         :with_recipe_table_id(286)
-        :with_recipes({ { recipe = 36561, item = 48268 } }),
+        :with_recipes({ { recipe = 36561, item = 48268 } })
+        :with_bronze_requirement({ ['48268'] = 3 }),
     [286] = Mission(286, Jobs.Alchemist, 'B', 1)
         :with_en_name('Research Medicine')
         :with_de_name('Forschungsmedikamente')
@@ -220,7 +235,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 5))
         :with_exp_reward(MissionReward(7, 1, 3))
         :with_recipe_table_id(287)
-        :with_recipes({ { recipe = 36562, item = 48551 } }),
+        :with_recipes({ { recipe = 36562, item = 48551 } })
+        :with_bronze_requirement({ ['48551'] = 2 }),
     [287] = Mission(287, Jobs.Alchemist, 'B', 1)
         :with_en_name('Holy Water')
         :with_de_name('Heiliges Alchemisten-Wasser')
@@ -234,7 +250,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 9))
         :with_exp_reward(MissionReward(7, 2, 5))
         :with_recipe_table_id(288)
-        :with_recipes({ { recipe = 36563, item = 48552 } }),
+        :with_recipes({ { recipe = 36563, item = 48552 } })
+        :with_bronze_requirement({ ['48552'] = 3 }),
     [288] = Mission(288, Jobs.Alchemist, 'B', 1)
         :with_en_name('Lunar Flooring')
         :with_de_name('Mondgestein-Bodenbelag')
@@ -248,7 +265,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 10))
         :with_exp_reward(MissionReward(7, 1, 6))
         :with_recipe_table_id(289)
-        :with_recipes({ { recipe = 36564, item = 48553 } }),
+        :with_recipes({ { recipe = 36564, item = 48553 } })
+        :with_bronze_requirement({ ['48553'] = 3 }),
     [289] = Mission(289, Jobs.Alchemist, 'B', 1)
         :with_en_name('Stellar Nutrients')
         :with_de_name('Hochwertige Nahrungsergänzungsmittel')
@@ -262,7 +280,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 10))
         :with_exp_reward(MissionReward(7, 2, 6))
         :with_recipe_table_id(290)
-        :with_recipes({ { recipe = 36565, item = 48554 } }),
+        :with_recipes({ { recipe = 36565, item = 48554 } })
+        :with_bronze_requirement({ ['48554'] = 3 }),
     [290] = Mission(290, Jobs.Alchemist, 'B', 1)
         :with_en_name('Miniature Gardens')
         :with_de_name('Miniatur-Garten')
@@ -278,7 +297,8 @@ return {
         :with_exp_reward(MissionReward(7, 1, 5))
         :with_recipe_table_id(291)
         :with_recipes({ { recipe = 36566, item = 48557 }, { recipe = 36567, item = 48555 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48555'] = 1 }),
     [291] = Mission(291, Jobs.Alchemist, 'B', 1)
         :with_en_name('Decorative Lunar Plants')
         :with_de_name('Dekorative Mondpflanzen')
@@ -294,7 +314,8 @@ return {
         :with_exp_reward(MissionReward(7, 1, 6))
         :with_recipe_table_id(292)
         :with_recipes({ { recipe = 36568, item = 48558 }, { recipe = 36569, item = 48556 } })
-        :with_multi_craft_config({ [0] = 2, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 2, [1] = 1 })
+        :with_bronze_requirement({ ['48556'] = 1 }),
     [292] = Mission(292, Jobs.Alchemist, 'A', 1)
         :with_en_name('A-1: Water-resistant Bricks')
         :with_de_name('A-1: Wasserabweisende Ziegelsteine')
@@ -309,7 +330,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 13))
         :with_exp_reward(MissionReward(7, 1, 19))
         :with_recipe_table_id(293)
-        :with_recipes({ { recipe = 36570, item = 48268 } }),
+        :with_recipes({ { recipe = 36570, item = 48268 } })
+        :with_bronze_requirement({ ['48268'] = 3 }),
     [293] = Mission(293, Jobs.Alchemist, 'A', 1)
         :with_en_name('A-1: Stellar Adhesive')
         :with_de_name('A-1: Hochwertiger Klebstoff')
@@ -324,7 +346,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 18))
         :with_exp_reward(MissionReward(7, 1, 12))
         :with_recipe_table_id(294)
-        :with_recipes({ { recipe = 36571, item = 48559 } }),
+        :with_recipes({ { recipe = 36571, item = 48559 } })
+        :with_bronze_requirement({ ['48559'] = 3 }),
     [294] = Mission(294, Jobs.Alchemist, 'A', 1)
         :with_en_name('A-1: Nutrient Supplements')
         :with_de_name('A-1: Nährstoff-Regulierungsmittel')
@@ -338,7 +361,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 12))
         :with_exp_reward(MissionReward(7, 2, 19))
         :with_recipe_table_id(295)
-        :with_recipes({ { recipe = 36572, item = 48560 } }),
+        :with_recipes({ { recipe = 36572, item = 48560 } })
+        :with_bronze_requirement({ ['48560'] = 1 }),
     [295] = Mission(295, Jobs.Alchemist, 'A', 1)
         :with_en_name('A-1: Cafeteria Goods')
         :with_de_name('A-1: Speisesaal-Besteck')
@@ -353,7 +377,8 @@ return {
         :with_exp_reward(MissionReward(7, 4, 15))
         :with_exp_reward(MissionReward(7, 1, 10))
         :with_recipe_table_id(296)
-        :with_recipes({ { recipe = 36573, item = 48561 } }),
+        :with_recipes({ { recipe = 36573, item = 48561 } })
+        :with_bronze_requirement({ ['48561'] = 1 }),
     [296] = Mission(296, Jobs.Alchemist, 'A', 1)
         :with_en_name('A-1: Lunar Seafood Processing')
         :with_de_name('A-1: Wasserprodukte-Inspektion')
@@ -368,12 +393,9 @@ return {
         :with_exp_reward(MissionReward(7, 4, 30))
         :with_exp_reward(MissionReward(7, 2, 20))
         :with_recipe_table_id(297)
-        :with_recipes({
-            { recipe = 36574, item = 48562 },
-            { recipe = 36575, item = 48563 },
-            { recipe = 36576, item = 48564 },
-        })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_recipes({ { recipe = 36574, item = 48562 }, { recipe = 36575, item = 48563 }, { recipe = 36576, item = 48564 } })
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48562'] = 1, ['48563'] = 1, ['48564'] = 1 }),
     [297] = Mission(297, Jobs.Alchemist, 'A', 2)
         :with_en_name('A-2: Emergency Potables')
         :with_de_name('A-2: Notvorrats-Getränke')
@@ -388,7 +410,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 19))
         :with_exp_reward(MissionReward(7, 1, 13))
         :with_recipe_table_id(298)
-        :with_recipes({ { recipe = 36577, item = 48565 } }),
+        :with_recipes({ { recipe = 36577, item = 48565 } })
+        :with_bronze_requirement({ ['48565'] = 3 }),
     [298] = Mission(298, Jobs.Alchemist, 'A', 2)
         :with_en_name('A-2: Cosmetic Research Materials')
         :with_de_name('A-2: Unterstützung für Kosmetikartikel')
@@ -403,7 +426,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 10))
         :with_exp_reward(MissionReward(7, 2, 15))
         :with_recipe_table_id(299)
-        :with_recipes({ { recipe = 36578, item = 48566 } }),
+        :with_recipes({ { recipe = 36578, item = 48566 } })
+        :with_bronze_requirement({ ['48566'] = 1 }),
     [299] = Mission(299, Jobs.Alchemist, 'A', 2)
         :with_en_name('A-2: Replica Ornamental Plants')
         :with_de_name('A-2: Zierpflanzen-Nachbildungen')
@@ -418,7 +442,8 @@ return {
         :with_exp_reward(MissionReward(7, 4, 15))
         :with_exp_reward(MissionReward(7, 1, 10))
         :with_recipe_table_id(300)
-        :with_recipes({ { recipe = 36579, item = 48567 } }),
+        :with_recipes({ { recipe = 36579, item = 48567 } })
+        :with_bronze_requirement({ ['48567'] = 1 }),
     [300] = Mission(300, Jobs.Alchemist, 'A', 2)
         :with_en_name('A-2: Artisan\'s Mixtures')
         :with_de_name('A-2: Handwerker-Mischungen')
@@ -435,12 +460,9 @@ return {
         :with_exp_reward(MissionReward(7, 1, 16))
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(301)
-        :with_recipes({
-            { recipe = 36580, item = 48568 },
-            { recipe = 36581, item = 48569 },
-            { recipe = 36582, item = 48570 },
-        })
-        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 }),
+        :with_recipes({ { recipe = 36580, item = 48568 }, { recipe = 36581, item = 48569 }, { recipe = 36582, item = 48570 } })
+        :with_multi_craft_config({ [0] = 1, [1] = 1, [2] = 1 })
+        :with_bronze_requirement({ ['48568'] = 1, ['48569'] = 1, ['48570'] = 1 }),
     [301] = Mission(301, Jobs.Alchemist, 'A', 3)
         :with_en_name('A-3: Rust Repellent')
         :with_de_name('A-3: Rostschutzmittel')
@@ -458,7 +480,8 @@ return {
         :with_weather_restriction(Weather.UmbralWind)
         :with_recipe_table_id(302)
         :with_recipes({ { recipe = 36583, item = 48274 }, { recipe = 36584, item = 48571 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48571'] = 1 }),
     [302] = Mission(302, Jobs.Alchemist, 'A', 3)
         :with_en_name('A-3: Stable Medicine')
         :with_de_name('A-3: Lang haltbare Medikamente')
@@ -476,7 +499,8 @@ return {
         :with_weather_restriction(Weather.MoonDust)
         :with_recipe_table_id(303)
         :with_recipes({ { recipe = 36585, item = 48274 }, { recipe = 36586, item = 48572 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48572'] = 1 }),
     [303] = Mission(303, Jobs.Alchemist, 'A', 1)
         :with_en_name('A-1: Natural Remedy Inspection I')
         :with_de_name('A-1: Naturheilmittel-Inspektion I')
@@ -491,7 +515,8 @@ return {
         :with_exp_reward(MissionReward(7, 4, 16))
         :with_exp_reward(MissionReward(7, 3, 11))
         :with_recipe_table_id(304)
-        :with_recipes({ { recipe = 36587, item = 48573 } }),
+        :with_recipes({ { recipe = 36587, item = 48573 } })
+        :with_bronze_requirement({ ['48573'] = 3 }),
     [304] = Mission(304, Jobs.Alchemist, 'A', 2)
         :with_en_name('A-2: Natural Remedy Inspection II')
         :with_de_name('A-2: Naturheilmittel-Inspektion II')
@@ -507,7 +532,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 10))
         :with_exp_reward(MissionReward(7, 1, 10))
         :with_recipe_table_id(305)
-        :with_recipes({ { recipe = 36588, item = 48574 } }),
+        :with_recipes({ { recipe = 36588, item = 48574 } })
+        :with_bronze_requirement({ ['48574'] = 3 }),
     [305] = Mission(305, Jobs.Alchemist, 'A', 1)
         :with_en_name('A-1: Loporrit Habitat Improvements I')
         :with_de_name('A-1: Loporrit-Wohnumfeldverbesserung I')
@@ -522,7 +548,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 7))
         :with_exp_reward(MissionReward(7, 1, 11))
         :with_recipe_table_id(306)
-        :with_recipes({ { recipe = 36589, item = 48575 } }),
+        :with_recipes({ { recipe = 36589, item = 48575 } })
+        :with_bronze_requirement({ ['48575'] = 2 }),
     [306] = Mission(306, Jobs.Alchemist, 'A', 2)
         :with_en_name('A-2: Loporrit Habitat Improvements II')
         :with_de_name('A-2: Loporrit-Wohnumfeldverbesserung II')
@@ -538,7 +565,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 8))
         :with_exp_reward(MissionReward(7, 1, 8))
         :with_recipe_table_id(307)
-        :with_recipes({ { recipe = 36590, item = 48576 } }),
+        :with_recipes({ { recipe = 36590, item = 48576 } })
+        :with_bronze_requirement({ ['48576'] = 2 }),
     [307] = Mission(307, Jobs.Alchemist, 'A', 3)
         :with_en_name('A-3: Loporrit Habitat Improvements III')
         :with_de_name('A-3: Loporrit-Wohnumfeldverbesserung III')
@@ -554,7 +582,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 7))
         :with_exp_reward(MissionReward(7, 2, 7))
         :with_recipe_table_id(308)
-        :with_recipes({ { recipe = 36591, item = 48577 } }),
+        :with_recipes({ { recipe = 36591, item = 48577 } })
+        :with_bronze_requirement({ ['48577'] = 2 }),
     [308] = Mission(308, Jobs.Alchemist, 'A', 2)
         :with_en_name('A-2: Aquaculture Feed I')
         :with_de_name('A-2: Weichfutter für Tierzüchtungen I')
@@ -569,7 +598,8 @@ return {
         :with_exp_reward(MissionReward(7, 4, 15))
         :with_exp_reward(MissionReward(7, 2, 10))
         :with_recipe_table_id(309)
-        :with_recipes({ { recipe = 36592, item = 48271 } }),
+        :with_recipes({ { recipe = 36592, item = 48271 } })
+        :with_bronze_requirement({ ['48271'] = 1 }),
     [309] = Mission(309, Jobs.Alchemist, 'A', 3)
         :with_en_name('A-3: Aquaculture Feed II')
         :with_de_name('A-3: Weichfutter für Tierzüchtungen II')
@@ -585,7 +615,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 8))
         :with_exp_reward(MissionReward(7, 1, 8))
         :with_recipe_table_id(310)
-        :with_recipes({ { recipe = 36593, item = 48272 } }),
+        :with_recipes({ { recipe = 36593, item = 48272 } })
+        :with_bronze_requirement({ ['48272'] = 1 }),
     [310] = Mission(310, Jobs.Alchemist, 'A', 1)
         :with_en_name('A-1: Nutrient Jelly Materials I')
         :with_de_name('A-1: Nährreiche Geleegetränk-Zutaten I')
@@ -601,7 +632,8 @@ return {
         :with_exp_reward(MissionReward(7, 3, 12))
         :with_time_restriction(0, 2)
         :with_recipe_table_id(311)
-        :with_recipes({ { recipe = 36594, item = 48578 } }),
+        :with_recipes({ { recipe = 36594, item = 48578 } })
+        :with_bronze_requirement({ ['48578'] = 3 }),
     [311] = Mission(311, Jobs.Alchemist, 'A', 2)
         :with_en_name('A-2: Nutrient Jelly Materials II')
         :with_de_name('A-2: Nährreiche Geleegetränk-Zutaten II')
@@ -617,7 +649,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 11))
         :with_exp_reward(MissionReward(7, 1, 11))
         :with_recipe_table_id(312)
-        :with_recipes({ { recipe = 36595, item = 48579 } }),
+        :with_recipes({ { recipe = 36595, item = 48579 } })
+        :with_bronze_requirement({ ['48579'] = 3 }),
     [312] = Mission(312, Jobs.Alchemist, 'A', 3)
         :with_en_name('A-3: Nutrient Jelly')
         :with_de_name('A-3: Nährreiches Geleegetränk')
@@ -633,7 +666,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 10))
         :with_exp_reward(MissionReward(7, 1, 10))
         :with_recipe_table_id(313)
-        :with_recipes({ { recipe = 36596, item = 48580 } }),
+        :with_recipes({ { recipe = 36596, item = 48580 } })
+        :with_bronze_requirement({ ['48580'] = 3 }),
     [313] = Mission(313, Jobs.Alchemist, 'A', 3)
         :with_en_name('A-3: Dichromatic Compound I')
         :with_de_name('A-3: Pleochrome Tinktur I')
@@ -651,7 +685,8 @@ return {
         :with_time_restriction(12, 14)
         :with_recipe_table_id(314)
         :with_recipes({ { recipe = 36597, item = 48582 }, { recipe = 36598, item = 48583 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48583'] = 1 }),
     [314] = Mission(314, Jobs.Alchemist, 'A', 3)
         :with_en_name('A-3: Dichromatic Compound II')
         :with_de_name('A-3: Pleochrome Tinktur II')
@@ -668,7 +703,8 @@ return {
         :with_exp_reward(MissionReward(7, 2, 19))
         :with_recipe_table_id(315)
         :with_recipes({ { recipe = 36600, item = 48584 }, { recipe = 36601, item = 48585 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48585'] = 1 }),
     [315] = Mission(315, Jobs.Alchemist, 'A', 3)
         :with_en_name('A-3: Dichromatic Compound III')
         :with_de_name('A-3: Pleochrome Tinktur III')
@@ -685,5 +721,6 @@ return {
         :with_exp_reward(MissionReward(7, 1, 51))
         :with_recipe_table_id(316)
         :with_recipes({ { recipe = 36603, item = 48236 }, { recipe = 36605, item = 48581 } })
-        :with_multi_craft_config({ [0] = 1, [1] = 1 }),
+        :with_multi_craft_config({ [0] = 1, [1] = 1 })
+        :with_bronze_requirement({ ['48581'] = 1 }),
 }
