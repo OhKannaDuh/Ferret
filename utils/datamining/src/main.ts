@@ -12,29 +12,25 @@ import { MoonItemInfo } from "./Models/MoonItemInfo";
 import { TodoText } from "./Models/TodoText";
 import { Item } from "./Models/Item";
 
-const missions = new CsvRepository<Mission>("data/missions.csv", (row) => new Mission(row));
-const mission_rewards = new CsvRepository<MissionReward>("data/mission_reward.csv", (row) => new MissionReward(row));
-const mission_recipe = new CsvRepository<MissionRecipeSet>("data/mission_recipe.csv", (row) => new MissionRecipeSet(row));
-const recipes = new CsvRepository<Recipe>("data/recipes.csv", (row) => new Recipe(row));
-const names = new CsvRepository<Name>("names.csv", (row) => new Name(row));
+function load_repository<T>(m: {new(row: any): T}, path: string): CsvRepository<T> {
+    return new CsvRepository<T>(path, (row) => new m(row))
+}
 
-const todo = new CsvRepository<Todo>("data/todo.csv", (row) => new Todo(row));
+function register_repository<T>(m: {new(row: any): T}, path: string) {
+    Model.registerRepository(m, load_repository<T>(m, path));
+}
 
-const todo_text = new CsvRepository<TodoText>("data/todo_text.csv", (row) => new TodoText(row));
-
-const moon_item_info = new CsvRepository<MoonItemInfo>("data/moon_item_info.csv", (row) => new MoonItemInfo(row));
-
-const items = new CsvRepository<Item>("data/items.csv", (row) => new Item(row));
-
+const missions = load_repository<Mission>(Mission, "data/missions.csv");
 Model.registerRepository(Mission, missions);
-Model.registerRepository(MissionReward, mission_rewards);
-Model.registerRepository(MissionRecipeSet, mission_recipe);
-Model.registerRepository(Recipe, recipes);
-Model.registerRepository(Name, names);
-Model.registerRepository(Todo, todo);
-Model.registerRepository(TodoText, todo_text);
-Model.registerRepository(MoonItemInfo, moon_item_info);
-Model.registerRepository(Item, items);
+
+register_repository(MissionReward, "data/mission_reward.csv");
+register_repository(MissionRecipeSet, "data/mission_recipe.csv");
+register_repository(Recipe, "data/recipes.csv")
+register_repository(Name, "names.csv")
+register_repository(Todo, "data/todo.csv")
+register_repository(TodoText, "data/todo_text.csv")
+register_repository(MoonItemInfo, "data/moon_item_info.csv")
+register_repository(Item, "data/items.csv")
 
 const formatter = new Formatter();
 const jobs: Record<string, string[]> = {};
@@ -54,22 +50,22 @@ for (const mission of missions.all()) {
 }
 
 const output_map = {
-    "8": "CarpenterMissions.gen.lua",
-    "9": "BlacksmithMissions.gen.lua",
-    "10": "ArmorerMissions.gen.lua",
-    "11": "GoldsmithMissions.gen.lua",
-    "12": "LeatherworkerMissions.gen.lua",
-    "13": "WeaverMissions.gen.lua",
-    "14": "AlchemistMissions.gen.lua",
-    "15": "CulinarianMissions.gen.lua",
-    "16": "MinerMissions.gen.lua",
-    "17": "BotanistMissions.gen.lua",
-    "18": "FisherMissions.gen.lua",
-    critical: "CriticalMissions.gen.lua",
+    "8": "Carpenter",
+    "9": "Blacksmith",
+    "10": "Armorer",
+    "11": "Goldsmith",
+    "12": "Leatherworker",
+    "13": "Weaver",
+    "14": "Alchemist",
+    "15": "Culinarian",
+    "16": "Miner",
+    "17": "Botanist",
+    "18": "Fisher",
+    critical: "Critical",
 };
 
 Object.entries(output_map).forEach(([key, file]) => {
     const output = `return {\n${jobs[key].join("\n")}\n}`;
 
-    fs.writeFileSync(`output/SinusArdorum/${file}`, output);
+    fs.writeFileSync(`output/SinusArdorum/${file}Missions.gen.lua`, output);
 });
