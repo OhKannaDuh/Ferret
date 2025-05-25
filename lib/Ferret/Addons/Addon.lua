@@ -33,7 +33,7 @@ function Addon:wait_until_ready(delay, max)
     Logger:debug_t('addons.messages.wait_until_ready', { addon = self.key })
     Debug:log_previous_call()
 
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:is_ready()
     end, delay, max)
 
@@ -47,7 +47,7 @@ function Addon:wait_until_not_ready(delay, max)
     Logger:debug_t('addons.messages.wait_until_not_ready', { addon = self.key })
     Debug:log_previous_call()
 
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not self:is_ready()
     end, delay, max)
 
@@ -65,7 +65,7 @@ function Addon:wait_until_visible(delay, max)
 
     Logger:debug_t('addons.messages.wait_until_visible', { addon = self.key })
     Debug:log_previous_call()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:is_visible()
     end, delay, max)
 
@@ -78,7 +78,7 @@ function Addon:wait_until_not_visible(delay, max)
 
     Logger:debug_t('addons.messages.wait_until_not_visible', { addon = self.key })
     Debug:log_previous_call()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not self:is_ready()
     end, delay, max)
 
@@ -88,7 +88,7 @@ end
 ---@param ... integer
 ---@return string
 function Addon:get_node_text(...)
-    Ferret:wait(0.0167)
+    Wait:seconds(0.0167)
     return GetNodeText(self.key, ...)
 end
 
@@ -101,7 +101,7 @@ end
 ---@param ... integer
 ---@return boolean
 function Addon:is_node_visible(...)
-    Ferret:wait(0.0167)
+    Wait:seconds(0.0167)
     return IsNodeVisible(self.key, ...)
 end
 

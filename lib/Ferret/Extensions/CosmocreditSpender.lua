@@ -43,6 +43,8 @@ function CosmocreditSpender:init()
             return
         end
 
+        PauseYesAlready()
+
         RequestManager:request(Requests.STOP_CRAFT)
 
         self.npc:interact()
@@ -53,6 +55,8 @@ function CosmocreditSpender:init()
         Addons.ShopExchangeCurrency:buy(self.item_index, amount)
         Addons.SelectYesno:wait_until_ready()
         Addons.SelectYesno:yes()
+
+        RestoreYesAlready()
     end)
 end
 

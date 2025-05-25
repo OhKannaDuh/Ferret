@@ -26,8 +26,6 @@ end
 function MissionFarmer:init()
     Template.init(self)
 
-    CosmicExploration:init()
-
     return self
 end
 
@@ -36,8 +34,6 @@ function MissionFarmer:setup()
         Logger:warn('No missions taken from configured mission list')
         return false
     end
-
-    PauseYesAlready()
 
     return true
 end

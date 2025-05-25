@@ -25,7 +25,7 @@ end
 
 function World:wait_until(hour)
     Logger:debug_t('world.waiting', { hour = hour })
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:get_current_hour() == hour
     end, 3)
     Logger:debug_t('world.done_waiting')

@@ -19,27 +19,31 @@ function Repair:init()
             return
         end
 
+        PauseYesAlready()
+
         self:log_debug('repairing')
         while not IsAddonVisible('Repair') do
             Actions.Repair:execute()
-            Ferret:wait(0.5)
+            Wait:seconds(0.5)
         end
 
         yield('/callback Repair true 0')
-        Ferret:wait(0.1)
+        Wait:seconds(0.1)
 
         if Addons.SelectYesno:is_visible() then
             Addons.SelectYesno:yes()
-            Ferret:wait(0.1)
+            Wait:seconds(0.1)
         end
 
-        Ferret:wait_until(function()
+        Wait:seconds_until(function()
             return not GetCharacterCondition(Conditions.Occupied39)
         end)
 
-        Ferret:wait(1)
+        Wait:seconds(1)
         yield('/callback Repair true -1')
         self:log_debug('done')
+
+        RestoreYesAlready()
     end)
 end
 

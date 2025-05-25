@@ -51,7 +51,7 @@ end
 
 function WKSHud:has_mission()
     self:open_mission_menu()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return Addons.WKSMission:is_visible() or Addons.WKSMissionInfomation:is_visible()
     end)
 

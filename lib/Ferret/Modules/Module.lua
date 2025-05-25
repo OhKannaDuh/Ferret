@@ -11,6 +11,7 @@ function Module:new(key, version)
     self.key = key
     self.version = version
 
+    self:load_addon_mixins()
     self:load_addons()
     self:load_models()
     self:load_static()
@@ -24,6 +25,10 @@ function Module:get_addons()
     return {}
 end
 
+function Module:get_addon_mixins()
+    return {}
+end
+
 function Module:get_models()
     return {}
 end
@@ -33,8 +38,22 @@ function Module:init()
 end
 
 function Module:load_addons()
-    for _, addon in pairs(self:get_addons()) do
-        Addons[addon] = self:require('Addons/' .. addon)
+    for name, addon in pairs(self:get_addons()) do
+        if type(name) == "number" then
+            name = addon
+        end
+
+        Addons[name] = self:require('Addons/' .. addon)
+    end
+end
+
+function Module:load_addon_mixins()
+    for name, addon in pairs(self:get_addon_mixins()) do
+        if type(name) == "number" then
+            name = addon
+        end
+
+        AddonMixins[name] = self:require('Addons/Mixins/' .. addon)
     end
 end
 

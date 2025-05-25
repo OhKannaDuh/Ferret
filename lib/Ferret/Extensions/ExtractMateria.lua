@@ -28,20 +28,18 @@ function ExtractMateria:init()
 
         while CanExtractMateria(100) do
             if Addons.Materialize:is_visible() then
-                Ferret:repeat_until(function()
+                repeat
                     Addons.Materialize:click_first_slot()
-                end, function()
-                    return Addons.MaterializeDialog:is_visible()
-                end)
+                    Wait:seconds(0.5)
+                until Addons.MaterializeDialog:is_visible()
 
-                Ferret:repeat_until(function()
+                repeat
                     Addons.MaterializeDialog:yes()
-                end, function()
-                    return not Addons.MaterializeDialog:is_visible()
-                end)
+                    Wait:seconds(0.5)
+                until not Addons.MaterializeDialog:is_visible()
             end
 
-            Ferret:wait_until(function()
+            Wait:seconds_until(function()
                 return not GetCharacterCondition(Conditions.Occupied39)
             end)
         end

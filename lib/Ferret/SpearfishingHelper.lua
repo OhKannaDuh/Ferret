@@ -17,13 +17,13 @@ function SpearfishingHelper:is_spearfishing()
 end
 
 function SpearfishingHelper:wait_to_start()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:is_spearfishing()
     end)
 end
 
 function SpearfishingHelper:wait_to_stop()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not self:is_spearfishing()
     end)
 end

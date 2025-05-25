@@ -39,25 +39,25 @@ function Gathering:has_eureka_moment()
 end
 
 function Gathering:wait_to_start(max)
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:is_gathering()
     end, 0.0167, max)
 end
 
 function Gathering:wait_to_stop()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not self:is_gathering()
     end, 0.0167)
 end
 
 function Gathering:wait_to_start_collectable()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:is_gathering_collectable()
     end)
 end
 
 function Gathering:wait_to_stop_collectable()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not self:is_gathering_collectable()
     end)
 end
@@ -89,7 +89,7 @@ function Gathering:has_nearby_nodes(range)
 end
 
 function Gathering:wait_for_nearby_nodes()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:has_nearby_nodes()
     end)
 end
@@ -149,13 +149,13 @@ function Gathering:integrity_action()
 end
 
 function Gathering:wait_to_start_action()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return Character:has_condition(Conditions.ExecutingGatheringAction)
     end, 0.1)
 end
 
 function Gathering:wait_to_stop_action()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not Character:has_condition(Conditions.ExecutingGatheringAction)
     end, 0.1)
 end

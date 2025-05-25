@@ -7,7 +7,7 @@
 local list = MissionList()
 
 local function add_master_mission_list(zone, job)
-    local missions = module_require('CosmicExploration', 'Data/Missions/' .. zone .. '/' .. job .. 'Missions.gen')
+    local missions = module_require('CosmicExploration', 'Data/Missions/' .. zone .. '/' .. job .. 'Missions.gen.lua')
     for k, v in pairs(missions) do
         list.missions[k] = v
     end

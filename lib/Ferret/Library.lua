@@ -43,25 +43,28 @@ require('Ferret/Timer')
 require('Ferret/Sandtimer')
 require('Ferret/Pathfinding')
 
--- Base extension
 require('Ferret/Extensions/Extension')
 
--- Addons
-require('Ferret/Addons/Addons')
+require('Ferret/Addons/Addon')
+AddonMixins = {}
+Addons = {}
 
--- Actions
 require('Ferret/Actions/Actions')
 
 -- Static objects
+
+-- Move to Core Module
 Character = require('Ferret/Character')
 Mount = require('Ferret/Mount')
 World = require('Ferret/World')
-Gathering = require('Ferret/Gathering')
-GatherBuddy = require('Ferret/GatherBuddy')
-SpearfishingHelper = require('Ferret/SpearfishingHelper')
 IO = require('Ferret/IO')
 Logger = require('Ferret/Logger')
 Debug = require('Ferret/Debug')
 Table = require('Ferret/Table')
 String = require('Ferret/String')
 Wait = require('Ferret/Wait')
+
+-- Move to Gathering Module
+Gathering = require('Ferret/Gathering')
+GatherBuddy = require('Ferret/GatherBuddy')
+SpearfishingHelper = require('Ferret/SpearfishingHelper')

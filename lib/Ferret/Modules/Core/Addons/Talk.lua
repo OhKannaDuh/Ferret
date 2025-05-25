@@ -10,11 +10,10 @@ function Talk:new()
 end
 
 function Talk:progress_until_done()
-    Ferret:repeat_until(function()
+    repeat
         yield('/click Talk Click')
-    end, function()
-        return not self:is_visible()
-    end)
+        Wait:seconds(0.5)
+    until  not self:is_visible()
 end
 
 return Talk()

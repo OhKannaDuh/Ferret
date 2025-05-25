@@ -15,7 +15,7 @@ function PurifyAutoDialog:check_for_exit()
 end
 
 function PurifyAutoDialog:wait_for_exit()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:check_for_exit()
     end)
 end

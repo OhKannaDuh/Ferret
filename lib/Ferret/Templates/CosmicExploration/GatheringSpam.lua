@@ -20,8 +20,6 @@ end
 function GatheringSpam:init()
     Template.init(self)
 
-    CosmicExploration:init()
-
     return self
 end
 
@@ -30,8 +28,6 @@ function GatheringSpam:setup()
         Logger:warn('Set up a mission bozo')
         return false
     end
-
-    PauseYesAlready()
 
     return true
 end

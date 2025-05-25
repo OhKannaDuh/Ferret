@@ -13,20 +13,24 @@ function WKSMission:new()
 end
 
 function WKSMission:start_mission(id)
+    PauseYesAlready()
+
     self:wait_until_ready()
     repeat
         if self:is_ready() then
             self:callback(true, 13, id)
         end
-        Ferret:wait(0.1)
+        Wait:seconds(0.1)
     until Addons.SelectYesno:is_visible()
 
     repeat
         if Addons.SelectYesno:is_ready() then
             Addons.SelectYesno:yes()
         end
-        Ferret:wait(0.1)
+        Wait:seconds(0.1)
     until not self:is_ready()
+
+    RestoreYesAlready()
 end
 
 function WKSMission:open()

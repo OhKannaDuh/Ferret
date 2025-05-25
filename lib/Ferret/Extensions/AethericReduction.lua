@@ -24,22 +24,22 @@ function AethericReduction:init()
         PauseYesAlready()
         if not Addons.PurifyItemSelector:is_visible() and not Mount:is_mounted() then
             Actions.AetherialReduction:execute()
-            Ferret:wait(0.5)
+            Wait:seconds(0.5)
         end
 
         Addons.PurifyItemSelector:wait_until_ready()
-        Ferret:wait(0.5)
+        Wait:seconds(0.5)
         Addons.PurifyItemSelector:click_first()
 
         Addons.PurifyResult:wait_until_ready()
-        Ferret:wait(0.5)
+        Wait:seconds(0.5)
         Addons.PurifyResult:auto()
 
         Addons.PurifyAutoDialog:wait_until_ready()
         Addons.PurifyAutoDialog:wait_for_exit()
-        Ferret:wait(0.5)
+        Wait:seconds(0.5)
         Addons.PurifyAutoDialog:exit()
-        Ferret:wait(0.5)
+        Wait:seconds(0.5)
         Addons.PurifyItemSelector:exit()
 
         RestoreYesAlready()

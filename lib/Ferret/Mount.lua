@@ -26,11 +26,10 @@ function Mount:is_flying()
 end
 
 function Mount:roulette()
-    Ferret:repeat_until(function()
+    repeat
         Actions.MountRoulette:execute()
-    end, function()
-        return self:is_mounted()
-    end)
+        Wait:seconds(0.5)
+    until self:is_mounted()
 end
 
 ---@param name string?
@@ -44,19 +43,17 @@ function Mount:mount(name)
 end
 
 function Mount:unmount()
-    Ferret:repeat_until(function()
+    repeat
         Actions.Mount:execute()
-    end, function()
-        return not self:is_flying() and not self:is_mounted()
-    end)
+        Wait:seconds(0.5)
+    until  not self:is_flying() and not self:is_mounted()
 end
 
 function Mount:land()
-    Ferret:repeat_until(function()
+    repeat
         Actions.Mount:execute()
-    end, function()
-        return not self:is_flying()
-    end, 2)
+        Wait:seconds(3)
+    until not self:is_flying()
 
     -- This function is a bit bugged, sometimes it will unmount you
     -- This call remounts you if you get unmounted

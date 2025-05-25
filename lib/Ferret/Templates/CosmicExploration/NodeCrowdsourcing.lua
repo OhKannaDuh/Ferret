@@ -53,7 +53,7 @@ function NodeCrowdsourcing:loop()
     end
 
     while self:is_in_mission() do
-        Ferret:wait_until(function()
+        Wait:seconds_until(function()
             return Character:has_target() or not self:is_in_mission()
         end, 0.167)
 

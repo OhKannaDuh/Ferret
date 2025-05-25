@@ -19,6 +19,6 @@ end
 ---Tries to target the subject and interact with them
 function Targetable:interact()
     self:target()
-    Ferret:wait(0.2)
+    Wait:seconds(0.2)
     yield('/interact')
 end

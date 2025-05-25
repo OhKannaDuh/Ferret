@@ -30,8 +30,6 @@ function RedAlert:setup()
 
     Jobs.change_to(self.mission.job)
 
-    PauseYesAlready()
-
     return true
 end
 

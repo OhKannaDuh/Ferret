@@ -56,13 +56,13 @@ function CraftingConsumables:init()
                 yield('/item ' .. self.food)
                 attempt = attempt + 1
 
-                Ferret:wait_until(function()
+                Wait:seconds_until(function()
                     return self:get_remaining_food_time() > food_remaining
                 end, 0.5, self.wait_time * 2)
             until self:get_remaining_food_time() > food_remaining or attempt >= self.max_attempts
 
             if should_drink then
-                Ferret:wait(self.wait_time)
+                Wait:seconds(self.wait_time)
             end
         end
 
@@ -75,7 +75,7 @@ function CraftingConsumables:init()
                 yield('/item ' .. self.medicine)
                 attempt = attempt + 1
 
-                Ferret:wait_until(function()
+                Wait:seconds_until(function()
                     return self:get_remaining_medicine_time() > medicine_remaining
                 end, 0.5, self.wait_time * 2)
             until self:get_remaining_medicine_time() > medicine_remaining or attempt >= self.max_attempts

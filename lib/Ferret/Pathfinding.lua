@@ -72,7 +72,7 @@ function Pathfinding:fly_to(node)
         self:walk_to(node)
         Mount:mount()
 
-        Ferret:wait_until(function()
+        Wait:seconds_until(function()
             return Mount:is_mounted()
         end, 1 / 60, 5)
     end
@@ -126,13 +126,13 @@ function Pathfinding:stop()
 end
 
 function Pathfinding:wait_to_start_moving()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return Character:is_moving()
     end)
 end
 
 function Pathfinding:wait_to_stop_moving()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not Character:is_moving()
     end)
 end
@@ -140,13 +140,13 @@ end
 function Pathfinding:wait_until_at_node(node)
     node = node or Pathfinding:current()
 
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return Character:get_position():is_nearby(node, 1)
     end, 0.0167)
 end
 
 function Pathfinding:wait_until_close_to_target(distance)
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return Character:get_target_position():get_distance_to() <= distance
     end)
 end

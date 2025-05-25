@@ -40,18 +40,22 @@ function WKSMissionInfomation:report()
 end
 
 function WKSMissionInfomation:abandon()
+    PauseYesAlready()
+
     repeat
         if self:is_ready() then
             self:callback(true, 12)
         end
-        Ferret:wait(0.1)
+        Wait:seconds(0.1)
     until Addons.SelectYesno:is_visible()
     repeat
         if Addons.SelectYesno:is_ready() then
             Addons.SelectYesno:yes()
         end
-        Ferret:wait(0.1)
+        Wait:seconds(0.1)
     until not WKSMissionInfomation:is_visible()
+
+    RestoreYesAlready()
 end
 
 function WKSMissionInfomation:open_cosmopouch()

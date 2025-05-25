@@ -5,6 +5,8 @@
 
 require('Ferret/Library')
 
+Core = load_module('Core')
+
 ---@class FerretCore : Object, Translation
 ---@field name string
 ---@field run boolean
@@ -51,28 +53,11 @@ function FerretCore:repeat_until(action, condition, delay, max)
 
     repeat
         last_return = action()
-        self:wait(delay)
+        Wait:seconds(delay)
         elapsed = elapsed + delay
     until condition() or (max ~= nil and max > 0 and elapsed >= max)
 
     return last_return
-end
-
----@param condition fun(): boolean
----@param delay? number
----@param max? number
-function FerretCore:wait_until(condition, delay, max)
-    local delay = delay or 0.5
-    local elapsed = 0
-
-    if condition() then
-        return
-    end
-
-    repeat
-        self:wait(delay)
-        elapsed = elapsed + delay
-    until condition() or (max ~= nil and max > 0 and elapsed >= max)
 end
 
 ---Stops the loop from running

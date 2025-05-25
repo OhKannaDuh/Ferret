@@ -30,11 +30,10 @@ end
 
 ---@param target Targetable
 function Character:wait_for_target(target)
-    Ferret:repeat_until(function()
+    repeat
         target:target()
-    end, function()
-        return self:has_target()
-    end)
+        Wait:seconds(0.5)
+    until self:has_target()
 end
 
 ---@return Node
@@ -52,13 +51,13 @@ function Character:is_available()
 end
 
 function Character:wait_until_available()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return self:is_available()
     end, 0.2)
 end
 
 function Character:wait_until_not_available()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not self:is_available()
     end, 0.2)
 end
@@ -69,19 +68,19 @@ function Character:teleport(destination)
     yield('/tp ' .. destination)
     self:wait_until_not_available(10)
     self:wait_until_available()
-    Ferret:wait(2)
+    Wait:seconds(2)
 end
 
 --- Wait in 0.1 second intervals until the character is not crafting and not
 --- preparing to craft
 function Character:wait_until_done_crafting()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not self:has_condition(Conditions.Crafting40) and not self:has_condition(Conditions.PreparingToCraft)
     end, 0.1)
 end
 
 function Character:wait_until_ready_to_gather()
-    Ferret:wait_until(function()
+    Wait:seconds_until(function()
         return not self:has_condition(Conditions.Gathering42)
     end, 0.1)
 end

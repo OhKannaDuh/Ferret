@@ -36,15 +36,11 @@ end
 function RelicAutomator:init()
     Template.init(self)
 
-    CosmicExploration:init()
-
     return self
 end
 
 function RelicAutomator:setup()
     self:setup_blacklist()
-
-    PauseYesAlready()
 
     return true
 end
@@ -155,6 +151,8 @@ function RelicAutomator:is_ready_to_upgrade()
 end
 
 function RelicAutomator:upgrade()
+    PauseYesAlready()
+
     local text_advance = HasPlugin('TextAdvance')
     if text_advance then
         yield('/at disable')
@@ -181,6 +179,8 @@ function RelicAutomator:upgrade()
     if text_advance then
         yield('/at enable')
     end
+
+    RestoreYesAlready()
 end
 
 return RelicAutomator():init()
