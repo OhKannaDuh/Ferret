@@ -173,14 +173,20 @@ end
 function GatheringMissionRotationHandler:collectability(mission, index)
     if self.config[GatheringType.Collectability].high_gp_threshold <= Gathering:get_gp() then
         self.config[GatheringType.Collectability].high_gp(mission, index)
-        return
+    else
+        self.config[GatheringType.Collectability].low_gp(mission, index)
     end
-
-    self.config[GatheringType.Collectability].low_gp(mission, index)
 end
 
 function GatheringMissionRotationHandler:collectability_item_count(mission, index)
-    error('Collecatable not supported yet')
+    if self.config[GatheringType.CollectabilityItemCount].high_gp_threshold <= Gathering:get_gp() then
+        self.config[GatheringType.CollectabilityItemCount].high_gp(mission, index)
+    else
+        self.config[GatheringType.CollectabilityItemCount].low_gp(mission, index)
+    end
+
+    Gathering:wait_to_stop()
+    self:reduce()
 end
 
 function GatheringMissionRotationHandler:time_trial(mission, index)
@@ -214,6 +220,31 @@ function GatheringMissionRotationHandler:gather_all_collectables()
 
         Gathering:execute(GatheringActionType.Collect)
     until not Gathering:is_gathering()
+end
+
+function GatheringMissionRotationHandler:reduce()
+    PauseYesAlready()
+    if not Addons.PurifyItemSelector:is_visible() and not Mount:is_mounted() then
+        Actions.AetherialReduction:execute()
+        Wait:seconds(0.5)
+    end
+
+    Addons.PurifyItemSelector:wait_until_ready()
+    Wait:seconds(0.5)
+    Addons.PurifyItemSelector:click_first()
+
+    Addons.PurifyResult:wait_until_ready()
+    Wait:seconds(0.5)
+    Addons.PurifyResult:auto()
+
+    Addons.PurifyAutoDialog:wait_until_ready()
+    Addons.PurifyAutoDialog:wait_for_exit()
+    Wait:seconds(0.5)
+    Addons.PurifyAutoDialog:exit()
+    Wait:seconds(0.5)
+    Addons.PurifyItemSelector:exit()
+
+    RestoreYesAlready()
 end
 
 return GatheringMissionRotationHandler()

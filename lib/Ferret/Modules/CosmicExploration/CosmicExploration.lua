@@ -104,7 +104,7 @@ function CosmicExploration:init()
 end
 
 ---@return MissionList
-function CosmicExploration:create_mision_list(callback)
+function CosmicExploration:create_mission_list(callback)
     return self.mission_list:filter(callback)
 end
 

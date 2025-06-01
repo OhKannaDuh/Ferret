@@ -44,15 +44,28 @@ function GatheringSpam:loop()
         local class = self.mission.class
         local classMission = available_missions:filter_by_class(class):random()
 
+        self:pause_pandora()
         classMission:start()
         Addons.WKSMissionInfomation:graceful_open()
         Addons.WKSMissionInfomation:wait_until_ready()
         classMission:abandon()
+        self:restore_pandora()
 
         return
     end
 
+    self:pause_pandora()
     GatheringMissionHandler:handle(self.mission, MissionResult.Gold)
+    self:restore_pandora()
+end
+
+function GatheringSpam:pause_pandora()
+    PandorasBox:pause(PandorasBoxFeature.AutoInteract)
+    PandorasBox:pause(PandorasBoxFeature.AutoGather)
+end
+
+function GatheringSpam:restore_pandora()
+    PandorasBox:restore()
 end
 
 return GatheringSpam():init()

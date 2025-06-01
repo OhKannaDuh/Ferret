@@ -53,9 +53,9 @@ function NodeCrowdsourcing:loop()
     end
 
     while self:is_in_mission() do
-        Wait:seconds_until(function()
-            return Character:has_target() or not self:is_in_mission()
-        end, 0.167)
+        repeat
+            Wait:seconds(0.167)
+        until Character:has_target() or not self:is_in_mission()
 
         if Character:has_target() then
             local target = Character:get_target_position()

@@ -17,8 +17,16 @@ function Gathering:is_gathering()
     return Character:has_condition(Conditions.Gathering)
 end
 
+function Gathering:is_not_gathering()
+    return not self:is_gathering()
+end
+
 function Gathering:is_gathering_collectable()
     return Addons.GatheringMasterpiece:is_ready()
+end
+
+function Gathering:is_not_gathering_collectable()
+    return not self:is_gathering_collectable()
 end
 
 function Gathering:get_integrity()
@@ -39,27 +47,19 @@ function Gathering:has_eureka_moment()
 end
 
 function Gathering:wait_to_start(max)
-    Wait:seconds_until(function()
-        return self:is_gathering()
-    end, 0.0167, max)
+    Wait:seconds_until(self, self.is_gathering, 0.0167, max)
 end
 
-function Gathering:wait_to_stop()
-    Wait:seconds_until(function()
-        return not self:is_gathering()
-    end, 0.0167)
+function Gathering:wait_to_stop(max)
+    Wait:seconds_until(self, self.is_not_gathering, 0.0167, max)
 end
 
 function Gathering:wait_to_start_collectable()
-    Wait:seconds_until(function()
-        return self:is_gathering_collectable()
-    end)
+    Wait:seconds_until(self, self.is_gathering_collectable)
 end
 
 function Gathering:wait_to_stop_collectable()
-    Wait:seconds_until(function()
-        return not self:is_gathering_collectable()
-    end)
+    Wait:seconds_until(self, self.is_not_gathering_collectable)
 end
 
 function Gathering:is_valid_node_name(name)
@@ -89,9 +89,7 @@ function Gathering:has_nearby_nodes(range)
 end
 
 function Gathering:wait_for_nearby_nodes()
-    Wait:seconds_until(function()
-        return self:has_nearby_nodes()
-    end)
+    Wait:seconds_until(self, self.has_nearby_nodes)
 end
 
 ---@return boolean
@@ -148,16 +146,20 @@ function Gathering:integrity_action()
     end
 end
 
+function Gathering:is_executing_gathering_action()
+    return Character:has_condition(Conditions.ExecutingGatheringAction)
+end
+
+function Gathering:is_not_executing_gathering_action()
+    return not self:is_executing_gathering_action()
+end
+
 function Gathering:wait_to_start_action()
-    Wait:seconds_until(function()
-        return Character:has_condition(Conditions.ExecutingGatheringAction)
-    end, 0.1)
+    Wait:seconds_until(self, self.is_executing_gathering_action, 0.1)
 end
 
 function Gathering:wait_to_stop_action()
-    Wait:seconds_until(function()
-        return not Character:has_condition(Conditions.ExecutingGatheringAction)
-    end, 0.1)
+    Wait:seconds_until(self, self.is_not_executing_gathering_action, 0.1)
 end
 
 function Gathering:execute(action)
@@ -184,6 +186,14 @@ end
 function Gathering:start_collect(index)
     Addons.Gathering:gather(index)
     Addons.GatheringMasterpiece:wait_until_ready()
+end
+
+function Gathering:is_ready_to_execute_action()
+    return not Character:has_condition(Conditions.Gathering42)
+end
+
+function Gathering:wait_until_ready_to_gather()
+    Wait:seconds_until(self, self.is_ready_to_execute_action, 0.1)
 end
 
 return Gathering()

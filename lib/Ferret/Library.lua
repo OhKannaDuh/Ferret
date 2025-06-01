@@ -68,3 +68,6 @@ Wait = require('Ferret/Wait')
 Gathering = require('Ferret/Gathering')
 GatherBuddy = require('Ferret/GatherBuddy')
 SpearfishingHelper = require('Ferret/SpearfishingHelper')
+
+-- Move to PandorasBox or IPC Module
+PandorasBox = require('Ferret/PandorasBox')

@@ -26,16 +26,17 @@ function Addon:is_ready()
     return IsAddonReady(self.key)
 end
 
-function Addon:wait_until_ready(delay, max)
+function Addon:is_not_ready()
+    return not self:is_ready()
+end
+
+function Addon:wait_until_ready(delay)
     delay = delay or self.ready_delay
-    max = max or self.ready_max
 
     Logger:debug_t('addons.messages.wait_until_ready', { addon = self.key })
     Debug:log_previous_call()
 
-    Wait:seconds_until(function()
-        return self:is_ready()
-    end, delay, max)
+    Wait:seconds_until(self, self.is_ready, delay)
 
     Logger:debug_t('addons.messages.ready', { addon = self.key })
 end
@@ -47,9 +48,7 @@ function Addon:wait_until_not_ready(delay, max)
     Logger:debug_t('addons.messages.wait_until_not_ready', { addon = self.key })
     Debug:log_previous_call()
 
-    Wait:seconds_until(function()
-        return not self:is_ready()
-    end, delay, max)
+    Wait:seconds_until(self, self.is_ready, delay, max)
 
     Logger:debug_t('addons.messages.not_ready', { addon = self.key })
 end
@@ -59,15 +58,17 @@ function Addon:is_visible()
     return IsAddonVisible(self.key)
 end
 
+function Addon:is_not_visible()
+    return not self:is_visible()
+end
+
 function Addon:wait_until_visible(delay, max)
     delay = delay or self.visible_delay
     max = max or self.visible_max
 
     Logger:debug_t('addons.messages.wait_until_visible', { addon = self.key })
     Debug:log_previous_call()
-    Wait:seconds_until(function()
-        return self:is_visible()
-    end, delay, max)
+    Wait:seconds_until(self, self.is_visible, delay, max)
 
     Logger:debug_t('addons.messages.visible', { addon = self.key })
 end
@@ -78,9 +79,7 @@ function Addon:wait_until_not_visible(delay, max)
 
     Logger:debug_t('addons.messages.wait_until_not_visible', { addon = self.key })
     Debug:log_previous_call()
-    Wait:seconds_until(function()
-        return not self:is_ready()
-    end, delay, max)
+    Wait:seconds_until(self, self.is_not_ready, delay, max)
 
     Logger:debug_t('addons.messages.not_visible', { addon = self.key })
 end

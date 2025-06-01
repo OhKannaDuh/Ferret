@@ -46,20 +46,25 @@ function Character:is_moving()
     return IsMoving()
 end
 
+---@return boolean
+function Character:is_not_moving()
+    return IsMoving()
+end
+
 function Character:is_available()
     return IsPlayerAvailable()
 end
 
+function Character:is_not_available()
+    return IsPlayerAvailable()
+end
+
 function Character:wait_until_available()
-    Wait:seconds_until(function()
-        return self:is_available()
-    end, 0.2)
+    Wait:seconds_until(self, self.is_available, 0.2)
 end
 
 function Character:wait_until_not_available()
-    Wait:seconds_until(function()
-        return not self:is_available()
-    end, 0.2)
+    Wait:seconds_until(self, self.is_not_available, 0.2)
 end
 
 ---Requires https://github.com/pohky/TeleporterPlugin
@@ -69,20 +74,6 @@ function Character:teleport(destination)
     self:wait_until_not_available(10)
     self:wait_until_available()
     Wait:seconds(2)
-end
-
---- Wait in 0.1 second intervals until the character is not crafting and not
---- preparing to craft
-function Character:wait_until_done_crafting()
-    Wait:seconds_until(function()
-        return not self:has_condition(Conditions.Crafting40) and not self:has_condition(Conditions.PreparingToCraft)
-    end, 0.1)
-end
-
-function Character:wait_until_ready_to_gather()
-    Wait:seconds_until(function()
-        return not self:has_condition(Conditions.Gathering42)
-    end, 0.1)
 end
 
 return Character()

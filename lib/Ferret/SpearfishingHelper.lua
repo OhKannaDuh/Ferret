@@ -16,16 +16,16 @@ function SpearfishingHelper:is_spearfishing()
     return Addons.SpearFishing:is_ready()
 end
 
+function SpearfishingHelper:is_not_spearfishing()
+    return not self:is_spearfishing()
+end
+
 function SpearfishingHelper:wait_to_start()
-    Wait:seconds_until(function()
-        return self:is_spearfishing()
-    end)
+    Wait:seconds_until(self, self.is_spearfishing, 0.1)
 end
 
 function SpearfishingHelper:wait_to_stop()
-    Wait:seconds_until(function()
-        return not self:is_spearfishing()
-    end)
+    Wait:seconds_until(self, self.is_not_spearfishing, 0.1)
 end
 
 -- @todo Requires PR, after SND update

@@ -35,9 +35,9 @@ function Repair:init()
             Wait:seconds(0.1)
         end
 
-        Wait:seconds_until(function()
-            return not GetCharacterCondition(Conditions.Occupied39)
-        end)
+        repeat
+            Wait:seconds(0.1)
+        until not GetCharacterCondition(Conditions.Occupied39)
 
         Wait:seconds(1)
         yield('/callback Repair true -1')

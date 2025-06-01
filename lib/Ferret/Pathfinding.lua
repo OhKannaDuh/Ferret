@@ -16,7 +16,6 @@ end
 
 ---@param node Node
 function Pathfinding:add_node(node)
-    Logger:debug('Pathfinding:add_node ' .. node:to_string())
     table.insert(self.nodes, node)
 end
 
@@ -72,9 +71,7 @@ function Pathfinding:fly_to(node)
         self:walk_to(node)
         Mount:mount()
 
-        Wait:seconds_until(function()
-            return Mount:is_mounted()
-        end, 1 / 60, 5)
+        Wait:tps_until(Mount, Mount.is_mounted, 5, 5)
     end
 
     yield('/vnavmesh flyto ' .. node.x .. ' ' .. node.y .. ' ' .. node.z)
@@ -126,29 +123,33 @@ function Pathfinding:stop()
 end
 
 function Pathfinding:wait_to_start_moving()
-    Wait:seconds_until(function()
-        return Character:is_moving()
-    end)
+    Wait:seconds_until(Character, Character.is_moving)
 end
 
 function Pathfinding:wait_to_stop_moving()
-    Wait:seconds_until(function()
-        return not Character:is_moving()
-    end)
+    Wait:seconds_until(Character, Character.is_not_moving)
 end
 
 function Pathfinding:wait_until_at_node(node)
     node = node or Pathfinding:current()
 
-    Wait:seconds_until(function()
-        return Character:get_position():is_nearby(node, 1)
-    end, 0.0167)
+    if Character:get_position():is_nearby(node, 1) then
+        return
+    end
+
+    repeat
+        Wait:fps(60)
+    until Character:get_position():is_nearby(node, 1)
 end
 
 function Pathfinding:wait_until_close_to_target(distance)
-    Wait:seconds_until(function()
-        return Character:get_target_position():get_distance_to() <= distance
-    end)
+    if Character:get_target_position():get_distance_to() <= distance then
+        return
+    end
+
+    repeat
+        Wait:seconds(0.1)
+    until Character:get_target_position():get_distance_to() <= distance
 end
 
 ---@param node Node

@@ -46,7 +46,7 @@ function CraftingMissionHandler:single_recipe(mission, goal)
             return score, mission:translate('reached_goal', { crafted = crafted })
         end
 
-    until MissionScorer:score(mission).tier >= goal or not mission:has_base_crafting_material()
+    until mission.scorer:score(mission).tier >= goal or not mission:has_base_crafting_material()
 
     return mission:get_score(), mission:translate('finished', { crafted = crafted })
 end
@@ -83,7 +83,7 @@ function CraftingMissionHandler:multi_recipe(mission, goal)
                 end
             end
         end
-    until MissionScorer:score(mission).tier >= goal or not mission:has_base_crafting_material()
+    until mission.scorer:score(mission).tier >= goal or not mission:has_base_crafting_material()
 
     return mission:get_score(), mission:translate('finished', { crafted = crafted })
 end

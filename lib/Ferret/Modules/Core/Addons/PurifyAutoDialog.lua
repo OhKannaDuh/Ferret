@@ -15,9 +15,9 @@ function PurifyAutoDialog:check_for_exit()
 end
 
 function PurifyAutoDialog:wait_for_exit()
-    Wait:seconds_until(function()
-        return self:check_for_exit()
-    end)
+    repeat
+        Wait:seconds(0.1)
+    until self:check_for_exit()
 end
 
 function PurifyAutoDialog:exit()

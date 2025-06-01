@@ -51,12 +51,12 @@ end
 
 function WKSHud:has_mission()
     self:open_mission_menu()
-    Wait:seconds_until(function()
-        return Addons.WKSMission:is_visible() or Addons.WKSMissionInfomation:is_visible()
-    end)
+
+    repeat
+        Wait:seconds(0.1)
+    until Addons.WKSMission:is_visible() or Addons.WKSMissionInfomation:is_visible()
 
     return Addons.WKSMissionInfomation:is_visible()
 end
-
 
 return WKSHud()

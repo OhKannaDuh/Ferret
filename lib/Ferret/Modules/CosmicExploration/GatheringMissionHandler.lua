@@ -100,7 +100,7 @@ function GatheringMissionHandler:chain(mission, goal)
 
             GatheringMissionRotationHandler:handle(mission, index)
 
-            Character:wait_until_ready_to_gather()
+            Gathering:wait_until_ready_to_gather()
         until not Gathering:is_gathering()
 
         Gathering:wait_to_stop()
@@ -109,7 +109,7 @@ function GatheringMissionHandler:chain(mission, goal)
     mission:finish(goal)
 end
 
-function GatheringMissionHandler:gather_cluster(mission)
+function GatheringMissionHandler:gather_cluster(mission, goal)
     repeat
         local nearest = Gathering:get_nearest_node()
         nearest:target()
@@ -134,9 +134,9 @@ function GatheringMissionHandler:gather_cluster(mission)
 
             GatheringMissionRotationHandler:handle(mission, index)
 
-            Character:wait_until_ready_to_gather()
+            Gathering:wait_until_ready_to_gather()
         until not Gathering:is_gathering()
-    until not Gathering:has_nearby_nodes(20)
+    until not Gathering:has_nearby_nodes(20) or mission.scorer:score(mission).tier >= goal
 end
 
 function GatheringMissionHandler:clustered(mission, goal)
@@ -145,18 +145,20 @@ function GatheringMissionHandler:clustered(mission, goal)
 
     repeat
         local cluster_location = self.pathfinding:next()
-        Logger:info('Moving to cluster: ' .. cluster_location:to_string())
-        self.pathfinding:walk_to(cluster_location)
-        self.pathfinding:wait_until_at_node(cluster_location)
+        local floor = self.pathfinding:get_floor_near_node(cluster_location)
+        Logger:info('Moving to cluster: ' .. floor:to_string())
+        self.pathfinding:walk_to(floor)
+        self.pathfinding:wait_until_at_node(floor)
         self.pathfinding:stop()
         Logger:info('Cluster reached')
 
         Logger:info('Gathering from cluster')
-        self:gather_cluster(mission)
+        self:gather_cluster(mission, goal)
         Logger:info('Cluster depleated')
 
         Wait:seconds(0.5)
     until Addons.WKSMissionInfomation:get_time_limit_label() == 'Clear Time'
+        or mission.scorer:score(mission).tier >= goal
 
     Wait:seconds(1)
     mission:finish(goal)

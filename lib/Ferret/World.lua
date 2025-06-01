@@ -25,9 +25,15 @@ end
 
 function World:wait_until(hour)
     Logger:debug_t('world.waiting', { hour = hour })
-    Wait:seconds_until(function()
-        return self:get_current_hour() == hour
-    end, 3)
+    if self:get_current_hour() == hour then
+        Logger:debug_t('world.done_waiting')
+        return
+    end
+
+    repeat
+        Wait:seconds(3)
+    until self:get_current_hour() == hour
+
     Logger:debug_t('world.done_waiting')
 end
 

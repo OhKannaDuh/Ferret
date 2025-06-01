@@ -39,9 +39,9 @@ function ExtractMateria:init()
                 until not Addons.MaterializeDialog:is_visible()
             end
 
-            Wait:seconds_until(function()
-                return not GetCharacterCondition(Conditions.Occupied39)
-            end)
+            repeat
+                Wait:seconds(0.1)
+            until not GetCharacterCondition(Conditions.Occupied39)
         end
 
         Addons.Materialize:close()
