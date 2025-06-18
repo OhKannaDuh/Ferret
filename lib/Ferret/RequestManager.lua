@@ -12,6 +12,8 @@ RequestManager:implement(Translation)
 function RequestManager:new()
     self.subscriptions = {}
     self.translation_path = 'request_manager'
+
+    Actions.ExecuteAction()
 end
 
 ---@param request Request
