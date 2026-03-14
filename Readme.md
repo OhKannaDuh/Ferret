@@ -1,5 +1,10 @@
 # Ferret
 
+---
+**This project is no longer maintained.**
+
+---
+
 A Lua library to be used with https://github.com/Jaksuhn/SomethingNeedDoing
 Plugin repository: https://raw.githubusercontent.com/OhKannaDuh/plugins/refs/heads/master/manifest.json
 
